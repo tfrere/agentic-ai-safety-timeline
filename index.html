@@ -1,19 +1,149 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>My static Space</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="card">
-			<h1>Welcome to your static Space!</h1>
-			<p>You can modify this app directly by editing <i>index.html</i> in the Files and versions tab.</p>
-			<p>
-				Also don't forget to check the
-				<a href="https://huggingface.co/docs/hub/spaces" target="_blank">Spaces documentation</a>.
-			</p>
-		</div>
-	</body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agentic AI Safety Timeline - Jun to Sep 2026</title>
+  <meta name="description" content="A sourced, interactive timeline of the serious events in agentic AI safety over June to September 2026." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <span class="eyebrow">State of the field</span>
+      <h1>Agentic AI Safety</h1>
+      <p class="subtitle">
+        A sourced, deduplicated timeline of the serious events over the last three
+        months: real sandbox-escape incidents, notable departures and whistleblowers,
+        lab position statements, regulation, third-party evaluations, and the most
+        solid research. Sensationalist takes with no verifiable substance were filtered out.
+      </p>
+      <div class="meta">
+        <span><b>Window</b> Jun 1 - Sep 9, 2026</span>
+        <span><b>Events</b> <span id="total-count">0</span></span>
+        <span><b>Updated</b> 2026-09-09</span>
+      </div>
+    </header>
+
+    <section class="controls">
+      <div class="filters" id="filters">
+        <span class="chip active" data-filter="ALL">All</span>
+        <span class="chip" data-tag="INCIDENT" data-filter="INCIDENT"><span class="dot"></span>Incident</span>
+        <span class="chip" data-tag="DEPARTURE" data-filter="DEPARTURE"><span class="dot"></span>Departure</span>
+        <span class="chip" data-tag="LAB" data-filter="LAB"><span class="dot"></span>Lab</span>
+        <span class="chip" data-tag="POLICY" data-filter="POLICY"><span class="dot"></span>Policy</span>
+        <span class="chip" data-tag="EVAL" data-filter="EVAL"><span class="dot"></span>Eval</span>
+        <span class="chip" data-tag="RESEARCH" data-filter="RESEARCH"><span class="dot"></span>Research</span>
+      </div>
+      <div class="controls-row2">
+        <input id="search" class="search" type="search" placeholder="Search events, e.g. Hugging Face, prompt injection, Sanders..." />
+        <label class="toggle"><input type="checkbox" id="ctx-toggle" checked /> Context anchors</label>
+        <label class="toggle"><input type="checkbox" id="oai-toggle" checked /> OpenAI x HF</label>
+        <label class="toggle"><input type="checkbox" id="ant-toggle" checked /> Anthropic x Irregular</label>
+        <span class="count" id="shown-count"></span>
+      </div>
+    </section>
+
+    <section class="timeline" id="timeline"></section>
+
+    <footer class="foot">
+      <p>
+        <b>Caveat.</b> Some resignation claims about what researchers "privately
+        believe" are the departing individuals' own accounts, paired where possible
+        with on-record confirmations. Incident facts are drawn from first-party reports
+        and independent (METR) review.
+      </p>
+      <p>Built as a static Space. Data in <b>data.js</b>. Full write-up in <b>TIMELINE.md</b>.</p>
+    </footer>
+  </main>
+
+  <script src="data.js"></script>
+  <script>
+    (function () {
+      const events = (window.TIMELINE_EVENTS || []).slice().sort((a, b) => a.iso.localeCompare(b.iso));
+      const timeline = document.getElementById("timeline");
+      const searchEl = document.getElementById("search");
+      const ctxToggle = document.getElementById("ctx-toggle");
+      const oaiToggle = document.getElementById("oai-toggle");
+      const antToggle = document.getElementById("ant-toggle");
+      const shownCount = document.getElementById("shown-count");
+      document.getElementById("total-count").textContent = events.length;
+
+      let activeFilter = "ALL";
+      const monthName = (iso) => {
+        const d = new Date(iso + "T00:00:00Z");
+        return d.toLocaleString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+      };
+
+      function trackBadge(track) {
+        if (track === "openai-hf") return '<span class="track-badge oai">OpenAI x HF</span>';
+        if (track === "anthropic-irregular") return '<span class="track-badge ant">Anthropic x Irregular</span>';
+        return "";
+      }
+
+      function render() {
+        const q = searchEl.value.trim().toLowerCase();
+        timeline.innerHTML = "";
+        let lastMonth = "";
+        let shown = 0;
+
+        events.forEach((e) => {
+          if (activeFilter !== "ALL" && e.tag !== activeFilter) return;
+          if (e.context && !ctxToggle.checked) return;
+          if (e.track === "openai-hf" && !oaiToggle.checked) return;
+          if (e.track === "anthropic-irregular" && !antToggle.checked) return;
+          if (q) {
+            const hay = (e.title + " " + e.desc + " " + (e.sourceLabel || "") + " " + e.tag).toLowerCase();
+            if (!hay.includes(q)) return;
+          }
+
+          const m = monthName(e.iso);
+          if (m !== lastMonth) {
+            const h = document.createElement("div");
+            h.className = "month";
+            h.textContent = m;
+            timeline.appendChild(h);
+            lastMonth = m;
+          }
+
+          const item = document.createElement("article");
+          item.className = "item";
+          item.setAttribute("data-tag", e.tag);
+          item.innerHTML =
+            '<div class="card">' +
+              '<div class="card-top">' +
+                '<span class="date">' + e.date + '</span>' +
+                '<span class="pill">' + e.tag + '</span>' +
+                trackBadge(e.track) +
+                (e.context ? '<span class="ctx-badge">context</span>' : '') +
+              '</div>' +
+              '<h3>' + e.title + '</h3>' +
+              '<p>' + e.desc + '</p>' +
+              '<div class="src">Source: <a href="' + e.source + '" target="_blank" rel="noopener">' + (e.sourceLabel || e.source) + '</a></div>' +
+            '</div>';
+          timeline.appendChild(item);
+          shown++;
+        });
+
+        shownCount.textContent = shown + " shown";
+      }
+
+      document.getElementById("filters").addEventListener("click", (ev) => {
+        const chip = ev.target.closest(".chip");
+        if (!chip) return;
+        document.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        activeFilter = chip.getAttribute("data-filter");
+        render();
+      });
+
+      searchEl.addEventListener("input", render);
+      ctxToggle.addEventListener("change", render);
+      oaiToggle.addEventListener("change", render);
+      antToggle.addEventListener("change", render);
+
+      render();
+    })();
+  </script>
+</body>
 </html>
