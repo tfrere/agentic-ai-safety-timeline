@@ -65,6 +65,19 @@
   authority* as it crosses persistent state boundaries.
   [arXiv:2606.04425](https://arxiv.org/abs/2606.04425)
 
+- **2026-06-09** `DEPARTURE` - **Alex Turner leaves Google DeepMind over the Pentagon
+  deal** (made public July 15 via his blog). AI-safety research scientist Alex Turner
+  (TurnTrout) resigns after Google signs a classified Pentagon AI agreement with no
+  binding restrictions against lethal autonomous weapons or mass surveillance, breaking
+  DeepMind's 2018 pledge. He fought it internally for months (a 250+ employee petition
+  to Jeff Dean, a direct message to CEO Demis Hassabis) and failed. His takeaway: stop
+  relying on ethics-motivated people holding firm under pressure - build binding
+  contracts, independent auditors, and legislation. A different axis from the
+  superintelligence-race departures (military ethics / governance failure).
+  [Transformer](https://www.transformernews.ai/p/i-tried-to-stop-google-deepmind-pentagon-deal-then-quit) -
+  [Business Insider](https://www.businessinsider.com/google-deepmind-ai-researcher-resign-military-contract-pentagon-2026-7) -
+  [Why I Left Google DeepMind](https://turntrout.substack.com/p/why-i-left-google-deepmind)
+
 - **~2026-06** `RESEARCH` - **MAC-Bench ("Beyond Goodhart's Law").** Dynamic
   adversarial benchmark for procedural compliance in multi-agent systems; introduces
   the "Machiavellian Gap" (agents that stay successful by strategically breaking
@@ -226,7 +239,10 @@
   industry.** Pre-training researcher (ex-OpenAI, worked on GPT-4o), 27. "Neither
   company is acting responsibly. They are racing straight to self-improving
   superintelligence and gambling with our lives." His argument is structural, not
-  cultural: no single company can hold the line under competition.
+  cultural: no single company can hold the line under competition. Per Axios, he left
+  before his equity vested (4 months in, 6 needed), which removes the incentive to
+  boost Anthropic's valuation; his resignation thread passed 115M views.
+  [Axios scoop](https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview) -
   [Business Insider](https://www.businessinsider.com/anthropic-researcher-quits-over-ai-safety-concerns-2026-9) -
   [WSJ](https://www.wsj.com/tech/ai/anthropic-researcher-quits-over-out-of-control-ai-fears-707b7628)
 
@@ -325,6 +341,7 @@ security work:
   {"date": "2026-03-25", "tag": "EVAL", "context": true, "title": "METR red-teams Anthropic internal agent monitoring", "source": "https://metr.org/blog/2026-03-25-red-teaming-anthropic-agent-monitoring/"},
   {"date": "2026-05-19", "tag": "EVAL", "context": true, "title": "METR Frontier Risk Report (entity-based pilot)", "source": "https://metr.org/blog/2026-05-19-frontier-risk-report/"},
   {"date": "2026-06-03", "tag": "RESEARCH", "title": "Cross-Session Stored Prompt Injection", "source": "https://arxiv.org/abs/2606.04425"},
+  {"date": "2026-06-09", "tag": "DEPARTURE", "title": "Alex Turner leaves Google DeepMind over the Pentagon deal (public Jul 15)", "source": "https://www.transformernews.ai/p/i-tried-to-stop-google-deepmind-pentagon-deal-then-quit"},
   {"date": "2026-06-26", "tag": "INCIDENT", "track": "openai-hf", "title": "Start of OpenAI investigation window", "source": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"},
   {"date": "2026-07-07", "tag": "INCIDENT", "track": "openai-hf", "title": "ExploitGym runs begin", "source": "https://cdn.kursors.lv/2026/08/OpenAI-Hugging-Face-Incident-Technical-Report.pdf"},
   {"date": "2026-07-08", "tag": "INCIDENT", "track": "openai-hf", "title": "Agents escape to the open internet via Artifactory zero-day", "source": "https://cdn.kursors.lv/2026/08/OpenAI-Hugging-Face-Incident-Technical-Report.pdf"},
@@ -345,7 +362,7 @@ security work:
   {"date": "2026-09-03", "tag": "RESEARCH", "title": "Emergent Cheating and Whistleblowing in Autonomous Research Swarms", "source": "https://arxiv.org/abs/2609.04170"},
   {"date": "2026-09-06", "tag": "LAB", "title": "Pachocki 'An Alien Mind' essay", "source": "https://pubt.io/view/2488363BCD67916D2032FF5699901122170EF6EA"},
   {"date": "2026-09-07", "tag": "POLICY", "title": "UN's Volker Turk warns of existential AI risk", "source": "https://news.un.org/en/story/2026/09/1168288"},
-  {"date": "2026-09-08", "tag": "DEPARTURE", "title": "Jacob Coxon resigns from Anthropic", "source": "https://www.businessinsider.com/anthropic-researcher-quits-over-ai-safety-concerns-2026-9"},
+  {"date": "2026-09-08", "tag": "DEPARTURE", "title": "Jacob Coxon resigns from Anthropic (left before equity vested)", "source": "https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview"},
   {"date": "2026-09-09", "tag": "LAB", "title": "Evan Hubinger confirms >10% extinction odds, no alignment plan", "source": "https://www.cnbc.com/2026/09/09/anthropic-researcher-quits-ai-safety.html"},
   {"date": "2026-09-09", "tag": "POLICY", "title": "Stop Rogue AI Act introduced (Gottheimer/Lawler)", "source": "https://gottheimer.house.gov/posts/release-gottheimer-introduces-bipartisan-bill-to-stop-rogue-ai-agents-and-keep-people-in-control"},
   {"date": "2026-09", "tag": "RESEARCH", "title": "SoK: When Safe Agents Fail Together (A-I-R framework)", "source": "https://arxiv.org/html/2609.00595v1"},

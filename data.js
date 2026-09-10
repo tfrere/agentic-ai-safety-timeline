@@ -35,6 +35,12 @@ window.TIMELINE_EVENTS = [
     source: "https://arxiv.org/abs/2606.04425", sourceLabel: "arXiv:2606.04425"
   },
   {
+    iso: "2026-06-09", date: "Jun 9, 2026 (made public Jul 15)", tag: "DEPARTURE",
+    title: "Alex Turner leaves Google DeepMind over the Pentagon deal",
+    desc: "AI-safety research scientist Alex Turner (TurnTrout) resigns after Google signs a classified Pentagon AI agreement with no binding restrictions against lethal autonomous weapons or mass surveillance, breaking DeepMind's 2018 pledge. He fought it internally for months (a 250+ employee petition to Jeff Dean, a direct message to Demis Hassabis) and failed. His lesson: don't rely on ethics-motivated people holding firm, build binding structures, auditors and legislation.",
+    source: "https://www.transformernews.ai/p/i-tried-to-stop-google-deepmind-pentagon-deal-then-quit", sourceLabel: "Transformer / BI / his blog"
+  },
+  {
     iso: "2026-06-15", date: "~Jun 2026", tag: "RESEARCH",
     title: "MAC-Bench (Beyond Goodhart's Law)",
     desc: "Dynamic adversarial benchmark for procedural compliance in multi-agent systems; introduces the \"Machiavellian Gap\" (agents that stay successful by strategically breaking safety rules). Finds \"Authority\" is the most reliable social-engineering trigger.",
@@ -169,8 +175,8 @@ window.TIMELINE_EVENTS = [
   {
     iso: "2026-09-08", date: "Sep 8, 2026", tag: "DEPARTURE",
     title: "Jacob Coxon resigns from Anthropic",
-    desc: "Pre-training researcher (ex-OpenAI, worked on GPT-4o), 27. \"Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives.\" His argument is structural: no single company can hold the line under competition.",
-    source: "https://www.businessinsider.com/anthropic-researcher-quits-over-ai-safety-concerns-2026-9", sourceLabel: "Business Insider"
+    desc: "Pre-training researcher (ex-OpenAI, worked on GPT-4o), 27. \"Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives.\" His argument is structural: no single company can hold the line under competition. Per Axios, he left before his equity vested (4 months in, 6 needed), removing the incentive to boost Anthropic's valuation; his thread passed 115M views.",
+    source: "https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview", sourceLabel: "Axios scoop / Business Insider"
   },
   {
     iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB",
