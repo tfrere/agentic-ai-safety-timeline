@@ -46,6 +46,61 @@
 
     <section class="timeline" id="timeline"></section>
 
+    <section class="fieldnote">
+      <span class="eyebrow">Field note</span>
+      <h2>What this looks like on one developer's machine</h2>
+      <p class="fn-intro">
+        While the events above played out at lab scale, we ran the same questions
+        against a single, ordinary developer laptop (Sep 8-10, 2026): one Hugging Face
+        power user, ~60 project folders, daily agentic-IDE usage. Conducted by a coding
+        agent auditing its own blast radius, read-only.
+      </p>
+
+      <div class="fn-grid">
+        <div class="fn-stat">
+          <span class="fn-num">0</span>
+          <span class="fn-label">tokens leaked via git: every <code>.env</code> was
+          properly ignored, no token in any history or deployed bundle</span>
+        </div>
+        <div class="fn-stat warn">
+          <span class="fn-num">17</span>
+          <span class="fn-label">still-active API tokens sitting in plaintext in the
+          local AI chat-history database, accumulated over six months of agent
+          sessions, including one belonging to a colleague</span>
+        </div>
+        <div class="fn-stat warn">
+          <span class="fn-num">7</span>
+          <span class="fn-label">of those tokens were "zombies": no longer used in any
+          project, forgotten, but never revoked, several with write scope</span>
+        </div>
+      </div>
+
+      <p>
+        The machine itself showed no signs of compromise (system protections on, all
+        persistence signed and accounted for, clean network listeners). The exposure
+        was entirely self-inflicted: agents had read <code>.env</code> files into
+        context during routine sessions, and the chat history quietly became the
+        largest unencrypted secret store on the disk, one file aggregating credentials
+        from every project.
+      </p>
+      <p>
+        A permission audit of the agent's own shell context completed the picture: it
+        could read SSH private keys, cloud and registry credentials, 43
+        <code>.env</code> files, browser profiles and every AI tool's history; write
+        anywhere in the home directory; and reach the open internet. No Full Disk
+        Access, and root was password-gated, but exfiltration needs none of that.
+        The same probes are packaged as a small read-only script you can run from an
+        agent shell and from your terminal to compare contexts:
+        <a href="audit-agent-permissions.sh" download>audit-agent-permissions.sh</a>.
+      </p>
+      <p class="fn-takeaway">
+        <b>Takeaway.</b> The micro-scale mirror of the incidents above: the boundary
+        that matters is not the model's intent but what the process is allowed to
+        touch. Treat anything that enters an agent's context as potentially public,
+        rotate accordingly, and starve the context of secrets by default.
+      </p>
+    </section>
+
     <footer class="foot">
       <p>
         <b>Caveat.</b> Some resignation claims about what researchers "privately

@@ -333,6 +333,48 @@ security work:
 
 ---
 
+## Field note: auditing one developer's machine (Sep 8-10, 2026)
+
+A micro-scale companion to the incidents above: the same questions, asked of a single
+ordinary developer laptop (one Hugging Face power user, ~60 project folders, daily
+agentic-IDE usage). The audit was performed by a coding agent examining its own blast
+radius, read-only, with all secret values masked before they could enter the model's
+context.
+
+**Findings:**
+
+- **Git hygiene held.** 10 active personal API tokens found across local `.env`
+  files; every one was properly gitignored, none appeared in any git history or in
+  any deployed Space bundle. The classic leak vector was closed.
+- **The chat history did not.** The local AI chat-history database and agent
+  transcripts contained **17 still-active tokens in plaintext**, accumulated over six
+  months of routine agent sessions, including 7 "zombie" tokens no longer used in any
+  project but never revoked (several write-scoped), and one token belonging to a
+  colleague. The chat history had quietly become the largest unencrypted secret
+  store on the disk: one predictable-path file aggregating credentials from every
+  project, an ideal infostealer target.
+- **The machine itself was clean.** System protections enabled, all persistence
+  mechanisms signed and accounted for, no anomalous listeners or stealer artifacts.
+  The exposure was entirely self-inflicted.
+- **The agent's effective permissions were near-total.** From its shell context the
+  agent could read SSH private keys, cloud and registry credentials, 43 `.env`
+  files, browser profiles and every AI tool's history; write anywhere in the home
+  directory; and reach the open internet without restriction. No Full Disk Access
+  and password-gated root, but exfiltration requires neither.
+
+**Takeaway.** The boundary that matters is not the model's intent but what the
+process is allowed to touch. Treat anything that enters an agent's context as
+potentially public, rotate accordingly, and starve the context of secrets by default
+(fine-grained per-project tokens, hooks that block or mask `.env` reads, workspace
+sandboxing).
+
+The permission probes are packaged as a small read-only script,
+[`audit-agent-permissions.sh`](audit-agent-permissions.sh), meant to be run twice:
+once from an agent shell and once from your own terminal, to compare what each
+context can reach (macOS TCC permissions are granted per parent application).
+
+---
+
 ## Machine-readable events (for building the Space)
 
 ```json

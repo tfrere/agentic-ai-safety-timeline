@@ -21,5 +21,8 @@ filtered out.
 - Every entry links to a primary or high-quality source.
 - Data lives in `data.js` (also mirrored as a machine-readable array) so the frise can
   be regenerated or extended easily.
+- Includes a field note: a read-only audit of one developer's machine (token exposure
+  through AI chat history, agent permission surface), with the audit script
+  (`audit-agent-permissions.sh`) available for download.
 
 Built as a static Space. Content and full write-up: see `TIMELINE.md`.
