@@ -1,4 +1,4 @@
-# Agentic AI Safety - Timeline (June to September 2026)
+# Agentic AI Safety - Timeline (2026)
 
 > A sourced, deduplicated timeline of the serious events in agentic AI safety over
 > the last three months: real sandbox-escape incidents, notable departures and
@@ -6,12 +6,12 @@
 > the most solid research. Sensationalist takes with no verifiable substance were
 > filtered out.
 
-- **Scope:** June 1 - September 9, 2026 (a few earlier anchor events are included as
-  context and clearly marked).
+- **Scope:** February - September 2026. The core window is June onward; earlier
+  anchor events (back to February) are included as context and clearly marked.
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-09-09.
+- **Last updated:** 2026-09-10.
 
 ---
 

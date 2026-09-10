@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Agentic AI Safety Timeline - Jun to Sep 2026</title>
-  <meta name="description" content="A sourced, interactive timeline of the serious events in agentic AI safety over June to September 2026." />
+  <title>Agentic AI Safety Timeline - 2026</title>
+  <meta name="description" content="A sourced, interactive timeline of the serious events in agentic AI safety in 2026, newest first." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,30 +13,32 @@
       <span class="eyebrow">State of the field</span>
       <h1>Agentic AI Safety</h1>
       <p class="subtitle">
-        A sourced, deduplicated timeline of the serious events over the last three
-        months: real sandbox-escape incidents, notable departures and whistleblowers,
-        lab position statements, regulation, third-party evaluations, and the most
-        solid research. Sensationalist takes with no verifiable substance were filtered out.
+        A sourced, deduplicated timeline of the serious events in agentic AI safety,
+        newest first: real sandbox-escape incidents, notable departures and
+        whistleblowers, lab position statements, regulation, third-party evaluations,
+        and the most solid research. Sensationalist takes with no verifiable substance
+        were filtered out.
       </p>
       <div class="meta">
-        <span><b>Window</b> Jun 1 - Sep 9, 2026</span>
+        <span><b>Window</b> Feb - Sep 2026 (core: Jun onward)</span>
         <span><b>Events</b> <span id="total-count">0</span></span>
-        <span><b>Updated</b> 2026-09-09</span>
+        <span><b>Updated</b> 2026-09-10</span>
       </div>
     </header>
 
     <section class="controls">
-      <div class="filters" id="filters">
-        <span class="chip active" data-filter="ALL">All</span>
-        <span class="chip" data-tag="INCIDENT" data-filter="INCIDENT"><span class="dot"></span>Incident</span>
-        <span class="chip" data-tag="DEPARTURE" data-filter="DEPARTURE"><span class="dot"></span>Departure</span>
-        <span class="chip" data-tag="LAB" data-filter="LAB"><span class="dot"></span>Lab</span>
-        <span class="chip" data-tag="POLICY" data-filter="POLICY"><span class="dot"></span>Policy</span>
-        <span class="chip" data-tag="EVAL" data-filter="EVAL"><span class="dot"></span>Eval</span>
-        <span class="chip" data-tag="RESEARCH" data-filter="RESEARCH"><span class="dot"></span>Research</span>
+      <div class="filters" id="filters" role="group" aria-label="Filter by category">
+        <span class="chip active" role="button" tabindex="0" data-filter="ALL">All</span>
+        <span class="chip" role="button" tabindex="0" data-tag="INCIDENT" data-filter="INCIDENT"><span class="dot"></span>Incident</span>
+        <span class="chip" role="button" tabindex="0" data-tag="DEPARTURE" data-filter="DEPARTURE"><span class="dot"></span>Departure</span>
+        <span class="chip" role="button" tabindex="0" data-tag="LAB" data-filter="LAB"><span class="dot"></span>Lab</span>
+        <span class="chip" role="button" tabindex="0" data-tag="POLICY" data-filter="POLICY"><span class="dot"></span>Policy</span>
+        <span class="chip" role="button" tabindex="0" data-tag="EVAL" data-filter="EVAL"><span class="dot"></span>Eval</span>
+        <span class="chip" role="button" tabindex="0" data-tag="RESEARCH" data-filter="RESEARCH"><span class="dot"></span>Research</span>
       </div>
       <div class="controls-row2">
-        <input id="search" class="search" type="search" placeholder="Search events, e.g. Hugging Face, prompt injection, Sanders..." />
+        <input id="search" class="search" type="search" aria-label="Search events"
+               placeholder="Search events, e.g. Hugging Face, prompt injection... (press / to focus)" />
         <label class="toggle"><input type="checkbox" id="ctx-toggle" checked /> Context anchors</label>
         <label class="toggle"><input type="checkbox" id="oai-toggle" checked /> OpenAI x HF</label>
         <label class="toggle"><input type="checkbox" id="ant-toggle" checked /> Anthropic x Irregular</label>
@@ -115,7 +117,8 @@
   <script src="data.js"></script>
   <script>
     (function () {
-      const events = (window.TIMELINE_EVENTS || []).slice().sort((a, b) => a.iso.localeCompare(b.iso));
+      // Newest first
+      const events = (window.TIMELINE_EVENTS || []).slice().sort((a, b) => b.iso.localeCompare(a.iso));
       const timeline = document.getElementById("timeline");
       const searchEl = document.getElementById("search");
       const ctxToggle = document.getElementById("ctx-toggle");
@@ -180,16 +183,50 @@
           shown++;
         });
 
-        shownCount.textContent = shown + " shown";
+        if (shown === 0) {
+          const empty = document.createElement("div");
+          empty.className = "empty";
+          empty.textContent = q
+            ? 'No events match "' + searchEl.value.trim() + '". Try fewer words or clear a filter.'
+            : "No events match the current filters.";
+          timeline.appendChild(empty);
+        }
+
+        shownCount.textContent = shown + " / " + events.length + " shown";
       }
 
-      document.getElementById("filters").addEventListener("click", (ev) => {
-        const chip = ev.target.closest(".chip");
-        if (!chip) return;
+      function activateChip(chip) {
         document.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
         chip.classList.add("active");
         activeFilter = chip.getAttribute("data-filter");
         render();
+      }
+      const filtersEl = document.getElementById("filters");
+      filtersEl.addEventListener("click", (ev) => {
+        const chip = ev.target.closest(".chip");
+        if (chip) activateChip(chip);
+      });
+      filtersEl.addEventListener("keydown", (ev) => {
+        if (ev.key !== "Enter" && ev.key !== " ") return;
+        const chip = ev.target.closest(".chip");
+        if (!chip) return;
+        ev.preventDefault();
+        activateChip(chip);
+      });
+
+      // "/" focuses search, Escape clears it
+      document.addEventListener("keydown", (ev) => {
+        if (ev.key === "/" && document.activeElement !== searchEl &&
+            !/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) {
+          ev.preventDefault();
+          searchEl.focus();
+        }
+      });
+      searchEl.addEventListener("keydown", (ev) => {
+        if (ev.key === "Escape" && searchEl.value) {
+          searchEl.value = "";
+          render();
+        }
       });
 
       searchEl.addEventListener("input", render);

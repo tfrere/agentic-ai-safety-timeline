@@ -109,6 +109,12 @@ h1 {
   transition: all .15s ease;
 }
 .chip:hover { border-color: #37415a; color: var(--text); }
+.chip:focus-visible,
+.toggle:focus-within,
+.search:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
 .chip .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
 .chip.active { color: #0b0d12; background: var(--text); border-color: var(--text); }
 .chip[data-tag="INCIDENT"] { --k: var(--c-incident); }
@@ -201,7 +207,10 @@ h1 {
   padding: 16px 18px;
   transition: transform .12s ease, border-color .12s ease;
 }
-.card:hover { transform: translateY(-1px); border-color: #33405c; }
+.card:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--k, #33405c) 45%, var(--border));
+}
 .card-top {
   display: flex;
   align-items: center;
@@ -239,13 +248,46 @@ h1 {
   padding: 2px 8px;
   border-radius: 999px;
 }
-.card h3 { margin: 0 0 6px; font-size: 17px; letter-spacing: -.01em; }
-.card p { margin: 0 0 10px; color: var(--muted); font-size: 14.5px; }
+.card h3 { margin: 0 0 6px; font-size: 17.5px; letter-spacing: -.01em; line-height: 1.3; }
+.card p {
+  margin: 0 0 10px;
+  color: #aeb8ca;
+  font-size: 15px;
+  line-height: 1.62;
+  max-width: 72ch;
+}
 .src { font-size: 12.5px; color: var(--faint); }
 .src a { color: var(--accent); }
 .src a::after { content: " \2197"; font-size: 11px; opacity: .7; }
 
 .hidden { display: none !important; }
+
+/* Empty search/filter state */
+.empty {
+  margin: 26px 0 8px 44px;
+  padding: 18px 20px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--faint);
+  font-size: 14px;
+}
+
+/* Month headers: small rule for scannability */
+.month::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 48px;
+  height: 1px;
+  margin-left: 12px;
+  background: var(--border);
+}
+
+/* Reduce motion for those who ask for it */
+@media (prefers-reduced-motion: reduce) {
+  .card, .chip { transition: none; }
+  .card:hover { transform: none; }
+}
 
 /* Field note */
 .fieldnote {
@@ -306,8 +348,10 @@ h1 {
 }
 .foot b { color: var(--muted); }
 
-@media (max-width: 640px) {
-  .month { top: 150px; }
+@media (max-width: 760px) {
+  /* The controls panel is too tall to stay sticky on small screens */
+  .controls { position: static; }
+  .month { top: 0; padding-top: 6px; background: var(--bg); }
   .item { padding-left: 34px; }
   .card { padding: 14px; }
 }
