@@ -38,4 +38,5 @@ GitHub and the Hugging Face Space. Revert the commit if an entry is wrong.
 
 - Sources: `watch/sources.json`
 - Local run: `uv run python watch/run.py --dry-run`
+- Method given to the agent: `watch/METHOD.md`
 - Secrets: `OPENROUTER_API_KEY`, `HF_TOKEN`

@@ -7,6 +7,7 @@ import json
 import re
 from dataclasses import dataclass, field
 from typing import Literal
+from pathlib import Path
 from urllib.parse import unquote
 
 import httpx
@@ -25,35 +26,10 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MAX_REQUESTS = 12
 SOFT_STOP_STEP = 8
 MAX_PAGE_CHARS = 6_000
+METHOD_PATH = Path(__file__).with_name("METHOD.md")
+INSTRUCTIONS = METHOD_PATH.read_text(encoding="utf-8")
 Tag = Literal["INCIDENT", "DEPARTURE", "LAB", "POLICY", "EVAL", "RESEARCH"]
 Track = Literal["openai-hf", "anthropic-irregular", "aisi"]
-
-INSTRUCTIONS = """\
-You maintain a curated agentic AI safety timeline. You may add events that pass the bar.
-You think first, then use tools. Do not invent URLs.
-
-Tools:
-- web_search(query): find recent primary sources.
-- fetch_page(url): read a page before you cite it. You MUST fetch every source you add.
-
-SELECTION BAR. Add only if it is at least one of:
-- first-party incident report (lab, evaluator, or the org that was hit)
-- named, attributable departure
-- official lab or institutional statement
-- legislation that was introduced
-- peer-review or arXiv paper that changes the mental model (not another jailbreak)
-- independent evaluation (METR, AISI, Apollo, Redwood, CAISI, Frontier Security)
-
-REJECT: anonymous rumor, unsourced "sources say", sensational takes, recycled press of an
-already-listed event, advocacy without a new fact, routine papers that do not move the model.
-
-Prefer the primary URL (lab post, arXiv abs, bill page, parliamentary record) over a recap.
-iso is the event date, not today. desc is 1-3 factual sentences, same voice as existing entries.
-track only if it clearly belongs to openai-hf, anthropic-irregular, or aisi.
-
-Budget: at most 6 tool calls, one at a time. If a tool says BUDGET EXHAUSTED, stop and answer
-with what you have verified. Empty candidates is a valid answer.
-"""
 
 
 class Candidate(BaseModel):
