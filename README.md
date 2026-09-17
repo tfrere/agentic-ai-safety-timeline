@@ -32,8 +32,8 @@ GitHub copy (Actions live here): https://github.com/tfrere/agentic-ai-safety-tim
 ## Daily watch
 
 A GitHub Actions cron (`watch.yml`, 06:12 UTC) fetches first-party RSS/pages, runs one
-OpenRouter call with the web plugin, and opens a `watch` issue if something new
-passes the timeline selection bar. It never edits `data.js`.
+OpenRouter call (`anthropic/claude-fable-5.1` + web plugin), and opens a `watch` issue
+if something new passes the timeline selection bar. It never edits `data.js`.
 
 - Sources: `watch/sources.json`
 - Local run: `OPENROUTER_API_KEY=... python watch/run.py --dry-run`

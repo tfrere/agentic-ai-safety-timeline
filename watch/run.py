@@ -29,6 +29,7 @@ REPORT_PATH = WATCH_DIR / "last-report.md"
 DATA_JS = ROOT / "data.js"
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+WATCH_MODEL = "anthropic/claude-fable-5.1"
 USER_AGENT = "agentic-ai-safety-watch/0.1 (+https://github.com/tfrere/agentic-ai-safety-timeline)"
 MAX_FEED_ITEMS = 40
 MAX_ITEM_AGE_DAYS = 10
@@ -306,7 +307,7 @@ def call_openrouter(api_key: str, model: str, user: str) -> tuple[dict, dict]:
             "X-Title": "agentic-ai-safety-watch",
         },
     )
-    with urllib.request.urlopen(req, timeout=90) as resp:
+    with urllib.request.urlopen(req, timeout=180) as resp:
         data = json.loads(resp.read().decode("utf-8"))
     msg = data["choices"][0]["message"]["content"]
     parsed = parse_llm_json(msg)
@@ -397,7 +398,10 @@ def main() -> int:
     if not api_key:
         print("OPENROUTER_API_KEY is not set", file=sys.stderr)
         return 1
-    model = os.environ.get("WATCH_MODEL", "openai/gpt-5.4-mini")
+    model = os.environ.get("WATCH_MODEL", WATCH_MODEL).strip() or WATCH_MODEL
+    if "fable" not in model.lower():
+        print(f"WATCH_MODEL must be Claude Fable via OpenRouter, got {model!r}", file=sys.stderr)
+        return 1
     repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
     token = os.environ.get("GITHUB_TOKEN", "").strip()
 
