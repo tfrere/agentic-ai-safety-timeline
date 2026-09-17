@@ -1,17 +1,17 @@
 {
-  "last_run": "2026-09-17T16:46:47+00:00",
+  "last_run": "2026-09-17T17:12:30+00:00",
   "feed_hashes": {
     "hf-blog": "0c7f3ae80bb59ec02501bf420925fc9eecf8e1e3b3a82cc66e82eebb9e2bc380",
-    "metr": "4e8b2337f9397da7814d7adca2b1df0fb011862ceb62500907dc0bd39ee771fc",
-    "alignment-forum": "e584fc47cf307cccd8b8c5ecfcd01fa66f163ca8a807908a6e355d0e3e846878",
-    "simonw": "ae43b3e2d64cc0ff6118230aac621afb40d450a142c5d148de777e706a23683c",
-    "arxiv-cr": "eab2c28a1e470c701d554edce0a8e8444bede4810d922e8ea91e2b85148d02fa",
-    "arxiv-ai": "fc6f0120670b707f36260e2dd614d4bde6629c69fbef80cf16ef9511a1aa1c25",
+    "metr": "0fbffaa30fdcce0077a893ae3b4976ead1fcde2462e1a285b93f7ac93c719741",
+    "alignment-forum": "55a98a789639d31cf8386ee668136717951dddfbe6afe717d71c77bed1de5ad5",
+    "simonw": "e9cd5de374155b8c43fa769abcb64a8e2495b60ddc295cefc73d3ea0f94fb08e",
+    "openai-news": "89cc6cfea5b199685790546658c95c463a784952581c52296538d22a79fc2137",
+    "arxiv-cr": "93b9ade75dd48709efc0084066e9233b3697e65256885b0325a48f46a29dafa2",
+    "arxiv-ai": "4ece411178b6a283a3d73eef84a40febb5dab75bcfb7eb45599df8960ed69256",
     "transformer-news": "8943d5404e8f81d1c78dcb63607e8b86d831d244cd8a54874b9555abb88cade5"
   },
   "page_hashes": {
     "openai-alignment": "1097daf3ccd1df37bce687480a7682d8fa537b197fb317946685081567ae47b6",
-    "openai-safety": "53f6c67abdeb5ef12e98ee88f41dc38c0e83109e90a456cc0acfbc258c9e9a4f",
     "anthropic-research": "5b16bd702d2532d74904dad37bfa14a0e212b2b6e9c2a914a87fd813ddd5f24b",
     "aisi": "554d8254f3c5802860013bc0beb7d2dda1d70df406cf2836791d03220837f17e",
     "apollo": "746dd1a32b271b83217c78941085d253cc996807af61c270f506367c98f36cb7"
@@ -34,6 +34,62 @@
       "title": "Who Audits Whom, on What Substrate, with What Evidence? An Independence-Graded Audit Protocol for Agentic AI",
       "iso": "2026-09-17",
       "seen": "2026-09-17"
+    },
+    {
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-09-07/hcws314",
+      "title": "UK written ministerial statement on the agent incidents (HCWS314)",
+      "iso": "2026-09-07",
+      "seen": "2026-09-17",
+      "applied": true
+    },
+    {
+      "url": "https://openai.com/index/ai-policy-window/",
+      "title": "OpenAI calls for mandatory, capability-based national AI regulation",
+      "iso": "2026-09-09",
+      "seen": "2026-09-17",
+      "applied": true
+    },
+    {
+      "url": "https://www.axios.com/2026/09/10/openai-hugging-face-senate-investigation-hawley",
+      "title": "Hawley opens Senate subcommittee probe into OpenAI",
+      "iso": "2026-09-09",
+      "seen": "2026-09-17",
+      "applied": true
+    },
+    {
+      "url": "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-demands-answers-from-sam-altman-after-new-reporting-reveals-how-ai-agents-went-rogue-to-conduct-major-cyber-breach-and-conceal-their-operations",
+      "title": "Blumenthal demands answers on rogue agents and Astra monitorability",
+      "iso": "2026-09-09",
+      "seen": "2026-09-17",
+      "applied": true
+    },
+    {
+      "url": "https://rubyhack.ai",
+      "title": "OpenAI agents attacked RubyGems in May; OpenAI confirms involvement",
+      "iso": "2026-09-11",
+      "seen": "2026-09-17",
+      "applied": true
+    },
+    {
+      "url": "https://www.unite.ai/altman-says-openai-will-match-anthropics-embedded-evaluator-pledge/",
+      "title": "Altman commits OpenAI to embedded independent evaluators",
+      "iso": "2026-09-12",
+      "seen": "2026-09-17",
+      "applied": true
+    },
+    {
+      "url": "https://www.techmeme.com/260912/p13",
+      "title": "Hugging Face launches Open Alignment Initiative, asks to be an embedded evaluator",
+      "iso": "2026-09-12",
+      "seen": "2026-09-17",
+      "applied": true
+    },
+    {
+      "url": "https://science.house.gov/2026/9/chairman-babin-issues-statement-following-briefing-on-ai-agent-cyber-incident",
+      "title": "House Science Committee briefed by Hugging Face, METR, OpenAI and Anthropic",
+      "iso": "2026-09-14",
+      "seen": "2026-09-17",
+      "applied": true
     }
   ]
 }
