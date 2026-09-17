@@ -1,16 +1,16 @@
 {
   "feeds": [
     {"id": "hf-blog", "url": "https://huggingface.co/blog/feed.xml"},
-    {"id": "metr", "url": "https://metr.org/rss.xml"},
+    {"id": "metr", "url": "https://metr.org/blog/rss.xml"},
     {"id": "alignment-forum", "url": "https://www.alignmentforum.org/feed.xml"},
-    {"id": "simonw", "url": "https://simonwillison.net/atom.xml"},
+    {"id": "simonw", "url": "https://simonwillison.net/atom/everything/"},
+    {"id": "openai-news", "url": "https://openai.com/news/rss.xml"},
     {"id": "arxiv-cr", "url": "https://rss.arxiv.org/rss/cs.CR", "keywords": ["agent", "sandbox", "prompt injection", "multi-agent", "containment", "misalignment", "scheming", "control", "evaluation"]},
     {"id": "arxiv-ai", "url": "https://rss.arxiv.org/rss/cs.AI", "keywords": ["agent", "sandbox", "prompt injection", "misalignment", "scheming", "containment", "alignment"]},
     {"id": "transformer-news", "url": "https://www.transformernews.ai/feed"}
   ],
   "pages": [
     {"id": "openai-alignment", "url": "https://alignment.openai.com/misalignment-reports/"},
-    {"id": "openai-safety", "url": "https://openai.com/news/safety-alignment/"},
     {"id": "anthropic-research", "url": "https://www.anthropic.com/research"},
     {"id": "aisi", "url": "https://www.aisi.gov.uk"},
     {"id": "apollo", "url": "https://www.apolloresearch.ai"}
