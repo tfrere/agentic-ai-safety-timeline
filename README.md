@@ -31,11 +31,11 @@ GitHub copy (Actions live here): https://github.com/tfrere/agentic-ai-safety-tim
 
 ## Daily watch
 
-A GitHub Actions cron (`watch.yml`, 06:12 UTC) fetches first-party RSS/pages, runs
-Claude Fable 5.1 on OpenRouter with reasoning + web search, and **writes passing
-events into `data.js` / `TIMELINE.md`**, then pushes GitHub and the Hugging Face
-Space. Revert the commit if an entry is wrong. The selection bar still applies.
+A GitHub Actions cron (`watch.yml`, 06:12 UTC) runs a **Pydantic AI** agent
+(`anthropic/claude-fable-5.1`, `thinking=high`) with `web_search` and `fetch_page`
+tools. Passing events are written to `data.js` / `TIMELINE.md`, then pushed to
+GitHub and the Hugging Face Space. Revert the commit if an entry is wrong.
 
 - Sources: `watch/sources.json`
-- Local run: `OPENROUTER_API_KEY=... python watch/run.py --dry-run`
+- Local run: `uv run python watch/run.py --dry-run`
 - Secrets: `OPENROUTER_API_KEY`, `HF_TOKEN`

@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Daily agentic-AI-safety watch.
 
-Fable (OpenRouter, reasoning on) scans feeds, searches the web, and writes passing
-events into data.js / TIMELINE.md. A human can revert the commit; the bar still
-filters rumor and recycled press.
+A Pydantic AI agent (Claude Fable 5.1, thinking high) scans feeds, uses search/fetch
+tools, and writes passing events into data.js / TIMELINE.md.
 """
 
 from __future__ import annotations
 
 import argparse
+import asyncio
 import hashlib
 import html
 import json
@@ -23,6 +23,10 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
+if str(Path(__file__).resolve().parent) not in sys.path:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+from agent import WATCH_MODEL, run_watch_agent
+
 ROOT = Path(__file__).resolve().parents[1]
 WATCH_DIR = Path(__file__).resolve().parent
 SOURCES_PATH = WATCH_DIR / "sources.json"
@@ -30,8 +34,6 @@ STATE_PATH = WATCH_DIR / "state.json"
 REPORT_PATH = WATCH_DIR / "last-report.md"
 DATA_JS = ROOT / "data.js"
 
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-WATCH_MODEL = "anthropic/claude-fable-5.1"
 USER_AGENT = "agentic-ai-safety-watch/0.1 (+https://github.com/tfrere/agentic-ai-safety-timeline)"
 MAX_FEED_ITEMS = 40
 MAX_ITEM_AGE_DAYS = 10
@@ -51,27 +53,6 @@ ARXIV_HINTS = (
 )
 
 ALLOWED_TRACKS = {"openai-hf", "anthropic-irregular", "aisi"}
-
-SYSTEM = """You are the maintainer of a curated agentic AI safety timeline. You may add events that pass the bar. You write them yourself; a human will not re-type them.
-
-SELECTION BAR. Add an event only if it is at least one of:
-- first-party incident report (lab, evaluator, or the org that was hit)
-- named, attributable departure
-- official lab or institutional statement
-- legislation that was introduced
-- peer-review or arXiv paper that changes the mental model (not another jailbreak)
-- independent evaluation (METR, AISI, Apollo, Redwood, CAISI, Frontier Security)
-
-REJECT: anonymous rumor, unsourced "sources say", sensational takes with no substance, recycled press of an already-listed event, advocacy blogs without a new fact, routine papers that do not move the model.
-
-Prefer the primary URL (lab post, arXiv abs, bill page) over a recap. Do not invent URLs. iso is the event date, not today.
-
-desc: 1-3 factual sentences in the same voice as existing entries (specific, no hype).
-track: only if it clearly belongs to openai-hf, anthropic-irregular, or aisi; otherwise omit.
-
-Return JSON only:
-{"candidates":[{"iso":"YYYY-MM-DD","tag":"INCIDENT|DEPARTURE|LAB|POLICY|EVAL|RESEARCH","title":"...","desc":"...","why":"why it passes the bar","source":"https://...","sourceLabel":"...","track":"openai-hf|anthropic-irregular|aisi"}]}
-If nothing qualifies: {"candidates":[]}"""
 
 
 def utc_now() -> datetime:
@@ -279,55 +260,6 @@ def open_issue_urls(repo: str, token: str) -> set[str]:
     return urls
 
 
-def parse_llm_json(text: str) -> dict:
-    text = text.strip()
-    text = re.sub(r"^```(?:json)?\s*", "", text)
-    text = re.sub(r"\s*```$", "", text)
-    start = text.find("{")
-    end = text.rfind("}")
-    if start < 0 or end < 0:
-        raise ValueError("no JSON object in model output")
-    return json.loads(text[start : end + 1])
-
-
-def call_openrouter(api_key: str, model: str, user: str) -> tuple[dict, dict]:
-    payload = {
-        "model": model,
-        "plugins": [{"id": "web", "max_results": 8}],
-        "reasoning": {"effort": "high"},
-        "temperature": 0.1,
-        "max_tokens": 12000,
-        "response_format": {"type": "json_object"},
-        "messages": [
-            {"role": "system", "content": SYSTEM},
-            {"role": "user", "content": user},
-        ],
-    }
-    req = urllib.request.Request(
-        OPENROUTER_URL,
-        data=json.dumps(payload).encode("utf-8"),
-        method="POST",
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/tfrere/agentic-ai-safety-timeline",
-            "X-Title": "agentic-ai-safety-watch",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=240) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-    msg = data["choices"][0]["message"]
-    content = msg.get("content") or ""
-    if isinstance(content, list):
-        content = "".join(
-            part.get("text", "") if isinstance(part, dict) else str(part) for part in content
-        )
-    if not str(content).strip():
-        content = msg.get("reasoning") or ""
-    parsed = parse_llm_json(str(content))
-    return parsed, data.get("usage") or {}
-
-
 def build_prompt(events: list[dict], feed_items: list[dict], page_notes: list[str], today: str) -> str:
     known = "\n".join(f"- {e['iso']} [{e['tag']}] {e['title']}" for e in events)
     feeds = "\n".join(
@@ -341,8 +273,9 @@ def build_prompt(events: list[dict], feed_items: list[dict], page_notes: list[st
         f"ALREADY ON THE TIMELINE:\n{known}\n\n"
         f"RECENT FEED ITEMS:\n{feeds}\n\n"
         f"FIRST-PARTY PAGES (hash changed since last run, excerpt):\n{pages}\n\n"
-        "Search the web as well, especially OpenAI Alignment reports, Anthropic research, "
-        "METR, UK AISI, Apollo, Hugging Face security posts, and new arXiv on agents/containment. "
+        "Use web_search and fetch_page. Fetch every source before adding it. "
+        "Focus on OpenAI Alignment reports, Anthropic research, METR, UK AISI, Apollo, "
+        "Hugging Face security posts, parliamentary/lab statements, and arXiv on agents/containment. "
         "Return only events that pass the selection bar and are not already listed. "
         "Those events will be written to the public timeline automatically."
     )
@@ -374,7 +307,7 @@ def validate_candidates(raw: dict, events: list[dict]) -> list[dict]:
             "desc": desc[:800],
             "why": str(item.get("why") or "").strip()[:400],
             "source": source,
-            "sourceLabel": str(item.get("sourceLabel") or "").strip()[:80] or source.split("/")[2],
+            "sourceLabel": str(item.get("sourceLabel") or item.get("source_label") or "").strip()[:80] or source.split("/")[2],
         }
         if track in ALLOWED_TRACKS:
             event["track"] = track
@@ -514,6 +447,8 @@ def write_report(report: dict) -> None:
         f"- applied: {len(report['candidates'])}",
         f"- issue: {report.get('issue_url') or 'none'}",
     ]
+    if report.get("tool_log"):
+        lines.append("- tools: " + "; ".join(report["tool_log"]))
     if report.get("usage"):
         lines.append(f"- tokens: {json.dumps(report['usage'])}")
     if report.get("errors"):
@@ -603,12 +538,14 @@ def main() -> int:
     prompt = build_prompt(events, feed_items, page_notes, today)
     candidates: list[dict] = []
     usage: dict = {}
+    tool_log: list[str] = []
     try:
-        parsed, usage = call_openrouter(api_key, model, prompt)
-        candidates = validate_candidates(parsed, events)
+        output, usage, tool_log = asyncio.run(run_watch_agent(api_key, model, prompt))
+        dumped = [c.model_dump(by_alias=True) for c in output.candidates]
+        candidates = validate_candidates({"candidates": dumped}, events)
         candidates = keep_reachable(candidates, errors)
     except Exception as exc:  # noqa: BLE001 - surface in the report, do not crash the commit
-        errors.append(f"openrouter: {exc}")
+        errors.append(f"agent: {exc}")
 
     applied: list[dict] = []
     if candidates and not args.dry_run:
@@ -625,7 +562,7 @@ def main() -> int:
         lines = [
             f"Watch applied {len(applied)} event(s) on {today}.",
             "",
-            "Written to `data.js` and `TIMELINE.md` by Claude Fable 5.1. Revert the commit if one is wrong.",
+            "Written to `data.js` and `TIMELINE.md` by a Pydantic AI agent (Claude Fable 5.1, thinking high). Revert the commit if one is wrong.",
             "",
         ]
         for c in applied:
@@ -667,6 +604,7 @@ def main() -> int:
         "candidates": applied if not args.dry_run else candidates,
         "issue_url": issue_url,
         "usage": usage,
+        "tool_log": tool_log,
         "errors": errors,
     }
     write_report(report)

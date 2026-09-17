@@ -16,13 +16,16 @@ permissions:
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: astral-sh/setup-uv@v5
         with:
-          python-version: "3.12"
+          enable-cache: true
+
+      - name: Install
+        run: uv sync --frozen
 
       - name: Scan and apply
         env:
@@ -30,7 +33,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           WATCH_MODEL: anthropic/claude-fable-5.1
-        run: python watch/run.py
+        run: uv run python watch/run.py
 
       - name: Commit timeline
         run: |
