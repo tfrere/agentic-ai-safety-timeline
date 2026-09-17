@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Daily agentic-AI-safety watch: fetch feeds, one OpenRouter web search, open an issue.
+"""Daily agentic-AI-safety watch.
 
-Never edits data.js. Candidates are proposals for a human to add to the timeline.
+Fable (OpenRouter, reasoning on) scans feeds, searches the web, and writes passing
+events into data.js / TIMELINE.md. A human can revert the commit; the bar still
+filters rumor and recycled press.
 """
 
 from __future__ import annotations
@@ -48,9 +50,11 @@ ARXIV_HINTS = (
     "alignment",
 )
 
-SYSTEM = """You research new events for a curated agentic AI safety timeline.
+ALLOWED_TRACKS = {"openai-hf", "anthropic-irregular", "aisi"}
 
-SELECTION BAR. A candidate must be at least one of:
+SYSTEM = """You are the maintainer of a curated agentic AI safety timeline. You may add events that pass the bar. You write them yourself; a human will not re-type them.
+
+SELECTION BAR. Add an event only if it is at least one of:
 - first-party incident report (lab, evaluator, or the org that was hit)
 - named, attributable departure
 - official lab or institutional statement
@@ -58,14 +62,16 @@ SELECTION BAR. A candidate must be at least one of:
 - peer-review or arXiv paper that changes the mental model (not another jailbreak)
 - independent evaluation (METR, AISI, Apollo, Redwood, CAISI, Frontier Security)
 
-REJECT: anonymous rumor, unsourced "sources say", sensational takes with no substance, recycled press of an already-listed event, advocacy blogs without a new fact.
+REJECT: anonymous rumor, unsourced "sources say", sensational takes with no substance, recycled press of an already-listed event, advocacy blogs without a new fact, routine papers that do not move the model.
 
-Prefer the primary URL (lab post, arXiv abs, bill page) over a recap.
+Prefer the primary URL (lab post, arXiv abs, bill page) over a recap. Do not invent URLs. iso is the event date, not today.
+
+desc: 1-3 factual sentences in the same voice as existing entries (specific, no hype).
+track: only if it clearly belongs to openai-hf, anthropic-irregular, or aisi; otherwise omit.
 
 Return JSON only:
-{"candidates":[{"iso":"YYYY-MM-DD","tag":"INCIDENT|DEPARTURE|LAB|POLICY|EVAL|RESEARCH","title":"...","why":"one sentence, grounded in the source","source":"https://...","sourceLabel":"..."}]}
-If nothing qualifies: {"candidates":[]}
-Do not invent URLs. iso is the event date, not today."""
+{"candidates":[{"iso":"YYYY-MM-DD","tag":"INCIDENT|DEPARTURE|LAB|POLICY|EVAL|RESEARCH","title":"...","desc":"...","why":"why it passes the bar","source":"https://...","sourceLabel":"...","track":"openai-hf|anthropic-irregular|aisi"}]}
+If nothing qualifies: {"candidates":[]}"""
 
 
 def utc_now() -> datetime:
@@ -287,9 +293,10 @@ def parse_llm_json(text: str) -> dict:
 def call_openrouter(api_key: str, model: str, user: str) -> tuple[dict, dict]:
     payload = {
         "model": model,
-        "plugins": [{"id": "web", "max_results": 6}],
+        "plugins": [{"id": "web", "max_results": 8}],
+        "reasoning": {"effort": "high"},
         "temperature": 0.1,
-        "max_tokens": 1800,
+        "max_tokens": 12000,
         "response_format": {"type": "json_object"},
         "messages": [
             {"role": "system", "content": SYSTEM},
@@ -307,10 +314,17 @@ def call_openrouter(api_key: str, model: str, user: str) -> tuple[dict, dict]:
             "X-Title": "agentic-ai-safety-watch",
         },
     )
-    with urllib.request.urlopen(req, timeout=180) as resp:
+    with urllib.request.urlopen(req, timeout=240) as resp:
         data = json.loads(resp.read().decode("utf-8"))
-    msg = data["choices"][0]["message"]["content"]
-    parsed = parse_llm_json(msg)
+    msg = data["choices"][0]["message"]
+    content = msg.get("content") or ""
+    if isinstance(content, list):
+        content = "".join(
+            part.get("text", "") if isinstance(part, dict) else str(part) for part in content
+        )
+    if not str(content).strip():
+        content = msg.get("reasoning") or ""
+    parsed = parse_llm_json(str(content))
     return parsed, data.get("usage") or {}
 
 
@@ -329,11 +343,12 @@ def build_prompt(events: list[dict], feed_items: list[dict], page_notes: list[st
         f"FIRST-PARTY PAGES (hash changed since last run, excerpt):\n{pages}\n\n"
         "Search the web as well, especially OpenAI Alignment reports, Anthropic research, "
         "METR, UK AISI, Apollo, Hugging Face security posts, and new arXiv on agents/containment. "
-        "Only return candidates that pass the selection bar and are not already listed."
+        "Return only events that pass the selection bar and are not already listed. "
+        "Those events will be written to the public timeline automatically."
     )
 
 
-def validate_candidates(raw: dict, events: list[dict], proposed: list[dict]) -> list[dict]:
+def validate_candidates(raw: dict, events: list[dict]) -> list[dict]:
     out = []
     for item in raw.get("candidates") or []:
         if not isinstance(item, dict):
@@ -342,23 +357,149 @@ def validate_candidates(raw: dict, events: list[dict], proposed: list[dict]) -> 
         title = str(item.get("title") or "").strip()
         source = str(item.get("source") or "").strip()
         iso = str(item.get("iso") or "").strip()
+        desc = str(item.get("desc") or item.get("why") or "").strip()
         if tag not in ALLOWED_TAGS or not title or not source.startswith("http"):
             continue
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", iso):
             continue
-        if already_known(source, title, events, proposed):
+        if len(desc) < 40:
             continue
-        out.append(
-            {
-                "iso": iso,
-                "tag": tag,
-                "title": title[:180],
-                "why": str(item.get("why") or "").strip()[:400],
-                "source": source,
-                "sourceLabel": str(item.get("sourceLabel") or "").strip()[:80],
-            }
-        )
+        if already_known(source, title, events, []):
+            continue
+        track = str(item.get("track") or "").strip()
+        event = {
+            "iso": iso,
+            "tag": tag,
+            "title": title[:180],
+            "desc": desc[:800],
+            "why": str(item.get("why") or "").strip()[:400],
+            "source": source,
+            "sourceLabel": str(item.get("sourceLabel") or "").strip()[:80] or source.split("/")[2],
+        }
+        if track in ALLOWED_TRACKS:
+            event["track"] = track
+        out.append(event)
     return out
+
+
+def display_date(iso: str) -> str:
+    dt = datetime.strptime(iso, "%Y-%m-%d")
+    return dt.strftime("%b ") + str(dt.day) + dt.strftime(", %Y")
+
+
+def js_escape_event(ev: dict) -> str:
+    extra = f', track: {json.dumps(ev["track"])}' if ev.get("track") else ""
+    return "\n".join(
+        [
+            "  {",
+            f'    iso: {json.dumps(ev["iso"])}, date: {json.dumps(display_date(ev["iso"]))}, tag: {json.dumps(ev["tag"])}{extra},',
+            f'    title: {json.dumps(ev["title"], ensure_ascii=False)},',
+            f'    desc: {json.dumps(ev["desc"], ensure_ascii=False)},',
+            f'    source: {json.dumps(ev["source"])}, sourceLabel: {json.dumps(ev["sourceLabel"], ensure_ascii=False)}',
+            "  }",
+        ]
+    )
+
+
+def split_js_objects(array_body: str) -> list[str]:
+    objs: list[str] = []
+    depth = 0
+    start = None
+    for i, ch in enumerate(array_body):
+        if ch == "{":
+            if depth == 0:
+                start = i
+            depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0 and start is not None:
+                objs.append("  " + array_body[start : i + 1].strip())
+                start = None
+    return objs
+
+
+def apply_to_data_js(events: list[dict]) -> None:
+    text = DATA_JS.read_text(encoding="utf-8")
+    match = re.search(r"window\.TIMELINE_EVENTS = \[", text)
+    end = text.rfind("];")
+    if not match or end < 0:
+        raise RuntimeError("could not find TIMELINE_EVENTS array in data.js")
+    body = text[match.end() : end]
+    blocks = split_js_objects(body)
+    keyed: list[tuple[str, str]] = []
+    for block in blocks:
+        iso_m = re.search(r'iso:\s*"(\d{4}-\d{2}-\d{2})"', block)
+        keyed.append((iso_m.group(1) if iso_m else "9999-99-99", block))
+    for ev in events:
+        keyed.append((ev["iso"], js_escape_event(ev)))
+    keyed.sort(key=lambda pair: pair[0])
+    new_body = "\n" + ",\n".join(block for _, block in keyed) + "\n"
+    DATA_JS.write_text(text[: match.end()] + new_body + text[end:], encoding="utf-8")
+
+
+def month_heading(iso: str) -> str:
+    dt = datetime.strptime(iso, "%Y-%m-%d")
+    return f"### {dt.strftime('%B')} {dt.year}"
+
+
+def timeline_bullet(ev: dict) -> str:
+    label = ev.get("sourceLabel") or ev["source"]
+    return (
+        f"- **{ev['iso']}** `{ev['tag']}` - **{ev['title']}.** {ev['desc']} "
+        f"[{label}]({ev['source']})\n"
+    )
+
+
+DEEP_DIVE = "\n---\n\n## Deep dive: the three unsanctioned-internet incidents"
+SOURCES_CLOSE = re.compile(r"\n\]\n```\s*\n---\s*\n## Sources")
+
+
+def apply_to_timeline_md(events: list[dict], today: str) -> None:
+    path = ROOT / "TIMELINE.md"
+    md = path.read_text(encoding="utf-8")
+    md = re.sub(
+        r"(\*\*Last updated:\*\* )\d{4}-\d{2}-\d{2}",
+        rf"\g<1>{today}",
+        md,
+        count=1,
+    )
+    for ev in events:
+        bullet = timeline_bullet(ev)
+        if ev["source"] in md and ev["title"] in md:
+            continue
+        heading = month_heading(ev["iso"])
+        if heading not in md:
+            md = md.replace(DEEP_DIVE, f"\n{heading}\n\n{bullet}\n{DEEP_DIVE}", 1)
+        else:
+            md = md.replace(DEEP_DIVE, f"\n{bullet}\n{DEEP_DIVE}", 1)
+        item = {
+            "date": ev["iso"],
+            "tag": ev["tag"],
+            "title": ev["title"],
+            "source": ev["source"],
+        }
+        if ev.get("track"):
+            item["track"] = ev["track"]
+        insertion = ",\n  " + json.dumps(item, ensure_ascii=False)
+        md, n = SOURCES_CLOSE.subn(lambda m, line=insertion: line + m.group(0), md, count=1)
+        if n != 1:
+            raise RuntimeError("could not insert into TIMELINE.md machine-readable array")
+    path.write_text(md, encoding="utf-8")
+
+
+def source_reachable(url: str) -> bool:
+    code, _ = http_get(url, timeout=20)
+    return code in {200, 203, 301, 302, 303, 401, 403}
+
+
+def keep_reachable(candidates: list[dict], errors: list[str]) -> list[dict]:
+    kept = []
+    for ev in candidates:
+        if source_reachable(ev["source"]):
+            kept.append(ev)
+        else:
+            errors.append(f"unreachable source skipped: {ev['source']}")
+    return kept
 
 
 def write_report(report: dict) -> None:
@@ -370,7 +511,7 @@ def write_report(report: dict) -> None:
         f"- feed items kept: {report['feed_items']}",
         f"- pages changed: {report['pages_changed']}",
         f"- model: `{report['model']}`",
-        f"- candidates: {len(report['candidates'])}",
+        f"- applied: {len(report['candidates'])}",
         f"- issue: {report.get('issue_url') or 'none'}",
     ]
     if report.get("usage"):
@@ -381,7 +522,7 @@ def write_report(report: dict) -> None:
         lines.extend(f"- {e}" for e in report["errors"])
     if report["candidates"]:
         lines.append("")
-        lines.append("## Candidates")
+        lines.append("## Applied")
         for c in report["candidates"]:
             lines.append(f"- **{c['iso']} [{c['tag']}]** {c['title']} - {c['source']}")
             if c.get("why"):
@@ -391,7 +532,7 @@ def write_report(report: dict) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Daily agentic AI safety watch")
-    parser.add_argument("--dry-run", action="store_true", help="Do not open a GitHub issue")
+    parser.add_argument("--dry-run", action="store_true", help="Do not write data.js or open an issue")
     args = parser.parse_args()
 
     api_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
@@ -464,50 +605,54 @@ def main() -> int:
     usage: dict = {}
     try:
         parsed, usage = call_openrouter(api_key, model, prompt)
-        candidates = validate_candidates(parsed, events, state.get("proposed") or [])
+        candidates = validate_candidates(parsed, events)
+        candidates = keep_reachable(candidates, errors)
     except Exception as exc:  # noqa: BLE001 - surface in the report, do not crash the commit
         errors.append(f"openrouter: {exc}")
 
+    applied: list[dict] = []
+    if candidates and not args.dry_run:
+        try:
+            apply_to_data_js(candidates)
+            apply_to_timeline_md(candidates, today)
+            applied = candidates
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"apply: {exc}")
+
     issue_url = None
-    if candidates and repo and token and not args.dry_run:
+    if applied and repo and token and not args.dry_run:
         ensure_label(repo, token)
-        existing = open_issue_urls(repo, token)
-        fresh = [c for c in candidates if c["source"].rstrip("/").lower() not in existing]
-        if fresh:
-            lines = [
-                f"Daily watch found {len(fresh)} candidate(s) on {today}.",
-                "",
-                "These are **proposals**. Do not merge into `data.js` without a primary source.",
-                "",
-            ]
-            for c in fresh:
-                label = c.get("sourceLabel") or c["source"]
-                lines.append(f"### {c['iso']} [{c['tag']}] {c['title']}")
-                lines.append(f"- source: [{label}]({c['source']})")
-                if c.get("why"):
-                    lines.append(f"- why: {c['why']}")
-                lines.append("")
-            code, created = github_api(
-                "POST",
-                f"/repos/{repo}/issues",
-                token,
-                {
-                    "title": f"watch: {len(fresh)} candidate(s) on {today}",
-                    "body": "\n".join(lines),
-                    "labels": ["watch"],
-                },
-            )
-            if code in {200, 201} and isinstance(created, dict):
-                issue_url = created.get("html_url")
-            else:
-                errors.append(f"github issue: HTTP {code} {created}")
-            candidates = fresh
+        lines = [
+            f"Watch applied {len(applied)} event(s) on {today}.",
+            "",
+            "Written to `data.js` and `TIMELINE.md` by Claude Fable 5.1. Revert the commit if one is wrong.",
+            "",
+        ]
+        for c in applied:
+            label = c.get("sourceLabel") or c["source"]
+            lines.append(f"### {c['iso']} [{c['tag']}] {c['title']}")
+            lines.append(f"- source: [{label}]({c['source']})")
+            if c.get("why"):
+                lines.append(f"- why: {c['why']}")
+            lines.append("")
+        code, created = github_api(
+            "POST",
+            f"/repos/{repo}/issues",
+            token,
+            {
+                "title": f"watch: added {len(applied)} event(s) on {today}",
+                "body": "\n".join(lines),
+                "labels": ["watch"],
+            },
+        )
+        if code in {200, 201} and isinstance(created, dict):
+            issue_url = created.get("html_url")
         else:
-            candidates = []
+            errors.append(f"github issue: HTTP {code} {created}")
 
     proposed = list(state.get("proposed") or [])
-    for c in candidates:
-        proposed.append({"url": c["source"], "title": c["title"], "iso": c["iso"], "seen": today})
+    for c in applied:
+        proposed.append({"url": c["source"], "title": c["title"], "iso": c["iso"], "seen": today, "applied": True})
     proposed = proposed[-200:]
 
     report = {
@@ -519,7 +664,7 @@ def main() -> int:
         "feed_items": len(feed_items),
         "pages_changed": pages_changed,
         "model": model,
-        "candidates": candidates,
+        "candidates": applied if not args.dry_run else candidates,
         "issue_url": issue_url,
         "usage": usage,
         "errors": errors,
