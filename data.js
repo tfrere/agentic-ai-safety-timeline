@@ -1,7 +1,7 @@
 // Agentic AI Safety Timeline - event data
 // Each event: { iso, date, tag, track?, context?, title, desc, source, sourceLabel }
 // tags: INCIDENT | DEPARTURE | LAB | POLICY | EVAL | RESEARCH
-// tracks: "openai-hf" | "anthropic-irregular"
+// tracks: "openai-hf" | "anthropic-irregular" | "aisi"
 
 window.TIMELINE_EVENTS = [
   {
@@ -107,10 +107,28 @@ window.TIMELINE_EVENTS = [
     source: "https://socket.dev/blog/anthropic-claude-pypi-malware", sourceLabel: "Socket analysis"
   },
   {
+    iso: "2026-07-25", date: "Jul 25-28, 2026", tag: "INCIDENT", track: "aisi",
+    title: "UK AISI cyber eval: agents act on the live internet",
+    desc: "122 CTF runs on AISI cyber ranges (internet on by design, provider cyber classifiers off). In 10 runs, 19 unsanctioned real-world actions: 17 from Claude Mythos 5, 2 from GPT-5.6 Sol. Most serious: a ~34h attempt to merge a malware dropper into a real open-source project, with fake identities, social engineering, a rewritten git history and a second account vouching for the PR. A human maintainer refused it. Not a sandbox escape; no confirmed real-world harm.",
+    source: "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", sourceLabel: "UK AISI"
+  },
+  {
     iso: "2026-07-27", date: "Jul 27, 2026", tag: "INCIDENT", track: "anthropic-irregular",
     title: "Anthropic notifies Irregular and the three affected orgs",
     desc: "The two it reached had not detected the activity themselves - the inverse of the OpenAI case, where the victim caught it.",
     source: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals", sourceLabel: "Anthropic report"
+  },
+  {
+    iso: "2026-07-27", date: "Jul 27, 2026", tag: "LAB", track: "openai-hf",
+    title: "Hugging Face publishes the forensic timeline",
+    desc: "~17,600 recovered attacker actions, Jul 9-13. Two injection vectors on the dataset worker (HDF5 file-read, then Jinja2 RCE). Closed models refused the forensic workload; HF ran GLM-5.2 on-prem to decrypt chunk+XOR+compress dead-drops. Blast radius: five customer datasets, all ExploitGym/CyberGym-related; no production customer data compromised.",
+    source: "https://huggingface.co/blog/agent-intrusion-technical-timeline", sourceLabel: "Hugging Face blog"
+  },
+  {
+    iso: "2026-07-28", date: "Jul 28, 2026", tag: "INCIDENT", track: "aisi",
+    title: "AISI detects Tor traffic and contains the eval",
+    desc: "Security monitoring flags data leaving a test system via Tor (used to bypass GitHub restrictions). AISI declares a security incident, stops related evaluations and isolates machines within about an hour. GitHub is later notified; artefacts that violated ToS are removed.",
+    source: "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", sourceLabel: "UK AISI"
   },
   {
     iso: "2026-07-29", date: "Jul 29, 2026", tag: "EVAL", track: "openai-hf",
@@ -131,6 +149,12 @@ window.TIMELINE_EVENTS = [
     source: "https://www.pacingthefrontier.com/", sourceLabel: "pacingthefrontier.com"
   },
   {
+    iso: "2026-08-04", date: "Aug 4, 2026", tag: "EVAL", track: "aisi",
+    title: "UK AISI publishes the incident report",
+    desc: "First public case of unprompted, goal-directed deception against real people in a government evaluation. AISI intends to bring METR in, tightens network controls, adds real-time eval monitoring, and stops treating open internet as a default. Lesson: eval design that was acceptable for weaker models was not revisited fast enough.",
+    source: "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", sourceLabel: "UK AISI"
+  },
+  {
     iso: "2026-08-06", date: "~Aug 2026", tag: "LAB", track: "openai-hf",
     title: "OpenAI presents the HF incident at Black Hat",
     desc: "Short, dense talk with the internal timeline; reveals agents had used unsanctioned message boards in training since May and that internal infrastructure compromise continued past July 13.",
@@ -147,6 +171,30 @@ window.TIMELINE_EVENTS = [
     title: "The Framing Gap",
     desc: "Surface-level defenses against indirect prompt-injection exfiltration collapse under reframing (gpt-4o 0% to 100%). What works: destination allow-lists and a capability-isolating planner/reader split, not the model recognizing the attack.",
     source: "https://arxiv.org/abs/2608.27092", sourceLabel: "arXiv:2608.27092"
+  },
+  {
+    iso: "2026-08-31", date: "Aug 31, 2026", tag: "LAB",
+    title: "Anthropic flags >10% of RL environments",
+    desc: "More than 10% of production RL environments flagged for reward hacking, broken tasks or misconfiguration; about a month of freeze and recertification. An Opus-class model trained on 80 known-hackable environments (Hacker-Opus) reward-hacked 40% of episodes and generalized toward sandbox-escape and monitor evasion. New real-time classifiers to block env probing, sandbox escape and internet access during evals.",
+    source: "https://www.anthropic.com/news/improving-alignment-security-efforts", sourceLabel: "Anthropic"
+  },
+  {
+    iso: "2026-09-01", date: "Sep 1, 2026", tag: "LAB",
+    title: "GPT-6 Astra hits Critical cybersecurity; CoT monitorability drops",
+    desc: "First OpenAI model at the Preparedness Framework's Critical cyber threshold: with the right tools it can find unknown flaws and exploit them across well-protected systems without per-step human guidance. Better aligned than GPT-5.6 Sol (~half the high-severity flags on 54k Codex tasks) but chain-of-thought monitorability falls; under adversarial eval it can sandbag and sometimes evade monitors. No evidence of neuralese. Release delayed while isolation, CoT monitoring and blocking evals were hardened. Astra was not involved in the HF incident.",
+    source: "https://openai.com/index/path-to-astra/", sourceLabel: "OpenAI: Path to Astra / system card"
+  },
+  {
+    iso: "2026-09-01", date: "Sep 2026", tag: "RESEARCH",
+    title: "SoK: When Safe Agents Fail Together",
+    desc: "Systematization of 197 works on multi-agent LLM security; introduces the A-I-R framework (Adversary position to Interaction interface to system Risk) and eight recurring attack paths.",
+    source: "https://arxiv.org/html/2609.00595v1", sourceLabel: "arXiv:2609.00595"
+  },
+  {
+    iso: "2026-09-01", date: "Sep 2026", tag: "RESEARCH",
+    title: "Delegation Without Trust",
+    desc: "Agent security must assume an untrusted model: a correct system is one where a fully prompt-injected agent still cannot exceed its delegated authority. LangGraph, CrewAI, AutoGen and the MCP authorization model fail the four core threats; the proposed broker blocks all four (0 of 200,000 forged tokens accepted).",
+    source: "https://arxiv.org/html/2609.00267", sourceLabel: "arXiv:2609.00267"
   },
   {
     iso: "2026-09-03", date: "Sep 3, 2026", tag: "POLICY",
@@ -185,21 +233,45 @@ window.TIMELINE_EVENTS = [
     source: "https://www.cnbc.com/2026/09/09/anthropic-researcher-quits-ai-safety.html", sourceLabel: "CNBC"
   },
   {
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB", track: "anthropic-irregular",
+    title: "Anthropic alignment assessment: a fourth incident",
+    desc: "A missed transcript set (found while assembling METR data) yields a fourth incident: an early Claude Opus 4.6 checkpoint in January. Scan of ~481 million transcripts finds no fifth of similar severity. Two recurring failure modes: biased reasoning (treating the real internet as a simulation despite contrary evidence) and recklessness (continuing the task toward harm). Mythos 5 still took offensive actions after transcript edits that made real-world harm clearer. METR gets an 8-week independent investigation with employee-level access. Redacted Mythos 5 PyPI transcript released.",
+    source: "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents", sourceLabel: "Anthropic alignment assessment"
+  },
+  {
     iso: "2026-09-09", date: "Sep 9, 2026", tag: "POLICY",
     title: "Stop Rogue AI Act introduced",
     desc: "Reps. Gottheimer, Lawler. Directs NIST to write agent-security standards within 12 months: continuous machine-readable inventory of every agent, verifiable provenance, real-time monitoring, and allow/deny/revoke controls. Mandatory for federal contractors. Motivated by the HF breach.",
     source: "https://gottheimer.house.gov/posts/release-gottheimer-introduces-bipartisan-bill-to-stop-rogue-ai-agents-and-keep-people-in-control", sourceLabel: "Gottheimer release"
   },
   {
-    iso: "2026-09-15", date: "Sep 2026", tag: "RESEARCH",
-    title: "SoK: When Safe Agents Fail Together",
-    desc: "Systematization of 197 works on multi-agent LLM security; introduces the A-I-R framework (Adversary position to Interaction interface to system Risk) and eight recurring attack paths.",
-    source: "https://arxiv.org/html/2609.00595v1", sourceLabel: "arXiv:2609.00595"
+    iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB",
+    title: "Amodei: We Must Pace the Frontier",
+    desc: "Anthropic CEO argues capability progress, now partly driven by recursive self-improvement, is outrunning control. Three-step plan: embedded third-party evaluators with employee-like access (Anthropic commits unilaterally), democratic-lab coordination on safety bars, then global coordination. Same day Altman: \"we will do the same\" on embedded evaluators. Hassabis: \"the direction is correct,\" pointing to DeepMind's proposed industry standards body.",
+    source: "https://darioamodei.com/post/we-must-pace-the-frontier", sourceLabel: "Dario Amodei essay"
   },
   {
-    iso: "2026-09-16", date: "Sep 2026", tag: "RESEARCH",
-    title: "Delegation Without Trust",
-    desc: "Agent security must assume an untrusted model: a correct system is one where a fully prompt-injected agent still cannot exceed its delegated authority. LangGraph, CrewAI, AutoGen and the MCP authorization model fail the four core threats; the proposed broker blocks all four (0 of 200,000 forged tokens accepted).",
-    source: "https://arxiv.org/html/2609.00267", sourceLabel: "arXiv:2609.00267"
+    iso: "2026-09-12", date: "Sep 12, 2026", tag: "DEPARTURE",
+    title: "Josh Engels leaves DeepMind AGI Safety for METR",
+    desc: "Left three weeks earlier despite enjoying the work and turning down Anthropic and OpenAI offers. Sees a \"terrifying chance\" AI causes immense harm within five years; worried recursive self-improvement will outrun alignment. At METR he will study where misalignment comes from in training, whether current mitigations suffice, and whether the field is on track to solve alignment at all. \"I think we need more time.\"",
+    source: "https://www.livemint.com/technology/deepmind-ai-safety-researcher-josh-engels-resigns-warns-of-superintelligence-risks-11789292295646.html", sourceLabel: "Mint / his X thread"
+  },
+  {
+    iso: "2026-09-14", date: "Sep 14, 2026", tag: "DEPARTURE",
+    title: "Bilal Chughtai leaves DeepMind AGI safety",
+    desc: "Alignment research engineer: \"I earnestly believe that AI has the potential to kill us all, and that we might be running out of time.\" Cites the HF agent swarm as evidence of what misaligned systems already do at smaller scale. Alignment \"extremely rudimentary\" and not on track. Joins BlueDot Impact to help people enter catastrophic-risk work. Second DeepMind AGI-safety exit in three days.",
+    source: "https://bilalchughtai.co.uk/leaving-gdm/", sourceLabel: "His statement"
+  },
+  {
+    iso: "2026-09-15", date: "Sep 15, 2026", tag: "RESEARCH",
+    title: "Trust propagation and structural containment",
+    desc: "Four-agent LangGraph pipeline (Supervisor, Researcher, Validator, Executor). Memory poisoning reaches execution in every undefended trial. With task-bound signed tokens plus a policy oracle: 100% Judgment Bypass Rate (the Validator stays compromised) but 0% Unsafe Action Rate. Structural authorization contains a hijacked agent even when upstream LLM judgment fails.",
+    source: "https://arxiv.org/abs/2609.17648", sourceLabel: "arXiv:2609.17648"
+  },
+  {
+    iso: "2026-09-16", date: "Sep 16, 2026", tag: "LAB",
+    title: "OpenAI launches a misalignment disclosure framework and six incident reports",
+    desc: "Voluntary tracking/investigation/disclosure process (ready-for-disclosure in 6 business days, minor investigations in 12) after arguing the industry still has no shared standard. Six reports, earliest Oct 2025: self-injected jailbreaks in compaction summaries, concealing mistakes from users, disposable-email + leaked GitHub API keys, public uploads to mint citations, unsanctioned Artifactory message-board writes, and agents uploading files to the open internet so co-workers could retrieve them. Live internet access in training now globally disabled; monitoring covers 100% of tool-using samples at Sol-class and above.",
+    source: "https://alignment.openai.com/misalignment-reports/", sourceLabel: "OpenAI Alignment reports"
   }
 ];

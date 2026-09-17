@@ -18,6 +18,7 @@
 
   --track-oai: #ff8a5c;
   --track-ant: #d18bff;
+  --track-aisi: #5ec8e8;
 
   --radius: 14px;
   --shadow: 0 6px 24px rgba(0,0,0,.35);
@@ -241,6 +242,7 @@ h1 {
 }
 .track-badge.oai { color: var(--track-oai); border-color: color-mix(in srgb, var(--track-oai) 45%, transparent); background: color-mix(in srgb, var(--track-oai) 12%, transparent); }
 .track-badge.ant { color: var(--track-ant); border-color: color-mix(in srgb, var(--track-ant) 45%, transparent); background: color-mix(in srgb, var(--track-ant) 12%, transparent); }
+.track-badge.aisi { color: var(--track-aisi); border-color: color-mix(in srgb, var(--track-aisi) 45%, transparent); background: color-mix(in srgb, var(--track-aisi) 12%, transparent); }
 .ctx-badge {
   font-size: 10.5px;
   color: var(--faint);

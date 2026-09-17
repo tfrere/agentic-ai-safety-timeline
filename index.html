@@ -22,7 +22,7 @@
       <div class="meta">
         <span><b>Window</b> Feb - Sep 2026 (core: Jun onward)</span>
         <span><b>Events</b> <span id="total-count">0</span></span>
-        <span><b>Updated</b> 2026-09-10</span>
+        <span><b>Updated</b> 2026-09-17</span>
       </div>
     </header>
 
@@ -42,6 +42,7 @@
         <label class="toggle"><input type="checkbox" id="ctx-toggle" checked /> Context anchors</label>
         <label class="toggle"><input type="checkbox" id="oai-toggle" checked /> OpenAI x HF</label>
         <label class="toggle"><input type="checkbox" id="ant-toggle" checked /> Anthropic x Irregular</label>
+        <label class="toggle"><input type="checkbox" id="aisi-toggle" checked /> UK AISI</label>
         <span class="count" id="shown-count"></span>
       </div>
     </section>
@@ -124,6 +125,7 @@
       const ctxToggle = document.getElementById("ctx-toggle");
       const oaiToggle = document.getElementById("oai-toggle");
       const antToggle = document.getElementById("ant-toggle");
+      const aisiToggle = document.getElementById("aisi-toggle");
       const shownCount = document.getElementById("shown-count");
       document.getElementById("total-count").textContent = events.length;
 
@@ -136,6 +138,7 @@
       function trackBadge(track) {
         if (track === "openai-hf") return '<span class="track-badge oai">OpenAI x HF</span>';
         if (track === "anthropic-irregular") return '<span class="track-badge ant">Anthropic x Irregular</span>';
+        if (track === "aisi") return '<span class="track-badge aisi">UK AISI</span>';
         return "";
       }
 
@@ -150,6 +153,7 @@
           if (e.context && !ctxToggle.checked) return;
           if (e.track === "openai-hf" && !oaiToggle.checked) return;
           if (e.track === "anthropic-irregular" && !antToggle.checked) return;
+          if (e.track === "aisi" && !aisiToggle.checked) return;
           if (q) {
             const hay = (e.title + " " + e.desc + " " + (e.sourceLabel || "") + " " + e.tag).toLowerCase();
             if (!hay.includes(q)) return;
@@ -233,6 +237,7 @@
       ctxToggle.addEventListener("change", render);
       oaiToggle.addEventListener("change", render);
       antToggle.addEventListener("change", render);
+      aisiToggle.addEventListener("change", render);
 
       render();
     })();
