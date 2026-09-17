@@ -31,10 +31,11 @@ GitHub copy (Actions live here): https://github.com/tfrere/agentic-ai-safety-tim
 
 ## Daily watch
 
-A GitHub Actions cron (`watch.yml`, 06:12 UTC) fetches first-party RSS/pages, runs one
-OpenRouter call (`anthropic/claude-fable-5.1` + web plugin), and opens a `watch` issue
-if something new passes the timeline selection bar. It never edits `data.js`.
+A GitHub Actions cron (`watch.yml`, 06:12 UTC) fetches first-party RSS/pages, runs
+Claude Fable 5.1 on OpenRouter with reasoning + web search, and **writes passing
+events into `data.js` / `TIMELINE.md`**, then pushes GitHub and the Hugging Face
+Space. Revert the commit if an entry is wrong. The selection bar still applies.
 
 - Sources: `watch/sources.json`
 - Local run: `OPENROUTER_API_KEY=... python watch/run.py --dry-run`
-- Secret: repository `OPENROUTER_API_KEY` (same key as marseille-agenda)
+- Secrets: `OPENROUTER_API_KEY`, `HF_TOKEN`

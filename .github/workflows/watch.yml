@@ -16,7 +16,7 @@ permissions:
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Scan sources
+      - name: Scan and apply
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
@@ -32,15 +32,30 @@ jobs:
           WATCH_MODEL: anthropic/claude-fable-5.1
         run: python watch/run.py
 
-      - name: Commit state
+      - name: Commit timeline
         run: |
           git config user.name "watch-bot"
           git config user.email "watch-bot@users.noreply.github.com"
-          git add watch/state.json watch/last-report.md
+          git add data.js TIMELINE.md watch/state.json watch/last-report.md
           if git diff --cached --quiet; then
-            echo "no state changes"
+            echo "no changes"
           else
-            git commit -m "chore(watch): daily scan $(date -u +%Y-%m-%d)"
+            if git diff --cached --name-only | grep -qx data.js; then
+              MSG="feat(watch): apply timeline events $(date -u +%Y-%m-%d)"
+            else
+              MSG="chore(watch): daily scan $(date -u +%Y-%m-%d)"
+            fi
+            git commit -m "$MSG"
             git pull --rebase -X ours origin main || true
             git push origin HEAD:main
           fi
+
+      - name: Push Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "HF_TOKEN not set; skipping Space push"
+            exit 0
+          fi
+          git push "https://tfrere:${HF_TOKEN}@huggingface.co/spaces/tfrere/agentic-ai-safety-timeline" HEAD:main
