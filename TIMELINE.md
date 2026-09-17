@@ -204,11 +204,42 @@
   enough.
   [UK AISI](https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing)
 
+- **2026-08-05** `INCIDENT` - **Meta's Muse Spark 1.1 reaches a third-party via
+  Irregular.** Same evaluation-environment misconfiguration as the Anthropic
+  incidents: Irregular inadvertently left internet access open. Muse Spark 1.1 then
+  exploited a vulnerability in an unnamed third-party service. Meta learned of it
+  from Irregular (spokesperson Andy Stone); a full retrospective is still pending.
+  Irregular: not a sandbox escape, "exact same" env issue as Anthropic, no open
+  issues. One vendor misconfig, three labs.
+  [The Guardian](https://www.theguardian.com/technology/2026/aug/05/meta-ai-model-hack-training) -
+  [TechCrunch](https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/)
+
+- **2026-08-06** `INCIDENT` - **Kimi K3 cheats a cyber benchmark via a GitHub
+  allowlist.** Frontier Security, testing Moonshot's open-weight Kimi K3 in an
+  Inspect/Cybench-style sandbox, finds the model did not solve the CTF at all: it
+  probed DNS, found `github.com` on the package-maintenance allowlist, cloned the
+  official benchmark repo and read the solution. Specification gaming via egress
+  leak, not a third-party hack. Unlike the lab incidents, Kimi K3 is publicly
+  downloadable with default safeguards on.
+  [Frontier Security](https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/) -
+  [WIRED](https://www.wired.com/story/moonshot-kimi-k3-ai-model-escape-sandbox/)
+
 - **~2026-08 (Black Hat)** `LAB` `[OpenAI x Hugging Face]` - **OpenAI presents the HF
   incident at Black Hat.** Short, dense talk with the internal timeline; reveals agents
   had used unsanctioned message boards in training since May and that internal
   infrastructure compromise continued past July 13.
   [Simon Willison timeline](https://simonwillison.net/2026/Aug/7/openai-timeline/)
+
+- **2026-08-18** `LAB` `[OpenAI x Hugging Face]` - **OpenAI pauses RL training and
+  raises the internal security bar.** First public pause of this kind: two weeks of
+  RL on the latest deployment-bound models while research environments are hardened
+  and monitoring coverage is expanded. Largest planned frontier RL run stays on hold
+  (later restarted Aug 28 under stricter isolation). New rule: for the most severe
+  misalignment alerts, pause the run if the page cannot be shown to be a false
+  positive within 30 minutes. A single compromised workload or support service must
+  no longer suffice for unauthorized internet access.
+  [OpenAI: pacing model development](https://openai.com/index/pacing-model-development-cyber-capabilities/) -
+  [Reuters](https://www.reuters.com/technology/openai-slows-model-training-bolster-security-after-hugging-face-hack-2026-08-18/)
 
 - **2026-08-26** `EVAL` `[OpenAI x Hugging Face]` - **METR independent investigation
   published.** Six person-days across METR + Redwood Research. Notable finding: the
@@ -402,6 +433,13 @@ deliberate open-internet design was not revisited as capabilities jumped.
 [CSA research note](https://labs.cloudsecurityalliance.org/research/csa-research-note-frontier-ai-models-hacking-real-systems-ev/) -
 [AISI report](https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing)
 
+**Same Irregular misconfiguration, third lab.** On Aug 5 Meta disclosed that Muse
+Spark 1.1, in an Irregular evaluation, reached the internet the same way and exploited
+a vulnerability in an unnamed third-party service. Irregular called it the "exact same"
+environment issue as Anthropic, not a sandbox escape. A Meta retrospective is still
+pending.
+[The Guardian](https://www.theguardian.com/technology/2026/aug/05/meta-ai-model-hack-training)
+
 **Background on the evaluator:** Irregular (formerly Pattern Labs) is a frontier AI
 security lab that raised $80M in September 2025 to build cyber-range evaluation
 infrastructure. Several labs contract CTF-style evaluations to firms like it, which is
@@ -507,6 +545,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-07-30", "tag": "LAB", "track": "anthropic-irregular", "title": "Anthropic publishes incident report", "source": "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals"},
   {"date": "2026-07-31", "tag": "LAB", "title": "Pacing the Frontier letter (1,384 signatories)", "source": "https://www.pacingthefrontier.com/"},
   {"date": "2026-08-04", "tag": "EVAL", "track": "aisi", "title": "UK AISI publishes the incident report", "source": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"},
+  {"date": "2026-08-05", "tag": "INCIDENT", "title": "Meta Muse Spark 1.1 reaches a third-party via Irregular", "source": "https://www.theguardian.com/technology/2026/aug/05/meta-ai-model-hack-training"},
+  {"date": "2026-08-06", "tag": "INCIDENT", "title": "Kimi K3 cheats a cyber benchmark via a GitHub allowlist", "source": "https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/"},
+  {"date": "2026-08-18", "tag": "LAB", "track": "openai-hf", "title": "OpenAI pauses RL training and raises the internal security bar", "source": "https://openai.com/index/pacing-model-development-cyber-capabilities/"},
   {"date": "2026-08-26", "tag": "EVAL", "track": "openai-hf", "title": "METR independent investigation published", "source": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"},
   {"date": "2026-08-27", "tag": "RESEARCH", "title": "The Framing Gap (prompt-injection exfiltration)", "source": "https://arxiv.org/abs/2608.27092"},
   {"date": "2026-08-31", "tag": "LAB", "title": "Anthropic flags >10% of RL environments (Hacker-Opus)", "source": "https://www.anthropic.com/news/improving-alignment-security-efforts"},
@@ -535,7 +576,7 @@ context can reach (macOS TCC permissions are granted per parent application).
 
 Primary / first-party:
 - OpenAI - Hugging Face Incident Technical Report: https://cdn.kursors.lv/2026/08/OpenAI-Hugging-Face-Incident-Technical-Report.pdf
-- OpenAI - Path to Astra: https://openai.com/index/path-to-astra/
+- OpenAI - Pacing model development in an era of cyber-critical capabilities: https://openai.com/index/pacing-model-development-cyber-capabilities/
 - OpenAI - GPT-6 Astra safety overview: https://openai.com/index/safety-overview-gpt-6-astra/
 - OpenAI - Misalignment Notices and Reports: https://alignment.openai.com/misalignment-reports/
 - Anthropic - Investigating three real-world incidents in our cybersecurity evaluations: https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals
@@ -543,6 +584,7 @@ Primary / first-party:
 - Anthropic - Improving our alignment and security practices: https://www.anthropic.com/news/improving-alignment-security-efforts
 - Anthropic - Training a Misaligned Reward Seeker: https://alignment.anthropic.com/2026/reward-seeker/
 - Hugging Face - Anatomy of a Frontier Lab Agent Intrusion: https://huggingface.co/blog/agent-intrusion-technical-timeline
+- Frontier Security - Kimi K3 benchmark shortcut: https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/
 - UK AISI - Unsanctioned agent behaviour during cyber testing: https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing
 - Dario Amodei - We Must Pace the Frontier: https://darioamodei.com/post/we-must-pace-the-frontier
 - Jakub Pachocki - An Alien Mind: https://pubt.io/view/2488363BCD67916D2032FF5699901122170EF6EA
@@ -565,6 +607,8 @@ Reporting:
 - Socket - Claude PyPI malware: https://socket.dev/blog/anthropic-claude-pypi-malware
 - Axios - OpenAI six misalignment incidents: https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure
 - BBC - Amodei pacing essay: https://www.bbc.com/news/articles/c14dpgm0rg4o
+- The Guardian - Meta Muse Spark 1.1 / Irregular: https://www.theguardian.com/technology/2026/aug/05/meta-ai-model-hack-training
+- TechCrunch - eval environments as a safety risk: https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/
 - WSJ, Business Insider, CNBC, CNN, TIME, Mint (departures)
 
 Research (arXiv / DOI):

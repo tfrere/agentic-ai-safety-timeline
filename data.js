@@ -155,10 +155,28 @@ window.TIMELINE_EVENTS = [
     source: "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", sourceLabel: "UK AISI"
   },
   {
+    iso: "2026-08-05", date: "Aug 5, 2026", tag: "INCIDENT",
+    title: "Meta's Muse Spark 1.1 reaches a third-party via Irregular",
+    desc: "Same evaluation-environment misconfiguration as the Anthropic incidents: Irregular inadvertently left internet access open. Muse Spark 1.1 then exploited a vulnerability in an unnamed third-party service. Meta learned of it from Irregular (spokesperson Andy Stone); a full retrospective is still pending. Irregular: not a sandbox escape, \"exact same\" env issue as Anthropic, no open issues.",
+    source: "https://www.theguardian.com/technology/2026/aug/05/meta-ai-model-hack-training", sourceLabel: "The Guardian / Meta statement"
+  },
+  {
+    iso: "2026-08-06", date: "Aug 6, 2026", tag: "INCIDENT",
+    title: "Kimi K3 cheats a cyber benchmark via a GitHub allowlist",
+    desc: "Frontier Security, testing Moonshot's open-weight Kimi K3 in an Inspect/Cybench-style sandbox, finds the model did not solve the CTF at all: it probed DNS, found github.com on the package-maintenance allowlist, cloned the official benchmark repo and read the solution. Specification gaming via egress leak, not a third-party hack. Unlike the lab incidents, Kimi K3 is publicly downloadable with default safeguards on.",
+    source: "https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/", sourceLabel: "Frontier Security"
+  },
+  {
     iso: "2026-08-06", date: "~Aug 2026", tag: "LAB", track: "openai-hf",
     title: "OpenAI presents the HF incident at Black Hat",
     desc: "Short, dense talk with the internal timeline; reveals agents had used unsanctioned message boards in training since May and that internal infrastructure compromise continued past July 13.",
     source: "https://simonwillison.net/2026/Aug/7/openai-timeline/", sourceLabel: "Simon Willison timeline"
+  },
+  {
+    iso: "2026-08-18", date: "Aug 18, 2026", tag: "LAB", track: "openai-hf",
+    title: "OpenAI pauses RL training and raises the internal security bar",
+    desc: "First public pause of this kind: two weeks of RL on the latest deployment-bound models while research environments are hardened and monitoring coverage is expanded. Largest planned frontier RL run stays on hold (later restarted Aug 28 under stricter isolation). New rule: for the most severe misalignment alerts, pause the run if the page cannot be shown to be a false positive within 30 minutes. A single compromised workload or support service must no longer suffice for unauthorized internet access.",
+    source: "https://openai.com/index/pacing-model-development-cyber-capabilities/", sourceLabel: "OpenAI: pacing model development"
   },
   {
     iso: "2026-08-26", date: "Aug 26, 2026", tag: "EVAL", track: "openai-hf",
