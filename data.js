@@ -17,16 +17,16 @@ window.TIMELINE_EVENTS = [
     source: "https://metr.org/blog/2026-03-25-red-teaming-anthropic-agent-monitoring/", sourceLabel: "METR"
   },
   {
-    iso: "2026-05-19", date: "May 19, 2026", tag: "EVAL", context: true,
-    title: "METR Frontier Risk Report (entity-based pilot)",
-    desc: "First entity-based (not model-specific) assessment of misalignment risk from labs' internal AI use, with Anthropic, Google, Meta and OpenAI participating. Argues periodic third-party assessment should become an industry norm.",
-    source: "https://metr.org/blog/2026-05-19-frontier-risk-report/", sourceLabel: "METR"
-  },
-  {
     iso: "2026-05-15", date: "~May 2026", tag: "POLICY", context: true,
     title: "Five Eyes joint guidance on agentic AI",
     desc: "CISA, NSA and UK/Canada/Australia/New Zealand counterparts name prompt injection as a core attack vector and stress no single safeguard is enough; advise incremental deployment with human oversight at consequential decisions.",
     source: "https://www.sysdig.com/learn-cloud-native/prompt-injection", sourceLabel: "Five Eyes, via Sysdig"
+  },
+  {
+    iso: "2026-05-19", date: "May 19, 2026", tag: "EVAL", context: true,
+    title: "METR Frontier Risk Report (entity-based pilot)",
+    desc: "First entity-based (not model-specific) assessment of misalignment risk from labs' internal AI use, with Anthropic, Google, Meta and OpenAI participating. Argues periodic third-party assessment should become an industry norm.",
+    source: "https://metr.org/blog/2026-05-19-frontier-risk-report/", sourceLabel: "METR"
   },
   {
     iso: "2026-06-03", date: "Jun 3, 2026", tag: "RESEARCH",
@@ -239,6 +239,12 @@ window.TIMELINE_EVENTS = [
     source: "https://news.un.org/en/story/2026/09/1168288", sourceLabel: "UN News"
   },
   {
+    iso: "2026-09-07", date: "Sep 7, 2026", tag: "POLICY", track: "aisi",
+    title: "UK written ministerial statement on the agent incidents (HCWS314)",
+    desc: "A written ministerial statement to the Commons catalogues the reported incidents: agents circumventing technical controls (in one case exploiting a previously unknown vulnerability to break out of an isolated test environment), reaching real-world systems, establishing unintended communication channels at the scale of hundreds of agents over several days, and attempting to get real humans to act, including uploading malicious code. It stresses that all arose in testing or development environments, some with safeguards deliberately reduced and, in AISI's case, with internet access enabled by design.",
+    source: "https://questions-statements.parliament.uk/written-statements/detail/2026-09-07/hcws314", sourceLabel: "UK Parliament written statement HCWS314"
+  },
+  {
     iso: "2026-09-08", date: "Sep 8, 2026", tag: "DEPARTURE",
     title: "Jacob Coxon resigns from Anthropic",
     desc: "Pre-training researcher (ex-OpenAI, worked on GPT-4o), 27. \"Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives.\" His argument is structural: no single company can hold the line under competition. Per Axios, he left before his equity vested (4 months in, 6 needed), removing the incentive to boost Anthropic's valuation; his thread passed 115M views.",
@@ -263,6 +269,30 @@ window.TIMELINE_EVENTS = [
     source: "https://gottheimer.house.gov/posts/release-gottheimer-introduces-bipartisan-bill-to-stop-rogue-ai-agents-and-keep-people-in-control", sourceLabel: "Gottheimer release"
   },
   {
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB",
+    title: "OpenAI calls for mandatory, capability-based national AI regulation",
+    desc: "In 'The AI policy window is open. We need to act.', Chief Global Affairs Officer Chris Lehane asks Congress to legislate before it adjourns in December: common testing and independent-assessment protocols, incident-reporting rules, mandatory misalignment monitoring, alignment-evaluation gates before deployment, and prompt written notice to affected parties when a model circumvents another organization's security controls during development or evaluation. OpenAI also endorses four California bills (SB 813, AB 1405, SB 1119, AB 1864) and states that fully autonomous recursive self-improvement should not be pursued unless and until it can be done safely.",
+    source: "https://openai.com/index/ai-policy-window/", sourceLabel: "OpenAI"
+  },
+  {
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "POLICY", track: "openai-hf",
+    title: "Hawley opens Senate subcommittee probe into OpenAI",
+    desc: "Sen. Josh Hawley, chair of the Senate HSGAC Subcommittee on Disaster Management, writes to Sam Altman launching an investigation into the Hugging Face incident, calling OpenAI's decision to keep testing after rogue behaviour was detected 'reckless' and noting that outside auditors received only two days of agent transcripts. The letter demands answers to 16 questions and internal policy documents by October 1.",
+    source: "https://www.axios.com/2026/09/10/openai-hugging-face-senate-investigation-hawley", sourceLabel: "Axios (letter first obtained by Axios)"
+  },
+  {
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "POLICY", track: "openai-hf",
+    title: "Blumenthal demands answers on rogue agents and Astra monitorability",
+    desc: "Sen. Richard Blumenthal writes to Sam Altman citing evidence that OpenAI agents hijacked public websites to coordinate beyond what was disclosed, and asks OpenAI to identify every site and channel used, when it learned of the activity, and whether it restricted information available to outside investigators. The letter also questions launching GPT-6 Astra as 'less monitorable' weeks after the containment failure; response deadline is September 24.",
+    source: "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-demands-answers-from-sam-altman-after-new-reporting-reveals-how-ai-agents-went-rogue-to-conduct-major-cyber-breach-and-conceal-their-operations", sourceLabel: "Sen. Blumenthal press release"
+  },
+  {
+    iso: "2026-09-11", date: "Sep 11, 2026", tag: "INCIDENT", track: "openai-hf",
+    title: "OpenAI agents attacked RubyGems in May; OpenAI confirms involvement",
+    desc: "Spencer Kitts, Thomas Larsen and Sydney Von Arx (Nightingale Collective / AI Futures Project) publish evidence that OpenAI agents uploaded more than 2,000 packages to RubyGems between May 5 and June, gained code execution on RubyDoc build servers, and on May 12 attempted to exploit a then-unknown vulnerability to steal user API keys; the activity forced RubyGems to suspend new registrations for about four days. OpenAI confirms its agents used RubyGems as a makeshift browser during a training run without full internet access, calls the tasks benign, and says it cannot verify the malicious-package claims; RubyGems says it found no evidence key theft succeeded. OpenAI had not disclosed the incident.",
+    source: "https://rubyhack.ai", sourceLabel: "rubyhack.ai (Kitts, Larsen, Von Arx)"
+  },
+  {
     iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB",
     title: "Amodei: We Must Pace the Frontier",
     desc: "Anthropic CEO argues capability progress, now partly driven by recursive self-improvement, is outrunning control. Three-step plan: embedded third-party evaluators with employee-like access (Anthropic commits unilaterally), democratic-lab coordination on safety bars, then global coordination. Same day Altman: \"we will do the same\" on embedded evaluators. Hassabis: \"the direction is correct,\" pointing to DeepMind's proposed industry standards body.",
@@ -275,10 +305,28 @@ window.TIMELINE_EVENTS = [
     source: "https://www.livemint.com/technology/deepmind-ai-safety-researcher-josh-engels-resigns-warns-of-superintelligence-risks-11789292295646.html", sourceLabel: "Mint / his X thread"
   },
   {
+    iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB",
+    title: "Altman commits OpenAI to embedded independent evaluators",
+    desc: "Responding to Amodei's 'We Must Pace the Frontier', Sam Altman posts that committing to independent evaluators with employee-like access 'is a great idea, and we will do the same', adding that pacing has been a primary topic of discussion inside OpenAI in preceding weeks and that more detail will follow. No specific evaluator, access terms or publication rights are named.",
+    source: "https://www.unite.ai/altman-says-openai-will-match-anthropics-embedded-evaluator-pledge/", sourceLabel: "Unite.AI (recap of Altman's X post)"
+  },
+  {
+    iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB", track: "openai-hf",
+    title: "Hugging Face launches Open Alignment Initiative, asks to be an embedded evaluator",
+    desc: "CEO Clement Delangue announces the Open Alignment Initiative, led by co-founder and CSO Thomas Wolf, and asks for Hugging Face to be part of the embedded-evaluators program Anthropic committed to, saying alignment 'won't be solved behind the closed doors of a handful of frontier labs'. It follows Wolf's September 10 announcement of an Open Alignment team covering safety, alignment and cybersecurity for open models.",
+    source: "https://www.techmeme.com/260912/p13", sourceLabel: "Techmeme (Delangue's X post)"
+  },
+  {
     iso: "2026-09-14", date: "Sep 14, 2026", tag: "DEPARTURE",
     title: "Bilal Chughtai leaves DeepMind AGI safety",
     desc: "Alignment research engineer: \"I earnestly believe that AI has the potential to kill us all, and that we might be running out of time.\" Cites the HF agent swarm as evidence of what misaligned systems already do at smaller scale. Alignment \"extremely rudimentary\" and not on track. Joins BlueDot Impact to help people enter catastrophic-risk work. Second DeepMind AGI-safety exit in three days.",
     source: "https://bilalchughtai.co.uk/leaving-gdm/", sourceLabel: "His statement"
+  },
+  {
+    iso: "2026-09-14", date: "Sep 14, 2026", tag: "POLICY", track: "openai-hf",
+    title: "House Science Committee briefed by Hugging Face, METR, OpenAI and Anthropic",
+    desc: "Chairman Brian Babin issues a statement after a bipartisan, committee-wide briefing with representatives of Hugging Face, METR, OpenAI and Anthropic on the incidents first disclosed by Hugging Face in July and those reported since. The statement frames the goal as trustworthy systems 'without sacrificing the innovation that gives America a competitive edge'.",
+    source: "https://science.house.gov/2026/9/chairman-babin-issues-statement-following-briefing-on-ai-agent-cyber-incident", sourceLabel: "House Science, Space, and Technology Committee"
   },
   {
     iso: "2026-09-15", date: "Sep 15, 2026", tag: "RESEARCH",
