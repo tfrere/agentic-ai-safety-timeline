@@ -54,8 +54,20 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          set +x
           if [ -z "$HF_TOKEN" ]; then
             echo "HF_TOKEN not set; skipping Space push"
             exit 0
           fi
-          git push "https://tfrere:${HF_TOKEN}@huggingface.co/spaces/tfrere/agentic-ai-safety-timeline" HEAD:main
+          git clone --depth 1 "https://tfrere:${HF_TOKEN}@huggingface.co/spaces/tfrere/agentic-ai-safety-timeline" /tmp/hf-space
+          cp data.js TIMELINE.md /tmp/hf-space/
+          cd /tmp/hf-space
+          git config user.name "watch-bot"
+          git config user.email "watch-bot@users.noreply.github.com"
+          git add data.js TIMELINE.md
+          if git diff --cached --quiet; then
+            echo "Space already up to date"
+            exit 0
+          fi
+          git commit -m "feat(watch): apply timeline events $(date -u +%Y-%m-%d)"
+          git push
