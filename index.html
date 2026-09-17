@@ -8,101 +8,96 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label="Agentic AI Safety home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span>Agentic Safety</span>
+    </a>
+    <div class="nav-links">
+      <a href="#timeline-heading">Timeline</a>
+      <a class="nav-cta" href="TIMELINE.md">Read the full brief <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+
   <main class="wrap">
-    <header class="hero">
-      <span class="eyebrow">State of the field</span>
-      <h1>Agentic AI Safety</h1>
-      <p class="subtitle">
-        A sourced, deduplicated timeline of the serious events in agentic AI safety,
-        newest first: real sandbox-escape incidents, notable departures and
-        whistleblowers, lab position statements, regulation, third-party evaluations,
-        and the most solid research. Sensationalist takes with no verifiable substance
-        were filtered out.
-      </p>
-      <div class="meta">
-        <span><b>Window</b> Feb - Sep 2026 (core: Jun onward)</span>
-        <span><b>Events</b> <span id="total-count">0</span></span>
-        <span><b>Updated</b> 2026-09-17</span>
+    <header class="hero" id="top">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="live-dot"></span> Independent field record · Updated Sep 17, 2026</span>
+        <h1>Agentic AI<br><em>Safety Timeline</em></h1>
+        <p class="subtitle">
+          A sourced, deduplicated record of incidents, lab responses, policy,
+          evaluations and research — newest first.
+        </p>
       </div>
+
+      <aside class="hero-visual" aria-label="Timeline summary">
+        <div class="hero-stats">
+          <div class="primary-stat"><strong id="total-count">0</strong><span>Verified events</span></div>
+          <div><strong id="incident-count">0</strong><span>Incidents</span></div>
+          <div><strong id="source-count">0</strong><span>Sources</span></div>
+          <div><strong id="month-count">0</strong><span>Months</span></div>
+        </div>
+      </aside>
     </header>
 
-    <section class="controls">
+    <section class="section-intro" aria-labelledby="timeline-heading">
+      <div>
+        <span class="section-kicker">The record</span>
+        <h2 id="timeline-heading">Follow the evidence.</h2>
+      </div>
+      <p>Every entry links to a primary or high-quality source. Use the filters to isolate the signal you care about.</p>
+    </section>
+
+    <section class="controls" aria-label="Timeline controls">
+      <div class="search-row">
+        <label class="search-wrap" for="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+          <input id="search" class="search" type="search" aria-label="Search events"
+                 placeholder="Search people, labs, incidents or research…" />
+          <kbd>/</kbd>
+        </label>
+        <label class="sort-wrap" for="sort-order">
+          <span>Order</span>
+          <select id="sort-order" aria-label="Sort timeline">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="filter-row">
+        <span class="filter-label">Category</span>
       <div class="filters" id="filters" role="group" aria-label="Filter by category">
-        <span class="chip active" role="button" tabindex="0" data-filter="ALL">All</span>
-        <span class="chip" role="button" tabindex="0" data-tag="INCIDENT" data-filter="INCIDENT"><span class="dot"></span>Incident</span>
-        <span class="chip" role="button" tabindex="0" data-tag="DEPARTURE" data-filter="DEPARTURE"><span class="dot"></span>Departure</span>
-        <span class="chip" role="button" tabindex="0" data-tag="LAB" data-filter="LAB"><span class="dot"></span>Lab</span>
-        <span class="chip" role="button" tabindex="0" data-tag="POLICY" data-filter="POLICY"><span class="dot"></span>Policy</span>
-        <span class="chip" role="button" tabindex="0" data-tag="EVAL" data-filter="EVAL"><span class="dot"></span>Eval</span>
-        <span class="chip" role="button" tabindex="0" data-tag="RESEARCH" data-filter="RESEARCH"><span class="dot"></span>Research</span>
+        <button class="chip active" type="button" data-filter="ALL">All <span class="chip-count" data-count="ALL"></span></button>
+        <button class="chip" type="button" data-tag="INCIDENT" data-filter="INCIDENT"><span class="dot"></span>Incident <span class="chip-count" data-count="INCIDENT"></span></button>
+        <button class="chip" type="button" data-tag="DEPARTURE" data-filter="DEPARTURE"><span class="dot"></span>Departure <span class="chip-count" data-count="DEPARTURE"></span></button>
+        <button class="chip" type="button" data-tag="LAB" data-filter="LAB"><span class="dot"></span>Lab <span class="chip-count" data-count="LAB"></span></button>
+        <button class="chip" type="button" data-tag="POLICY" data-filter="POLICY"><span class="dot"></span>Policy <span class="chip-count" data-count="POLICY"></span></button>
+        <button class="chip" type="button" data-tag="EVAL" data-filter="EVAL"><span class="dot"></span>Eval <span class="chip-count" data-count="EVAL"></span></button>
+        <button class="chip" type="button" data-tag="RESEARCH" data-filter="RESEARCH"><span class="dot"></span>Research <span class="chip-count" data-count="RESEARCH"></span></button>
       </div>
+      </div>
+
       <div class="controls-row2">
-        <input id="search" class="search" type="search" aria-label="Search events"
-               placeholder="Search events, e.g. Hugging Face, prompt injection... (press / to focus)" />
-        <label class="toggle"><input type="checkbox" id="ctx-toggle" checked /> Context anchors</label>
-        <label class="toggle"><input type="checkbox" id="oai-toggle" checked /> OpenAI x HF</label>
-        <label class="toggle"><input type="checkbox" id="ant-toggle" checked /> Anthropic x Irregular</label>
-        <label class="toggle"><input type="checkbox" id="aisi-toggle" checked /> UK AISI</label>
-        <span class="count" id="shown-count"></span>
+        <span class="filter-label">Tracks</span>
+        <div class="toggles">
+          <label class="toggle"><input type="checkbox" id="ctx-toggle" checked /><span></span>Context</label>
+          <label class="toggle oai-toggle"><input type="checkbox" id="oai-toggle" checked /><span></span>OpenAI × HF</label>
+          <label class="toggle ant-toggle"><input type="checkbox" id="ant-toggle" checked /><span></span>Anthropic × Irregular</label>
+          <label class="toggle aisi-toggle"><input type="checkbox" id="aisi-toggle" checked /><span></span>UK AISI</label>
+        </div>
+        <button class="reset-button" id="reset-filters" type="button">Reset</button>
       </div>
     </section>
 
-    <section class="timeline" id="timeline"></section>
+    <div class="results-bar" aria-live="polite">
+      <span class="count" id="shown-count"></span>
+      <span class="results-rule"></span>
+      <span>Newest verified developments</span>
+    </div>
 
-    <section class="fieldnote">
-      <span class="eyebrow">Field note</span>
-      <h2>What this looks like on one developer's machine</h2>
-      <p class="fn-intro">
-        While the events above played out at lab scale, we ran the same questions
-        against a single, ordinary developer laptop (Sep 8-10, 2026): one Hugging Face
-        power user, ~60 project folders, daily agentic-IDE usage. Conducted by a coding
-        agent auditing its own blast radius, read-only.
-      </p>
-
-      <div class="fn-grid">
-        <div class="fn-stat">
-          <span class="fn-num">0</span>
-          <span class="fn-label">tokens leaked via git: every <code>.env</code> was
-          properly ignored, no token in any history or deployed bundle</span>
-        </div>
-        <div class="fn-stat warn">
-          <span class="fn-num">17</span>
-          <span class="fn-label">still-active API tokens sitting in plaintext in the
-          local AI chat-history database, accumulated over six months of agent
-          sessions, including one belonging to a colleague</span>
-        </div>
-        <div class="fn-stat warn">
-          <span class="fn-num">7</span>
-          <span class="fn-label">of those tokens were "zombies": no longer used in any
-          project, forgotten, but never revoked, several with write scope</span>
-        </div>
-      </div>
-
-      <p>
-        The machine itself showed no signs of compromise (system protections on, all
-        persistence signed and accounted for, clean network listeners). The exposure
-        was entirely self-inflicted: agents had read <code>.env</code> files into
-        context during routine sessions, and the chat history quietly became the
-        largest unencrypted secret store on the disk, one file aggregating credentials
-        from every project.
-      </p>
-      <p>
-        A permission audit of the agent's own shell context completed the picture: it
-        could read SSH private keys, cloud and registry credentials, 43
-        <code>.env</code> files, browser profiles and every AI tool's history; write
-        anywhere in the home directory; and reach the open internet. No Full Disk
-        Access, and root was password-gated, but exfiltration needs none of that.
-        The same probes are packaged as a small read-only script you can run from an
-        agent shell and from your terminal to compare contexts:
-        <a href="audit-agent-permissions.sh" download>audit-agent-permissions.sh</a>.
-      </p>
-      <p class="fn-takeaway">
-        <b>Takeaway.</b> The micro-scale mirror of the incidents above: the boundary
-        that matters is not the model's intent but what the process is allowed to
-        touch. Treat anything that enters an agent's context as potentially public,
-        rotate accordingly, and starve the context of secrets by default.
-      </p>
-    </section>
+    <section class="timeline" id="timeline" aria-label="Agentic AI safety events"></section>
 
     <footer class="foot">
       <p>
@@ -114,6 +109,8 @@
       <p>Built as a static Space. Data in <b>data.js</b>. Full write-up in <b>TIMELINE.md</b>.</p>
     </footer>
   </main>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">↑</button>
 
   <script src="data.js"></script>
   <script>
@@ -127,7 +124,19 @@
       const antToggle = document.getElementById("ant-toggle");
       const aisiToggle = document.getElementById("aisi-toggle");
       const shownCount = document.getElementById("shown-count");
+      const sortOrder = document.getElementById("sort-order");
+      const resetFilters = document.getElementById("reset-filters");
+      const backToTop = document.getElementById("back-to-top");
+      const readingProgress = document.getElementById("reading-progress");
       document.getElementById("total-count").textContent = events.length;
+      document.getElementById("incident-count").textContent = events.filter((e) => e.tag === "INCIDENT").length;
+      document.getElementById("source-count").textContent = new Set(events.map((e) => e.source)).size;
+      document.getElementById("month-count").textContent = new Set(events.map((e) => e.iso.slice(0, 7))).size;
+
+      document.querySelectorAll("[data-count]").forEach((node) => {
+        const tag = node.getAttribute("data-count");
+        node.textContent = tag === "ALL" ? events.length : events.filter((e) => e.tag === tag).length;
+      });
 
       let activeFilter = "ALL";
       const monthName = (iso) => {
@@ -146,9 +155,13 @@
         const q = searchEl.value.trim().toLowerCase();
         timeline.innerHTML = "";
         let lastMonth = "";
+        let currentMonthGroup = null;
         let shown = 0;
+        const orderedEvents = events.slice().sort((a, b) =>
+          sortOrder.value === "oldest" ? a.iso.localeCompare(b.iso) : b.iso.localeCompare(a.iso)
+        );
 
-        events.forEach((e) => {
+        orderedEvents.forEach((e) => {
           if (activeFilter !== "ALL" && e.tag !== activeFilter) return;
           if (e.context && !ctxToggle.checked) return;
           if (e.track === "openai-hf" && !oaiToggle.checked) return;
@@ -161,10 +174,14 @@
 
           const m = monthName(e.iso);
           if (m !== lastMonth) {
+            currentMonthGroup = document.createElement("section");
+            currentMonthGroup.className = "month-group";
+            currentMonthGroup.setAttribute("aria-label", m);
             const h = document.createElement("div");
             h.className = "month";
-            h.textContent = m;
-            timeline.appendChild(h);
+            h.innerHTML = '<span>' + m + '</span>';
+            currentMonthGroup.appendChild(h);
+            timeline.appendChild(currentMonthGroup);
             lastMonth = m;
           }
 
@@ -173,6 +190,7 @@
           item.setAttribute("data-tag", e.tag);
           item.innerHTML =
             '<div class="card">' +
+              '<div class="card-accent" aria-hidden="true"></div>' +
               '<div class="card-top">' +
                 '<span class="date">' + e.date + '</span>' +
                 '<span class="pill">' + e.tag + '</span>' +
@@ -181,9 +199,9 @@
               '</div>' +
               '<h3>' + e.title + '</h3>' +
               '<p>' + e.desc + '</p>' +
-              '<div class="src">Source: <a href="' + e.source + '" target="_blank" rel="noopener">' + (e.sourceLabel || e.source) + '</a></div>' +
+              '<div class="src"><span>Verified source</span><a href="' + e.source + '" target="_blank" rel="noopener">' + (e.sourceLabel || e.source) + '<span aria-hidden="true">↗</span></a></div>' +
             '</div>';
-          timeline.appendChild(item);
+          currentMonthGroup.appendChild(item);
           shown++;
         });
 
@@ -196,7 +214,7 @@
           timeline.appendChild(empty);
         }
 
-        shownCount.textContent = shown + " / " + events.length + " shown";
+        shownCount.innerHTML = '<strong>' + shown + '</strong> of ' + events.length + ' events';
       }
 
       function activateChip(chip) {
@@ -234,12 +252,30 @@
       });
 
       searchEl.addEventListener("input", render);
+      sortOrder.addEventListener("change", render);
       ctxToggle.addEventListener("change", render);
       oaiToggle.addEventListener("change", render);
       antToggle.addEventListener("change", render);
       aisiToggle.addEventListener("change", render);
 
+      resetFilters.addEventListener("click", () => {
+        searchEl.value = "";
+        sortOrder.value = "newest";
+        [ctxToggle, oaiToggle, antToggle, aisiToggle].forEach((toggle) => { toggle.checked = true; });
+        activateChip(document.querySelector('.chip[data-filter="ALL"]'));
+      });
+
+      function updateScrollUI() {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = max > 0 ? window.scrollY / max : 0;
+        readingProgress.style.transform = 'scaleX(' + progress + ')';
+        backToTop.classList.toggle("visible", window.scrollY > 700);
+      }
+      window.addEventListener("scroll", updateScrollUI, { passive: true });
+      backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
       render();
+      updateScrollUI();
     })();
   </script>
 </body>
