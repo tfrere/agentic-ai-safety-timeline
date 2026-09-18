@@ -23,8 +23,9 @@ log = logging.getLogger(__name__)
 WATCH_MODEL = "anthropic/claude-fable-5.1"
 USER_AGENT = "agentic-ai-safety-watch/0.1 (+https://github.com/tfrere/agentic-ai-safety-timeline)"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
-MAX_REQUESTS = 12
-SOFT_STOP_STEP = 8
+MAX_REQUESTS = 24
+SOFT_STOP_STEP = 6
+MAX_TOOL_CALLS = 20
 MAX_PAGE_CHARS = 6_000
 METHOD_PATH = Path(__file__).with_name("METHOD.md")
 INSTRUCTIONS = METHOD_PATH.read_text(encoding="utf-8")
@@ -216,7 +217,7 @@ async def run_watch_agent(api_key: str, model: str, prompt: str) -> tuple[WatchO
         result = await agent.run(
             prompt,
             deps=deps,
-            usage_limits=UsageLimits(request_limit=MAX_REQUESTS, tool_calls_limit=SOFT_STOP_STEP),
+            usage_limits=UsageLimits(request_limit=MAX_REQUESTS, tool_calls_limit=MAX_TOOL_CALLS),
         )
     usage = result.usage
     if hasattr(usage, "model_dump"):
