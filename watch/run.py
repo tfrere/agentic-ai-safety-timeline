@@ -12,6 +12,7 @@ import asyncio
 import hashlib
 import html
 import json
+import logging
 import os
 import re
 import ssl
@@ -498,6 +499,7 @@ def write_report(report: dict) -> None:
 
 
 def main() -> int:
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     parser = argparse.ArgumentParser(description="Daily agentic AI safety watch")
     parser.add_argument("--dry-run", action="store_true", help="Do not write data.js or open an issue")
     args = parser.parse_args()
