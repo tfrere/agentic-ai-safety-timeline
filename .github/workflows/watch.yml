@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "12 6 * * *"
   workflow_dispatch:
+    inputs:
+      backfill:
+        description: "One-shot scan from Feb 2026 instead of the daily 10-day window"
+        type: boolean
+        default: false
 
 concurrency:
   group: watch
@@ -16,7 +21,7 @@ permissions:
 jobs:
   watch:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
 
@@ -33,7 +38,12 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           WATCH_MODEL: anthropic/claude-fable-5.1
-        run: uv run python watch/run.py
+        run: |
+          if [ "${{ github.event.inputs.backfill }}" = "true" ]; then
+            uv run python watch/run.py --backfill
+          else
+            uv run python watch/run.py
+          fi
 
       - name: Commit timeline
         run: |

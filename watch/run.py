@@ -19,7 +19,7 @@ import ssl
 import sys
 import urllib.error
 import urllib.request
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -38,6 +38,8 @@ DATA_JS = ROOT / "data.js"
 USER_AGENT = "agentic-ai-safety-watch/0.1 (+https://github.com/tfrere/agentic-ai-safety-timeline)"
 MAX_FEED_ITEMS = 40
 MAX_ITEM_AGE_DAYS = 10
+BACKFILL_START = date(2026, 2, 1)
+BACKFILL_FEED_ITEMS = 80
 PAGE_EXCERPT_CHARS = 4000
 ALLOWED_TAGS = {"INCIDENT", "DEPARTURE", "LAB", "POLICY", "EVAL", "RESEARCH"}
 ARXIV_HINTS = (
@@ -286,6 +288,8 @@ def build_prompt(
     page_notes: list[str],
     pointers: list[str],
     today: str,
+    *,
+    backfill: bool = False,
 ) -> str:
     known = "\n".join(f"- {e['iso']} [{e['tag']}] {e['title']}" for e in events)
     feeds = "\n".join(
@@ -295,11 +299,25 @@ def build_prompt(
     ) or "(no recent feed items)"
     pages = "\n\n".join(page_notes) or "(no first-party page change)"
     pointer_block = "\n".join(f"- {t}" for t in pointers) or "(no agentic AIAAIC titles)"
+    if backfill:
+        window = (
+            f"Today is {today}. This is a one-shot BACKFILL from {BACKFILL_START.isoformat()} "
+            f"through {today}. Do not restrict yourself to the last {MAX_ITEM_AGE_DAYS} days. "
+            "Feeds are incomplete for older posts: search and fetch first-party lab/eval pages "
+            "to fill holes. Likely gaps to check (add only if first-party and not already listed): "
+            "Apollo metagaming / anti-scheming / monitor red-teams; DeepMind Gram, scheming "
+            "honeypots, Control Roadmap, double-blind evals; CAISI or NIST agent-eval findings; "
+            "Meta first-party Muse Spark retrospective if it exists."
+        )
+        page_label = "FIRST-PARTY PAGES (full excerpts this run, not only hash diffs)"
+    else:
+        window = f"Today is {today}. Look at the last {MAX_ITEM_AGE_DAYS} days."
+        page_label = "FIRST-PARTY PAGES (hash changed since last run, excerpt)"
     return (
-        f"Today is {today}. Look at the last {MAX_ITEM_AGE_DAYS} days.\n\n"
+        f"{window}\n\n"
         f"ALREADY ON THE TIMELINE:\n{known}\n\n"
         f"RECENT FEED ITEMS:\n{feeds}\n\n"
-        f"FIRST-PARTY PAGES (hash changed since last run, excerpt):\n{pages}\n\n"
+        f"{page_label}:\n{pages}\n\n"
         f"AIAAIC POINTERS (titles only, never cite aiaaic.org):\n{pointer_block}\n\n"
         "Use web_search and fetch_page. Fetch every source before adding it. "
         "Focus on OpenAI Alignment reports, Anthropic news/research, DeepMind, Meta, "
@@ -477,6 +495,7 @@ def write_report(report: dict) -> None:
         f"- feed items kept: {report['feed_items']}",
         f"- pages changed: {report['pages_changed']}",
         f"- aiaaic pointers: {report.get('pointers', 0)}",
+        *([f"- mode: backfill {BACKFILL_START.isoformat()} -> {report['run_date']}"] if report.get("backfill") else []),
         f"- model: `{report['model']}`",
         f"- applied: {len(report['candidates'])}",
         f"- issue: {report.get('issue_url') or 'none'}",
@@ -503,6 +522,11 @@ def main() -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
     parser = argparse.ArgumentParser(description="Daily agentic AI safety watch")
     parser.add_argument("--dry-run", action="store_true", help="Do not write data.js or open an issue")
+    parser.add_argument(
+        "--backfill",
+        action="store_true",
+        help="One-shot scan from Feb 2026 instead of the daily 10-day window",
+    )
     args = parser.parse_args()
 
     api_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
@@ -525,7 +549,9 @@ def main() -> int:
             pass
 
     events = load_timeline()
-    cutoff = utc_now() - timedelta(days=MAX_ITEM_AGE_DAYS)
+    backfill = args.backfill
+    feed_cap = BACKFILL_FEED_ITEMS if backfill else MAX_FEED_ITEMS
+    cutoff = datetime.combine(BACKFILL_START, datetime.min.time(), tzinfo=timezone.utc) if backfill else utc_now() - timedelta(days=MAX_ITEM_AGE_DAYS)
     errors: list[str] = []
     feed_items: list[dict] = []
     feeds_ok = 0
@@ -548,7 +574,7 @@ def main() -> int:
                 continue
             feed_items.append(item)
 
-    feed_items = feed_items[:MAX_FEED_ITEMS]
+    feed_items = feed_items[:feed_cap]
     pointers: list[str] = []
     page_notes: list[str] = []
     page_hashes: dict[str, str] = {}
@@ -567,19 +593,19 @@ def main() -> int:
         if page.get("role") == "pointer":
             pointers.extend(extract_pointer_titles(body, page.get("keywords")))
             continue
-        if old_page_hashes.get(page["id"]) == digest:
+        if not backfill and old_page_hashes.get(page["id"]) == digest:
             continue
         pages_changed += 1
         excerpt = strip_html(body)[:PAGE_EXCERPT_CHARS]
         page_notes.append(f"### {page['id']} ({page['url']})\n{excerpt}")
 
     today = utc_now().date().isoformat()
-    prompt = build_prompt(events, feed_items, page_notes, pointers, today)
+    prompt = build_prompt(events, feed_items, page_notes, pointers, today, backfill=backfill)
     candidates: list[dict] = []
     usage: dict = {}
     tool_log: list[str] = []
     try:
-        output, usage, tool_log = asyncio.run(run_watch_agent(api_key, model, prompt))
+        output, usage, tool_log = asyncio.run(run_watch_agent(api_key, model, prompt, backfill=backfill))
         dumped = [c.model_dump(by_alias=True) for c in output.candidates]
         candidates = validate_candidates({"candidates": dumped}, events)
         candidates = keep_reachable(candidates, errors)
@@ -599,7 +625,8 @@ def main() -> int:
     if applied and repo and token and not args.dry_run:
         ensure_label(repo, token)
         lines = [
-            f"Watch applied {len(applied)} event(s) on {today}.",
+            f"Watch applied {len(applied)} event(s) on {today}"
+            + (" (backfill Feb-Sep 2026)." if backfill else "."),
             "",
             "Written to `data.js` and `TIMELINE.md` by a Pydantic AI agent (Claude Fable 5.1, thinking high). Revert the commit if one is wrong.",
             "",
@@ -616,7 +643,8 @@ def main() -> int:
             f"/repos/{repo}/issues",
             token,
             {
-                "title": f"watch: added {len(applied)} event(s) on {today}",
+                "title": f"watch: added {len(applied)} event(s) on {today}"
+                + (" (backfill)" if backfill else ""),
                 "body": "\n".join(lines),
                 "labels": ["watch"],
             },
@@ -640,6 +668,7 @@ def main() -> int:
         "feed_items": len(feed_items),
         "pages_changed": pages_changed,
         "pointers": len(pointers),
+        "backfill": backfill,
         "model": model,
         "candidates": applied if not args.dry_run else candidates,
         "issue_url": issue_url,

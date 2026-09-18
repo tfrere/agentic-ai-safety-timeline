@@ -25,6 +25,8 @@ USER_AGENT = "agentic-ai-safety-watch/0.1 (+https://github.com/tfrere/agentic-ai
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MAX_REQUESTS = 16
 SOFT_STOP_STEP = 8
+BACKFILL_MAX_REQUESTS = 28
+BACKFILL_SOFT_STOP_STEP = 18
 MAX_PAGE_CHARS = 6_000
 METHOD_PATH = Path(__file__).with_name("METHOD.md")
 INSTRUCTIONS = METHOD_PATH.read_text(encoding="utf-8")
@@ -76,11 +78,12 @@ class WatchDeps:
     api_key: str
     model: str
     tool_log: list[str] = field(default_factory=list)
+    soft_stop_step: int = SOFT_STOP_STEP
 
 
 def _budget(ctx: RunContext[WatchDeps], tool: str, arg: str) -> str | None:
     log.info("watch step %d %s(%s)", ctx.run_step, tool, arg[:120])
-    if ctx.run_step > SOFT_STOP_STEP:
+    if ctx.run_step > ctx.deps.soft_stop_step:
         return "BUDGET EXHAUSTED: stop exploring and return your final answer now."
     return None
 
@@ -209,15 +212,23 @@ async def _fetch_page(client: httpx.AsyncClient, url: str) -> str:
     return f"status={r.status_code} final_url={r.url}\n{excerpt}"
 
 
-async def run_watch_agent(api_key: str, model: str, prompt: str) -> tuple[WatchOutput, dict, list[str]]:
+async def run_watch_agent(
+    api_key: str,
+    model: str,
+    prompt: str,
+    *,
+    backfill: bool = False,
+) -> tuple[WatchOutput, dict, list[str]]:
     settings_model = make_model(api_key, model)
     agent = build_agent(settings_model)
+    request_limit = BACKFILL_MAX_REQUESTS if backfill else MAX_REQUESTS
+    soft_stop = BACKFILL_SOFT_STOP_STEP if backfill else SOFT_STOP_STEP
     async with httpx.AsyncClient(headers={"User-Agent": USER_AGENT}, follow_redirects=True) as client:
-        deps = WatchDeps(client=client, api_key=api_key, model=model)
+        deps = WatchDeps(client=client, api_key=api_key, model=model, soft_stop_step=soft_stop)
         result = await agent.run(
             prompt,
             deps=deps,
-            usage_limits=UsageLimits(request_limit=MAX_REQUESTS),
+            usage_limits=UsageLimits(request_limit=request_limit),
         )
     usage = result.usage
     if hasattr(usage, "model_dump"):
