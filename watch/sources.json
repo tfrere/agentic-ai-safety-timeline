@@ -13,6 +13,12 @@
     {"id": "openai-alignment", "url": "https://alignment.openai.com/misalignment-reports/"},
     {"id": "anthropic-research", "url": "https://www.anthropic.com/research"},
     {"id": "aisi", "url": "https://www.aisi.gov.uk"},
-    {"id": "apollo", "url": "https://www.apolloresearch.ai"}
+    {"id": "apollo", "url": "https://www.apolloresearch.ai"},
+    {
+      "id": "aiaaic",
+      "url": "https://www.aiaaic.org/aiaaic-repository",
+      "role": "pointer",
+      "keywords": ["agent", "sandbox", "eval", "openai", "anthropic", "hugging face", "metr", "aisi", "scheming", "containment", "misalignment", "inspect"]
+    }
   ]
 }

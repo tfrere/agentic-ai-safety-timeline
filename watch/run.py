@@ -53,6 +53,8 @@ ARXIV_HINTS = (
 )
 
 ALLOWED_TRACKS = {"openai-hf", "anthropic-irregular", "aisi"}
+POINTER_HOSTS = ("aiaaic.org", "incidentdatabase.ai", "oecd.ai")
+AIAAIC_ITEM = re.compile(r"AIAAIC\s*\d+\s*:?\s*(.+?)(?=\s*AIAAIC\s*\d+|\Z)", re.I | re.S)
 
 
 def utc_now() -> datetime:
@@ -160,6 +162,23 @@ def strip_html(blob: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(blob)).strip()
 
 
+def extract_pointer_titles(html: str, keywords: list[str] | None, limit: int = 15) -> list[str]:
+    text = strip_html(html)
+    titles: list[str] = []
+    seen: set[str] = set()
+    for match in AIAAIC_ITEM.finditer(text):
+        title = re.sub(r"\s+", " ", match.group(1)).strip(" .-")[:180]
+        if len(title) < 12 or title.lower() in seen:
+            continue
+        if not keyword_ok(title, keywords):
+            continue
+        seen.add(title.lower())
+        titles.append(title)
+        if len(titles) >= limit:
+            break
+    return titles
+
+
 def keyword_ok(title: str, keywords: list[str] | None) -> bool:
     if not keywords:
         return True
@@ -260,7 +279,13 @@ def open_issue_urls(repo: str, token: str) -> set[str]:
     return urls
 
 
-def build_prompt(events: list[dict], feed_items: list[dict], page_notes: list[str], today: str) -> str:
+def build_prompt(
+    events: list[dict],
+    feed_items: list[dict],
+    page_notes: list[str],
+    pointers: list[str],
+    today: str,
+) -> str:
     known = "\n".join(f"- {e['iso']} [{e['tag']}] {e['title']}" for e in events)
     feeds = "\n".join(
         f"- {it.get('date') or '?'} | {it['title']} | {it['url']}"
@@ -268,14 +293,18 @@ def build_prompt(events: list[dict], feed_items: list[dict], page_notes: list[st
         for it in feed_items
     ) or "(no recent feed items)"
     pages = "\n\n".join(page_notes) or "(no first-party page change)"
+    pointer_block = "\n".join(f"- {t}" for t in pointers) or "(no agentic AIAAIC titles)"
     return (
         f"Today is {today}. Look at the last {MAX_ITEM_AGE_DAYS} days.\n\n"
         f"ALREADY ON THE TIMELINE:\n{known}\n\n"
         f"RECENT FEED ITEMS:\n{feeds}\n\n"
         f"FIRST-PARTY PAGES (hash changed since last run, excerpt):\n{pages}\n\n"
+        f"AIAAIC POINTERS (titles only, never cite aiaaic.org):\n{pointer_block}\n\n"
         "Use web_search and fetch_page. Fetch every source before adding it. "
         "Focus on OpenAI Alignment reports, Anthropic research, METR, UK AISI, Apollo, "
         "Hugging Face security posts, parliamentary/lab statements, and arXiv on agents/containment. "
+        "AIAAIC is a discovery net after first-party sources: chase only titles that might pass the bar, "
+        "then cite the primary. Never cite aiaaic.org, incidentdatabase.ai, or oecd.ai. "
         "Return only events that pass the selection bar and are not already listed. "
         "Those events will be written to the public timeline automatically."
     )
@@ -298,6 +327,8 @@ def validate_candidates(raw: dict, events: list[dict]) -> list[dict]:
         if len(desc) < 40:
             continue
         if already_known(source, title, events, []):
+            continue
+        if any(host in source.lower() for host in POINTER_HOSTS):
             continue
         track = str(item.get("track") or "").strip()
         event = {
@@ -443,6 +474,7 @@ def write_report(report: dict) -> None:
         f"- pages ok: {report['pages_ok']}/{report['pages_total']}",
         f"- feed items kept: {report['feed_items']}",
         f"- pages changed: {report['pages_changed']}",
+        f"- aiaaic pointers: {report.get('pointers', 0)}",
         f"- model: `{report['model']}`",
         f"- applied: {len(report['candidates'])}",
         f"- issue: {report.get('issue_url') or 'none'}",
@@ -514,6 +546,7 @@ def main() -> int:
             feed_items.append(item)
 
     feed_items = feed_items[:MAX_FEED_ITEMS]
+    pointers: list[str] = []
     page_notes: list[str] = []
     page_hashes: dict[str, str] = {}
     pages_ok = 0
@@ -528,6 +561,9 @@ def main() -> int:
             errors.append(f"page {page['id']}: HTTP {code}")
             continue
         pages_ok += 1
+        if page.get("role") == "pointer":
+            pointers.extend(extract_pointer_titles(body, page.get("keywords")))
+            continue
         if old_page_hashes.get(page["id"]) == digest:
             continue
         pages_changed += 1
@@ -535,7 +571,7 @@ def main() -> int:
         page_notes.append(f"### {page['id']} ({page['url']})\n{excerpt}")
 
     today = utc_now().date().isoformat()
-    prompt = build_prompt(events, feed_items, page_notes, today)
+    prompt = build_prompt(events, feed_items, page_notes, pointers, today)
     candidates: list[dict] = []
     usage: dict = {}
     tool_log: list[str] = []
@@ -600,6 +636,7 @@ def main() -> int:
         "pages_total": len(sources.get("pages") or []),
         "feed_items": len(feed_items),
         "pages_changed": pages_changed,
+        "pointers": len(pointers),
         "model": model,
         "candidates": applied if not args.dry_run else candidates,
         "issue_url": issue_url,
