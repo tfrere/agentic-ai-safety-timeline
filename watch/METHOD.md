@@ -7,7 +7,7 @@ you fetched this run, it does not exist. Do not invent quotes, numbers, or URLs.
 ## Loop (this order, every run)
 
 1. **Inventory.** Read the timeline already in the prompt. Do not re-add a title or URL that is there.
-2. **Scan first-party.** Labs and independent evaluators first (OpenAI alignment reports, Anthropic research, METR, UK AISI, Apollo, Hugging Face security). Incidents and pauses show up here 24-72h before the press.
+2. **Scan first-party.** Labs and independent evaluators first (OpenAI alignment reports, Anthropic news/research, DeepMind, Meta, METR, UK AISI, CAISI, Apollo, Redwood, Frontier Security, Hugging Face security). Incidents and pauses show up here 24-72h before the press.
 3. **Find the primary.** A recap (Axios, TechCrunch, Unite.AI, Techmeme) or an incident
    listing (AIAAIC) is a pointer. Follow it to the lab post, arXiv abs, bill page, or the
    person's own statement. That URL is the source you cite. Never cite aiaaic.org,

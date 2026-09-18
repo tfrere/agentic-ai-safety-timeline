@@ -2,18 +2,38 @@
   "feeds": [
     {"id": "hf-blog", "url": "https://huggingface.co/blog/feed.xml"},
     {"id": "metr", "url": "https://metr.org/blog/rss.xml"},
-    {"id": "alignment-forum", "url": "https://www.alignmentforum.org/feed.xml"},
-    {"id": "simonw", "url": "https://simonwillison.net/atom/everything/"},
     {"id": "openai-news", "url": "https://openai.com/news/rss.xml"},
+    {
+      "id": "deepmind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "keywords": ["agent", "sandbox", "eval", "alignment", "incident", "control", "scheming", "sabotage", "honeypot", "containment", "frontier safety", "misalignment"]
+    },
+    {
+      "id": "redwood",
+      "url": "https://blog.redwoodresearch.org/feed",
+      "keywords": ["agent", "sandbox", "eval", "alignment", "control", "scheming", "monitor", "misalignment", "containment"]
+    },
+    {
+      "id": "frontier-security",
+      "url": "https://blog.frontier.security/rss.xml",
+      "keywords": ["agent", "sandbox", "eval", "kimi", "cyber", "allowlist", "containment", "aisi"]
+    },
+    {"id": "transformer-news", "url": "https://www.transformernews.ai/feed"},
+    {"id": "simonw", "url": "https://simonwillison.net/atom/everything/"},
     {"id": "arxiv-cr", "url": "https://rss.arxiv.org/rss/cs.CR", "keywords": ["agent", "sandbox", "prompt injection", "multi-agent", "containment", "misalignment", "scheming", "control", "evaluation"]},
     {"id": "arxiv-ai", "url": "https://rss.arxiv.org/rss/cs.AI", "keywords": ["agent", "sandbox", "prompt injection", "misalignment", "scheming", "containment", "alignment"]},
-    {"id": "transformer-news", "url": "https://www.transformernews.ai/feed"}
+    {"id": "alignment-forum", "url": "https://www.alignmentforum.org/feed.xml"}
   ],
   "pages": [
     {"id": "openai-alignment", "url": "https://alignment.openai.com/misalignment-reports/"},
     {"id": "anthropic-research", "url": "https://www.anthropic.com/research"},
-    {"id": "aisi", "url": "https://www.aisi.gov.uk"},
-    {"id": "apollo", "url": "https://www.apolloresearch.ai"},
+    {"id": "anthropic-news", "url": "https://www.anthropic.com/news"},
+    {"id": "deepmind-frontier-safety", "url": "https://deepmind.google/frontier-safety/"},
+    {"id": "meta-blog", "url": "https://ai.meta.com/blog/"},
+    {"id": "aisi-blog", "url": "https://www.aisi.gov.uk/blog"},
+    {"id": "apollo-science", "url": "https://www.apolloresearch.ai/science"},
+    {"id": "caisi", "url": "https://www.nist.gov/caisi"},
+    {"id": "redwood-home", "url": "https://www.redwoodresearch.org/"},
     {
       "id": "aiaaic",
       "url": "https://www.aiaaic.org/aiaaic-repository",
