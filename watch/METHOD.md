@@ -8,7 +8,10 @@ you fetched this run, it does not exist. Do not invent quotes, numbers, or URLs.
 
 1. **Inventory.** Read the timeline already in the prompt. Do not re-add a title or URL that is there.
 2. **Scan first-party.** Labs and independent evaluators first (OpenAI alignment reports, Anthropic research, METR, UK AISI, Apollo, Hugging Face security). Incidents and pauses show up here 24-72h before the press.
-3. **Find the primary.** A recap (Axios, TechCrunch, Unite.AI, Techmeme) is a pointer. Follow it to the lab post, arXiv abs, bill page, or the person's own statement. That URL is the source you cite.
+3. **Find the primary.** A recap (Axios, TechCrunch, Unite.AI, Techmeme) or an incident
+   listing (AIAAIC) is a pointer. Follow it to the lab post, arXiv abs, bill page, or the
+   person's own statement. That URL is the source you cite. Never cite aiaaic.org,
+   incidentdatabase.ai, or oecd.ai as `source`.
 4. **Fetch before you cite.** `fetch_page` every URL you might add. If the page 404s, is empty, or does not contain the claim, drop the event.
 5. **Gate.** Keep the event only if all of these hold:
    - it matches the bar (below)
@@ -39,6 +42,14 @@ Tools, one at a time: `web_search` to locate, `fetch_page` to verify. Think firs
 - LinkedIn or newsletters that rephrase Axios
 - A paper that does not move the model
 - Dressing a recap up as first-party
+- AIAAIC / AIID / OECD AIM cards as the cited source (they are discovery nets)
+
+## Pointer net (AIAAIC)
+
+After first-party labs and evals, scan AIAAIC titles that look agentic (agent, sandbox,
+eval, named lab). Ignore facial recognition, deepfakes, pricing, bomb threats, and other
+generic AI harms. If a title might pass the bar, `web_search` + `fetch_page` the primary.
+If the primary is not there, drop it.
 
 ## When a lab drops an incident
 
