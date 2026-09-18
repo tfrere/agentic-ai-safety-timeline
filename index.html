@@ -11,8 +11,14 @@
   <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
   <main class="wrap" id="top">
     <section class="section-intro" aria-labelledby="timeline-heading">
-      <h1 id="timeline-heading">Agentic AI, <em>documented.</em></h1>
-      <p>Verified incidents, lab responses, policy and research — sourced, deduplicated, no hype.</p>
+      <div class="intro-copy">
+        <h1 id="timeline-heading">Agentic AI, <em>documented.</em></h1>
+        <p>Verified incidents, lab responses, policy and research — sourced, deduplicated, no hype.</p>
+      </div>
+      <div class="intro-meta" aria-label="Timeline coverage">
+        <div><strong id="header-count">0</strong><span>records</span></div>
+        <div><strong id="header-range">—</strong><span>coverage</span></div>
+      </div>
     </section>
 
     <section class="controls" aria-label="Timeline controls">
@@ -45,15 +51,9 @@
           <label class="toggle ant-toggle"><input type="checkbox" id="ant-toggle" checked /><span></span>Anthropic × Irregular</label>
           <label class="toggle aisi-toggle"><input type="checkbox" id="aisi-toggle" checked /><span></span>UK AISI</label>
         </div>
-        <button class="reset-button" id="reset-filters" type="button">Reset</button>
+        <button class="reset-button" id="reset-filters" type="button" hidden>Reset</button>
       </div>
     </section>
-
-    <div class="results-bar" aria-live="polite">
-      <span class="count" id="shown-count"></span>
-      <span class="results-rule"></span>
-      <span>Newest verified developments</span>
-    </div>
 
     <section class="timeline" id="timeline" aria-label="Agentic AI safety events"></section>
 
@@ -81,10 +81,17 @@
       const oaiToggle = document.getElementById("oai-toggle");
       const antToggle = document.getElementById("ant-toggle");
       const aisiToggle = document.getElementById("aisi-toggle");
-      const shownCount = document.getElementById("shown-count");
       const resetFilters = document.getElementById("reset-filters");
       const backToTop = document.getElementById("back-to-top");
       const readingProgress = document.getElementById("reading-progress");
+      document.getElementById("header-count").textContent = events.length;
+      if (events.length) {
+        const oldest = new Date(events[events.length - 1].iso + "T00:00:00Z");
+        const newest = new Date(events[0].iso + "T00:00:00Z");
+        const shortMonth = (date) => date.toLocaleString("en-US", { month: "short", timeZone: "UTC" });
+        document.getElementById("header-range").textContent =
+          shortMonth(oldest) + " — " + shortMonth(newest) + " " + newest.getUTCFullYear();
+      }
       document.querySelectorAll("[data-count]").forEach((node) => {
         const tag = node.getAttribute("data-count");
         node.textContent = tag === "ALL" ? events.length : events.filter((e) => e.tag === tag).length;
@@ -93,7 +100,7 @@
       let activeFilter = "ALL";
       const monthName = (iso) => {
         const d = new Date(iso + "T00:00:00Z");
-        return d.toLocaleString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+        return d.toLocaleString("en-US", { month: "short", year: "numeric", timeZone: "UTC" });
       };
 
       function trackBadge(track) {
@@ -105,6 +112,9 @@
 
       function render() {
         const q = searchEl.value.trim().toLowerCase();
+        const isPristine = activeFilter === "ALL" && !q &&
+          ctxToggle.checked && oaiToggle.checked && antToggle.checked && aisiToggle.checked;
+        resetFilters.hidden = isPristine;
         timeline.innerHTML = "";
         let lastMonth = "";
         let currentMonthGroup = null;
@@ -162,7 +172,6 @@
           timeline.appendChild(empty);
         }
 
-        shownCount.innerHTML = '<strong>' + shown + '</strong> of ' + events.length + ' events';
       }
 
       function activateChip(chip) {
