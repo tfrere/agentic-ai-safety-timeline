@@ -1,0 +1,39 @@
+name: Share OpenRouter key with a Space (one-off)
+
+# Copies the OPENROUTER_API_KEY repository secret into a Hugging Face Space
+# secret, secret to secret, without printing it. Dispatched once, then removed.
+
+on:
+  workflow_dispatch:
+    inputs:
+      space:
+        description: "Target Space id (owner/name)"
+        type: string
+        default: tfrere/microduck-academy
+
+permissions:
+  contents: read
+
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Copy the secret into the Space
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          SPACE: ${{ github.event.inputs.space }}
+        run: |
+          pip install -q huggingface_hub
+          python - <<'EOF'
+          import os
+          from huggingface_hub import HfApi
+          key = os.environ["OPENROUTER_API_KEY"].strip()
+          assert key.startswith("sk-or-"), "OPENROUTER_API_KEY does not look like an OpenRouter key"
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          me = api.whoami()["name"]
+          api.add_space_secret(os.environ["SPACE"], "OPENROUTER_API_KEY", key,
+                               description="OpenRouter key for the pilot agent (copied from GitHub secrets)")
+          print(f"OPENROUTER_API_KEY set on {os.environ['SPACE']} as {me} (key length {len(key)})")
+          EOF
