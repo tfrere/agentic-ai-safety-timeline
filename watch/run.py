@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Daily agentic-AI-safety watch.
 
-A Pydantic AI agent (Claude Fable 5.1, thinking high) scans feeds, uses search/fetch
+A Pydantic AI agent (Claude Opus 5, thinking high) scans feeds, uses search/fetch
 tools, and writes passing events into data.js / TIMELINE.md.
 """
 
@@ -534,8 +534,8 @@ def main() -> int:
         print("OPENROUTER_API_KEY is not set", file=sys.stderr)
         return 1
     model = os.environ.get("WATCH_MODEL", WATCH_MODEL).strip() or WATCH_MODEL
-    if "fable" not in model.lower():
-        print(f"WATCH_MODEL must be Claude Fable via OpenRouter, got {model!r}", file=sys.stderr)
+    if "opus" not in model.lower() or "anthropic" not in model.lower():
+        print(f"WATCH_MODEL must be Claude Opus via OpenRouter, got {model!r}", file=sys.stderr)
         return 1
     repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
     token = os.environ.get("GITHUB_TOKEN", "").strip()
@@ -628,7 +628,7 @@ def main() -> int:
             f"Watch applied {len(applied)} event(s) on {today}"
             + (" (backfill Feb-Sep 2026)." if backfill else "."),
             "",
-            "Written to `data.js` and `TIMELINE.md` by a Pydantic AI agent (Claude Fable 5.1, thinking high). Revert the commit if one is wrong.",
+            "Written to `data.js` and `TIMELINE.md` by a Pydantic AI agent (Claude Opus 5, thinking high). Revert the commit if one is wrong.",
             "",
         ]
         for c in applied:

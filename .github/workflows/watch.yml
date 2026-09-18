@@ -37,7 +37,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          WATCH_MODEL: anthropic/claude-fable-5.1
+          WATCH_MODEL: anthropic/claude-opus-5
         run: |
           if [ "${{ github.event.inputs.backfill }}" = "true" ]; then
             uv run python watch/run.py --backfill

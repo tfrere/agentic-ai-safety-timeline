@@ -1,4 +1,4 @@
-"""Pydantic AI watch agent: Fable thinks, uses tools, returns structured events."""
+"""Pydantic AI watch agent: Claude Opus thinks, uses tools, returns structured events."""
 
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ from pydantic_ai.usage import UsageLimits
 
 log = logging.getLogger(__name__)
 
-WATCH_MODEL = "anthropic/claude-fable-5.1"
+WATCH_MODEL = "anthropic/claude-opus-5"
 USER_AGENT = "agentic-ai-safety-watch/0.1 (+https://github.com/tfrere/agentic-ai-safety-timeline)"
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MAX_REQUESTS = 16
@@ -95,8 +95,8 @@ def _done(ctx: RunContext[WatchDeps], tool: str, out: str) -> str:
 
 
 def make_model(api_key: str, name: str) -> OpenRouterModel:
-    if "fable" not in name.lower():
-        raise RuntimeError(f"WATCH_MODEL must be Claude Fable via OpenRouter, got {name!r}")
+    if "opus" not in name.lower() or "anthropic" not in name.lower():
+        raise RuntimeError(f"WATCH_MODEL must be Claude Opus via OpenRouter, got {name!r}")
     provider = OpenRouterProvider(
         api_key=api_key,
         app_url="https://github.com/tfrere/agentic-ai-safety-timeline",

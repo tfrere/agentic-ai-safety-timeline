@@ -32,7 +32,7 @@ GitHub copy (Actions live here): https://github.com/tfrere/agentic-ai-safety-tim
 ## Daily watch
 
 A GitHub Actions cron (`watch.yml`, 06:12 UTC) runs a **Pydantic AI** agent
-(`anthropic/claude-fable-5.1`, `thinking=high`) with `web_search` and `fetch_page`
+(`anthropic/claude-opus-5`, `thinking=high`) with `web_search` and `fetch_page`
 tools. Passing events are written to `data.js` / `TIMELINE.md`, then pushed to
 GitHub and the Hugging Face Space. Revert the commit if an entry is wrong.
 
