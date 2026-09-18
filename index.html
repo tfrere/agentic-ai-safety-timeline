@@ -9,44 +9,10 @@
 </head>
 <body>
   <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
-  <nav class="site-nav" aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="Agentic AI Safety home">
-      <span class="brand-mark" aria-hidden="true"><span></span></span>
-      <span>Agentic Safety</span>
-    </a>
-    <div class="nav-links">
-      <a href="#timeline-heading">Timeline</a>
-      <a class="nav-cta" href="TIMELINE.md">Read the full brief <span aria-hidden="true">↗</span></a>
-    </div>
-  </nav>
-
-  <main class="wrap">
-    <header class="hero" id="top">
-      <div class="hero-copy">
-        <span class="eyebrow"><span class="live-dot"></span> Independent field record · Updated Sep 17, 2026</span>
-        <h1>Agentic AI<br><em>Safety Timeline</em></h1>
-        <p class="subtitle">
-          A sourced, deduplicated record of incidents, lab responses, policy,
-          evaluations and research — newest first.
-        </p>
-      </div>
-
-      <aside class="hero-visual" aria-label="Timeline summary">
-        <div class="hero-stats">
-          <div class="primary-stat"><strong id="total-count">0</strong><span>Verified events</span></div>
-          <div><strong id="incident-count">0</strong><span>Incidents</span></div>
-          <div><strong id="source-count">0</strong><span>Sources</span></div>
-          <div><strong id="month-count">0</strong><span>Months</span></div>
-        </div>
-      </aside>
-    </header>
-
+  <main class="wrap" id="top">
     <section class="section-intro" aria-labelledby="timeline-heading">
-      <div>
-        <span class="section-kicker">The record</span>
-        <h2 id="timeline-heading">Follow the evidence.</h2>
-      </div>
-      <p>Every entry links to a primary or high-quality source. Use the filters to isolate the signal you care about.</p>
+      <h1 id="timeline-heading">Agentic AI, <em>documented.</em></h1>
+      <p>Verified incidents, lab responses, policy and research — sourced, deduplicated, no hype.</p>
     </section>
 
     <section class="controls" aria-label="Timeline controls">
@@ -55,14 +21,6 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
           <input id="search" class="search" type="search" aria-label="Search events"
                  placeholder="Search people, labs, incidents or research…" />
-          <kbd>/</kbd>
-        </label>
-        <label class="sort-wrap" for="sort-order">
-          <span>Order</span>
-          <select id="sort-order" aria-label="Sort timeline">
-            <option value="newest">Newest first</option>
-            <option value="oldest">Oldest first</option>
-          </select>
         </label>
       </div>
 
@@ -124,15 +82,9 @@
       const antToggle = document.getElementById("ant-toggle");
       const aisiToggle = document.getElementById("aisi-toggle");
       const shownCount = document.getElementById("shown-count");
-      const sortOrder = document.getElementById("sort-order");
       const resetFilters = document.getElementById("reset-filters");
       const backToTop = document.getElementById("back-to-top");
       const readingProgress = document.getElementById("reading-progress");
-      document.getElementById("total-count").textContent = events.length;
-      document.getElementById("incident-count").textContent = events.filter((e) => e.tag === "INCIDENT").length;
-      document.getElementById("source-count").textContent = new Set(events.map((e) => e.source)).size;
-      document.getElementById("month-count").textContent = new Set(events.map((e) => e.iso.slice(0, 7))).size;
-
       document.querySelectorAll("[data-count]").forEach((node) => {
         const tag = node.getAttribute("data-count");
         node.textContent = tag === "ALL" ? events.length : events.filter((e) => e.tag === tag).length;
@@ -157,11 +109,7 @@
         let lastMonth = "";
         let currentMonthGroup = null;
         let shown = 0;
-        const orderedEvents = events.slice().sort((a, b) =>
-          sortOrder.value === "oldest" ? a.iso.localeCompare(b.iso) : b.iso.localeCompare(a.iso)
-        );
-
-        orderedEvents.forEach((e) => {
+        events.forEach((e) => {
           if (activeFilter !== "ALL" && e.tag !== activeFilter) return;
           if (e.context && !ctxToggle.checked) return;
           if (e.track === "openai-hf" && !oaiToggle.checked) return;
@@ -252,7 +200,6 @@
       });
 
       searchEl.addEventListener("input", render);
-      sortOrder.addEventListener("change", render);
       ctxToggle.addEventListener("change", render);
       oaiToggle.addEventListener("change", render);
       antToggle.addEventListener("change", render);
@@ -260,7 +207,6 @@
 
       resetFilters.addEventListener("click", () => {
         searchEl.value = "";
-        sortOrder.value = "newest";
         [ctxToggle, oaiToggle, antToggle, aisiToggle].forEach((toggle) => { toggle.checked = true; });
         activateChip(document.querySelector('.chip[data-filter="ALL"]'));
       });
