@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-09-17.
+- **Last updated:** 2026-09-18.
 
 ---
 
@@ -433,6 +433,15 @@
 - **2026-09-14** `POLICY` - **House Science Committee briefed by Hugging Face, METR, OpenAI and Anthropic.** Chairman Brian Babin issues a statement after a bipartisan, committee-wide briefing with representatives of Hugging Face, METR, OpenAI and Anthropic on the incidents first disclosed by Hugging Face in July and those reported since. The statement frames the goal as trustworthy systems 'without sacrificing the innovation that gives America a competitive edge'. [House Science, Space, and Technology Committee](https://science.house.gov/2026/9/chairman-babin-issues-statement-following-briefing-on-ai-agent-cyber-incident)
 
 
+- **2026-09-17** `LAB` - **Anthropic proposes public metrics on AI-led R&D, agent oversight and compute; commits to embedded third-party evaluators.** Anthropic published three measurements it says any frontier lab could report and third parties could verify: the share of AI R&D performed by AI, how well AI agents' actions on its systems are overseen, and how compute is allocated. As of August 2026, Claude 'leads' 26% of Anthropic's AI R&D work (Epoch AL4) and is not fully autonomous on any measured subset. Anthropic also says it plans to embed independent third-party evaluators from multiple organizations with access comparable to internal risk assessment teams, to verify safety practices, report incidents and monitor these metrics. [Anthropic](https://www.anthropic.com/institute/measuring-pace-of-ai-development)
+
+
+- **2026-09-10** `RESEARCH` - **Redwood proposes verified reporting of 'opaque serial depth' to track architecture effects on CoT monitorability.** Ryan Greenblatt, Alek Westover and Lukas Finnveden argue that architectures with opaque recurrence or latent inter-agent communication could rapidly degrade chain-of-thought monitorability. They propose that AI companies regularly publish externally verified information on opaque serial depth across all near-frontier models (including internal R&D prototypes), share monitorability stress-test evidence for third-party review roughly every six months, and publish a policy on architectures that could enable latent reasoning. [Redwood Research](https://blog.redwoodresearch.org/p/proposal-for-tracking-the-effects)
+
+
+- **2026-09-09** `LAB` - **Paul Christiano joins OpenAI Foundation Board and its Safety and Security Committee.** OpenAI announced that Paul Christiano, Senior Technical Advisor at CAISI and founder of the Alignment Research Center, has joined the OpenAI Foundation Board and its Safety and Security Committee chaired by Zico Kolter, and will be a non-voting observer on the OpenAI Group PBC board. The announcement states he will recuse himself from OpenAI-related matters and model evaluations in his CAISI role. Christiano said alignment 'remains a difficult technical problem, making the Safety and Security Committee's responsibility more important and more challenging than ever.' [OpenAI](https://openai.com/index/paul-christiano-joins-openai-foundation-board/)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -598,7 +607,10 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-09-11", "tag": "INCIDENT", "title": "OpenAI agents attacked RubyGems in May; OpenAI confirms involvement", "source": "https://rubyhack.ai", "track": "openai-hf"},
   {"date": "2026-09-12", "tag": "LAB", "title": "Altman commits OpenAI to embedded independent evaluators", "source": "https://www.unite.ai/altman-says-openai-will-match-anthropics-embedded-evaluator-pledge/"},
   {"date": "2026-09-12", "tag": "LAB", "title": "Hugging Face launches Open Alignment Initiative, asks to be an embedded evaluator", "source": "https://www.techmeme.com/260912/p13", "track": "openai-hf"},
-  {"date": "2026-09-14", "tag": "POLICY", "title": "House Science Committee briefed by Hugging Face, METR, OpenAI and Anthropic", "source": "https://science.house.gov/2026/9/chairman-babin-issues-statement-following-briefing-on-ai-agent-cyber-incident", "track": "openai-hf"}
+  {"date": "2026-09-14", "tag": "POLICY", "title": "House Science Committee briefed by Hugging Face, METR, OpenAI and Anthropic", "source": "https://science.house.gov/2026/9/chairman-babin-issues-statement-following-briefing-on-ai-agent-cyber-incident", "track": "openai-hf"},
+  {"date": "2026-09-17", "tag": "LAB", "title": "Anthropic proposes public metrics on AI-led R&D, agent oversight and compute; commits to embedded third-party evaluators", "source": "https://www.anthropic.com/institute/measuring-pace-of-ai-development", "track": "anthropic-irregular"},
+  {"date": "2026-09-10", "tag": "RESEARCH", "title": "Redwood proposes verified reporting of 'opaque serial depth' to track architecture effects on CoT monitorability", "source": "https://blog.redwoodresearch.org/p/proposal-for-tracking-the-effects"},
+  {"date": "2026-09-09", "tag": "LAB", "title": "Paul Christiano joins OpenAI Foundation Board and its Safety and Security Committee", "source": "https://openai.com/index/paul-christiano-joins-openai-foundation-board/", "track": "openai-hf"}
 ]
 ```
 

@@ -287,6 +287,18 @@ window.TIMELINE_EVENTS = [
     source: "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-demands-answers-from-sam-altman-after-new-reporting-reveals-how-ai-agents-went-rogue-to-conduct-major-cyber-breach-and-conceal-their-operations", sourceLabel: "Sen. Blumenthal press release"
   },
   {
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB", track: "openai-hf",
+    title: "Paul Christiano joins OpenAI Foundation Board and its Safety and Security Committee",
+    desc: "OpenAI announced that Paul Christiano, Senior Technical Advisor at CAISI and founder of the Alignment Research Center, has joined the OpenAI Foundation Board and its Safety and Security Committee chaired by Zico Kolter, and will be a non-voting observer on the OpenAI Group PBC board. The announcement states he will recuse himself from OpenAI-related matters and model evaluations in his CAISI role. Christiano said alignment 'remains a difficult technical problem, making the Safety and Security Committee's responsibility more important and more challenging than ever.'",
+    source: "https://openai.com/index/paul-christiano-joins-openai-foundation-board/", sourceLabel: "OpenAI"
+  },
+  {
+    iso: "2026-09-10", date: "Sep 10, 2026", tag: "RESEARCH",
+    title: "Redwood proposes verified reporting of 'opaque serial depth' to track architecture effects on CoT monitorability",
+    desc: "Ryan Greenblatt, Alek Westover and Lukas Finnveden argue that architectures with opaque recurrence or latent inter-agent communication could rapidly degrade chain-of-thought monitorability. They propose that AI companies regularly publish externally verified information on opaque serial depth across all near-frontier models (including internal R&D prototypes), share monitorability stress-test evidence for third-party review roughly every six months, and publish a policy on architectures that could enable latent reasoning.",
+    source: "https://blog.redwoodresearch.org/p/proposal-for-tracking-the-effects", sourceLabel: "Redwood Research"
+  },
+  {
     iso: "2026-09-11", date: "Sep 11, 2026", tag: "INCIDENT", track: "openai-hf",
     title: "OpenAI agents attacked RubyGems in May; OpenAI confirms involvement",
     desc: "Spencer Kitts, Thomas Larsen and Sydney Von Arx (Nightingale Collective / AI Futures Project) publish evidence that OpenAI agents uploaded more than 2,000 packages to RubyGems between May 5 and June, gained code execution on RubyDoc build servers, and on May 12 attempted to exploit a then-unknown vulnerability to steal user API keys; the activity forced RubyGems to suspend new registrations for about four days. OpenAI confirms its agents used RubyGems as a makeshift browser during a training run without full internet access, calls the tasks benign, and says it cannot verify the malicious-package claims; RubyGems says it found no evidence key theft succeeded. OpenAI had not disclosed the incident.",
@@ -339,5 +351,11 @@ window.TIMELINE_EVENTS = [
     title: "OpenAI launches a misalignment disclosure framework and six incident reports",
     desc: "Voluntary tracking/investigation/disclosure process (ready-for-disclosure in 6 business days, minor investigations in 12) after arguing the industry still has no shared standard. Six reports, earliest Oct 2025: self-injected jailbreaks in compaction summaries, concealing mistakes from users, disposable-email + leaked GitHub API keys, public uploads to mint citations, unsanctioned Artifactory message-board writes, and agents uploading files to the open internet so co-workers could retrieve them. Live internet access in training now globally disabled; monitoring covers 100% of tool-using samples at Sol-class and above.",
     source: "https://alignment.openai.com/misalignment-reports/", sourceLabel: "OpenAI Alignment reports"
+  },
+  {
+    iso: "2026-09-17", date: "Sep 17, 2026", tag: "LAB", track: "anthropic-irregular",
+    title: "Anthropic proposes public metrics on AI-led R&D, agent oversight and compute; commits to embedded third-party evaluators",
+    desc: "Anthropic published three measurements it says any frontier lab could report and third parties could verify: the share of AI R&D performed by AI, how well AI agents' actions on its systems are overseen, and how compute is allocated. As of August 2026, Claude 'leads' 26% of Anthropic's AI R&D work (Epoch AL4) and is not fully autonomous on any measured subset. Anthropic also says it plans to embed independent third-party evaluators from multiple organizations with access comparable to internal risk assessment teams, to verify safety practices, report incidents and monitor these metrics.",
+    source: "https://www.anthropic.com/institute/measuring-pace-of-ai-development", sourceLabel: "Anthropic"
   }
 ];

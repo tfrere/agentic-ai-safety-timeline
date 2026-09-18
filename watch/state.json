@@ -1,21 +1,29 @@
 {
-  "last_run": "2026-09-18T08:28:22+00:00",
+  "last_run": "2026-09-18T09:21:11+00:00",
   "feed_hashes": {
     "hf-blog": "0c7f3ae80bb59ec02501bf420925fc9eecf8e1e3b3a82cc66e82eebb9e2bc380",
     "metr": "ba16780545df99a1c492e8b47ed3676fe3c9df8c599a4db57e2e63d246f4b32d",
-    "alignment-forum": "07f4e9f060d703a5ab2d854b614072a0e70db2c0fcf32f4202bba7ab8323ad01",
+    "openai-news": "04683fd24b70a14ea111d6aa693ee8841f17f03395617b7c55a98e42ffdbfa41",
+    "deepmind": "e97a206e974345102f7b103cc9abc17d8be6a734143e4a34449d1c36782f49b2",
+    "redwood": "61536e3683972a3e88423c71b7c0ff4d92418f817ed934e3a8103a12faa37024",
+    "frontier-security": "cfc13eecada908bd9ae7e7fe2aa3f0d6c6a6ed898c5b78582d1550ed388b2908",
+    "transformer-news": "e57f1a4e0fcdc17a682d3e07610dcbfe2fe6c0ad5a910fc3d23160b92141f21e",
     "simonw": "bb132541ed63f3495f4c99dcfea60c2aa7e62f430a116af86d3aba390c6f3123",
-    "openai-news": "140a5c240c162c17842220f12cba4818d04ddc1d1e0748d65c195ba1bc929a03",
     "arxiv-cr": "5b4e8f01a90a637d27a441649ee0b66c7e401d283028a0f87b8ad4cb9d74156d",
     "arxiv-ai": "b8787f67c59fcb5a596ad8b3a14294355981c01593f9818af0dfde16d9955916",
-    "transformer-news": "5220589e3d9a07b514a9258c000a4ac8d14ab23e4fb3fce700969a5da458df17"
+    "alignment-forum": "4fe2f08f875640a98d690acfecfce2a1222b2ef1d2fcf17066421d43a4ce5df3"
   },
   "page_hashes": {
     "openai-alignment": "1097daf3ccd1df37bce687480a7682d8fa537b197fb317946685081567ae47b6",
     "anthropic-research": "5e0b40fddabfa5e80362ddc973881789c0310fc329bbd6133dcaa9cf36c6b495",
-    "aisi": "554d8254f3c5802860013bc0beb7d2dda1d70df406cf2836791d03220837f17e",
-    "apollo": "746dd1a32b271b83217c78941085d253cc996807af61c270f506367c98f36cb7",
-    "aiaaic": "27b62cf3284b5eaa5680caa89acb88112f2cbc16e3e95584e5a20f4e9b3a8f25"
+    "anthropic-news": "1c3957a76befa7f1e12e047f8f81053ae8d2b20db7c9301cdc361a632f31e7b0",
+    "deepmind-frontier-safety": "7aaa6ac869a56a3fef1726395e71f750d9473e329abe08f2df69ab3455afa432",
+    "meta-blog": "66e53f25f2d572ebe0e6931ee358ff19d9e7f18fcf756d8e1016ac36cbbe75ac",
+    "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
+    "apollo-science": "72fb4e4541e293c3f367c356e8cd757e2566fdd5e471a4b1dd7142cabf5ed8e4",
+    "caisi": "f3fbc6277008403586c5ec6522ad2de1622e414083208bed67192eed71e3f77c",
+    "redwood-home": "ee96976ec677d01223be936d38585ffa8a41e30db5a5c5c0e00d1ea602933de7",
+    "aiaaic": "7fea786cd147bfa9cffd1752027a8f0a26d78120df4e00ff158b895a7cd31d8e"
   },
   "proposed": [
     {
@@ -90,6 +98,27 @@
       "title": "House Science Committee briefed by Hugging Face, METR, OpenAI and Anthropic",
       "iso": "2026-09-14",
       "seen": "2026-09-17",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/institute/measuring-pace-of-ai-development",
+      "title": "Anthropic proposes public metrics on AI-led R&D, agent oversight and compute; commits to embedded third-party evaluators",
+      "iso": "2026-09-17",
+      "seen": "2026-09-18",
+      "applied": true
+    },
+    {
+      "url": "https://blog.redwoodresearch.org/p/proposal-for-tracking-the-effects",
+      "title": "Redwood proposes verified reporting of 'opaque serial depth' to track architecture effects on CoT monitorability",
+      "iso": "2026-09-10",
+      "seen": "2026-09-18",
+      "applied": true
+    },
+    {
+      "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board/",
+      "title": "Paul Christiano joins OpenAI Foundation Board and its Safety and Security Committee",
+      "iso": "2026-09-09",
+      "seen": "2026-09-18",
       "applied": true
     }
   ]
