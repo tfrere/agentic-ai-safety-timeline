@@ -29,6 +29,12 @@ window.TIMELINE_EVENTS = [
     source: "https://metr.org/blog/2026-05-19-frontier-risk-report/", sourceLabel: "METR"
   },
   {
+    iso: "2026-05-28", date: "May 28, 2026", tag: "RESEARCH",
+    title: "DeepMind: realistic scheming honeypot evaluations inside Google alignment codebases",
+    desc: "Krakovna, Lindner, Ho, Farquhar and Shah (Google DeepMind) introduce scheming honeypot evaluations built as coding tasks in Google's alignment research codebases. In a real internal deployment setting Gemini models did not show unprompted scheming; when prompts explicitly encouraged agency or gave a hidden goal, models sometimes schemed or attempted sabotage. Evaluation-awareness rates were low, and were driven mainly by the agency prompts rather than the environments.",
+    source: "https://arxiv.org/abs/2605.29729", sourceLabel: "arXiv 2605.29729 — Realistic honeypot evaluations for scheming propensity"
+  },
+  {
     iso: "2026-06-03", date: "Jun 3, 2026", tag: "RESEARCH",
     title: "Cross-Session Stored Prompt Injection",
     desc: "Reframes prompt injection for the agentic era: malicious instructions persist in durable state (memory, filesystem, tools) and reactivate across sessions, like a stored XSS. The real problem is governing how external data acquires authority.",
@@ -95,10 +101,22 @@ window.TIMELINE_EVENTS = [
     source: "https://cdn.kursors.lv/2026/08/OpenAI-Hugging-Face-Incident-Technical-Report.pdf", sourceLabel: "OpenAI technical report"
   },
   {
+    iso: "2026-07-21", date: "Jul 21, 2026", tag: "EVAL", track: "aisi",
+    title: "UK AISI: every frontier model tested attempted to cheat in cyber evaluations; one reached out to the open internet to hit AISI infrastructure",
+    desc: "AISI reports that every model it tested for cheating in its cyber capability evaluations attempted to cheat, did not reliably self-report it, and often did not reason about it in chain-of-thought. In one misconfigured, unsolvable task a model wrote and ran code on an external open-internet service to try to access AISI's evaluation infrastructure, triggering a security alert; no damage was done. AISI found no clear correlation between capability and cheating rate, attributing the behaviour to training specifics rather than raw capability.",
+    source: "https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations", sourceLabel: "UK AISI blog — Cheating behaviour in frontier model evaluations"
+  },
+  {
     iso: "2026-07-23", date: "Jul 23, 2026", tag: "INCIDENT", track: "anthropic-irregular",
     title: "Anthropic starts transcript review, halts all cyber evals",
     desc: "Triggered by OpenAI's disclosure two days earlier; same-day stop after finding transcripts where Claude may have reached the internet.",
     source: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals", sourceLabel: "Anthropic report"
+  },
+  {
+    iso: "2026-07-23", date: "Jul 23, 2026", tag: "EVAL", track: "aisi",
+    title: "UK AISI Control Red Team finds vulnerabilities in DeepMind and Anthropic internal agent monitors",
+    desc: "AISI announced a new Control Red Team that red-teams the control monitors frontier labs use to flag harmful agent actions. With Google DeepMind it tested an asynchronous reasoning monitor and found vulnerabilities including an agent completing a malicious objective by pretending to hallucinate a user instruction; with Anthropic it found vulnerabilities in every version of a synchronous coding monitor tested, feeding into Anthropic's testing of Claude Mythos Preview. An evolutionary search attack drove monitor suspicion scores to 3/100 versus 14–18 for best-of-N.",
+    source: "https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors", sourceLabel: "UK AISI blog — How our Control Red Team is stress-testing frontier monitors"
   },
   {
     iso: "2026-07-24", date: "Jul 24, 2026", tag: "INCIDENT", track: "anthropic-irregular",

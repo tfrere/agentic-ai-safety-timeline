@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-18T09:21:11+00:00",
+  "last_run": "2026-09-18T09:39:31+00:00",
   "feed_hashes": {
     "hf-blog": "0c7f3ae80bb59ec02501bf420925fc9eecf8e1e3b3a82cc66e82eebb9e2bc380",
     "metr": "ba16780545df99a1c492e8b47ed3676fe3c9df8c599a4db57e2e63d246f4b32d",
-    "openai-news": "04683fd24b70a14ea111d6aa693ee8841f17f03395617b7c55a98e42ffdbfa41",
+    "openai-news": "ceef6b6a7fb6c719dd712ed1218bc670e7ec42bf1eea047be0f1126472d23330",
     "deepmind": "e97a206e974345102f7b103cc9abc17d8be6a734143e4a34449d1c36782f49b2",
-    "redwood": "61536e3683972a3e88423c71b7c0ff4d92418f817ed934e3a8103a12faa37024",
-    "frontier-security": "cfc13eecada908bd9ae7e7fe2aa3f0d6c6a6ed898c5b78582d1550ed388b2908",
+    "redwood": "92270a20f21c54f6523d301a52b90c0e306c2eb5dc67a4162d286390b3048f1c",
+    "frontier-security": "f332e61de3e3f05e68f77cf7fcf3597d47ff67392594c748f64f4d16595a1feb",
     "transformer-news": "e57f1a4e0fcdc17a682d3e07610dcbfe2fe6c0ad5a910fc3d23160b92141f21e",
     "simonw": "bb132541ed63f3495f4c99dcfea60c2aa7e62f430a116af86d3aba390c6f3123",
     "arxiv-cr": "5b4e8f01a90a637d27a441649ee0b66c7e401d283028a0f87b8ad4cb9d74156d",
     "arxiv-ai": "b8787f67c59fcb5a596ad8b3a14294355981c01593f9818af0dfde16d9955916",
-    "alignment-forum": "4fe2f08f875640a98d690acfecfce2a1222b2ef1d2fcf17066421d43a4ce5df3"
+    "alignment-forum": "7558f22473bec1d0d1f7fa6200f262aa42c5feb11cc0cfc48ca1d44f89f8aa50"
   },
   "page_hashes": {
     "openai-alignment": "1097daf3ccd1df37bce687480a7682d8fa537b197fb317946685081567ae47b6",
     "anthropic-research": "5e0b40fddabfa5e80362ddc973881789c0310fc329bbd6133dcaa9cf36c6b495",
     "anthropic-news": "1c3957a76befa7f1e12e047f8f81053ae8d2b20db7c9301cdc361a632f31e7b0",
     "deepmind-frontier-safety": "7aaa6ac869a56a3fef1726395e71f750d9473e329abe08f2df69ab3455afa432",
-    "meta-blog": "66e53f25f2d572ebe0e6931ee358ff19d9e7f18fcf756d8e1016ac36cbbe75ac",
+    "meta-blog": "3e8f90de8daad74cabc4dd13f65d55b7980708fecef8f0889a4a39ec3e984ee2",
     "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
     "apollo-science": "72fb4e4541e293c3f367c356e8cd757e2566fdd5e471a4b1dd7142cabf5ed8e4",
-    "caisi": "f3fbc6277008403586c5ec6522ad2de1622e414083208bed67192eed71e3f77c",
+    "caisi": "5f11de309f02976ae88058bed8f9a958360d202ea5070a7e3d82aad0e1876244",
     "redwood-home": "ee96976ec677d01223be936d38585ffa8a41e30db5a5c5c0e00d1ea602933de7",
-    "aiaaic": "7fea786cd147bfa9cffd1752027a8f0a26d78120df4e00ff158b895a7cd31d8e"
+    "aiaaic": "23fd4f36bd5e28557c0067bdbc806ebfa3c63ae8a6e3bd93705f2b804fc82cf6"
   },
   "proposed": [
     {
@@ -118,6 +118,27 @@
       "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board/",
       "title": "Paul Christiano joins OpenAI Foundation Board and its Safety and Security Committee",
       "iso": "2026-09-09",
+      "seen": "2026-09-18",
+      "applied": true
+    },
+    {
+      "url": "https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors",
+      "title": "UK AISI Control Red Team finds vulnerabilities in DeepMind and Anthropic internal agent monitors",
+      "iso": "2026-07-23",
+      "seen": "2026-09-18",
+      "applied": true
+    },
+    {
+      "url": "https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations",
+      "title": "UK AISI: every frontier model tested attempted to cheat in cyber evaluations; one reached out to the open internet to hit AISI infrastructure",
+      "iso": "2026-07-21",
+      "seen": "2026-09-18",
+      "applied": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2605.29729",
+      "title": "DeepMind: realistic scheming honeypot evaluations inside Google alignment codebases",
+      "iso": "2026-05-28",
       "seen": "2026-09-18",
       "applied": true
     }
