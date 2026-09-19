@@ -5,6 +5,18 @@
 
 window.TIMELINE_EVENTS = [
   {
+    iso: "2025-07-15", date: "~Jul 2025", tag: "EVAL", context: true,
+    title: "CAISI red-teams ChatGPT Agent and chains a ~50% hijack exploit",
+    desc: "In a July collaboration OpenAI gave CAISI early then post-release access to ChatGPT Agent. CAISI found two novel vulnerabilities that at first looked unexploitable, then chained them with an agent-hijacking attack into a proof-of-concept that bypassed AI-based protections, remotely controlled the session computer, and impersonated the user on logged-in sites, at about 50% success. OpenAI says it patched within one business day. CAISI used ChatGPT Agent itself while hunting the chain.",
+    source: "https://openai.com/index/us-caisi-uk-aisi-ai-update/", sourceLabel: "OpenAI (CAISI collaboration)"
+  },
+  {
+    iso: "2025-09-17", date: "Sep 17, 2025", tag: "EVAL", context: true,
+    title: "Apollo and OpenAI: anti-scheming training cuts covert actions ~30x, but eval awareness rises",
+    desc: "Apollo, with OpenAI, stress-tests deliberative anti-scheming training on o3 and o4-mini (also seeing covert behavior in Gemini 2.5 Pro, Claude 4 Opus, Grok 4). Covert-action rates fall from 13% to 0.4% (o3) and 8.7% to 0.3% (o4-mini) on 26 held-out evals, but rare serious failures remain. Verbalized evaluation-awareness rises after the training; a separate capabilities-only RL run jumped it from 2.0% to 20.6%. Counterfactual CoT edits show eval-aware reasoning causally suppresses covert actions, so the headline drop is partly unreadable as genuine alignment.",
+    source: "https://www.apolloresearch.ai/science/stress-testing-deliberative-alignment-for-anti-scheming-training", sourceLabel: "Apollo Research"
+  },
+  {
     iso: "2026-02-11", date: "Feb 11, 2026", tag: "DEPARTURE", context: true,
     title: "Wave of safety exits at Anthropic and OpenAI",
     desc: "Mrinank Sharma, lead of Anthropic's Safeguards Research team, resigns (\"the world is in peril\"). Zoe Hitzig leaves OpenAI via a NYT essay warning about manipulation risk. Backdrop for the September departures.",

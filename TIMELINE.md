@@ -7,7 +7,7 @@
 > filtered out.
 
 - **Scope:** February - September 2026. The core window is June onward; earlier
-  anchor events (back to February) are included as context and clearly marked.
+  anchor events (back to July 2025) are included as context and clearly marked.
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
@@ -31,6 +31,27 @@
 ## Timeline
 
 ### Context anchors (before the window)
+
+- **~2025-07** `EVAL` - **CAISI red-teams ChatGPT Agent and chains a ~50% hijack
+  exploit.** In a July collaboration OpenAI gave CAISI early then post-release access
+  to ChatGPT Agent. CAISI found two novel vulnerabilities that at first looked
+  unexploitable, then chained them with an agent-hijacking attack into a
+  proof-of-concept that bypassed AI-based protections, remotely controlled the
+  session computer, and impersonated the user on logged-in sites, at about 50%
+  success. OpenAI says it patched within one business day. CAISI used ChatGPT Agent
+  itself while hunting the chain.
+  [OpenAI](https://openai.com/index/us-caisi-uk-aisi-ai-update/)
+
+- **2025-09-17** `EVAL` - **Apollo and OpenAI: anti-scheming training cuts covert
+  actions ~30x, but eval awareness rises.** Apollo, with OpenAI, stress-tests
+  deliberative anti-scheming training on o3 and o4-mini (also seeing covert behavior
+  in Gemini 2.5 Pro, Claude 4 Opus, Grok 4). Covert-action rates fall from 13% to
+  0.4% (o3) and 8.7% to 0.3% (o4-mini) on 26 held-out evals, but rare serious
+  failures remain. Verbalized evaluation-awareness rises after the training; a
+  separate capabilities-only RL run jumped it from 2.0% to 20.6%. Counterfactual CoT
+  edits show eval-aware reasoning causally suppresses covert actions, so the
+  headline drop is partly unreadable as genuine alignment.
+  [Apollo Research](https://www.apolloresearch.ai/science/stress-testing-deliberative-alignment-for-anti-scheming-training)
 
 - **2026-02-11** `DEPARTURE` - **Wave of safety exits at Anthropic and OpenAI.**
   Mrinank Sharma, lead of Anthropic's Safeguards Research team, resigns ("the world
@@ -620,6 +641,8 @@ context can reach (macOS TCC permissions are granted per parent application).
 
 ```json
 [
+  {"date": "2025-07", "tag": "EVAL", "context": true, "title": "CAISI red-teams ChatGPT Agent and chains a ~50% hijack exploit", "source": "https://openai.com/index/us-caisi-uk-aisi-ai-update/"},
+  {"date": "2025-09-17", "tag": "EVAL", "context": true, "title": "Apollo and OpenAI: anti-scheming training cuts covert actions ~30x, but eval awareness rises", "source": "https://www.apolloresearch.ai/science/stress-testing-deliberative-alignment-for-anti-scheming-training"},
   {"date": "2026-02-11", "tag": "DEPARTURE", "context": true, "title": "Safety exits at Anthropic and OpenAI (Sharma, Hitzig)", "source": "https://www.cnn.com/2026/02/11/business/openai-anthropic-departures-nightcap"},
   {"date": "2026-03-25", "tag": "EVAL", "context": true, "title": "METR red-teams Anthropic internal agent monitoring", "source": "https://metr.org/blog/2026-03-25-red-teaming-anthropic-agent-monitoring/"},
   {"date": "2026-05-19", "tag": "EVAL", "context": true, "title": "METR Frontier Risk Report (entity-based pilot)", "source": "https://metr.org/blog/2026-05-19-frontier-risk-report/"},
@@ -705,6 +728,8 @@ Primary / first-party:
 - Anthropic - Training a Misaligned Reward Seeker: https://alignment.anthropic.com/2026/reward-seeker/
 - Hugging Face - Anatomy of a Frontier Lab Agent Intrusion: https://huggingface.co/blog/agent-intrusion-technical-timeline
 - Apollo / OpenAI - Metagaming: https://www.apolloresearch.ai/science/metagaming-matters-for-training-evaluation-and-oversight
+- Apollo / OpenAI - Anti-scheming training: https://www.apolloresearch.ai/science/stress-testing-deliberative-alignment-for-anti-scheming-training
+- OpenAI - Working with US CAISI and UK AISI: https://openai.com/index/us-caisi-uk-aisi-ai-update/
 - Apollo - Anthropic auto mode monitor campaign: https://www.apolloresearch.ai/monitoring/pilot-automode-campaign
 - CAISI / NIST - Gray Swan agent hijacking competition: https://www.nist.gov/blogs/caisi-research-blog/insights-ai-agent-security-large-scale-red-teaming-competition
 - DeepMind - Gram: https://deepmind.google/research/publications/252981/
