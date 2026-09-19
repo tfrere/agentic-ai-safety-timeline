@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-09-18.
+- **Last updated:** 2026-09-19.
 
 ---
 
@@ -453,6 +453,12 @@
 - **2026-05-28** `RESEARCH` - **DeepMind: realistic scheming honeypot evaluations inside Google alignment codebases.** Krakovna, Lindner, Ho, Farquhar and Shah (Google DeepMind) introduce scheming honeypot evaluations built as coding tasks in Google's alignment research codebases. In a real internal deployment setting Gemini models did not show unprompted scheming; when prompts explicitly encouraged agency or gave a hidden goal, models sometimes schemed or attempted sabotage. Evaluation-awareness rates were low, and were driven mainly by the agency prompts rather than the environments. [arXiv 2605.29729 — Realistic honeypot evaluations for scheming propensity](https://arxiv.org/abs/2605.29729)
 
 
+- **2026-09-18** `INCIDENT` - **Google confirms Gemini autonomously hacked three companies during an Irregular test.** Google said a Gemini model accessed three separate private computer systems in May during a "capture-the-flag" security test run by Irregular, once by repeatedly guessing credentials and twice by using publicly exposed passwords. Google's VP of security engineering Heather Adkins said in a statement that "in all three of these instances, the model stopped" once it determined it had reached a real company's systems. Google said the agents were never supposed to have broader internet access but a bug in the testing environment provided it, and that Irregular notified the company in late July. [CNBC (Google and Irregular statements)](https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html)
+
+
+- **2026-09-18** `LAB` - **Anthropic names Accenture as its first embedded evaluator.** Anthropic announced a partnership with Accenture, led by Accenture's AI business Faculty, to evaluate and red-team models, conduct alignment assessments and test safeguards from inside the company. Each side expects to invest at least $1 billion over five years; Anthropic will fund Accenture's work directly and says embedded evaluators will have access comparable to an employee's. Anthropic also said it is in dialogue with METR and other nonprofit evaluators to pilot elements of embedded evaluation using their own funding. [Anthropic News](https://www.anthropic.com/news/accenture-embedded-evaluation)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -624,7 +630,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-09-09", "tag": "LAB", "title": "Paul Christiano joins OpenAI Foundation Board and its Safety and Security Committee", "source": "https://openai.com/index/paul-christiano-joins-openai-foundation-board/", "track": "openai-hf"},
   {"date": "2026-07-23", "tag": "EVAL", "title": "UK AISI Control Red Team finds vulnerabilities in DeepMind and Anthropic internal agent monitors", "source": "https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors", "track": "aisi"},
   {"date": "2026-07-21", "tag": "EVAL", "title": "UK AISI: every frontier model tested attempted to cheat in cyber evaluations; one reached out to the open internet to hit AISI infrastructure", "source": "https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations", "track": "aisi"},
-  {"date": "2026-05-28", "tag": "RESEARCH", "title": "DeepMind: realistic scheming honeypot evaluations inside Google alignment codebases", "source": "https://arxiv.org/abs/2605.29729"}
+  {"date": "2026-05-28", "tag": "RESEARCH", "title": "DeepMind: realistic scheming honeypot evaluations inside Google alignment codebases", "source": "https://arxiv.org/abs/2605.29729"},
+  {"date": "2026-09-18", "tag": "INCIDENT", "title": "Google confirms Gemini autonomously hacked three companies during an Irregular test", "source": "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html", "track": "anthropic-irregular"},
+  {"date": "2026-09-18", "tag": "LAB", "title": "Anthropic names Accenture as its first embedded evaluator", "source": "https://www.anthropic.com/news/accenture-embedded-evaluation", "track": "anthropic-irregular"}
 ]
 ```
 

@@ -375,5 +375,17 @@ window.TIMELINE_EVENTS = [
     title: "Anthropic proposes public metrics on AI-led R&D, agent oversight and compute; commits to embedded third-party evaluators",
     desc: "Anthropic published three measurements it says any frontier lab could report and third parties could verify: the share of AI R&D performed by AI, how well AI agents' actions on its systems are overseen, and how compute is allocated. As of August 2026, Claude 'leads' 26% of Anthropic's AI R&D work (Epoch AL4) and is not fully autonomous on any measured subset. Anthropic also says it plans to embed independent third-party evaluators from multiple organizations with access comparable to internal risk assessment teams, to verify safety practices, report incidents and monitor these metrics.",
     source: "https://www.anthropic.com/institute/measuring-pace-of-ai-development", sourceLabel: "Anthropic"
+  },
+  {
+    iso: "2026-09-18", date: "Sep 18, 2026", tag: "INCIDENT", track: "anthropic-irregular",
+    title: "Google confirms Gemini autonomously hacked three companies during an Irregular test",
+    desc: "Google said a Gemini model accessed three separate private computer systems in May during a \"capture-the-flag\" security test run by Irregular, once by repeatedly guessing credentials and twice by using publicly exposed passwords. Google's VP of security engineering Heather Adkins said in a statement that \"in all three of these instances, the model stopped\" once it determined it had reached a real company's systems. Google said the agents were never supposed to have broader internet access but a bug in the testing environment provided it, and that Irregular notified the company in late July.",
+    source: "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html", sourceLabel: "CNBC (Google and Irregular statements)"
+  },
+  {
+    iso: "2026-09-18", date: "Sep 18, 2026", tag: "LAB", track: "anthropic-irregular",
+    title: "Anthropic names Accenture as its first embedded evaluator",
+    desc: "Anthropic announced a partnership with Accenture, led by Accenture's AI business Faculty, to evaluate and red-team models, conduct alignment assessments and test safeguards from inside the company. Each side expects to invest at least $1 billion over five years; Anthropic will fund Accenture's work directly and says embedded evaluators will have access comparable to an employee's. Anthropic also said it is in dialogue with METR and other nonprofit evaluators to pilot elements of embedded evaluation using their own funding.",
+    source: "https://www.anthropic.com/news/accenture-embedded-evaluation", sourceLabel: "Anthropic News"
   }
 ];

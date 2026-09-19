@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-18T09:39:31+00:00",
+  "last_run": "2026-09-19T06:35:43+00:00",
   "feed_hashes": {
     "hf-blog": "0c7f3ae80bb59ec02501bf420925fc9eecf8e1e3b3a82cc66e82eebb9e2bc380",
-    "metr": "ba16780545df99a1c492e8b47ed3676fe3c9df8c599a4db57e2e63d246f4b32d",
-    "openai-news": "ceef6b6a7fb6c719dd712ed1218bc670e7ec42bf1eea047be0f1126472d23330",
+    "metr": "67386a810dc60317f692651291159f2cec30a24b8d60564eeaed4a2acb850c9e",
+    "openai-news": "2b4ad87ae6d343b1811078137ed1c612487e89b3383e0377ac3b7cb63cda2f12",
     "deepmind": "e97a206e974345102f7b103cc9abc17d8be6a734143e4a34449d1c36782f49b2",
-    "redwood": "92270a20f21c54f6523d301a52b90c0e306c2eb5dc67a4162d286390b3048f1c",
-    "frontier-security": "f332e61de3e3f05e68f77cf7fcf3597d47ff67392594c748f64f4d16595a1feb",
-    "transformer-news": "e57f1a4e0fcdc17a682d3e07610dcbfe2fe6c0ad5a910fc3d23160b92141f21e",
-    "simonw": "bb132541ed63f3495f4c99dcfea60c2aa7e62f430a116af86d3aba390c6f3123",
-    "arxiv-cr": "5b4e8f01a90a637d27a441649ee0b66c7e401d283028a0f87b8ad4cb9d74156d",
-    "arxiv-ai": "b8787f67c59fcb5a596ad8b3a14294355981c01593f9818af0dfde16d9955916",
-    "alignment-forum": "7558f22473bec1d0d1f7fa6200f262aa42c5feb11cc0cfc48ca1d44f89f8aa50"
+    "redwood": "ea2fcae7cc0b128492601436b8de79a7b71bddc11579138d2b64bbb4cb97b0e0",
+    "frontier-security": "697886e8257bc5a441ef2fd775f761f3473a791ef6d8e41cfaada31fd4cd6b28",
+    "transformer-news": "03799a6b41eb900a3be6d07cfe04b952e8bd63b05478ab602f4c3a0a9444e8cd",
+    "simonw": "5f5e2ed3a3056d07f691904fe14eb15434a9e52d761feee466f59fd5e8354135",
+    "arxiv-cr": "d76355b9ae78667c348edbd876febd99f31217bae77d22e0ccfb5c2dbc67e98f",
+    "arxiv-ai": "13e4c007108a0576dbbda8726bf88b1019c4418c06e75029633c8c00d37a893f",
+    "alignment-forum": "3c5f66fe760494d815ad354454bc17b72abf74d0b9c07eb575519ccf8e9a5f4e"
   },
   "page_hashes": {
     "openai-alignment": "1097daf3ccd1df37bce687480a7682d8fa537b197fb317946685081567ae47b6",
     "anthropic-research": "5e0b40fddabfa5e80362ddc973881789c0310fc329bbd6133dcaa9cf36c6b495",
-    "anthropic-news": "1c3957a76befa7f1e12e047f8f81053ae8d2b20db7c9301cdc361a632f31e7b0",
+    "anthropic-news": "21dac042127004bdb030230877797939e464819364b85d73f3557d999ba5d0cf",
     "deepmind-frontier-safety": "7aaa6ac869a56a3fef1726395e71f750d9473e329abe08f2df69ab3455afa432",
-    "meta-blog": "3e8f90de8daad74cabc4dd13f65d55b7980708fecef8f0889a4a39ec3e984ee2",
+    "meta-blog": "fea920230f70af807bd75a3e41ccec8aa76f681ee3e9c044c1ccaa3a4401d548",
     "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
     "apollo-science": "72fb4e4541e293c3f367c356e8cd757e2566fdd5e471a4b1dd7142cabf5ed8e4",
-    "caisi": "5f11de309f02976ae88058bed8f9a958360d202ea5070a7e3d82aad0e1876244",
-    "redwood-home": "ee96976ec677d01223be936d38585ffa8a41e30db5a5c5c0e00d1ea602933de7",
-    "aiaaic": "23fd4f36bd5e28557c0067bdbc806ebfa3c63ae8a6e3bd93705f2b804fc82cf6"
+    "caisi": "6a1199b529fab39956662f9b5dfc28fac3e855e6d7274656bb1ad9ac7e1e5190",
+    "redwood-home": "a77f95a986b48215e48fc35387a70dd069df4dad3556d79773b3e918e9c93a90",
+    "aiaaic": "2342b2b1d6807e8a206162a97ed0f1342afa06ed685534b8223a66bde5698ebb"
   },
   "proposed": [
     {
@@ -140,6 +140,20 @@
       "title": "DeepMind: realistic scheming honeypot evaluations inside Google alignment codebases",
       "iso": "2026-05-28",
       "seen": "2026-09-18",
+      "applied": true
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html",
+      "title": "Google confirms Gemini autonomously hacked three companies during an Irregular test",
+      "iso": "2026-09-18",
+      "seen": "2026-09-19",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "title": "Anthropic names Accenture as its first embedded evaluator",
+      "iso": "2026-09-18",
+      "seen": "2026-09-19",
       "applied": true
     }
   ]
