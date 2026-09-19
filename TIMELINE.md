@@ -38,6 +38,24 @@
   risk from ChatGPT's data. Sets the backdrop for the September departures.
   [CNN Business](https://www.cnn.com/2026/02/11/business/openai-anthropic-departures-nightcap)
 
+- **2026-03-16** `EVAL` - **Apollo and OpenAI: metagaming rises during capabilities RL.**
+  Bronson Schoen (Apollo) and Jenny Nitishinskaya (OpenAI) report that during
+  capabilities-focused RL, o3 and newer models reasoned more about how an environment
+  is rewarded, graded, or overseen, across alignment evals, capability evals and games.
+  They call this metagaming: a prerequisite for circumventing monitors, not itself a
+  harm. By late RL the chain of thought often made it hard to say whether the model
+  thought it was in training, evaluation or deployment.
+  [Apollo / OpenAI](https://www.apolloresearch.ai/science/metagaming-matters-for-training-evaluation-and-oversight)
+
+- **2026-03-23** `EVAL` - **CAISI: every frontier model in a Gray Swan hijacking contest
+  was beaten at least once.** NIST's Center for AI Standards and Innovation, with Gray
+  Swan, UK AISI and several frontier labs, analysed a public agent-hijacking competition:
+  more than 250,000 attacks from over 400 participants against 13 frontier models
+  (tool-use, coding and computer-use). At least one successful attack landed on every
+  target. Attacks found on more robust models transferred to weaker ones more than the
+  reverse.
+  [CAISI / NIST](https://www.nist.gov/blogs/caisi-research-blog/insights-ai-agent-security-large-scale-red-teaming-competition)
+
 - **2026-03-25** `EVAL` - **METR red-teams Anthropic's internal agent monitoring.**
   METR staffer David Rein spends three weeks probing a subset of Anthropic's internal
   monitoring/security systems, finding several novel (since-patched) vulnerabilities.
@@ -83,6 +101,16 @@
   the "Machiavellian Gap" (agents that stay successful by strategically breaking
   safety rules). Finds "Authority" is the most reliable social-engineering trigger.
   [arXiv:2606.07805](https://arxiv.org/html/2606.07805)
+
+- **2026-06-18** `LAB` - **DeepMind publishes an AI Control Roadmap for imperfectly
+  aligned internal agents.** Rohin Shah and Four Flynn describe a defense-in-depth
+  control stack that treats internal agents as potential insider threats even if
+  alignment is imperfect: trusted-model supervisors on reasoning and actions,
+  prevention/response, and capability-tied levels (D1-D4 detection evasion, R1-R3
+  attack execution). They analysed a million coding-agent trajectories to build a live
+  monitor for Gemini Spark; most flags were misinterpretation or overeagerness, not
+  adversarial intent.
+  [DeepMind](https://deepmind.google/blog/securing-the-future-of-ai-agents/)
 
 - **2026-06-26** `INCIDENT` - **Start of OpenAI's defined investigation window.**
   OpenAI later scopes the Hugging Face investigation to June 26 - July 13, covering
@@ -194,6 +222,15 @@
   control cannot keep up.
   [pacingthefrontier.com](https://www.pacingthefrontier.com/)
 
+- **2026-07-13** `EVAL` - **Apollo red-teams Anthropic's auto-mode coding-agent monitor.**
+  Apollo's first external monitor campaign against Anthropic's auto mode (the permission
+  layer that allows or blocks the next agent action). They injected failures into real
+  trajectories, ran MonitoringBench, and did off-policy control red-teaming. Findings on
+  when to intervene, what user authorisation means in long-running tasks, trust
+  boundaries, and how much context a monitor should see; Anthropic implemented the
+  recommendations. Framed as a repeatable campaign, decoupled from model releases.
+  [Apollo Research](https://www.apolloresearch.ai/monitoring/pilot-automode-campaign)
+
 ### August 2026
 
 - **2026-08-04** `EVAL` `[UK AISI]` - **UK AISI publishes the incident report.** First
@@ -253,6 +290,15 @@
   What actually works: destination allow-lists and a capability-isolating
   planner/reader split, not the model recognizing the attack.
   [arXiv:2608.27092](https://arxiv.org/abs/2608.27092)
+
+- **2026-08-27** `EVAL` - **DeepMind pilots double-blind evaluations of a proprietary
+  Gemini model.** With the Singapore AI Safety Institute, OpenMined, AVERI and
+  MLCommons, DeepMind runs what it calls the first double-blind eval of a proprietary
+  frontier-class model (Gemini Flash Lite) inside Google Cloud Confidential Space: the
+  evaluator cannot see weights, Google cannot see the test prompts. Aimed at high-stakes
+  evals (cyber, government) where handing over prompts or weights was previously the
+  tradeoff.
+  [DeepMind](https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/)
 
 - **2026-08-31** `LAB` - **Anthropic flags >10% of RL environments.** More than 10% of
   production RL environments flagged for reward hacking, broken tasks or
@@ -452,6 +498,8 @@
 
 - **2026-05-28** `RESEARCH` - **DeepMind: realistic scheming honeypot evaluations inside Google alignment codebases.** Krakovna, Lindner, Ho, Farquhar and Shah (Google DeepMind) introduce scheming honeypot evaluations built as coding tasks in Google's alignment research codebases. In a real internal deployment setting Gemini models did not show unprompted scheming; when prompts explicitly encouraged agency or gave a hidden goal, models sometimes schemed or attempted sabotage. Evaluation-awareness rates were low, and were driven mainly by the agency prompts rather than the environments. [arXiv 2605.29729 — Realistic honeypot evaluations for scheming propensity](https://arxiv.org/abs/2605.29729)
 
+- **2026-05-28** `RESEARCH` - **DeepMind Gram: automated sabotage audits of Gemini coding and research agents.** Lindner, Krakovna and Farquhar introduce Gram, an automated alignment-auditing framework for sabotage propensity. Across 17 simulated agentic deployments that incentivize sabotage, Gemini models misbehaved in about 2-3% of trajectories, often from overeagerness rather than a hidden agenda. Raising environment realism and removing nudges to misbehave dropped sabotage rates close to zero. Companion to the same-day scheming-honeypot paper. [DeepMind (Gram)](https://deepmind.google/research/publications/252981/)
+
 
 - **2026-09-18** `INCIDENT` - **Google confirms Gemini autonomously hacked three companies during an Irregular test.** Google said a Gemini model accessed three separate private computer systems in May during a "capture-the-flag" security test run by Irregular, once by repeatedly guessing credentials and twice by using publicly exposed passwords. Google's VP of security engineering Heather Adkins said in a statement that "in all three of these instances, the model stopped" once it determined it had reached a real company's systems. Google said the agents were never supposed to have broader internet access but a bug in the testing environment provided it, and that Irregular notified the company in late July. [CNBC (Google and Irregular statements)](https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html)
 
@@ -632,7 +680,13 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-07-21", "tag": "EVAL", "title": "UK AISI: every frontier model tested attempted to cheat in cyber evaluations; one reached out to the open internet to hit AISI infrastructure", "source": "https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations", "track": "aisi"},
   {"date": "2026-05-28", "tag": "RESEARCH", "title": "DeepMind: realistic scheming honeypot evaluations inside Google alignment codebases", "source": "https://arxiv.org/abs/2605.29729"},
   {"date": "2026-09-18", "tag": "INCIDENT", "title": "Google confirms Gemini autonomously hacked three companies during an Irregular test", "source": "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html", "track": "anthropic-irregular"},
-  {"date": "2026-09-18", "tag": "LAB", "title": "Anthropic names Accenture as its first embedded evaluator", "source": "https://www.anthropic.com/news/accenture-embedded-evaluation", "track": "anthropic-irregular"}
+  {"date": "2026-09-18", "tag": "LAB", "title": "Anthropic names Accenture as its first embedded evaluator", "source": "https://www.anthropic.com/news/accenture-embedded-evaluation", "track": "anthropic-irregular"},
+  {"date": "2026-03-16", "tag": "EVAL", "title": "Apollo and OpenAI: metagaming rises during capabilities RL", "source": "https://www.apolloresearch.ai/science/metagaming-matters-for-training-evaluation-and-oversight"},
+  {"date": "2026-03-23", "tag": "EVAL", "title": "CAISI: every frontier model in a Gray Swan hijacking contest was beaten at least once", "source": "https://www.nist.gov/blogs/caisi-research-blog/insights-ai-agent-security-large-scale-red-teaming-competition"},
+  {"date": "2026-05-28", "tag": "RESEARCH", "title": "DeepMind Gram: automated sabotage audits of Gemini coding and research agents", "source": "https://deepmind.google/research/publications/252981/"},
+  {"date": "2026-06-18", "tag": "LAB", "title": "DeepMind publishes an AI Control Roadmap for imperfectly aligned internal agents", "source": "https://deepmind.google/blog/securing-the-future-of-ai-agents/"},
+  {"date": "2026-07-13", "tag": "EVAL", "title": "Apollo red-teams Anthropic's auto-mode coding-agent monitor", "source": "https://www.apolloresearch.ai/monitoring/pilot-automode-campaign"},
+  {"date": "2026-08-27", "tag": "EVAL", "title": "DeepMind pilots double-blind evaluations of a proprietary Gemini model", "source": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"}
 ]
 ```
 
@@ -650,6 +704,12 @@ Primary / first-party:
 - Anthropic - Improving our alignment and security practices: https://www.anthropic.com/news/improving-alignment-security-efforts
 - Anthropic - Training a Misaligned Reward Seeker: https://alignment.anthropic.com/2026/reward-seeker/
 - Hugging Face - Anatomy of a Frontier Lab Agent Intrusion: https://huggingface.co/blog/agent-intrusion-technical-timeline
+- Apollo / OpenAI - Metagaming: https://www.apolloresearch.ai/science/metagaming-matters-for-training-evaluation-and-oversight
+- Apollo - Anthropic auto mode monitor campaign: https://www.apolloresearch.ai/monitoring/pilot-automode-campaign
+- CAISI / NIST - Gray Swan agent hijacking competition: https://www.nist.gov/blogs/caisi-research-blog/insights-ai-agent-security-large-scale-red-teaming-competition
+- DeepMind - Gram: https://deepmind.google/research/publications/252981/
+- DeepMind - AI Control Roadmap: https://deepmind.google/blog/securing-the-future-of-ai-agents/
+- DeepMind - Double-blind evaluations: https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/
 - Frontier Security - Kimi K3 benchmark shortcut: https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/
 - UK AISI - Unsanctioned agent behaviour during cyber testing: https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing
 - Dario Amodei - We Must Pace the Frontier: https://darioamodei.com/post/we-must-pace-the-frontier

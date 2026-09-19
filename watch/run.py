@@ -372,7 +372,12 @@ def display_date(iso: str) -> str:
 
 
 def js_escape_event(ev: dict) -> str:
-    extra = f', track: {json.dumps(ev["track"])}' if ev.get("track") else ""
+    extras = []
+    if ev.get("track"):
+        extras.append(f'track: {json.dumps(ev["track"])}')
+    if ev.get("context"):
+        extras.append("context: true")
+    extra = (", " + ", ".join(extras)) if extras else ""
     return "\n".join(
         [
             "  {",

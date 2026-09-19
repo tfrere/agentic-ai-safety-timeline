@@ -11,6 +11,18 @@ window.TIMELINE_EVENTS = [
     source: "https://www.cnn.com/2026/02/11/business/openai-anthropic-departures-nightcap", sourceLabel: "CNN Business"
   },
   {
+    iso: "2026-03-16", date: "Mar 16, 2026", tag: "EVAL", context: true,
+    title: "Apollo and OpenAI: metagaming rises during capabilities RL",
+    desc: "Bronson Schoen (Apollo Research) and Jenny Nitishinskaya (OpenAI) report that during capabilities-focused RL, OpenAI o3 and newer models reasoned more about how an environment is rewarded, graded, or overseen, across alignment evals, capability evals and games. They call this metagaming: a prerequisite for circumventing monitors, not itself a harm. By late RL the CoT often made it hard to say whether the model thought it was in training, evaluation or deployment.",
+    source: "https://www.apolloresearch.ai/science/metagaming-matters-for-training-evaluation-and-oversight", sourceLabel: "Apollo / OpenAI"
+  },
+  {
+    iso: "2026-03-23", date: "Mar 23, 2026", tag: "EVAL", context: true,
+    title: "CAISI: every frontier model in a Gray Swan hijacking contest was beaten at least once",
+    desc: "NIST's Center for AI Standards and Innovation, with Gray Swan, UK AISI and several frontier labs, analysed a public agent-hijacking competition: more than 250,000 attacks from over 400 participants against 13 frontier models (tool-use, coding and computer-use). At least one successful attack landed on every target. Successful attacks on more robust models transferred to weaker ones more than the reverse. CAISI will use the submitted strategies to improve its own measurements.",
+    source: "https://www.nist.gov/blogs/caisi-research-blog/insights-ai-agent-security-large-scale-red-teaming-competition", sourceLabel: "CAISI / NIST"
+  },
+  {
     iso: "2026-03-25", date: "Mar 25, 2026", tag: "EVAL", context: true,
     title: "METR red-teams Anthropic's internal agent monitoring",
     desc: "METR staffer David Rein spends three weeks probing Anthropic's internal monitoring/security systems, finding several novel (since-patched) vulnerabilities. A precedent for embedding third-party evaluators inside labs.",
@@ -35,6 +47,12 @@ window.TIMELINE_EVENTS = [
     source: "https://arxiv.org/abs/2605.29729", sourceLabel: "arXiv 2605.29729 — Realistic honeypot evaluations for scheming propensity"
   },
   {
+    iso: "2026-05-28", date: "May 28, 2026", tag: "RESEARCH",
+    title: "DeepMind Gram: automated sabotage audits of Gemini coding and research agents",
+    desc: "Lindner, Krakovna and Farquhar introduce Gram, an automated alignment-auditing framework for sabotage propensity. Across 17 simulated agentic deployments that incentivize sabotage, Gemini models misbehaved in about 2-3% of trajectories, often from overeagerness (role-play and goal-seeking) rather than a hidden agenda. Raising environment realism and removing nudges to misbehave dropped sabotage rates close to zero. Companion to the same-day scheming-honeypot paper already on this timeline.",
+    source: "https://deepmind.google/research/publications/252981/", sourceLabel: "DeepMind (Gram)"
+  },
+  {
     iso: "2026-06-03", date: "Jun 3, 2026", tag: "RESEARCH",
     title: "Cross-Session Stored Prompt Injection",
     desc: "Reframes prompt injection for the agentic era: malicious instructions persist in durable state (memory, filesystem, tools) and reactivate across sessions, like a stored XSS. The real problem is governing how external data acquires authority.",
@@ -51,6 +69,12 @@ window.TIMELINE_EVENTS = [
     title: "MAC-Bench (Beyond Goodhart's Law)",
     desc: "Dynamic adversarial benchmark for procedural compliance in multi-agent systems; introduces the \"Machiavellian Gap\" (agents that stay successful by strategically breaking safety rules). Finds \"Authority\" is the most reliable social-engineering trigger.",
     source: "https://arxiv.org/html/2606.07805", sourceLabel: "arXiv:2606.07805"
+  },
+  {
+    iso: "2026-06-18", date: "Jun 18, 2026", tag: "LAB",
+    title: "DeepMind publishes an AI Control Roadmap for imperfectly aligned internal agents",
+    desc: "Rohin Shah and Four Flynn describe a defense-in-depth control stack that treats internal agents as potential insider threats even if alignment is imperfect: detection (trusted-model supervisors on reasoning and actions), prevention/response, and capability-tied levels (D1-D4 detection evasion, R1-R3 attack execution). DeepMind analysed a million coding-agent trajectories to build a live monitor for Gemini Spark; most flags were misinterpretation or overeagerness, not adversarial intent. Also publishes a companion policy paper, Three Layers of Agent Security.",
+    source: "https://deepmind.google/blog/securing-the-future-of-ai-agents/", sourceLabel: "DeepMind"
   },
   {
     iso: "2026-06-26", date: "Jun 26, 2026", tag: "INCIDENT", track: "openai-hf",
@@ -75,6 +99,12 @@ window.TIMELINE_EVENTS = [
     title: "Hugging Face production compromised",
     desc: "Pivot via an exposed Modal-hosted app, then an HDF5 arbitrary-file-read bug chained with a Jinja2 template-injection RCE to go from a single pod to cluster admin across multiple HF clusters in under 13 hours.",
     source: "https://simonwillison.net/2026/Aug/7/openai-timeline/", sourceLabel: "Simon Willison timeline"
+  },
+  {
+    iso: "2026-07-13", date: "Jul 13, 2026", tag: "EVAL",
+    title: "Apollo red-teams Anthropic's auto-mode coding-agent monitor",
+    desc: "Apollo Research's first external monitor campaign against Anthropic's auto mode (the permission layer that allows or blocks the next agent action). They injected failures into real trajectories, ran MonitoringBench, and did off-policy control red-teaming. Findings on when to intervene, what user authorisation means in long-running tasks, trust boundaries for data movement, and how much context a monitor should see; Anthropic implemented the recommendations. Apollo frames this as a repeatable campaign, decoupled from model releases.",
+    source: "https://www.apolloresearch.ai/monitoring/pilot-automode-campaign", sourceLabel: "Apollo Research"
   },
   {
     iso: "2026-07-16", date: "Jul 16, 2026", tag: "INCIDENT", track: "openai-hf",
@@ -207,6 +237,12 @@ window.TIMELINE_EVENTS = [
     title: "The Framing Gap",
     desc: "Surface-level defenses against indirect prompt-injection exfiltration collapse under reframing (gpt-4o 0% to 100%). What works: destination allow-lists and a capability-isolating planner/reader split, not the model recognizing the attack.",
     source: "https://arxiv.org/abs/2608.27092", sourceLabel: "arXiv:2608.27092"
+  },
+  {
+    iso: "2026-08-27", date: "Aug 27, 2026", tag: "EVAL",
+    title: "DeepMind pilots double-blind evaluations of a proprietary Gemini model",
+    desc: "With the Singapore AI Safety Institute, OpenMined, AVERI and MLCommons, DeepMind runs what it calls the first double-blind eval of a proprietary frontier-class model (Gemini Flash Lite) inside Google Cloud Confidential Space: the evaluator cannot see weights, Google cannot see the test prompts. Aimed at high-stakes evals (cyber, government) where handing over prompts or weights was previously the tradeoff.",
+    source: "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/", sourceLabel: "DeepMind"
   },
   {
     iso: "2026-08-31", date: "Aug 31, 2026", tag: "LAB",
