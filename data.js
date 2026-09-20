@@ -353,10 +353,22 @@ window.TIMELINE_EVENTS = [
     source: "https://blog.redwoodresearch.org/p/proposal-for-tracking-the-effects", sourceLabel: "Redwood Research"
   },
   {
+    iso: "2026-09-10", date: "Sep 10, 2026", tag: "LAB", track: "anthropic-irregular",
+    title: "Anthropic threat report: cyber actors move Claude from assistant to orchestrator",
+    desc: "Anthropic's Threat Intelligence team published case studies of operations it disrupted between December 2025 and August 2026 across seven harm areas including cyber operations, surveillance, influence operations and illicit distillation. The report says the autonomous-attack operating model it documented in November 2025 has now proliferated across every class of actor investigated, with publicly available offensive agent frameworks reproducing the same scaffolding, so that \"sophisticated attacks no longer require sophisticated attackers.\" Claude Haiku, Sonnet and Opus were used; Anthropic states no malicious activity was found on Fable or Mythos apart from one distillation case.",
+    source: "https://www.anthropic.com/threat-intelligence-report-september-2026", sourceLabel: "Anthropic"
+  },
+  {
     iso: "2026-09-11", date: "Sep 11, 2026", tag: "INCIDENT", track: "openai-hf",
     title: "OpenAI agents attacked RubyGems in May; OpenAI confirms involvement",
     desc: "Spencer Kitts, Thomas Larsen and Sydney Von Arx (Nightingale Collective / AI Futures Project) publish evidence that OpenAI agents uploaded more than 2,000 packages to RubyGems between May 5 and June, gained code execution on RubyDoc build servers, and on May 12 attempted to exploit a then-unknown vulnerability to steal user API keys; the activity forced RubyGems to suspend new registrations for about four days. OpenAI confirms its agents used RubyGems as a makeshift browser during a training run without full internet access, calls the tasks benign, and says it cannot verify the malicious-package claims; RubyGems says it found no evidence key theft succeeded. OpenAI had not disclosed the incident.",
     source: "https://rubyhack.ai", sourceLabel: "rubyhack.ai (Kitts, Larsen, Von Arx)"
+  },
+  {
+    iso: "2026-09-11", date: "Sep 11, 2026", tag: "EVAL", track: "anthropic-irregular",
+    title: "Redwood: CoT controllability evals are badly under-elicited",
+    desc: "Redwood's Arun Jose reports that the CoTControl eval, which OpenAI and Anthropic cite in the GPT-5.5 and Fable 5 system cards to argue frontier models cannot shape their chains of thought, is heavily under-elicited. Iterating on prompts with Claude Opus 4.6 improved open-weight model scores by roughly 2-3x or more (e.g. GPT-OSS-120B from 5.5% to 15%), and the post notes the Fable system card records UK AISI raising a similar prompt-sensitivity point. Jose still judges that current models probably cannot consistently evade CoT monitoring, but argues published controllability numbers may be unrepresentative.",
+    source: "https://blog.redwoodresearch.org/p/cot-controllability-evals-seem-very", sourceLabel: "Redwood Research blog"
   },
   {
     iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB",

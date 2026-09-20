@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-09-19.
+- **Last updated:** 2026-09-20.
 
 ---
 
@@ -507,6 +507,12 @@
 - **2026-09-18** `LAB` - **Anthropic names Accenture as its first embedded evaluator.** Anthropic announced a partnership with Accenture, led by Accenture's AI business Faculty, to evaluate and red-team models, conduct alignment assessments and test safeguards from inside the company. Each side expects to invest at least $1 billion over five years; Anthropic will fund Accenture's work directly and says embedded evaluators will have access comparable to an employee's. Anthropic also said it is in dialogue with METR and other nonprofit evaluators to pilot elements of embedded evaluation using their own funding. [Anthropic News](https://www.anthropic.com/news/accenture-embedded-evaluation)
 
 
+- **2026-09-11** `EVAL` - **Redwood: CoT controllability evals are badly under-elicited.** Redwood's Arun Jose reports that the CoTControl eval, which OpenAI and Anthropic cite in the GPT-5.5 and Fable 5 system cards to argue frontier models cannot shape their chains of thought, is heavily under-elicited. Iterating on prompts with Claude Opus 4.6 improved open-weight model scores by roughly 2-3x or more (e.g. GPT-OSS-120B from 5.5% to 15%), and the post notes the Fable system card records UK AISI raising a similar prompt-sensitivity point. Jose still judges that current models probably cannot consistently evade CoT monitoring, but argues published controllability numbers may be unrepresentative. [Redwood Research blog](https://blog.redwoodresearch.org/p/cot-controllability-evals-seem-very)
+
+
+- **2026-09-10** `LAB` - **Anthropic threat report: cyber actors move Claude from assistant to orchestrator.** Anthropic's Threat Intelligence team published case studies of operations it disrupted between December 2025 and August 2026 across seven harm areas including cyber operations, surveillance, influence operations and illicit distillation. The report says the autonomous-attack operating model it documented in November 2025 has now proliferated across every class of actor investigated, with publicly available offensive agent frameworks reproducing the same scaffolding, so that "sophisticated attacks no longer require sophisticated attackers." Claude Haiku, Sonnet and Opus were used; Anthropic states no malicious activity was found on Fable or Mythos apart from one distillation case. [Anthropic](https://www.anthropic.com/threat-intelligence-report-september-2026)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -686,7 +692,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-05-28", "tag": "RESEARCH", "title": "DeepMind Gram: automated sabotage audits of Gemini coding and research agents", "source": "https://deepmind.google/research/publications/252981/"},
   {"date": "2026-06-18", "tag": "LAB", "title": "DeepMind publishes an AI Control Roadmap for imperfectly aligned internal agents", "source": "https://deepmind.google/blog/securing-the-future-of-ai-agents/"},
   {"date": "2026-07-13", "tag": "EVAL", "title": "Apollo red-teams Anthropic's auto-mode coding-agent monitor", "source": "https://www.apolloresearch.ai/monitoring/pilot-automode-campaign"},
-  {"date": "2026-08-27", "tag": "EVAL", "title": "DeepMind pilots double-blind evaluations of a proprietary Gemini model", "source": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"}
+  {"date": "2026-08-27", "tag": "EVAL", "title": "DeepMind pilots double-blind evaluations of a proprietary Gemini model", "source": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"},
+  {"date": "2026-09-11", "tag": "EVAL", "title": "Redwood: CoT controllability evals are badly under-elicited", "source": "https://blog.redwoodresearch.org/p/cot-controllability-evals-seem-very", "track": "anthropic-irregular"},
+  {"date": "2026-09-10", "tag": "LAB", "title": "Anthropic threat report: cyber actors move Claude from assistant to orchestrator", "source": "https://www.anthropic.com/threat-intelligence-report-september-2026", "track": "anthropic-irregular"}
 ]
 ```
 

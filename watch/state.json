@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-19T06:35:43+00:00",
+  "last_run": "2026-09-20T06:36:05+00:00",
   "feed_hashes": {
     "hf-blog": "0c7f3ae80bb59ec02501bf420925fc9eecf8e1e3b3a82cc66e82eebb9e2bc380",
     "metr": "67386a810dc60317f692651291159f2cec30a24b8d60564eeaed4a2acb850c9e",
-    "openai-news": "2b4ad87ae6d343b1811078137ed1c612487e89b3383e0377ac3b7cb63cda2f12",
+    "openai-news": "bb1017036e3212137f5be041d1c0b5861f960056f4019efaefd76e2e0f211538",
     "deepmind": "e97a206e974345102f7b103cc9abc17d8be6a734143e4a34449d1c36782f49b2",
-    "redwood": "ea2fcae7cc0b128492601436b8de79a7b71bddc11579138d2b64bbb4cb97b0e0",
-    "frontier-security": "697886e8257bc5a441ef2fd775f761f3473a791ef6d8e41cfaada31fd4cd6b28",
-    "transformer-news": "03799a6b41eb900a3be6d07cfe04b952e8bd63b05478ab602f4c3a0a9444e8cd",
-    "simonw": "5f5e2ed3a3056d07f691904fe14eb15434a9e52d761feee466f59fd5e8354135",
-    "arxiv-cr": "d76355b9ae78667c348edbd876febd99f31217bae77d22e0ccfb5c2dbc67e98f",
-    "arxiv-ai": "13e4c007108a0576dbbda8726bf88b1019c4418c06e75029633c8c00d37a893f",
-    "alignment-forum": "3c5f66fe760494d815ad354454bc17b72abf74d0b9c07eb575519ccf8e9a5f4e"
+    "redwood": "16b317916ec8c4581d5536dd431676af2a4cbc0609423bf75191d23122b18353",
+    "frontier-security": "934faed94fec787174f0b11d97c116ed130891c3c2fed0efd60d9c506bcf6ae9",
+    "transformer-news": "f357afa16b2d4641835c543b0ced8b66c37d67c104db9f817af36ff0f4a773e8",
+    "simonw": "5ef1df005cacf77d132fa687a7920033706ca7bd998a032ed7b0385d5b0dcfb2",
+    "arxiv-cr": "ee2ff4a6424bbde23cb187462b2aa3327a4d6c5f3f1056ade1ac7ed811bbe522",
+    "arxiv-ai": "b23ba038164147ef7e478efd7e5d92d2b099567fedef1774fbf0031395fbfec0",
+    "alignment-forum": "56d0045daafebaa10905836e5a611d5e99d6ba0d3a267c2e7fbe8549f08465ca"
   },
   "page_hashes": {
     "openai-alignment": "1097daf3ccd1df37bce687480a7682d8fa537b197fb317946685081567ae47b6",
     "anthropic-research": "5e0b40fddabfa5e80362ddc973881789c0310fc329bbd6133dcaa9cf36c6b495",
     "anthropic-news": "21dac042127004bdb030230877797939e464819364b85d73f3557d999ba5d0cf",
     "deepmind-frontier-safety": "7aaa6ac869a56a3fef1726395e71f750d9473e329abe08f2df69ab3455afa432",
-    "meta-blog": "fea920230f70af807bd75a3e41ccec8aa76f681ee3e9c044c1ccaa3a4401d548",
+    "meta-blog": "bfa2ef45d6b34b31f223bf699098563bb7e0c387837b6260c4cebd0b20f9471f",
     "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
     "apollo-science": "72fb4e4541e293c3f367c356e8cd757e2566fdd5e471a4b1dd7142cabf5ed8e4",
-    "caisi": "6a1199b529fab39956662f9b5dfc28fac3e855e6d7274656bb1ad9ac7e1e5190",
-    "redwood-home": "a77f95a986b48215e48fc35387a70dd069df4dad3556d79773b3e918e9c93a90",
-    "aiaaic": "2342b2b1d6807e8a206162a97ed0f1342afa06ed685534b8223a66bde5698ebb"
+    "caisi": "6428408b62d3bd82186ad0c4f39721b4e905a4d0fceacfe6e75a16eac63815e9",
+    "redwood-home": "dba1d17f409f48f4b7fdee46e7b5326aa77a045d886f1aab5d1dbc241fb9870a",
+    "aiaaic": "fe1ed748f4c7ea5d6a281f39dfccbeb2c76d17b77952ec1e45f7f9a3a36e79ce"
   },
   "proposed": [
     {
@@ -154,6 +154,20 @@
       "title": "Anthropic names Accenture as its first embedded evaluator",
       "iso": "2026-09-18",
       "seen": "2026-09-19",
+      "applied": true
+    },
+    {
+      "url": "https://blog.redwoodresearch.org/p/cot-controllability-evals-seem-very",
+      "title": "Redwood: CoT controllability evals are badly under-elicited",
+      "iso": "2026-09-11",
+      "seen": "2026-09-20",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "title": "Anthropic threat report: cyber actors move Claude from assistant to orchestrator",
+      "iso": "2026-09-10",
+      "seen": "2026-09-20",
       "applied": true
     }
   ]
