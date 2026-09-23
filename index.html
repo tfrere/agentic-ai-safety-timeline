@@ -13,11 +13,33 @@
     <section class="section-intro" aria-labelledby="timeline-heading">
       <div class="intro-copy">
         <h1 id="timeline-heading">Agentic AI <em>safety timeline.</em></h1>
-        <p>Incidents, lab responses, policy &amp; research. <span>Every event linked to its source.</span></p>
+        <p>Incidents, lab responses, policy &amp; research. <span class="intro-source">Every event linked to its source.<button class="method-trigger" id="method-trigger" type="button" popovertarget="event-method" aria-expanded="false" aria-controls="event-method" aria-label="How events are added"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 9v5"/><circle class="info-dot" cx="10" cy="6" r=".8"/></svg></button></span></p>
+        <aside class="method-popover" id="event-method" popover="auto" aria-labelledby="method-heading">
+          <h2 id="method-heading">How events are added</h2>
+          <p>An AI agent runs a daily watch. Events that meet these rules are added automatically.</p>
+          <ol>
+            <li><strong>Primary sources first</strong><span>Lab reports, independent evaluations, official statements and research.</span></li>
+            <li><strong>Evidence before inclusion</strong><span>The agent reads the source and checks that it supports the claim.</span></li>
+            <li><strong>One event, one entry</strong><span>Skip duplicates and unsupported claims. Use the event date, not the discovery date.</span></li>
+          </ol>
+          <a href="https://github.com/tfrere/agentic-ai-safety-timeline/blob/main/watch/METHOD.md" target="_blank" rel="noopener">Read the full methodology <span aria-hidden="true">↗</span></a>
+        </aside>
       </div>
       <div class="intro-meta" aria-label="Timeline coverage">
+        <svg class="intro-illustration" viewBox="0 0 120 64" fill="none" aria-hidden="true">
+          <path class="illustration-guide" d="M8 32h104M28 32V14h16M52 32v19h17M76 32V12h17M100 32v17h12"/>
+          <path class="illustration-spine" d="M8 32h104"/>
+          <circle cx="12" cy="32" r="3" style="--node: var(--c-incident)"/>
+          <circle cx="44" cy="14" r="3" style="--node: var(--c-departure)"/>
+          <circle cx="52" cy="32" r="3" style="--node: var(--c-lab)"/>
+          <circle cx="69" cy="51" r="3" style="--node: var(--c-policy)"/>
+          <circle cx="93" cy="12" r="3" style="--node: var(--c-eval)"/>
+          <circle cx="112" cy="49" r="3" style="--node: var(--c-research)"/>
+          <circle class="illustration-halo" cx="100" cy="32" r="8"/>
+          <circle cx="100" cy="32" r="3" style="--node: var(--accent)"/>
+        </svg>
         <div class="intro-total" role="status"><strong id="header-count">0</strong> <span id="header-count-label">sourced events</span></div>
-        <div class="intro-period"><span class="intro-range-mark" aria-hidden="true"></span><span id="header-range">—</span></div>
+        <div class="intro-period"><span id="header-range">—</span></div>
       </div>
     </section>
 
@@ -70,6 +92,59 @@
       const resetFilters = document.getElementById("reset-filters");
       const backToTop = document.getElementById("back-to-top");
       const readingProgress = document.getElementById("reading-progress");
+      const methodTrigger = document.getElementById("method-trigger");
+      const methodPopover = document.getElementById("event-method");
+      let methodPinned = false;
+      let methodCloseTimer;
+
+      function positionMethod() {
+        const trigger = methodTrigger.getBoundingClientRect();
+        const popup = methodPopover.getBoundingClientRect();
+        methodPopover.style.left = Math.max(16, Math.min(trigger.right - popup.width, window.innerWidth - popup.width - 16)) + "px";
+        methodPopover.style.top = Math.max(16, Math.min(trigger.bottom + 10, window.innerHeight - popup.height - 16)) + "px";
+      }
+      function showMethod() {
+        clearTimeout(methodCloseTimer);
+        methodPopover.showPopover();
+        methodTrigger.setAttribute("aria-expanded", "true");
+        positionMethod();
+      }
+      function scheduleMethodClose() {
+        clearTimeout(methodCloseTimer);
+        methodCloseTimer = setTimeout(() => {
+          if (!methodPinned && !methodPopover.contains(document.activeElement)) methodPopover.hidePopover();
+        }, 180);
+      }
+      methodTrigger.addEventListener("click", (ev) => {
+        ev.preventDefault();
+        if (methodPinned && methodPopover.matches(":popover-open")) {
+          methodPopover.hidePopover();
+        } else {
+          methodPinned = true;
+          showMethod();
+        }
+      });
+      methodTrigger.addEventListener("pointerenter", (ev) => {
+        if (ev.pointerType === "mouse") showMethod();
+      });
+      methodTrigger.addEventListener("pointerleave", scheduleMethodClose);
+      methodPopover.addEventListener("pointerenter", () => clearTimeout(methodCloseTimer));
+      methodPopover.addEventListener("pointerleave", scheduleMethodClose);
+      methodPopover.addEventListener("focusout", scheduleMethodClose);
+      methodPopover.addEventListener("toggle", () => {
+        const open = methodPopover.matches(":popover-open");
+        methodTrigger.setAttribute("aria-expanded", String(open));
+        if (!open) {
+          methodPinned = false;
+          clearTimeout(methodCloseTimer);
+        }
+      });
+      window.addEventListener("resize", () => {
+        if (methodPopover.matches(":popover-open")) positionMethod();
+      });
+      window.addEventListener("scroll", () => {
+        if (methodPopover.matches(":popover-open")) methodPopover.hidePopover();
+      }, { passive: true });
       document.getElementById("header-count").textContent = events.length;
       if (events.length) {
         const oldest = new Date(events[events.length - 1].iso + "T00:00:00Z");
