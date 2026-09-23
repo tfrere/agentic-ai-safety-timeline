@@ -47,8 +47,10 @@
         <span class="filter-label">Tracks</span>
         <div class="toggles">
           <label class="toggle"><input type="checkbox" id="ctx-toggle" checked /><span></span>Context <span class="chip-count" data-track-count="context"></span></label>
-          <label class="toggle oai-toggle"><input type="checkbox" id="oai-toggle" checked /><span></span>OpenAI × HF <span class="chip-count" data-track-count="openai-hf"></span></label>
-          <label class="toggle ant-toggle"><input type="checkbox" id="ant-toggle" checked /><span></span>Anthropic × Irregular <span class="chip-count" data-track-count="anthropic-irregular"></span></label>
+          <label class="toggle oai-toggle"><input type="checkbox" id="oai-toggle" checked /><span></span>OpenAI <span class="chip-count" data-track-count="openai"></span></label>
+          <label class="toggle ant-toggle"><input type="checkbox" id="ant-toggle" checked /><span></span>Anthropic <span class="chip-count" data-track-count="anthropic"></span></label>
+          <label class="toggle gdm-toggle"><input type="checkbox" id="gdm-toggle" checked /><span></span>Google <span class="chip-count" data-track-count="google"></span></label>
+          <label class="toggle meta-toggle"><input type="checkbox" id="meta-toggle" checked /><span></span>Meta <span class="chip-count" data-track-count="meta"></span></label>
           <label class="toggle aisi-toggle"><input type="checkbox" id="aisi-toggle" checked /><span></span>UK AISI <span class="chip-count" data-track-count="aisi"></span></label>
         </div>
         <button class="reset-button" id="reset-filters" type="button" hidden>Reset</button>
@@ -80,7 +82,10 @@
       const ctxToggle = document.getElementById("ctx-toggle");
       const oaiToggle = document.getElementById("oai-toggle");
       const antToggle = document.getElementById("ant-toggle");
+      const gdmToggle = document.getElementById("gdm-toggle");
+      const metaToggle = document.getElementById("meta-toggle");
       const aisiToggle = document.getElementById("aisi-toggle");
+      const labToggles = [oaiToggle, antToggle, gdmToggle, metaToggle, aisiToggle];
       const resetFilters = document.getElementById("reset-filters");
       const backToTop = document.getElementById("back-to-top");
       const readingProgress = document.getElementById("reading-progress");
@@ -110,8 +115,10 @@
       };
 
       function trackBadge(track) {
-        if (track === "openai-hf") return '<span class="track-badge oai">OpenAI x HF</span>';
-        if (track === "anthropic-irregular") return '<span class="track-badge ant">Anthropic x Irregular</span>';
+        if (track === "openai") return '<span class="track-badge oai">OpenAI</span>';
+        if (track === "anthropic") return '<span class="track-badge ant">Anthropic</span>';
+        if (track === "google") return '<span class="track-badge gdm">Google</span>';
+        if (track === "meta") return '<span class="track-badge meta">Meta</span>';
         if (track === "aisi") return '<span class="track-badge aisi">UK AISI</span>';
         return "";
       }
@@ -119,16 +126,18 @@
       function render() {
         const q = searchEl.value.trim().toLowerCase();
         const isPristine = activeFilter === "ALL" && !q &&
-          ctxToggle.checked && oaiToggle.checked && antToggle.checked && aisiToggle.checked;
+          ctxToggle.checked && labToggles.every((toggle) => toggle.checked);
         resetFilters.hidden = isPristine;
         timeline.innerHTML = "";
         let lastMonth = "";
         let currentMonthGroup = null;
         let shown = 0;
-        const allTracksOn = oaiToggle.checked && antToggle.checked && aisiToggle.checked;
+        const allTracksOn = labToggles.every((toggle) => toggle.checked);
         const allowedTracks = new Set();
-        if (oaiToggle.checked) allowedTracks.add("openai-hf");
-        if (antToggle.checked) allowedTracks.add("anthropic-irregular");
+        if (oaiToggle.checked) allowedTracks.add("openai");
+        if (antToggle.checked) allowedTracks.add("anthropic");
+        if (gdmToggle.checked) allowedTracks.add("google");
+        if (metaToggle.checked) allowedTracks.add("meta");
         if (aisiToggle.checked) allowedTracks.add("aisi");
         events.forEach((e) => {
           if (activeFilter !== "ALL" && e.tag !== activeFilter) return;
@@ -220,13 +229,11 @@
 
       searchEl.addEventListener("input", render);
       ctxToggle.addEventListener("change", render);
-      oaiToggle.addEventListener("change", render);
-      antToggle.addEventListener("change", render);
-      aisiToggle.addEventListener("change", render);
+      labToggles.forEach((toggle) => toggle.addEventListener("change", render));
 
       resetFilters.addEventListener("click", () => {
         searchEl.value = "";
-        [ctxToggle, oaiToggle, antToggle, aisiToggle].forEach((toggle) => { toggle.checked = true; });
+        [ctxToggle, ...labToggles].forEach((toggle) => { toggle.checked = true; });
         activateChip(document.querySelector('.chip[data-filter="ALL"]'));
       });
 

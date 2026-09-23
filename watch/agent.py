@@ -31,7 +31,7 @@ MAX_PAGE_CHARS = 6_000
 METHOD_PATH = Path(__file__).with_name("METHOD.md")
 INSTRUCTIONS = METHOD_PATH.read_text(encoding="utf-8")
 Tag = Literal["INCIDENT", "DEPARTURE", "LAB", "POLICY", "EVAL", "RESEARCH"]
-Track = Literal["openai-hf", "anthropic-irregular", "aisi"]
+Track = Literal["openai", "anthropic", "google", "meta", "aisi"]
 
 
 class Candidate(BaseModel):

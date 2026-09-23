@@ -32,7 +32,7 @@ Tools, one at a time: `web_search` to locate, `fetch_page` to verify. Think firs
 - **EVAL** - independent evaluation (METR, AISI, Apollo, Redwood, CAISI, Frontier Security)
 - **RESEARCH** - arXiv or peer-review that changes the mental model (containment, scheming eval, SoK-level). Not another jailbreak paper.
 
-`track` only if it clearly belongs to `openai-hf`, `anthropic-irregular`, or `aisi`.
+`track` only if it clearly belongs to one lab: `openai`, `anthropic`, `google`, `meta`, or `aisi` (UK AI Security Institute). Multi-lab events stay untracked.
 
 ## Reject
 

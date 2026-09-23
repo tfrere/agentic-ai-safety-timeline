@@ -55,7 +55,7 @@ ARXIV_HINTS = (
     "alignment",
 )
 
-ALLOWED_TRACKS = {"openai-hf", "anthropic-irregular", "aisi"}
+ALLOWED_TRACKS = {"openai", "anthropic", "google", "meta", "aisi"}
 POINTER_HOSTS = ("aiaaic.org", "incidentdatabase.ai", "oecd.ai")
 AIAAIC_ITEM = re.compile(r"AIAAIC\s*\d+\s*:?\s*(.+?)(?=\s*AIAAIC\s*\d+|\Z)", re.I | re.S)
 

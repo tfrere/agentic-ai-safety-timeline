@@ -18,6 +18,8 @@
   --c-research: #68d890;
   --track-oai: #ff8a5c;
   --track-ant: #d18bff;
+  --track-gdm: #8ab4f8;
+  --track-meta: #7ec8c0;
   --track-aisi: #5ec8e8;
   --radius: 16px;
   --radius-lg: 26px;
@@ -77,24 +79,28 @@ a { color: inherit; text-decoration: none; }
 .chip:hover { color: var(--text); background: rgba(255,255,255,.04); }
 .chip.active { color: var(--text); border-color: var(--border-bright); background: rgba(255,255,255,.07); }
 .chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--k); box-shadow: 0 0 9px color-mix(in srgb, var(--k) 60%, transparent); }
-.chip-count { color: var(--faint); font-size: 9px; font-variant-numeric: tabular-nums; }
+.chip-count { color: var(--faint); font-size: 9px; font-variant-numeric: tabular-nums; white-space: nowrap; flex: 0 0 auto; }
 .chip[data-tag="INCIDENT"] { --k: var(--c-incident); }
 .chip[data-tag="DEPARTURE"] { --k: var(--c-departure); }
 .chip[data-tag="LAB"] { --k: var(--c-lab); }
 .chip[data-tag="POLICY"] { --k: var(--c-policy); }
 .chip[data-tag="EVAL"] { --k: var(--c-eval); }
 .chip[data-tag="RESEARCH"] { --k: var(--c-research); }
-.toggle { position: relative; padding: 5px 9px; display: inline-flex; align-items: center; gap: 7px; color: var(--faint); border-radius: 7px; font-size: 11px; font-weight: 600; cursor: pointer; }
+.toggle { position: relative; padding: 5px 9px; display: inline-flex; align-items: center; gap: 7px; color: var(--faint); border-radius: 7px; font-size: 11px; font-weight: 600; cursor: pointer; white-space: nowrap; }
 .toggle:hover { color: var(--muted); background: rgba(255,255,255,.025); }
 .toggle input { position: absolute; opacity: 0; pointer-events: none; }
-.toggle > span { width: 24px; height: 14px; padding: 2px; flex: 0 0 auto; border-radius: 99px; background: #343b46; transition: background .2s ease; }
-.toggle > span::after { display: block; width: 10px; height: 10px; content: ""; border-radius: 50%; background: #87909d; transition: transform .2s ease, background .2s ease; }
+.toggle > span:not(.chip-count) { width: 24px; height: 14px; padding: 2px; flex: 0 0 auto; border-radius: 99px; background: #343b46; transition: background .2s ease; }
+.toggle > span:not(.chip-count)::after { display: block; width: 10px; height: 10px; content: ""; border-radius: 50%; background: #87909d; transition: transform .2s ease, background .2s ease; }
 .toggle input:checked + span { background: rgba(216,255,95,.24); }
 .toggle input:checked + span::after { background: var(--accent); transform: translateX(10px); }
 .oai-toggle input:checked + span { background: rgba(255,138,92,.23); }
 .oai-toggle input:checked + span::after { background: var(--track-oai); }
 .ant-toggle input:checked + span { background: rgba(209,139,255,.22); }
 .ant-toggle input:checked + span::after { background: var(--track-ant); }
+.gdm-toggle input:checked + span { background: rgba(138,180,248,.22); }
+.gdm-toggle input:checked + span::after { background: var(--track-gdm); }
+.meta-toggle input:checked + span { background: rgba(126,200,192,.22); }
+.meta-toggle input:checked + span::after { background: var(--track-meta); }
 .aisi-toggle input:checked + span { background: rgba(94,200,232,.22); }
 .aisi-toggle input:checked + span::after { background: var(--track-aisi); }
 .toggle:focus-within, .chip:focus-visible, .reset-button:focus-visible, .back-to-top:focus-visible { outline: 1px solid var(--border-bright); outline-offset: 2px; }
@@ -126,6 +132,8 @@ a { color: inherit; text-decoration: none; }
 .track-badge { border: 1px solid; }
 .track-badge.oai { color: var(--track-oai); border-color: rgba(255,138,92,.25); background: rgba(255,138,92,.06); }
 .track-badge.ant { color: var(--track-ant); border-color: rgba(209,139,255,.25); background: rgba(209,139,255,.06); }
+.track-badge.gdm { color: var(--track-gdm); border-color: rgba(138,180,248,.25); background: rgba(138,180,248,.06); }
+.track-badge.meta { color: var(--track-meta); border-color: rgba(126,200,192,.25); background: rgba(126,200,192,.06); }
 .track-badge.aisi { color: var(--track-aisi); border-color: rgba(94,200,232,.25); background: rgba(94,200,232,.06); }
 .ctx-badge { color: var(--faint); border: 1px dashed var(--border-bright); }
 .card h3 { max-width: 850px; margin: 0 0 9px; font-size: clamp(17px, 2vw, 20px); font-weight: 640; line-height: 1.32; letter-spacing: -.025em; }

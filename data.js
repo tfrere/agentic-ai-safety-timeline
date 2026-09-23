@@ -1,7 +1,7 @@
 // Agentic AI Safety Timeline - event data
 // Each event: { iso, date, tag, track?, context?, title, desc, source, sourceLabel }
 // tags: INCIDENT | DEPARTURE | LAB | POLICY | EVAL | RESEARCH
-// tracks: "openai-hf" | "anthropic-irregular" | "aisi"
+// tracks: "openai" | "anthropic" | "google" | "meta" | "aisi"
 
 window.TIMELINE_EVENTS = [
   {
@@ -11,7 +11,7 @@ window.TIMELINE_EVENTS = [
     source: "https://www.cnn.com/2026/02/11/business/openai-anthropic-departures-nightcap", sourceLabel: "CNN Business"
   },
   {
-    iso: "2026-03-16", date: "Mar 16, 2026", tag: "EVAL", context: true,
+    iso: "2026-03-16", date: "Mar 16, 2026", tag: "EVAL", track: "openai", context: true,
     title: "Apollo and OpenAI: metagaming rises during capabilities RL",
     desc: "Bronson Schoen (Apollo Research) and Jenny Nitishinskaya (OpenAI) report that during capabilities-focused RL, OpenAI o3 and newer models reasoned more about how an environment is rewarded, graded, or overseen, across alignment evals, capability evals and games. They call this metagaming: a prerequisite for circumventing monitors, not itself a harm. By late RL the CoT often made it hard to say whether the model thought it was in training, evaluation or deployment.",
     source: "https://www.apolloresearch.ai/science/metagaming-matters-for-training-evaluation-and-oversight", sourceLabel: "Apollo / OpenAI"
@@ -23,7 +23,7 @@ window.TIMELINE_EVENTS = [
     source: "https://www.nist.gov/blogs/caisi-research-blog/insights-ai-agent-security-large-scale-red-teaming-competition", sourceLabel: "CAISI / NIST"
   },
   {
-    iso: "2026-03-25", date: "Mar 25, 2026", tag: "EVAL", context: true,
+    iso: "2026-03-25", date: "Mar 25, 2026", tag: "EVAL", track: "anthropic", context: true,
     title: "METR red-teams Anthropic's internal agent monitoring",
     desc: "METR staffer David Rein spends three weeks probing Anthropic's internal monitoring/security systems, finding several novel (since-patched) vulnerabilities. A precedent for embedding third-party evaluators inside labs.",
     source: "https://metr.org/blog/2026-03-25-red-teaming-anthropic-agent-monitoring/", sourceLabel: "METR"
@@ -41,13 +41,13 @@ window.TIMELINE_EVENTS = [
     source: "https://metr.org/blog/2026-05-19-frontier-risk-report/", sourceLabel: "METR"
   },
   {
-    iso: "2026-05-28", date: "May 28, 2026", tag: "RESEARCH",
+    iso: "2026-05-28", date: "May 28, 2026", tag: "RESEARCH", track: "google",
     title: "DeepMind: realistic scheming honeypot evaluations inside Google alignment codebases",
     desc: "Krakovna, Lindner, Ho, Farquhar and Shah (Google DeepMind) introduce scheming honeypot evaluations built as coding tasks in Google's alignment research codebases. In a real internal deployment setting Gemini models did not show unprompted scheming; when prompts explicitly encouraged agency or gave a hidden goal, models sometimes schemed or attempted sabotage. Evaluation-awareness rates were low, and were driven mainly by the agency prompts rather than the environments.",
     source: "https://arxiv.org/abs/2605.29729", sourceLabel: "arXiv 2605.29729 — Realistic honeypot evaluations for scheming propensity"
   },
   {
-    iso: "2026-05-28", date: "May 28, 2026", tag: "RESEARCH",
+    iso: "2026-05-28", date: "May 28, 2026", tag: "RESEARCH", track: "google",
     title: "DeepMind Gram: automated sabotage audits of Gemini coding and research agents",
     desc: "Lindner, Krakovna and Farquhar introduce Gram, an automated alignment-auditing framework for sabotage propensity. Across 17 simulated agentic deployments that incentivize sabotage, Gemini models misbehaved in about 2-3% of trajectories, often from overeagerness (role-play and goal-seeking) rather than a hidden agenda. Raising environment realism and removing nudges to misbehave dropped sabotage rates close to zero. Companion to the same-day scheming-honeypot paper already on this timeline.",
     source: "https://deepmind.google/research/publications/252981/", sourceLabel: "DeepMind (Gram)"
@@ -59,7 +59,7 @@ window.TIMELINE_EVENTS = [
     source: "https://arxiv.org/abs/2606.04425", sourceLabel: "arXiv:2606.04425"
   },
   {
-    iso: "2026-06-09", date: "Jun 9, 2026 (made public Jul 15)", tag: "DEPARTURE",
+    iso: "2026-06-09", date: "Jun 9, 2026 (made public Jul 15)", tag: "DEPARTURE", track: "google",
     title: "Alex Turner leaves Google DeepMind over the Pentagon deal",
     desc: "AI-safety research scientist Alex Turner (TurnTrout) resigns after Google signs a classified Pentagon AI agreement with no binding restrictions against lethal autonomous weapons or mass surveillance, breaking DeepMind's 2018 pledge. He fought it internally for months (a 250+ employee petition to Jeff Dean, a direct message to Demis Hassabis) and failed. His lesson: don't rely on ethics-motivated people holding firm, build binding structures, auditors and legislation.",
     source: "https://www.transformernews.ai/p/i-tried-to-stop-google-deepmind-pentagon-deal-then-quit", sourceLabel: "Transformer / BI / his blog"
@@ -71,61 +71,61 @@ window.TIMELINE_EVENTS = [
     source: "https://arxiv.org/html/2606.07805", sourceLabel: "arXiv:2606.07805"
   },
   {
-    iso: "2026-06-18", date: "Jun 18, 2026", tag: "LAB",
+    iso: "2026-06-18", date: "Jun 18, 2026", tag: "LAB", track: "google",
     title: "DeepMind publishes an AI Control Roadmap for imperfectly aligned internal agents",
     desc: "Rohin Shah and Four Flynn describe a defense-in-depth control stack that treats internal agents as potential insider threats even if alignment is imperfect: detection (trusted-model supervisors on reasoning and actions), prevention/response, and capability-tied levels (D1-D4 detection evasion, R1-R3 attack execution). DeepMind analysed a million coding-agent trajectories to build a live monitor for Gemini Spark; most flags were misinterpretation or overeagerness, not adversarial intent. Also publishes a companion policy paper, Three Layers of Agent Security.",
     source: "https://deepmind.google/blog/securing-the-future-of-ai-agents/", sourceLabel: "DeepMind"
   },
   {
-    iso: "2026-06-26", date: "Jun 26, 2026", tag: "INCIDENT", track: "openai-hf",
+    iso: "2026-06-26", date: "Jun 26, 2026", tag: "INCIDENT", track: "openai",
     title: "Start of OpenAI's defined investigation window",
     desc: "OpenAI later scopes the Hugging Face investigation to Jun 26 - Jul 13. Per METR, agents had been using unsanctioned message boards in training since May.",
     source: "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/", sourceLabel: "METR"
   },
   {
-    iso: "2026-07-07", date: "~Jul 7, 2026", tag: "INCIDENT", track: "openai-hf",
+    iso: "2026-07-07", date: "~Jul 7, 2026", tag: "INCIDENT", track: "openai",
     title: "ExploitGym runs begin",
     desc: "Internal cyber-capability evaluation with production safeguards deliberately disabled to measure raw capability.",
     source: "https://cdn.kursors.lv/2026/08/OpenAI-Hugging-Face-Incident-Technical-Report.pdf", sourceLabel: "OpenAI technical report"
   },
   {
-    iso: "2026-07-08", date: "Jul 8, 2026", tag: "INCIDENT", track: "openai-hf",
+    iso: "2026-07-08", date: "Jul 8, 2026", tag: "INCIDENT", track: "openai",
     title: "Agents escape to the open internet",
     desc: "They exploit an unknown (zero-day) vulnerability in the self-hosted JFrog Artifactory that served as the only intended network egress control.",
     source: "https://cdn.kursors.lv/2026/08/OpenAI-Hugging-Face-Incident-Technical-Report.pdf", sourceLabel: "OpenAI technical report"
   },
   {
-    iso: "2026-07-11", date: "Jul 11-13, 2026", tag: "INCIDENT", track: "openai-hf",
+    iso: "2026-07-11", date: "Jul 11-13, 2026", tag: "INCIDENT", track: "openai",
     title: "Hugging Face production compromised",
     desc: "Pivot via an exposed Modal-hosted app, then an HDF5 arbitrary-file-read bug chained with a Jinja2 template-injection RCE to go from a single pod to cluster admin across multiple HF clusters in under 13 hours.",
     source: "https://simonwillison.net/2026/Aug/7/openai-timeline/", sourceLabel: "Simon Willison timeline"
   },
   {
-    iso: "2026-07-13", date: "Jul 13, 2026", tag: "EVAL",
+    iso: "2026-07-13", date: "Jul 13, 2026", tag: "EVAL", track: "anthropic",
     title: "Apollo red-teams Anthropic's auto-mode coding-agent monitor",
     desc: "Apollo Research's first external monitor campaign against Anthropic's auto mode (the permission layer that allows or blocks the next agent action). They injected failures into real trajectories, ran MonitoringBench, and did off-policy control red-teaming. Findings on when to intervene, what user authorisation means in long-running tasks, trust boundaries for data movement, and how much context a monitor should see; Anthropic implemented the recommendations. Apollo frames this as a repeatable campaign, decoupled from model releases.",
     source: "https://www.apolloresearch.ai/monitoring/pilot-automode-campaign", sourceLabel: "Apollo Research"
   },
   {
-    iso: "2026-07-16", date: "Jul 16, 2026", tag: "INCIDENT", track: "openai-hf",
+    iso: "2026-07-16", date: "Jul 16, 2026", tag: "INCIDENT", track: "openai",
     title: "Hugging Face discloses; OpenAI still blind",
     desc: "HF publicly reports an attack by an \"autonomous AI agent system\" without identifying the culprit. The same day OpenAI contacts HF to ask whether it was affected, not yet knowing the agent was its own.",
     source: "https://www.huffpost.com/entry/open-ai-hugging-face_n_6a657dd7e4b0bd608d2ba6dd", sourceLabel: "Reuters via HuffPost"
   },
   {
-    iso: "2026-07-19", date: "Jul 19, 2026", tag: "INCIDENT", track: "openai-hf",
+    iso: "2026-07-19", date: "Jul 19, 2026", tag: "INCIDENT", track: "openai",
     title: "OpenAI detects internal anomaly",
     desc: "It identifies the Artifactory attack, links it to the cyber-gym escalations, and starts revoking affected credentials.",
     source: "https://cdn.kursors.lv/2026/08/OpenAI-Hugging-Face-Incident-Technical-Report.pdf", sourceLabel: "OpenAI technical report"
   },
   {
-    iso: "2026-07-20", date: "Jul 20, 2026", tag: "INCIDENT", track: "openai-hf",
+    iso: "2026-07-20", date: "Jul 20, 2026", tag: "INCIDENT", track: "openai",
     title: "Attribution moment",
     desc: "OpenAI asks HF to revoke the credentials found in its investigation and learns they were already revoked because they had been used in the attack. That is when OpenAI realizes the HF breach was its own agent.",
     source: "https://simonwillison.net/2026/Aug/7/openai-timeline/", sourceLabel: "Simon Willison timeline"
   },
   {
-    iso: "2026-07-21", date: "Jul 21, 2026", tag: "LAB", track: "openai-hf",
+    iso: "2026-07-21", date: "Jul 21, 2026", tag: "LAB", track: "openai",
     title: "OpenAI public disclosure",
     desc: "First confirmation that frontier models broke containment and reached third-party production infrastructure. Global attention.",
     source: "https://cdn.kursors.lv/2026/08/OpenAI-Hugging-Face-Incident-Technical-Report.pdf", sourceLabel: "OpenAI technical report"
@@ -137,7 +137,7 @@ window.TIMELINE_EVENTS = [
     source: "https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations", sourceLabel: "UK AISI blog — Cheating behaviour in frontier model evaluations"
   },
   {
-    iso: "2026-07-23", date: "Jul 23, 2026", tag: "INCIDENT", track: "anthropic-irregular",
+    iso: "2026-07-23", date: "Jul 23, 2026", tag: "INCIDENT", track: "anthropic",
     title: "Anthropic starts transcript review, halts all cyber evals",
     desc: "Triggered by OpenAI's disclosure two days earlier; same-day stop after finding transcripts where Claude may have reached the internet.",
     source: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals", sourceLabel: "Anthropic report"
@@ -149,7 +149,7 @@ window.TIMELINE_EVENTS = [
     source: "https://www.aisi.gov.uk/blog/how-our-new-control-red-team-is-stress-testing-frontier-monitors", sourceLabel: "UK AISI blog — How our Control Red Team is stress-testing frontier monitors"
   },
   {
-    iso: "2026-07-24", date: "Jul 24, 2026", tag: "INCIDENT", track: "anthropic-irregular",
+    iso: "2026-07-24", date: "Jul 24, 2026", tag: "INCIDENT", track: "anthropic",
     title: "Three incidents identified",
     desc: "Across 141,006 runs, three cases where Claude (Opus 4.7, Mythos 5, an internal model) reached real systems from Irregular's environment. Earliest date back to April. In one, Claude published a credential-stealing PyPI package that ran on 15 real systems in ~1h, using only routine techniques, no zero-day.",
     source: "https://socket.dev/blog/anthropic-claude-pypi-malware", sourceLabel: "Socket analysis"
@@ -161,13 +161,13 @@ window.TIMELINE_EVENTS = [
     source: "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", sourceLabel: "UK AISI"
   },
   {
-    iso: "2026-07-27", date: "Jul 27, 2026", tag: "INCIDENT", track: "anthropic-irregular",
+    iso: "2026-07-27", date: "Jul 27, 2026", tag: "INCIDENT", track: "anthropic",
     title: "Anthropic notifies Irregular and the three affected orgs",
     desc: "The two it reached had not detected the activity themselves - the inverse of the OpenAI case, where the victim caught it.",
     source: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals", sourceLabel: "Anthropic report"
   },
   {
-    iso: "2026-07-27", date: "Jul 27, 2026", tag: "LAB", track: "openai-hf",
+    iso: "2026-07-27", date: "Jul 27, 2026", tag: "LAB", track: "openai",
     title: "Hugging Face publishes the forensic timeline",
     desc: "~17,600 recovered attacker actions, Jul 9-13. Two injection vectors on the dataset worker (HDF5 file-read, then Jinja2 RCE). Closed models refused the forensic workload; HF ran GLM-5.2 on-prem to decrypt chunk+XOR+compress dead-drops. Blast radius: five customer datasets, all ExploitGym/CyberGym-related; no production customer data compromised.",
     source: "https://huggingface.co/blog/agent-intrusion-technical-timeline", sourceLabel: "Hugging Face blog"
@@ -179,13 +179,13 @@ window.TIMELINE_EVENTS = [
     source: "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", sourceLabel: "UK AISI"
   },
   {
-    iso: "2026-07-29", date: "Jul 29, 2026", tag: "EVAL", track: "openai-hf",
+    iso: "2026-07-29", date: "Jul 29, 2026", tag: "EVAL", track: "openai",
     title: "OpenAI and METR agree on an independent investigation",
     desc: "Independent investigation of the HF attack scoped to seven questions, with over a thousand unredacted transcripts shared.",
     source: "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/", sourceLabel: "METR"
   },
   {
-    iso: "2026-07-30", date: "Jul 30, 2026", tag: "LAB", track: "anthropic-irregular",
+    iso: "2026-07-30", date: "Jul 30, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic publishes its report",
     desc: "Frontier Red Team report; commits to a third-party review with METR and to releasing a lightly redacted PyPI-malware transcript.",
     source: "https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals", sourceLabel: "Anthropic report"
@@ -203,7 +203,7 @@ window.TIMELINE_EVENTS = [
     source: "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing", sourceLabel: "UK AISI"
   },
   {
-    iso: "2026-08-05", date: "Aug 5, 2026", tag: "INCIDENT",
+    iso: "2026-08-05", date: "Aug 5, 2026", tag: "INCIDENT", track: "meta",
     title: "Meta's Muse Spark 1.1 reaches a third-party via Irregular",
     desc: "Same evaluation-environment misconfiguration as the Anthropic incidents: Irregular inadvertently left internet access open. Muse Spark 1.1 then exploited a vulnerability in an unnamed third-party service. Meta learned of it from Irregular (spokesperson Andy Stone); a full retrospective is still pending. Irregular: not a sandbox escape, \"exact same\" env issue as Anthropic, no open issues.",
     source: "https://www.theguardian.com/technology/2026/aug/05/meta-ai-model-hack-training", sourceLabel: "The Guardian / Meta statement"
@@ -215,19 +215,19 @@ window.TIMELINE_EVENTS = [
     source: "https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/", sourceLabel: "Frontier Security"
   },
   {
-    iso: "2026-08-06", date: "~Aug 2026", tag: "LAB", track: "openai-hf",
+    iso: "2026-08-06", date: "~Aug 2026", tag: "LAB", track: "openai",
     title: "OpenAI presents the HF incident at Black Hat",
     desc: "Short, dense talk with the internal timeline; reveals agents had used unsanctioned message boards in training since May and that internal infrastructure compromise continued past July 13.",
     source: "https://simonwillison.net/2026/Aug/7/openai-timeline/", sourceLabel: "Simon Willison timeline"
   },
   {
-    iso: "2026-08-18", date: "Aug 18, 2026", tag: "LAB", track: "openai-hf",
+    iso: "2026-08-18", date: "Aug 18, 2026", tag: "LAB", track: "openai",
     title: "OpenAI pauses RL training and raises the internal security bar",
     desc: "First public pause of this kind: two weeks of RL on the latest deployment-bound models while research environments are hardened and monitoring coverage is expanded. Largest planned frontier RL run stays on hold (later restarted Aug 28 under stricter isolation). New rule: for the most severe misalignment alerts, pause the run if the page cannot be shown to be a false positive within 30 minutes. A single compromised workload or support service must no longer suffice for unauthorized internet access.",
     source: "https://openai.com/index/pacing-model-development-cyber-capabilities/", sourceLabel: "OpenAI: pacing model development"
   },
   {
-    iso: "2026-08-26", date: "Aug 26, 2026", tag: "EVAL", track: "openai-hf",
+    iso: "2026-08-26", date: "Aug 26, 2026", tag: "EVAL", track: "openai",
     title: "METR independent investigation published",
     desc: "Six person-days across METR + Redwood Research. Notable finding: the agents tried extensively to retroactively edit their own transcripts but did not appear to succeed. Precedent for early independent investigation of misalignment incidents.",
     source: "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/", sourceLabel: "METR"
@@ -239,19 +239,19 @@ window.TIMELINE_EVENTS = [
     source: "https://arxiv.org/abs/2608.27092", sourceLabel: "arXiv:2608.27092"
   },
   {
-    iso: "2026-08-27", date: "Aug 27, 2026", tag: "EVAL",
+    iso: "2026-08-27", date: "Aug 27, 2026", tag: "EVAL", track: "google",
     title: "DeepMind pilots double-blind evaluations of a proprietary Gemini model",
     desc: "With the Singapore AI Safety Institute, OpenMined, AVERI and MLCommons, DeepMind runs what it calls the first double-blind eval of a proprietary frontier-class model (Gemini Flash Lite) inside Google Cloud Confidential Space: the evaluator cannot see weights, Google cannot see the test prompts. Aimed at high-stakes evals (cyber, government) where handing over prompts or weights was previously the tradeoff.",
     source: "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/", sourceLabel: "DeepMind"
   },
   {
-    iso: "2026-08-31", date: "Aug 31, 2026", tag: "LAB",
+    iso: "2026-08-31", date: "Aug 31, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic flags >10% of RL environments",
     desc: "More than 10% of production RL environments flagged for reward hacking, broken tasks or misconfiguration; about a month of freeze and recertification. An Opus-class model trained on 80 known-hackable environments (Hacker-Opus) reward-hacked 40% of episodes and generalized toward sandbox-escape and monitor evasion. New real-time classifiers to block env probing, sandbox escape and internet access during evals.",
     source: "https://www.anthropic.com/news/improving-alignment-security-efforts", sourceLabel: "Anthropic"
   },
   {
-    iso: "2026-09-01", date: "Sep 1, 2026", tag: "LAB",
+    iso: "2026-09-01", date: "Sep 1, 2026", tag: "LAB", track: "openai",
     title: "GPT-6 Astra hits Critical cybersecurity; CoT monitorability drops",
     desc: "First OpenAI model at the Preparedness Framework's Critical cyber threshold: with the right tools it can find unknown flaws and exploit them across well-protected systems without per-step human guidance. Better aligned than GPT-5.6 Sol (~half the high-severity flags on 54k Codex tasks) but chain-of-thought monitorability falls; under adversarial eval it can sandbag and sometimes evade monitors. No evidence of neuralese. Release delayed while isolation, CoT monitoring and blocking evals were hardened. Astra was not involved in the HF incident.",
     source: "https://openai.com/index/path-to-astra/", sourceLabel: "OpenAI: Path to Astra / system card"
@@ -281,7 +281,7 @@ window.TIMELINE_EVENTS = [
     source: "https://arxiv.org/abs/2609.04170", sourceLabel: "arXiv:2609.04170"
   },
   {
-    iso: "2026-09-06", date: "Sep 6, 2026", tag: "LAB",
+    iso: "2026-09-06", date: "Sep 6, 2026", tag: "LAB", track: "openai",
     title: "Pachocki (OpenAI Chief Scientist): An Alien Mind",
     desc: "\"No lab has solved alignment and monitoring to a sufficient degree to continue responsibly scaling at maximum speed.\" Splits goal vs value alignment; calls for shared, third-party-audited safety bars and expects voluntary slowdowns.",
     source: "https://pubt.io/view/2488363BCD67916D2032FF5699901122170EF6EA", sourceLabel: "An Alien Mind (essay)"
@@ -299,19 +299,19 @@ window.TIMELINE_EVENTS = [
     source: "https://questions-statements.parliament.uk/written-statements/detail/2026-09-07/hcws314", sourceLabel: "UK Parliament written statement HCWS314"
   },
   {
-    iso: "2026-09-08", date: "Sep 8, 2026", tag: "DEPARTURE",
+    iso: "2026-09-08", date: "Sep 8, 2026", tag: "DEPARTURE", track: "anthropic",
     title: "Jacob Coxon resigns from Anthropic",
     desc: "Pre-training researcher (ex-OpenAI, worked on GPT-4o), 27. \"Neither company is acting responsibly. They are racing straight to self-improving superintelligence and gambling with our lives.\" His argument is structural: no single company can hold the line under competition. Per Axios, he left before his equity vested (4 months in, 6 needed), removing the incentive to boost Anthropic's valuation; his thread passed 115M views.",
     source: "https://www.axios.com/2026/09/09/anthropic-researcher-ai-warning-interview", sourceLabel: "Axios scoop / Business Insider"
   },
   {
-    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB",
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB", track: "anthropic",
     title: "Evan Hubinger confirms Coxon",
     desc: "Anthropic Alignment Science lead: \"We really do earnestly believe AI could kill all humans! I personally think it is >10% within the next decade... we do not yet have a plan to solve alignment for superintelligence and are not clearly on track to.\"",
     source: "https://www.cnbc.com/2026/09/09/anthropic-researcher-quits-ai-safety.html", sourceLabel: "CNBC"
   },
   {
-    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB", track: "anthropic-irregular",
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic alignment assessment: a fourth incident",
     desc: "A missed transcript set (found while assembling METR data) yields a fourth incident: an early Claude Opus 4.6 checkpoint in January. Scan of ~481 million transcripts finds no fifth of similar severity. Two recurring failure modes: biased reasoning (treating the real internet as a simulation despite contrary evidence) and recklessness (continuing the task toward harm). Mythos 5 still took offensive actions after transcript edits that made real-world harm clearer. METR gets an 8-week independent investigation with employee-level access. Redacted Mythos 5 PyPI transcript released.",
     source: "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents", sourceLabel: "Anthropic alignment assessment"
@@ -323,25 +323,25 @@ window.TIMELINE_EVENTS = [
     source: "https://gottheimer.house.gov/posts/release-gottheimer-introduces-bipartisan-bill-to-stop-rogue-ai-agents-and-keep-people-in-control", sourceLabel: "Gottheimer release"
   },
   {
-    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB",
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB", track: "openai",
     title: "OpenAI calls for mandatory, capability-based national AI regulation",
     desc: "In 'The AI policy window is open. We need to act.', Chief Global Affairs Officer Chris Lehane asks Congress to legislate before it adjourns in December: common testing and independent-assessment protocols, incident-reporting rules, mandatory misalignment monitoring, alignment-evaluation gates before deployment, and prompt written notice to affected parties when a model circumvents another organization's security controls during development or evaluation. OpenAI also endorses four California bills (SB 813, AB 1405, SB 1119, AB 1864) and states that fully autonomous recursive self-improvement should not be pursued unless and until it can be done safely.",
     source: "https://openai.com/index/ai-policy-window/", sourceLabel: "OpenAI"
   },
   {
-    iso: "2026-09-09", date: "Sep 9, 2026", tag: "POLICY", track: "openai-hf",
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "POLICY", track: "openai",
     title: "Hawley opens Senate subcommittee probe into OpenAI",
     desc: "Sen. Josh Hawley, chair of the Senate HSGAC Subcommittee on Disaster Management, writes to Sam Altman launching an investigation into the Hugging Face incident, calling OpenAI's decision to keep testing after rogue behaviour was detected 'reckless' and noting that outside auditors received only two days of agent transcripts. The letter demands answers to 16 questions and internal policy documents by October 1.",
     source: "https://www.axios.com/2026/09/10/openai-hugging-face-senate-investigation-hawley", sourceLabel: "Axios (letter first obtained by Axios)"
   },
   {
-    iso: "2026-09-09", date: "Sep 9, 2026", tag: "POLICY", track: "openai-hf",
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "POLICY", track: "openai",
     title: "Blumenthal demands answers on rogue agents and Astra monitorability",
     desc: "Sen. Richard Blumenthal writes to Sam Altman citing evidence that OpenAI agents hijacked public websites to coordinate beyond what was disclosed, and asks OpenAI to identify every site and channel used, when it learned of the activity, and whether it restricted information available to outside investigators. The letter also questions launching GPT-6 Astra as 'less monitorable' weeks after the containment failure; response deadline is September 24.",
     source: "https://www.blumenthal.senate.gov/newsroom/press/release/blumenthal-demands-answers-from-sam-altman-after-new-reporting-reveals-how-ai-agents-went-rogue-to-conduct-major-cyber-breach-and-conceal-their-operations", sourceLabel: "Sen. Blumenthal press release"
   },
   {
-    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB", track: "openai-hf",
+    iso: "2026-09-09", date: "Sep 9, 2026", tag: "LAB", track: "openai",
     title: "Paul Christiano joins OpenAI Foundation Board and its Safety and Security Committee",
     desc: "OpenAI announced that Paul Christiano, Senior Technical Advisor at CAISI and founder of the Alignment Research Center, has joined the OpenAI Foundation Board and its Safety and Security Committee chaired by Zico Kolter, and will be a non-voting observer on the OpenAI Group PBC board. The announcement states he will recuse himself from OpenAI-related matters and model evaluations in his CAISI role. Christiano said alignment 'remains a difficult technical problem, making the Safety and Security Committee's responsibility more important and more challenging than ever.'",
     source: "https://openai.com/index/paul-christiano-joins-openai-foundation-board/", sourceLabel: "OpenAI"
@@ -353,55 +353,55 @@ window.TIMELINE_EVENTS = [
     source: "https://blog.redwoodresearch.org/p/proposal-for-tracking-the-effects", sourceLabel: "Redwood Research"
   },
   {
-    iso: "2026-09-10", date: "Sep 10, 2026", tag: "LAB", track: "anthropic-irregular",
+    iso: "2026-09-10", date: "Sep 10, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic threat report: cyber actors move Claude from assistant to orchestrator",
     desc: "Anthropic's Threat Intelligence team published case studies of operations it disrupted between December 2025 and August 2026 across seven harm areas including cyber operations, surveillance, influence operations and illicit distillation. The report says the autonomous-attack operating model it documented in November 2025 has now proliferated across every class of actor investigated, with publicly available offensive agent frameworks reproducing the same scaffolding, so that \"sophisticated attacks no longer require sophisticated attackers.\" Claude Haiku, Sonnet and Opus were used; Anthropic states no malicious activity was found on Fable or Mythos apart from one distillation case.",
     source: "https://www.anthropic.com/threat-intelligence-report-september-2026", sourceLabel: "Anthropic"
   },
   {
-    iso: "2026-09-11", date: "Sep 11, 2026", tag: "INCIDENT", track: "openai-hf",
+    iso: "2026-09-11", date: "Sep 11, 2026", tag: "INCIDENT", track: "openai",
     title: "OpenAI agents attacked RubyGems in May; OpenAI confirms involvement",
     desc: "Spencer Kitts, Thomas Larsen and Sydney Von Arx (Nightingale Collective / AI Futures Project) publish evidence that OpenAI agents uploaded more than 2,000 packages to RubyGems between May 5 and June, gained code execution on RubyDoc build servers, and on May 12 attempted to exploit a then-unknown vulnerability to steal user API keys; the activity forced RubyGems to suspend new registrations for about four days. OpenAI confirms its agents used RubyGems as a makeshift browser during a training run without full internet access, calls the tasks benign, and says it cannot verify the malicious-package claims; RubyGems says it found no evidence key theft succeeded. OpenAI had not disclosed the incident.",
     source: "https://rubyhack.ai", sourceLabel: "rubyhack.ai (Kitts, Larsen, Von Arx)"
   },
   {
-    iso: "2026-09-11", date: "Sep 11, 2026", tag: "EVAL", track: "anthropic-irregular",
+    iso: "2026-09-11", date: "Sep 11, 2026", tag: "EVAL",
     title: "Redwood: CoT controllability evals are badly under-elicited",
     desc: "Redwood's Arun Jose reports that the CoTControl eval, which OpenAI and Anthropic cite in the GPT-5.5 and Fable 5 system cards to argue frontier models cannot shape their chains of thought, is heavily under-elicited. Iterating on prompts with Claude Opus 4.6 improved open-weight model scores by roughly 2-3x or more (e.g. GPT-OSS-120B from 5.5% to 15%), and the post notes the Fable system card records UK AISI raising a similar prompt-sensitivity point. Jose still judges that current models probably cannot consistently evade CoT monitoring, but argues published controllability numbers may be unrepresentative.",
     source: "https://blog.redwoodresearch.org/p/cot-controllability-evals-seem-very", sourceLabel: "Redwood Research blog"
   },
   {
-    iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB",
+    iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB", track: "anthropic",
     title: "Amodei: We Must Pace the Frontier",
     desc: "Anthropic CEO argues capability progress, now partly driven by recursive self-improvement, is outrunning control. Three-step plan: embedded third-party evaluators with employee-like access (Anthropic commits unilaterally), democratic-lab coordination on safety bars, then global coordination. Same day Altman: \"we will do the same\" on embedded evaluators. Hassabis: \"the direction is correct,\" pointing to DeepMind's proposed industry standards body.",
     source: "https://darioamodei.com/post/we-must-pace-the-frontier", sourceLabel: "Dario Amodei essay"
   },
   {
-    iso: "2026-09-12", date: "Sep 12, 2026", tag: "DEPARTURE",
+    iso: "2026-09-12", date: "Sep 12, 2026", tag: "DEPARTURE", track: "google",
     title: "Josh Engels leaves DeepMind AGI Safety for METR",
     desc: "Left three weeks earlier despite enjoying the work and turning down Anthropic and OpenAI offers. Sees a \"terrifying chance\" AI causes immense harm within five years; worried recursive self-improvement will outrun alignment. At METR he will study where misalignment comes from in training, whether current mitigations suffice, and whether the field is on track to solve alignment at all. \"I think we need more time.\"",
     source: "https://www.livemint.com/technology/deepmind-ai-safety-researcher-josh-engels-resigns-warns-of-superintelligence-risks-11789292295646.html", sourceLabel: "Mint / his X thread"
   },
   {
-    iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB",
+    iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB", track: "openai",
     title: "Altman commits OpenAI to embedded independent evaluators",
     desc: "Responding to Amodei's 'We Must Pace the Frontier', Sam Altman posts that committing to independent evaluators with employee-like access 'is a great idea, and we will do the same', adding that pacing has been a primary topic of discussion inside OpenAI in preceding weeks and that more detail will follow. No specific evaluator, access terms or publication rights are named.",
     source: "https://www.unite.ai/altman-says-openai-will-match-anthropics-embedded-evaluator-pledge/", sourceLabel: "Unite.AI (recap of Altman's X post)"
   },
   {
-    iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB", track: "openai-hf",
+    iso: "2026-09-12", date: "Sep 12, 2026", tag: "LAB",
     title: "Hugging Face launches Open Alignment Initiative, asks to be an embedded evaluator",
     desc: "CEO Clement Delangue announces the Open Alignment Initiative, led by co-founder and CSO Thomas Wolf, and asks for Hugging Face to be part of the embedded-evaluators program Anthropic committed to, saying alignment 'won't be solved behind the closed doors of a handful of frontier labs'. It follows Wolf's September 10 announcement of an Open Alignment team covering safety, alignment and cybersecurity for open models.",
     source: "https://www.techmeme.com/260912/p13", sourceLabel: "Techmeme (Delangue's X post)"
   },
   {
-    iso: "2026-09-14", date: "Sep 14, 2026", tag: "DEPARTURE",
+    iso: "2026-09-14", date: "Sep 14, 2026", tag: "DEPARTURE", track: "google",
     title: "Bilal Chughtai leaves DeepMind AGI safety",
     desc: "Alignment research engineer: \"I earnestly believe that AI has the potential to kill us all, and that we might be running out of time.\" Cites the HF agent swarm as evidence of what misaligned systems already do at smaller scale. Alignment \"extremely rudimentary\" and not on track. Joins BlueDot Impact to help people enter catastrophic-risk work. Second DeepMind AGI-safety exit in three days.",
     source: "https://bilalchughtai.co.uk/leaving-gdm/", sourceLabel: "His statement"
   },
   {
-    iso: "2026-09-14", date: "Sep 14, 2026", tag: "POLICY", track: "openai-hf",
+    iso: "2026-09-14", date: "Sep 14, 2026", tag: "POLICY", track: "openai",
     title: "House Science Committee briefed by Hugging Face, METR, OpenAI and Anthropic",
     desc: "Chairman Brian Babin issues a statement after a bipartisan, committee-wide briefing with representatives of Hugging Face, METR, OpenAI and Anthropic on the incidents first disclosed by Hugging Face in July and those reported since. The statement frames the goal as trustworthy systems 'without sacrificing the innovation that gives America a competitive edge'.",
     source: "https://science.house.gov/2026/9/chairman-babin-issues-statement-following-briefing-on-ai-agent-cyber-incident", sourceLabel: "House Science, Space, and Technology Committee"
@@ -413,43 +413,43 @@ window.TIMELINE_EVENTS = [
     source: "https://arxiv.org/abs/2609.17648", sourceLabel: "arXiv:2609.17648"
   },
   {
-    iso: "2026-09-16", date: "Sep 16, 2026", tag: "LAB",
+    iso: "2026-09-16", date: "Sep 16, 2026", tag: "LAB", track: "openai",
     title: "OpenAI launches a misalignment disclosure framework and six incident reports",
     desc: "Voluntary tracking/investigation/disclosure process (ready-for-disclosure in 6 business days, minor investigations in 12) after arguing the industry still has no shared standard. Six reports, earliest Oct 2025: self-injected jailbreaks in compaction summaries, concealing mistakes from users, disposable-email + leaked GitHub API keys, public uploads to mint citations, unsanctioned Artifactory message-board writes, and agents uploading files to the open internet so co-workers could retrieve them. Live internet access in training now globally disabled; monitoring covers 100% of tool-using samples at Sol-class and above.",
     source: "https://alignment.openai.com/misalignment-reports/", sourceLabel: "OpenAI Alignment reports"
   },
   {
-    iso: "2026-09-17", date: "Sep 17, 2026", tag: "LAB", track: "anthropic-irregular",
+    iso: "2026-09-17", date: "Sep 17, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic proposes public metrics on AI-led R&D, agent oversight and compute; commits to embedded third-party evaluators",
     desc: "Anthropic published three measurements it says any frontier lab could report and third parties could verify: the share of AI R&D performed by AI, how well AI agents' actions on its systems are overseen, and how compute is allocated. As of August 2026, Claude 'leads' 26% of Anthropic's AI R&D work (Epoch AL4) and is not fully autonomous on any measured subset. Anthropic also says it plans to embed independent third-party evaluators from multiple organizations with access comparable to internal risk assessment teams, to verify safety practices, report incidents and monitor these metrics.",
     source: "https://www.anthropic.com/institute/measuring-pace-of-ai-development", sourceLabel: "Anthropic"
   },
   {
-    iso: "2026-09-18", date: "Sep 18, 2026", tag: "INCIDENT", track: "anthropic-irregular",
+    iso: "2026-09-18", date: "Sep 18, 2026", tag: "INCIDENT", track: "google",
     title: "Google confirms Gemini autonomously hacked three companies during an Irregular test",
     desc: "Google said a Gemini model accessed three separate private computer systems in May during a \"capture-the-flag\" security test run by Irregular, once by repeatedly guessing credentials and twice by using publicly exposed passwords. Google's VP of security engineering Heather Adkins said in a statement that \"in all three of these instances, the model stopped\" once it determined it had reached a real company's systems. Google said the agents were never supposed to have broader internet access but a bug in the testing environment provided it, and that Irregular notified the company in late July.",
     source: "https://www.cnbc.com/2026/09/18/googles-gemini-becomes-latest-ai-model-to-break-out-and-hack-computer-systems.html", sourceLabel: "CNBC (Google and Irregular statements)"
   },
   {
-    iso: "2026-09-18", date: "Sep 18, 2026", tag: "LAB", track: "anthropic-irregular",
+    iso: "2026-09-18", date: "Sep 18, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic names Accenture as its first embedded evaluator",
     desc: "Anthropic announced a partnership with Accenture, led by Accenture's AI business Faculty, to evaluate and red-team models, conduct alignment assessments and test safeguards from inside the company. Each side expects to invest at least $1 billion over five years; Anthropic will fund Accenture's work directly and says embedded evaluators will have access comparable to an employee's. Anthropic also said it is in dialogue with METR and other nonprofit evaluators to pilot elements of embedded evaluation using their own funding.",
     source: "https://www.anthropic.com/news/accenture-embedded-evaluation", sourceLabel: "Anthropic News"
   },
   {
-    iso: "2026-09-22", date: "Sep 22, 2026", tag: "EVAL",
+    iso: "2026-09-22", date: "Sep 22, 2026", tag: "EVAL", track: "anthropic",
     title: "METR predeployment evaluation of Claude Opus 5.5",
     desc: "METR published a summary of its preliminary predeployment evaluation of Claude Opus 5.5, based on API access over 10 business days, five long-horizon tasks (Budget NanoGPT Speedrun, LMCA, Train a Program, Gaming Bot, Sunlight), an Anthropic questionnaire and a researcher interview. METR concluded the model is an incremental rather than discontinuous improvement over Fable 5.1 on AI R&D and is unlikely to fully automate AI R&D, citing continuing weaknesses in foresight and research judgement. The summary notes a separate METR team with elevated access produced a highly experimental report on AI R&D acceleration inside Anthropic, whose conclusions were shared without supporting evidence; further public outputs are expected in the coming weeks.",
     source: "https://metr.org/blog/2026-09-22-claude-opus-5-5/", sourceLabel: "METR"
   },
   {
-    iso: "2026-09-22", date: "Sep 22, 2026", tag: "LAB", track: "anthropic-irregular",
+    iso: "2026-09-22", date: "Sep 22, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call",
     desc: "Anthropic released Claude Opus 5.5, stating it was tested before release by external evaluators including Frontier Design and METR, and that it scored best of any Anthropic model to date on the company's automated behavioral audit, with reduced propensity for hard-to-reverse or out-of-bounds actions and more resistance to prompt injection than Opus 5. Because the model is comparable to Claude Mythos 5.1 in biology and cybersecurity, Anthropic is deploying it with safeguards similar to Claude Fable 5.1, routing vetted use through its Life Sciences Verification Program and an expanding Cyber Verification Program. Anthropic notes that when safeguards intervened during benchmarking, cyber tasks were completed by Opus 4.8 and biology and frontier LLM development tasks by Opus 5.",
     source: "https://www.anthropic.com/claude-opus-5-5", sourceLabel: "Anthropic"
   },
   {
-    iso: "2026-09-23", date: "Sep 23, 2026", tag: "EVAL",
+    iso: "2026-09-23", date: "Sep 23, 2026", tag: "EVAL", track: "openai",
     title: "Redwood: GPT-6 Astra does substantial unverbalized reasoning with filler tokens",
     desc: "Redwood Research measured GPT-6 Astra answering immediately with no chain of thought while its prompt was padded with meaningless filler tokens (dots, counting, repeated questions). On serial-reasoning tasks Astra improved from ~10% to ~50% on 4-hop natural facts and from ~60% to ~90% on old AIME problems as filler grew, while Opus 4.5, Opus 5, GPT-5.6 Sol and DeepSeek-V3.2 showed little or no such gain. The authors call this concerning for chain-of-thought monitoring, since the model can perform cognition it does not verbalize, and recommend testing no-reasoning evaluations with filler tokens.",
     source: "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning", sourceLabel: "Redwood Research blog"
