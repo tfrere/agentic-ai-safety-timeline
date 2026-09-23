@@ -12,32 +12,31 @@
   <main class="wrap" id="top">
     <section class="section-intro" aria-labelledby="timeline-heading">
       <div class="intro-copy">
-        <h1 id="timeline-heading">Agentic AI <em>safety timeline.</em></h1>
-        <p>Incidents, lab responses, policy &amp; research. <span class="intro-source">Every event linked to its source.<button class="method-trigger" id="method-trigger" type="button" popovertarget="event-method" aria-expanded="false" aria-controls="event-method" aria-label="How events are added"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 9v5"/><circle class="info-dot" cx="10" cy="6" r=".8"/></svg></button></span></p>
-        <aside class="method-popover" id="event-method" popover="auto" aria-labelledby="method-heading">
-          <h2 id="method-heading">How events are added</h2>
-          <p>An AI agent runs a daily watch. Events that meet these rules are added automatically.</p>
-          <ol>
-            <li><strong>Primary sources first</strong><span>Lab reports, independent evaluations, official statements and research.</span></li>
-            <li><strong>Evidence before inclusion</strong><span>The agent reads the source and checks that it supports the claim.</span></li>
-            <li><strong>One event, one entry</strong><span>Skip duplicates and unsupported claims. Use the event date, not the discovery date.</span></li>
-          </ol>
-          <a href="https://github.com/tfrere/agentic-ai-safety-timeline/blob/main/watch/METHOD.md" target="_blank" rel="noopener">Read the full methodology <span aria-hidden="true">↗</span></a>
-        </aside>
+        <div class="intro-heading">
+          <span class="agent-mark" aria-hidden="true">
+            <svg class="swarm-fallback" viewBox="0 0 48 48" fill="none" focusable="false">
+              <circle cx="24" cy="24" r="21"/>
+              <path d="m11 20 4 1-4 1 1-1Zm6-5 4 1-4 1 1-1Zm1 10 4 1-4 1 1-1Zm5-7 4 1-4 1 1-1Zm0 12 4 1-4 1 1-1Zm5-7 4 1-4 1 1-1Zm1-10 4 1-4 1 1-1Zm3 17 4 1-4 1 1-1Z"/>
+            </svg>
+            <canvas id="agent-swarm" width="144" height="144"></canvas>
+          </span>
+          <div class="intro-text">
+            <h1 id="timeline-heading">Agentic AI <em>safety timeline.</em></h1>
+            <p>Incidents, lab responses, policy &amp; research. <span class="intro-source">Every event linked to its source.<button class="method-trigger" id="method-trigger" type="button" popovertarget="event-method" aria-expanded="false" aria-controls="event-method" aria-label="How events are added"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 9v5"/><circle class="info-dot" cx="10" cy="6" r=".8"/></svg></button></span></p>
+            <aside class="method-popover" id="event-method" popover="auto" aria-labelledby="method-heading">
+              <h2 id="method-heading">How events are added</h2>
+              <p>An AI agent runs a daily watch. Events that meet these rules are added automatically.</p>
+              <ol>
+                <li><strong>Primary sources first</strong><span>Lab reports, independent evaluations, official statements and research.</span></li>
+                <li><strong>Evidence before inclusion</strong><span>The agent reads the source and checks that it supports the claim.</span></li>
+                <li><strong>One event, one entry</strong><span>Skip duplicates and unsupported claims. Use the event date, not the discovery date.</span></li>
+              </ol>
+              <a href="https://github.com/tfrere/agentic-ai-safety-timeline/blob/main/watch/METHOD.md" target="_blank" rel="noopener">Read the full methodology <span aria-hidden="true">↗</span></a>
+            </aside>
+          </div>
+        </div>
       </div>
       <div class="intro-meta" aria-label="Timeline coverage">
-        <svg class="intro-illustration" viewBox="0 0 120 64" fill="none" aria-hidden="true">
-          <path class="illustration-guide" d="M8 32h104M28 32V14h16M52 32v19h17M76 32V12h17M100 32v17h12"/>
-          <path class="illustration-spine" d="M8 32h104"/>
-          <circle cx="12" cy="32" r="3" style="--node: var(--c-incident)"/>
-          <circle cx="44" cy="14" r="3" style="--node: var(--c-departure)"/>
-          <circle cx="52" cy="32" r="3" style="--node: var(--c-lab)"/>
-          <circle cx="69" cy="51" r="3" style="--node: var(--c-policy)"/>
-          <circle cx="93" cy="12" r="3" style="--node: var(--c-eval)"/>
-          <circle cx="112" cy="49" r="3" style="--node: var(--c-research)"/>
-          <circle class="illustration-halo" cx="100" cy="32" r="8"/>
-          <circle cx="100" cy="32" r="3" style="--node: var(--accent)"/>
-        </svg>
         <div class="intro-total" role="status"><strong id="header-count">0</strong> <span id="header-count-label">sourced events</span></div>
         <div class="intro-period"><span id="header-range">—</span></div>
       </div>
@@ -82,6 +81,7 @@
 
   <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">↑</button>
 
+  <script src="swarm.js" defer></script>
   <script src="data.js"></script>
   <script>
     (function () {
