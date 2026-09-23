@@ -2,7 +2,8 @@
   "use strict";
 
   const canvas = document.getElementById("agent-swarm");
-  const ctx = canvas?.getContext("2d");
+  if (!canvas || canvas.parentElement.hidden) return;
+  const ctx = canvas.getContext("2d");
   if (!ctx) return;
 
   const mark = canvas.parentElement;
