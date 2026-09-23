@@ -46,16 +46,21 @@ a { color: inherit; text-decoration: none; }
 .reading-progress { position: fixed; inset: 0 0 auto; z-index: 100; height: 2px; background: var(--accent); box-shadow: 0 0 16px rgba(216, 255, 95, .55); transform: scaleX(0); transform-origin: left; }
 .wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; padding: 0 0 80px; }
 
-.section-intro { padding: 32px 0 22px; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; }
-.section-intro h1 { margin: 0; font-size: clamp(30px, 3.4vw, 42px); line-height: 1; letter-spacing: -.05em; font-weight: 620; }
+.section-intro { padding: 32px 0 22px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.intro-copy { min-width: 0; }
+.section-intro h1 { margin: 0; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.08; letter-spacing: -.045em; font-weight: 620; text-wrap: balance; }
 .section-intro h1 em { color: var(--accent); font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
-.section-intro p { margin: 11px 0 0; color: var(--faint); font-size: 12px; letter-spacing: .01em; }
-.intro-meta { flex: 0 0 auto; padding-bottom: 2px; display: flex; align-items: stretch; }
-.intro-meta div { min-width: 96px; padding: 0 20px; }
-.intro-meta div:first-child { border-right: 1px solid var(--border); }
-.intro-meta div:last-child { padding-right: 0; }
-.intro-meta strong { display: block; color: var(--text); font-size: 17px; font-weight: 650; line-height: 1.1; letter-spacing: -.025em; white-space: nowrap; }
-.intro-meta span { display: block; margin-top: 4px; color: var(--faint); font-size: 9px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+.intro-copy p { margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.intro-copy p span { color: #cbd1da; }
+.intro-meta { flex: 0 0 auto; padding-left: 24px; display: grid; gap: 8px; border-left: 1px solid var(--border-bright); }
+.intro-total { display: flex; align-items: baseline; gap: 8px; white-space: nowrap; }
+.intro-total strong { color: var(--text); font-size: 28px; font-weight: 650; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -.04em; }
+.intro-total span { color: var(--muted); font-size: 11px; }
+.intro-period { display: flex; align-items: center; gap: 9px; color: var(--muted); font: 500 11px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; }
+.intro-range-mark { position: relative; width: 24px; height: 1px; flex: 0 0 24px; background: var(--accent); }
+.intro-range-mark::before, .intro-range-mark::after { position: absolute; top: -2px; width: 5px; height: 5px; border: 1px solid var(--accent); border-radius: 50%; background: var(--bg); content: ""; }
+.intro-range-mark::before { left: 0; }
+.intro-range-mark::after { right: 0; background: var(--accent); }
 
 .controls { position: relative; z-index: 2; padding: 14px; border: 1px solid rgba(66, 74, 87, .82); border-radius: var(--radius); background: rgba(13, 16, 21, .9); box-shadow: 0 16px 55px rgba(0, 0, 0, .38); }
 .search-row { display: block; }
@@ -124,9 +129,15 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 680px) {
   .wrap { width: min(100% - 32px, 1120px); }
-  .section-intro { padding: 27px 0 20px; }
-  .section-intro { align-items: flex-start; flex-direction: column; gap: 19px; }
-  .intro-meta div:first-child { padding-left: 0; }
+  .section-intro { padding: 25px 0 20px; align-items: flex-start; flex-direction: column; gap: 16px; }
+  .section-intro h1 { max-width: 520px; font-size: clamp(30px, 5.8vw, 38px); text-wrap: initial; }
+  .section-intro h1 em { white-space: nowrap; }
+  .intro-copy p { max-width: 52ch; }
+  .intro-meta { width: 100%; padding: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 0; }
+  .intro-total { gap: 6px; }
+  .intro-total strong { font-size: 20px; }
+  .intro-total span, .intro-period { font-size: 10px; }
+  .intro-range-mark { width: 16px; flex-basis: 16px; }
   .controls { margin-inline: -4px; padding: 10px; }
   .filter-row { align-items: flex-start; flex-direction: column; gap: 8px; }
   .filters { flex-wrap: nowrap; width: 100%; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }

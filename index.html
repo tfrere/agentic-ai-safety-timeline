@@ -12,12 +12,12 @@
   <main class="wrap" id="top">
     <section class="section-intro" aria-labelledby="timeline-heading">
       <div class="intro-copy">
-        <h1 id="timeline-heading">Agentic AI, <em>documented.</em></h1>
-        <p>Verified incidents, lab responses, policy and research — sourced, deduplicated, no hype.</p>
+        <h1 id="timeline-heading">Agentic AI <em>safety timeline.</em></h1>
+        <p>Incidents, lab responses, policy &amp; research. <span>Every event linked to its source.</span></p>
       </div>
       <div class="intro-meta" aria-label="Timeline coverage">
-        <div><strong id="header-count">0</strong><span>records</span></div>
-        <div><strong id="header-range">—</strong><span>coverage</span></div>
+        <div class="intro-total" role="status"><strong id="header-count">0</strong> <span id="header-count-label">sourced events</span></div>
+        <div class="intro-period"><span class="intro-range-mark" aria-hidden="true"></span><span id="header-range">—</span></div>
       </div>
     </section>
 
@@ -134,6 +134,8 @@
           shown++;
         });
         document.getElementById("header-count").textContent = shown || 0;
+        document.getElementById("header-count-label").textContent =
+          (isPristine ? "sourced " : "matching ") + (shown === 1 ? "event" : "events");
 
         if (shown === 0) {
           const empty = document.createElement("div");
