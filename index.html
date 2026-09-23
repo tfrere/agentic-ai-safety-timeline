@@ -46,10 +46,10 @@
       <div class="controls-row2">
         <span class="filter-label">Tracks</span>
         <div class="toggles">
-          <label class="toggle"><input type="checkbox" id="ctx-toggle" checked /><span></span>Context</label>
-          <label class="toggle oai-toggle"><input type="checkbox" id="oai-toggle" checked /><span></span>OpenAI × HF</label>
-          <label class="toggle ant-toggle"><input type="checkbox" id="ant-toggle" checked /><span></span>Anthropic × Irregular</label>
-          <label class="toggle aisi-toggle"><input type="checkbox" id="aisi-toggle" checked /><span></span>UK AISI</label>
+          <label class="toggle"><input type="checkbox" id="ctx-toggle" checked /><span></span>Context <span class="chip-count" data-track-count="context"></span></label>
+          <label class="toggle oai-toggle"><input type="checkbox" id="oai-toggle" checked /><span></span>OpenAI × HF <span class="chip-count" data-track-count="openai-hf"></span></label>
+          <label class="toggle ant-toggle"><input type="checkbox" id="ant-toggle" checked /><span></span>Anthropic × Irregular <span class="chip-count" data-track-count="anthropic-irregular"></span></label>
+          <label class="toggle aisi-toggle"><input type="checkbox" id="aisi-toggle" checked /><span></span>UK AISI <span class="chip-count" data-track-count="aisi"></span></label>
         </div>
         <button class="reset-button" id="reset-filters" type="button" hidden>Reset</button>
       </div>
@@ -96,6 +96,12 @@
         const tag = node.getAttribute("data-count");
         node.textContent = tag === "ALL" ? events.length : events.filter((e) => e.tag === tag).length;
       });
+      document.querySelectorAll("[data-track-count]").forEach((node) => {
+        const key = node.getAttribute("data-track-count");
+        node.textContent = key === "context"
+          ? events.filter((e) => e.context).length
+          : events.filter((e) => e.track === key).length;
+      });
 
       let activeFilter = "ALL";
       const monthName = (iso) => {
@@ -119,12 +125,15 @@
         let lastMonth = "";
         let currentMonthGroup = null;
         let shown = 0;
+        const allTracksOn = oaiToggle.checked && antToggle.checked && aisiToggle.checked;
+        const allowedTracks = new Set();
+        if (oaiToggle.checked) allowedTracks.add("openai-hf");
+        if (antToggle.checked) allowedTracks.add("anthropic-irregular");
+        if (aisiToggle.checked) allowedTracks.add("aisi");
         events.forEach((e) => {
           if (activeFilter !== "ALL" && e.tag !== activeFilter) return;
           if (e.context && !ctxToggle.checked) return;
-          if (e.track === "openai-hf" && !oaiToggle.checked) return;
-          if (e.track === "anthropic-irregular" && !antToggle.checked) return;
-          if (e.track === "aisi" && !aisiToggle.checked) return;
+          if (!allTracksOn && !allowedTracks.has(e.track)) return;
           if (q) {
             const hay = (e.title + " " + e.desc + " " + (e.sourceLabel || "") + " " + e.tag).toLowerCase();
             if (!hay.includes(q)) return;
@@ -162,6 +171,7 @@
           currentMonthGroup.appendChild(item);
           shown++;
         });
+        document.getElementById("header-count").textContent = shown || 0;
 
         if (shown === 0) {
           const empty = document.createElement("div");
