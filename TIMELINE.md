@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-09-20.
+- **Last updated:** 2026-09-23.
 
 ---
 
@@ -513,6 +513,15 @@
 - **2026-09-10** `LAB` - **Anthropic threat report: cyber actors move Claude from assistant to orchestrator.** Anthropic's Threat Intelligence team published case studies of operations it disrupted between December 2025 and August 2026 across seven harm areas including cyber operations, surveillance, influence operations and illicit distillation. The report says the autonomous-attack operating model it documented in November 2025 has now proliferated across every class of actor investigated, with publicly available offensive agent frameworks reproducing the same scaffolding, so that "sophisticated attacks no longer require sophisticated attackers." Claude Haiku, Sonnet and Opus were used; Anthropic states no malicious activity was found on Fable or Mythos apart from one distillation case. [Anthropic](https://www.anthropic.com/threat-intelligence-report-september-2026)
 
 
+- **2026-09-22** `EVAL` - **METR predeployment evaluation of Claude Opus 5.5.** METR published a summary of its preliminary predeployment evaluation of Claude Opus 5.5, based on API access over 10 business days, five long-horizon tasks (Budget NanoGPT Speedrun, LMCA, Train a Program, Gaming Bot, Sunlight), an Anthropic questionnaire and a researcher interview. METR concluded the model is an incremental rather than discontinuous improvement over Fable 5.1 on AI R&D and is unlikely to fully automate AI R&D, citing continuing weaknesses in foresight and research judgement. The summary notes a separate METR team with elevated access produced a highly experimental report on AI R&D acceleration inside Anthropic, whose conclusions were shared without supporting evidence; further public outputs are expected in the coming weeks. [METR](https://metr.org/blog/2026-09-22-claude-opus-5-5/)
+
+
+- **2026-09-23** `EVAL` - **Redwood: GPT-6 Astra does substantial unverbalized reasoning with filler tokens.** Redwood Research measured GPT-6 Astra answering immediately with no chain of thought while its prompt was padded with meaningless filler tokens (dots, counting, repeated questions). On serial-reasoning tasks Astra improved from ~10% to ~50% on 4-hop natural facts and from ~60% to ~90% on old AIME problems as filler grew, while Opus 4.5, Opus 5, GPT-5.6 Sol and DeepSeek-V3.2 showed little or no such gain. The authors call this concerning for chain-of-thought monitoring, since the model can perform cognition it does not verbalize, and recommend testing no-reasoning evaluations with filler tokens. [Redwood Research blog](https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning)
+
+
+- **2026-09-22** `LAB` - **Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call.** Anthropic released Claude Opus 5.5, stating it was tested before release by external evaluators including Frontier Design and METR, and that it scored best of any Anthropic model to date on the company's automated behavioral audit, with reduced propensity for hard-to-reverse or out-of-bounds actions and more resistance to prompt injection than Opus 5. Because the model is comparable to Claude Mythos 5.1 in biology and cybersecurity, Anthropic is deploying it with safeguards similar to Claude Fable 5.1, routing vetted use through its Life Sciences Verification Program and an expanding Cyber Verification Program. Anthropic notes that when safeguards intervened during benchmarking, cyber tasks were completed by Opus 4.8 and biology and frontier LLM development tasks by Opus 5. [Anthropic](https://www.anthropic.com/claude-opus-5-5)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -694,7 +703,10 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-07-13", "tag": "EVAL", "title": "Apollo red-teams Anthropic's auto-mode coding-agent monitor", "source": "https://www.apolloresearch.ai/monitoring/pilot-automode-campaign"},
   {"date": "2026-08-27", "tag": "EVAL", "title": "DeepMind pilots double-blind evaluations of a proprietary Gemini model", "source": "https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/"},
   {"date": "2026-09-11", "tag": "EVAL", "title": "Redwood: CoT controllability evals are badly under-elicited", "source": "https://blog.redwoodresearch.org/p/cot-controllability-evals-seem-very", "track": "anthropic-irregular"},
-  {"date": "2026-09-10", "tag": "LAB", "title": "Anthropic threat report: cyber actors move Claude from assistant to orchestrator", "source": "https://www.anthropic.com/threat-intelligence-report-september-2026", "track": "anthropic-irregular"}
+  {"date": "2026-09-10", "tag": "LAB", "title": "Anthropic threat report: cyber actors move Claude from assistant to orchestrator", "source": "https://www.anthropic.com/threat-intelligence-report-september-2026", "track": "anthropic-irregular"},
+  {"date": "2026-09-22", "tag": "EVAL", "title": "METR predeployment evaluation of Claude Opus 5.5", "source": "https://metr.org/blog/2026-09-22-claude-opus-5-5/"},
+  {"date": "2026-09-23", "tag": "EVAL", "title": "Redwood: GPT-6 Astra does substantial unverbalized reasoning with filler tokens", "source": "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning"},
+  {"date": "2026-09-22", "tag": "LAB", "title": "Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call", "source": "https://www.anthropic.com/claude-opus-5-5", "track": "anthropic-irregular"}
 ]
 ```
 

@@ -435,5 +435,23 @@ window.TIMELINE_EVENTS = [
     title: "Anthropic names Accenture as its first embedded evaluator",
     desc: "Anthropic announced a partnership with Accenture, led by Accenture's AI business Faculty, to evaluate and red-team models, conduct alignment assessments and test safeguards from inside the company. Each side expects to invest at least $1 billion over five years; Anthropic will fund Accenture's work directly and says embedded evaluators will have access comparable to an employee's. Anthropic also said it is in dialogue with METR and other nonprofit evaluators to pilot elements of embedded evaluation using their own funding.",
     source: "https://www.anthropic.com/news/accenture-embedded-evaluation", sourceLabel: "Anthropic News"
+  },
+  {
+    iso: "2026-09-22", date: "Sep 22, 2026", tag: "EVAL",
+    title: "METR predeployment evaluation of Claude Opus 5.5",
+    desc: "METR published a summary of its preliminary predeployment evaluation of Claude Opus 5.5, based on API access over 10 business days, five long-horizon tasks (Budget NanoGPT Speedrun, LMCA, Train a Program, Gaming Bot, Sunlight), an Anthropic questionnaire and a researcher interview. METR concluded the model is an incremental rather than discontinuous improvement over Fable 5.1 on AI R&D and is unlikely to fully automate AI R&D, citing continuing weaknesses in foresight and research judgement. The summary notes a separate METR team with elevated access produced a highly experimental report on AI R&D acceleration inside Anthropic, whose conclusions were shared without supporting evidence; further public outputs are expected in the coming weeks.",
+    source: "https://metr.org/blog/2026-09-22-claude-opus-5-5/", sourceLabel: "METR"
+  },
+  {
+    iso: "2026-09-22", date: "Sep 22, 2026", tag: "LAB", track: "anthropic-irregular",
+    title: "Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call",
+    desc: "Anthropic released Claude Opus 5.5, stating it was tested before release by external evaluators including Frontier Design and METR, and that it scored best of any Anthropic model to date on the company's automated behavioral audit, with reduced propensity for hard-to-reverse or out-of-bounds actions and more resistance to prompt injection than Opus 5. Because the model is comparable to Claude Mythos 5.1 in biology and cybersecurity, Anthropic is deploying it with safeguards similar to Claude Fable 5.1, routing vetted use through its Life Sciences Verification Program and an expanding Cyber Verification Program. Anthropic notes that when safeguards intervened during benchmarking, cyber tasks were completed by Opus 4.8 and biology and frontier LLM development tasks by Opus 5.",
+    source: "https://www.anthropic.com/claude-opus-5-5", sourceLabel: "Anthropic"
+  },
+  {
+    iso: "2026-09-23", date: "Sep 23, 2026", tag: "EVAL",
+    title: "Redwood: GPT-6 Astra does substantial unverbalized reasoning with filler tokens",
+    desc: "Redwood Research measured GPT-6 Astra answering immediately with no chain of thought while its prompt was padded with meaningless filler tokens (dots, counting, repeated questions). On serial-reasoning tasks Astra improved from ~10% to ~50% on 4-hop natural facts and from ~60% to ~90% on old AIME problems as filler grew, while Opus 4.5, Opus 5, GPT-5.6 Sol and DeepSeek-V3.2 showed little or no such gain. The authors call this concerning for chain-of-thought monitoring, since the model can perform cognition it does not verbalize, and recommend testing no-reasoning evaluations with filler tokens.",
+    source: "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning", sourceLabel: "Redwood Research blog"
   }
 ];

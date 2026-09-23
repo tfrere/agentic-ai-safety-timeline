@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-22T06:39:41+00:00",
+  "last_run": "2026-09-23T06:40:02+00:00",
   "feed_hashes": {
-    "hf-blog": "b1a817731381fb1e20aaa71f556290abea6610a29620e9fa337d62b248b1f926",
-    "metr": "f4cccccb1316e572b8cff532fb25d0b4c2a7a0040b2ee727dab8b9e0a36afbfb",
-    "openai-news": "02dde78c686b1fa079d0088aeca0f8ac3566c466e9c70e13cc3175d7c1992d31",
+    "hf-blog": "f6eab8354da794494584253f270c4230e88e9603a2c7cc1cec7eb589c73fe62e",
+    "metr": "cc133a8f40c7c85b2a4d046c18b73a21a03a60a9668b77ff74e3ee3d97833da6",
+    "openai-news": "0b3c6fb65e0a9a2dfcfa510879c530b9ac5c40f4209161dec78b1b41e4390995",
     "deepmind": "e97a206e974345102f7b103cc9abc17d8be6a734143e4a34449d1c36782f49b2",
-    "redwood": "e1f49fb104c8d6c59a4703637810a89e9dbcc965dfe86ba6fc9b69df8a5b1fd9",
-    "frontier-security": "9eaae2deb8abafef17ebfe01c6650c3505ffd4b5366c49a7ab95137d2f4e7c36",
-    "transformer-news": "2a985716a18c7070301eef732939e3b556b3b8164b72fc5e08bfb26912697219",
-    "simonw": "6941ef0182a02505cb43bf8ad9ccf0805deae1c626cb9fd882b6c177f7a1bc61",
-    "arxiv-cr": "782137deb4a8a7e7ba8451fb986ee87a1aa9d9ef1ec67a41edbae3da153c45e5",
-    "arxiv-ai": "f6639c0310cb09e9f8fd371255e74385f89a0e2e17835eb3ab2d9002177bb888",
-    "alignment-forum": "f0a2ef12644edc3444f67a764242723a48c0150bbdb53c84c141caed4d7cb149"
+    "redwood": "005ae3500adf722c0a0755302e4aae057196a8db48521d549d15e5ea097bac6d",
+    "frontier-security": "f25afa4055ed8e02d86cbe02957f1ac4d7d35043389f2f0938d039959a13def1",
+    "transformer-news": "de105961fed344419baf10af46cc585d31fd280584d888ba476a122e6d3476d6",
+    "simonw": "7f5c667a3ebc491545a3257c631c1cdb27e7a09d6e31407e5554f363106c8193",
+    "arxiv-cr": "3ccd8878055ee466ba1e7c193e7f604ba4a39129acee4d19d1007cd21074dc62",
+    "arxiv-ai": "9221192591ade7569d6bb4fca9da2fb1c0fdf66412ae0d3ed008506d727cf291",
+    "alignment-forum": "e251a18efbe6b22be0c3272bdfb5d1770329093d8ceee94f4eff1164a8531986"
   },
   "page_hashes": {
-    "openai-alignment": "1097daf3ccd1df37bce687480a7682d8fa537b197fb317946685081567ae47b6",
-    "anthropic-research": "27acc29727aab1d784b48547e405024ce17f76c3cef9f0d8e6606e97e90803ac",
-    "anthropic-news": "835b8252527769b37e371081da53717846d3e1c1f31f4d6e5ebc760af5195f3b",
-    "deepmind-frontier-safety": "c8c5fc5ddd4853df350996058fd9e70e5f9b8b417fad6c6e7a7c3204bab23dc4",
-    "meta-blog": "29b78e7e0f093a79d4a866a08e806150eba16c65638b9f956ba4512766ec6402",
+    "openai-alignment": "7503be9753486a71f2de76b9858c5819ba4f77e3f75bfbe61534d40a9b8081ed",
+    "anthropic-research": "27259368c47e0659d721d467aea9c6f826e19cd208cac63ae7394f5f85dca7d0",
+    "anthropic-news": "fb325ade2f27b30548c6a823a7a48285e2f5035b6a67a176fc42bca8e3f97d41",
+    "deepmind-frontier-safety": "792ac4bbfd0f6093ccccf70069c341d43613ac8dcb71f563f57c29bf93e06bbb",
+    "meta-blog": "46274c841f16150027cb943d00068b9bde59463ab82729a45c3417fef7b9aab1",
     "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
     "apollo-science": "3cb0dfcfd3a234c3375e44c959aaaf77af9cf8514993830a2b4f80499a9d4f28",
-    "caisi": "aea95379f31496f6dfdfe13641ebe0a37e6f615be019c50ba9a1452f99b3b93c",
-    "redwood-home": "f27cbce92d2d6e657e495cad589d0429119e56df828b4a5d748a165631ffca9d",
-    "aiaaic": "b48d043b627e11f8f73f88289bd63bee58477e7e73a77c8791766208ad2f806b"
+    "caisi": "aa0c3f6fcfddfb520da8a06361eefc37fdadef2a4798b5f9dd3a91cba128b517",
+    "redwood-home": "6e5892565688ff6225686a46e6ecbf37f7dafdb9235db5da6bef9d0e3c94ed2d",
+    "aiaaic": "8390f518e2e0dd97682ffd416d36b71a3e0328fff1988c8dff14ad09e271135a"
   },
   "proposed": [
     {
@@ -168,6 +168,27 @@
       "title": "Anthropic threat report: cyber actors move Claude from assistant to orchestrator",
       "iso": "2026-09-10",
       "seen": "2026-09-20",
+      "applied": true
+    },
+    {
+      "url": "https://metr.org/blog/2026-09-22-claude-opus-5-5/",
+      "title": "METR predeployment evaluation of Claude Opus 5.5",
+      "iso": "2026-09-22",
+      "seen": "2026-09-23",
+      "applied": true
+    },
+    {
+      "url": "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning",
+      "title": "Redwood: GPT-6 Astra does substantial unverbalized reasoning with filler tokens",
+      "iso": "2026-09-23",
+      "seen": "2026-09-23",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "title": "Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call",
+      "iso": "2026-09-22",
+      "seen": "2026-09-23",
       "applied": true
     }
   ]
