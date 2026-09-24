@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-23T06:40:02+00:00",
+  "last_run": "2026-09-24T06:40:16+00:00",
   "feed_hashes": {
-    "hf-blog": "f6eab8354da794494584253f270c4230e88e9603a2c7cc1cec7eb589c73fe62e",
+    "hf-blog": "2389f54bf032033bd42c6c661c0d448557b939b12e0deca9857296df1779c1eb",
     "metr": "cc133a8f40c7c85b2a4d046c18b73a21a03a60a9668b77ff74e3ee3d97833da6",
-    "openai-news": "0b3c6fb65e0a9a2dfcfa510879c530b9ac5c40f4209161dec78b1b41e4390995",
-    "deepmind": "e97a206e974345102f7b103cc9abc17d8be6a734143e4a34449d1c36782f49b2",
-    "redwood": "005ae3500adf722c0a0755302e4aae057196a8db48521d549d15e5ea097bac6d",
-    "frontier-security": "f25afa4055ed8e02d86cbe02957f1ac4d7d35043389f2f0938d039959a13def1",
-    "transformer-news": "de105961fed344419baf10af46cc585d31fd280584d888ba476a122e6d3476d6",
-    "simonw": "7f5c667a3ebc491545a3257c631c1cdb27e7a09d6e31407e5554f363106c8193",
-    "arxiv-cr": "3ccd8878055ee466ba1e7c193e7f604ba4a39129acee4d19d1007cd21074dc62",
-    "arxiv-ai": "9221192591ade7569d6bb4fca9da2fb1c0fdf66412ae0d3ed008506d727cf291",
-    "alignment-forum": "e251a18efbe6b22be0c3272bdfb5d1770329093d8ceee94f4eff1164a8531986"
+    "openai-news": "6c06a15a714d4a1209f1c2b960ef0852dcdecdf071f1ad56fd45bd9c02680392",
+    "deepmind": "9da5647d7597d5bd8d47d2367c48c0e6a1aadf1229c380aaa7e0c5ddf567a569",
+    "redwood": "bf45fdcc2b6f6887f7bbb5e0bd4867c37276f14b38dda41d98c06b10764de4c1",
+    "frontier-security": "2d59041e27de6a5eedb81828c74ec71ce1d0ad4ea97f5a3a64e43cdbafa987ad",
+    "transformer-news": "21079b7ea91cdd574298263db6412d3984960db2767383867dea2efa526edef6",
+    "simonw": "7928bdc1afcfb1950bb1170e553b7db81b65e820d4f386bfd29644bc653954ca",
+    "arxiv-cr": "e7c6f51c94640a3c107eb44a6ab6639a54ab4fa84ec8f95c00ea8454e1ff4ea3",
+    "arxiv-ai": "f670f5318cfd12f9294faba6a7e4127785462f8cdea1994f9ea12f984ec2a1a1",
+    "alignment-forum": "137aa30784aaaaa45070b99aef7d8cb803376538e83d052ebb067ac5293bc71e"
   },
   "page_hashes": {
     "openai-alignment": "7503be9753486a71f2de76b9858c5819ba4f77e3f75bfbe61534d40a9b8081ed",
-    "anthropic-research": "27259368c47e0659d721d467aea9c6f826e19cd208cac63ae7394f5f85dca7d0",
-    "anthropic-news": "fb325ade2f27b30548c6a823a7a48285e2f5035b6a67a176fc42bca8e3f97d41",
-    "deepmind-frontier-safety": "792ac4bbfd0f6093ccccf70069c341d43613ac8dcb71f563f57c29bf93e06bbb",
-    "meta-blog": "46274c841f16150027cb943d00068b9bde59463ab82729a45c3417fef7b9aab1",
+    "anthropic-research": "54224af7a7802327e360f3a6e1cb430a7ff781a33e8d08731ca3027f8bd87434",
+    "anthropic-news": "830f1deeee7c5a84363ce53210516ddaa567ae97b6809891ec6ae3cf28e777fe",
+    "deepmind-frontier-safety": "b27a388300cf870e7f1a838e60ba6fe3cb4ff0ccc0a185600696dd43c2f5890e",
+    "meta-blog": "d3b4b8a7485b2fcbca501af360e006a2bb0017a6838337062fc72afca0053b03",
     "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
-    "apollo-science": "3cb0dfcfd3a234c3375e44c959aaaf77af9cf8514993830a2b4f80499a9d4f28",
-    "caisi": "aa0c3f6fcfddfb520da8a06361eefc37fdadef2a4798b5f9dd3a91cba128b517",
-    "redwood-home": "6e5892565688ff6225686a46e6ecbf37f7dafdb9235db5da6bef9d0e3c94ed2d",
-    "aiaaic": "8390f518e2e0dd97682ffd416d36b71a3e0328fff1988c8dff14ad09e271135a"
+    "apollo-science": "52ca818d5e27af3bcf4d321e8c1d4ff36502da8123290629158eebd2e8364350",
+    "caisi": "67b0ee3679146c64e4bbe2abd9790473033f928669035fe393eaae5fe5870c77",
+    "redwood-home": "c04f5eadaa5aad78da2652b5621bc9051e8aaf4e59983faa7856a65f9a215c38",
+    "aiaaic": "251e5ee5e8f97bbe7e8208d4cd0f91ff25d7014dfd5d709fd530dc0273beaaca"
   },
   "proposed": [
     {
@@ -189,6 +189,13 @@
       "title": "Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call",
       "iso": "2026-09-22",
       "seen": "2026-09-23",
+      "applied": true
+    },
+    {
+      "url": "https://blog.redwoodresearch.org/p/latent-reasoning-architectures-would",
+      "title": "Redwood: latent reasoning architectures would undermine CoT oversight",
+      "iso": "2026-09-23",
+      "seen": "2026-09-24",
       "applied": true
     }
   ]

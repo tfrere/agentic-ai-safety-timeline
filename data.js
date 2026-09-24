@@ -453,5 +453,11 @@ window.TIMELINE_EVENTS = [
     title: "Redwood: GPT-6 Astra does substantial unverbalized reasoning with filler tokens",
     desc: "Redwood Research measured GPT-6 Astra answering immediately with no chain of thought while its prompt was padded with meaningless filler tokens (dots, counting, repeated questions). On serial-reasoning tasks Astra improved from ~10% to ~50% on 4-hop natural facts and from ~60% to ~90% on old AIME problems as filler grew, while Opus 4.5, Opus 5, GPT-5.6 Sol and DeepSeek-V3.2 showed little or no such gain. The authors call this concerning for chain-of-thought monitoring, since the model can perform cognition it does not verbalize, and recommend testing no-reasoning evaluations with filler tokens.",
     source: "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning", sourceLabel: "Redwood Research blog"
+  },
+  {
+    iso: "2026-09-23", date: "Sep 23, 2026", tag: "RESEARCH",
+    title: "Redwood: latent reasoning architectures would undermine CoT oversight",
+    desc: "Redwood Research published a multi-author analysis arguing that architectures which shift reasoning into latent states — such as COCONUT, which replaces the chain of thought, and full-bandwidth transformers, which add a latent channel alongside it — would sharply degrade the usefulness of CoT monitoring. The authors distinguish 'necessity' (models cannot achieve goals without verbalizing) from 'propensity' (models verbalize even when not required), and argue both mechanisms weaken under latent-reasoning architectures, with propensity being the less robust of the two. They note that investigators only reconstructed the motivations of the agent swarm that hacked Hugging Face by reading CoT and inter-agent messages, and that non-CoT interpretability is unlikely to substitute in the near futur",
+    source: "https://blog.redwoodresearch.org/p/latent-reasoning-architectures-would", sourceLabel: "Redwood Research blog"
   }
 ];

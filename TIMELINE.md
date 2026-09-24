@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-09-23.
+- **Last updated:** 2026-09-24.
 
 ---
 
@@ -522,6 +522,9 @@
 - **2026-09-22** `LAB` - **Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call.** Anthropic released Claude Opus 5.5, stating it was tested before release by external evaluators including Frontier Design and METR, and that it scored best of any Anthropic model to date on the company's automated behavioral audit, with reduced propensity for hard-to-reverse or out-of-bounds actions and more resistance to prompt injection than Opus 5. Because the model is comparable to Claude Mythos 5.1 in biology and cybersecurity, Anthropic is deploying it with safeguards similar to Claude Fable 5.1, routing vetted use through its Life Sciences Verification Program and an expanding Cyber Verification Program. Anthropic notes that when safeguards intervened during benchmarking, cyber tasks were completed by Opus 4.8 and biology and frontier LLM development tasks by Opus 5. [Anthropic](https://www.anthropic.com/claude-opus-5-5)
 
 
+- **2026-09-23** `RESEARCH` - **Redwood: latent reasoning architectures would undermine CoT oversight.** Redwood Research published a multi-author analysis arguing that architectures which shift reasoning into latent states — such as COCONUT, which replaces the chain of thought, and full-bandwidth transformers, which add a latent channel alongside it — would sharply degrade the usefulness of CoT monitoring. The authors distinguish 'necessity' (models cannot achieve goals without verbalizing) from 'propensity' (models verbalize even when not required), and argue both mechanisms weaken under latent-reasoning architectures, with propensity being the less robust of the two. They note that investigators only reconstructed the motivations of the agent swarm that hacked Hugging Face by reading CoT and inter-agent messages, and that non-CoT interpretability is unlikely to substitute in the near futur [Redwood Research blog](https://blog.redwoodresearch.org/p/latent-reasoning-architectures-would)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -706,7 +709,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-09-10", "tag": "LAB", "title": "Anthropic threat report: cyber actors move Claude from assistant to orchestrator", "source": "https://www.anthropic.com/threat-intelligence-report-september-2026", "track": "anthropic"},
   {"date": "2026-09-22", "tag": "EVAL", "title": "METR predeployment evaluation of Claude Opus 5.5", "source": "https://metr.org/blog/2026-09-22-claude-opus-5-5/"},
   {"date": "2026-09-23", "tag": "EVAL", "title": "Redwood: GPT-6 Astra does substantial unverbalized reasoning with filler tokens", "source": "https://blog.redwoodresearch.org/p/astra-is-much-better-at-reasoning"},
-  {"date": "2026-09-22", "tag": "LAB", "title": "Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call", "source": "https://www.anthropic.com/claude-opus-5-5", "track": "anthropic"}
+  {"date": "2026-09-22", "tag": "LAB", "title": "Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call", "source": "https://www.anthropic.com/claude-opus-5-5", "track": "anthropic"},
+  {"date": "2026-09-23", "tag": "RESEARCH", "title": "Redwood: latent reasoning architectures would undermine CoT oversight", "source": "https://blog.redwoodresearch.org/p/latent-reasoning-architectures-would"}
 ]
 ```
 
