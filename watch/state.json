@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-24T06:40:16+00:00",
+  "last_run": "2026-09-25T06:41:30+00:00",
   "feed_hashes": {
-    "hf-blog": "2389f54bf032033bd42c6c661c0d448557b939b12e0deca9857296df1779c1eb",
-    "metr": "cc133a8f40c7c85b2a4d046c18b73a21a03a60a9668b77ff74e3ee3d97833da6",
-    "openai-news": "6c06a15a714d4a1209f1c2b960ef0852dcdecdf071f1ad56fd45bd9c02680392",
-    "deepmind": "9da5647d7597d5bd8d47d2367c48c0e6a1aadf1229c380aaa7e0c5ddf567a569",
-    "redwood": "bf45fdcc2b6f6887f7bbb5e0bd4867c37276f14b38dda41d98c06b10764de4c1",
-    "frontier-security": "2d59041e27de6a5eedb81828c74ec71ce1d0ad4ea97f5a3a64e43cdbafa987ad",
-    "transformer-news": "21079b7ea91cdd574298263db6412d3984960db2767383867dea2efa526edef6",
-    "simonw": "7928bdc1afcfb1950bb1170e553b7db81b65e820d4f386bfd29644bc653954ca",
-    "arxiv-cr": "e7c6f51c94640a3c107eb44a6ab6639a54ab4fa84ec8f95c00ea8454e1ff4ea3",
-    "arxiv-ai": "f670f5318cfd12f9294faba6a7e4127785462f8cdea1994f9ea12f984ec2a1a1",
-    "alignment-forum": "137aa30784aaaaa45070b99aef7d8cb803376538e83d052ebb067ac5293bc71e"
+    "hf-blog": "7621b28c21f71077f81daea50e8158eb6fe1257908d9d5e35bfb7589c6fffef6",
+    "metr": "5556da472d0056209db962b6a8b83ecbdbf0dee4f9c845aa7c485e61c365d7c3",
+    "openai-news": "8fa353c096d6df3e48f036ec3f4351c4659d95884e0aeeee33d6c3160122ffff",
+    "deepmind": "3fdb35d9985910bddbe1f0f4ec27ff80a9fd9a8184d28fb5a24c07e1ca688ea4",
+    "redwood": "25eb1dfa3ee0ab20b94f3aef6b6cdf5d0a2bb720a53bdec18d1f6ed5cd473a75",
+    "frontier-security": "befd0ffe71787ee49f8e36cf5b55f30a42ee7b3569b377adb8c8287abcbfd54c",
+    "transformer-news": "594eabcfb898324cbc652d2769006b4bb9f45395b5c6e6bcbe58116ec8c5a717",
+    "simonw": "fcf43c2fec4d6b8fee610b8ee21a65f869ec138ff8c961d40fa54979bbe2efef",
+    "arxiv-cr": "5aef360090efd274863be38394d839632226912bcec6a608537cae509c55745b",
+    "arxiv-ai": "fc59ad2f219b7f6725df7181d60c2c598d74f86c652710169df5ff64e0d8e165",
+    "alignment-forum": "2801efc7186eeddd5f1771b867f13f4a1a4a8c975e56225a885fc4a6bb4ab0a9"
   },
   "page_hashes": {
     "openai-alignment": "7503be9753486a71f2de76b9858c5819ba4f77e3f75bfbe61534d40a9b8081ed",
-    "anthropic-research": "54224af7a7802327e360f3a6e1cb430a7ff781a33e8d08731ca3027f8bd87434",
-    "anthropic-news": "830f1deeee7c5a84363ce53210516ddaa567ae97b6809891ec6ae3cf28e777fe",
-    "deepmind-frontier-safety": "b27a388300cf870e7f1a838e60ba6fe3cb4ff0ccc0a185600696dd43c2f5890e",
-    "meta-blog": "d3b4b8a7485b2fcbca501af360e006a2bb0017a6838337062fc72afca0053b03",
+    "anthropic-research": "01b9bd9847d95cd29dd44e39c0a2e4ac80ca68d37339ea84143fd5acb168ee76",
+    "anthropic-news": "2bb78e8b786852a36cbc1b11107f6735bc224ad33e272dabadd80ee1b446af8d",
+    "deepmind-frontier-safety": "e94c3eaa93fa51267d632ee615e53dc2c85223fdf383df0cc406a5306461f41d",
+    "meta-blog": "4343f9a96d98d5f4bc85b94ea46008adb3343fe6516f7e47348dcf5d442a8c97",
     "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
-    "apollo-science": "52ca818d5e27af3bcf4d321e8c1d4ff36502da8123290629158eebd2e8364350",
-    "caisi": "67b0ee3679146c64e4bbe2abd9790473033f928669035fe393eaae5fe5870c77",
-    "redwood-home": "c04f5eadaa5aad78da2652b5621bc9051e8aaf4e59983faa7856a65f9a215c38",
-    "aiaaic": "251e5ee5e8f97bbe7e8208d4cd0f91ff25d7014dfd5d709fd530dc0273beaaca"
+    "apollo-science": "2419c23781fd2b2b4f2190086bb1b295111b4ca2aa34a434ff87017781ae04a1",
+    "caisi": "56f51642f5b74c30f0c072e75a4de9120b542383f61c3d5546d53ed86b620aad",
+    "redwood-home": "caedd1a4fa4a9d4ecde9f625981f519efee58647a7e116ba5b161ae75e014ec7",
+    "aiaaic": "6883d05361b664a2e75261eac6f023332c1cdf56aa043106e8fa772cb7970719"
   },
   "proposed": [
     {
@@ -196,6 +196,20 @@
       "title": "Redwood: latent reasoning architectures would undermine CoT oversight",
       "iso": "2026-09-23",
       "seen": "2026-09-24",
+      "applied": true
+    },
+    {
+      "url": "https://transluce.org/agent-activity",
+      "title": "Transluce: OpenAI agents probed three sites for vulnerabilities, activity traced back to March",
+      "iso": "2026-09-23",
+      "seen": "2026-09-25",
+      "applied": true
+    },
+    {
+      "url": "https://blog.redwoodresearch.org/p/continual-learning-might-make-your",
+      "title": "Redwood: continual learning may make blocking monitors nearly useless",
+      "iso": "2026-09-25",
+      "seen": "2026-09-25",
       "applied": true
     }
   ]
