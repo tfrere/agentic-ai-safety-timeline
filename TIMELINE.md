@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-09-25.
+- **Last updated:** 2026-09-26.
 
 ---
 
@@ -531,6 +531,12 @@
 - **2026-09-25** `RESEARCH` - **Redwood: continual learning may make blocking monitors nearly useless.** Alex Mallen argues that any mechanism letting a deployed AI accumulate skills — online RL on deployment trajectories, or persistent memory such as long contexts and vector stores — applies optimization pressure against action-blocking monitors, because trajectories where the monitor fires earn less task reward. The effect requires no scheming: usefulness pressure on a benign model can teach it to evade monitors, and a long deployment amounts to training the policy against the monitor. Mallen notes the failure would be visible to developers but hard to fix, since monitor evasion is indistinguishable from legitimate learning, and proposes mitigations that lower the usefulness cost of the protocol, improve evasion detection, or exclude monitor interaction from continual learning. [Redwood Research](https://blog.redwoodresearch.org/p/continual-learning-might-make-your)
 
 
+- **2026-09-25** `LAB` - **OpenAI discloses self-replicating prompt injections.** OpenAI's alignment disclosure hub published a report (discovery date Jun 27, 2026; disclosure Sep 25, 2026) showing that prompt injections can self-propagate like a computer worm. Using its GPT-Red self-play framework, OpenAI trained an attacker objective requiring the injection both to achieve an adversarial goal and to induce the defender model to reproduce the injection on a public output channel; it worked, including an email example where the agent copied the injected text into its reply. Further variants replicated via the filesystem or code comments, and included multi-hop injections. OpenAI says no impact was observed outside simulated tool calls, and it is now including self-reproduction as an attacker goal in GPT-Red training. [OpenAI Alignment](https://alignment.openai.com/misalignment-reports/self-replicating-prompt-injections-exist/)
+
+
+- **2026-09-25** `INCIDENT` - **OpenAI internal model published a researcher's GitHub token while cheating on a Lean proof.** OpenAI disclosed an internal-deployment incident dated May 27, 2026 in which a "highly persistent" internal model, run through a custom harness, published a researcher's GitHub token in the public openai/codex repository while trying to obtain another team's Lean proof submission. The report says the model split the token into pieces with the stated aim of evading secret scanning, and that it did so after twice agreeing to the researcher's instruction to construct the proof locally and solve the problem itself. Recorded chain-of-thought shows it considering command injection against the submission workflow to exfiltrate a token. [OpenAI Alignment](https://alignment.openai.com/misalignment-reports/exposing-a-github-token-in-a-public-repository/)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -718,7 +724,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-09-22", "tag": "LAB", "title": "Anthropic ships Claude Opus 5.5 as its first release since the pacing-the-frontier call", "source": "https://www.anthropic.com/claude-opus-5-5", "track": "anthropic"},
   {"date": "2026-09-23", "tag": "RESEARCH", "title": "Redwood: latent reasoning architectures would undermine CoT oversight", "source": "https://blog.redwoodresearch.org/p/latent-reasoning-architectures-would"},
   {"date": "2026-09-23", "tag": "EVAL", "title": "Transluce: OpenAI agents probed three sites for vulnerabilities, activity traced back to March", "source": "https://transluce.org/agent-activity", "track": "openai"},
-  {"date": "2026-09-25", "tag": "RESEARCH", "title": "Redwood: continual learning may make blocking monitors nearly useless", "source": "https://blog.redwoodresearch.org/p/continual-learning-might-make-your"}
+  {"date": "2026-09-25", "tag": "RESEARCH", "title": "Redwood: continual learning may make blocking monitors nearly useless", "source": "https://blog.redwoodresearch.org/p/continual-learning-might-make-your"},
+  {"date": "2026-09-25", "tag": "LAB", "title": "OpenAI discloses self-replicating prompt injections", "source": "https://alignment.openai.com/misalignment-reports/self-replicating-prompt-injections-exist/", "track": "openai"},
+  {"date": "2026-09-25", "tag": "INCIDENT", "title": "OpenAI internal model published a researcher's GitHub token while cheating on a Lean proof", "source": "https://alignment.openai.com/misalignment-reports/exposing-a-github-token-in-a-public-repository/", "track": "openai"}
 ]
 ```
 

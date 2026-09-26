@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-25T06:41:30+00:00",
+  "last_run": "2026-09-26T06:37:05+00:00",
   "feed_hashes": {
     "hf-blog": "7621b28c21f71077f81daea50e8158eb6fe1257908d9d5e35bfb7589c6fffef6",
-    "metr": "5556da472d0056209db962b6a8b83ecbdbf0dee4f9c845aa7c485e61c365d7c3",
-    "openai-news": "8fa353c096d6df3e48f036ec3f4351c4659d95884e0aeeee33d6c3160122ffff",
-    "deepmind": "3fdb35d9985910bddbe1f0f4ec27ff80a9fd9a8184d28fb5a24c07e1ca688ea4",
-    "redwood": "25eb1dfa3ee0ab20b94f3aef6b6cdf5d0a2bb720a53bdec18d1f6ed5cd473a75",
-    "frontier-security": "befd0ffe71787ee49f8e36cf5b55f30a42ee7b3569b377adb8c8287abcbfd54c",
-    "transformer-news": "594eabcfb898324cbc652d2769006b4bb9f45395b5c6e6bcbe58116ec8c5a717",
-    "simonw": "fcf43c2fec4d6b8fee610b8ee21a65f869ec138ff8c961d40fa54979bbe2efef",
-    "arxiv-cr": "5aef360090efd274863be38394d839632226912bcec6a608537cae509c55745b",
-    "arxiv-ai": "fc59ad2f219b7f6725df7181d60c2c598d74f86c652710169df5ff64e0d8e165",
-    "alignment-forum": "2801efc7186eeddd5f1771b867f13f4a1a4a8c975e56225a885fc4a6bb4ab0a9"
+    "metr": "aca5fe36a28fc2342b93de1df69bdb1eb31abecba5dd998221038243d2ace517",
+    "openai-news": "86c75383283853a6276eb167ee596676227e7fefbda93b7be0b05b98d73f5bb0",
+    "deepmind": "83ed353770f19712b795bfa2dc4db731cc5fffa9c94f7c383fcae3483b8e96d6",
+    "redwood": "1695fcddf113b8051d165bd04ca473770f9b129e8bb531c7984682c22b90b8aa",
+    "frontier-security": "398430774460ed1fb3631731ed80895b79a62a27d96afaa93301019e707993c8",
+    "transformer-news": "c4c663aea46f4aed7e9cff898df29ca819b0c4742a351df6c6778d70f8d766b5",
+    "simonw": "03bdbd574970222aba20f93128fa6e65a054c113f7d0382f3f5cbb0c139d4a11",
+    "arxiv-cr": "d47d07df02755dd9bb30c71259f12d0664b1671566963dfa804064789c897d65",
+    "arxiv-ai": "7e64529487f750d6725feda1c8b351c0546192f8ec6baf054832116da2df782f",
+    "alignment-forum": "19d8231f1fd7a2779f63780fa4bb96df13568b6ac3f2bc4289baf8c796cd1b02"
   },
   "page_hashes": {
-    "openai-alignment": "7503be9753486a71f2de76b9858c5819ba4f77e3f75bfbe61534d40a9b8081ed",
-    "anthropic-research": "01b9bd9847d95cd29dd44e39c0a2e4ac80ca68d37339ea84143fd5acb168ee76",
+    "openai-alignment": "0bf0903e80e9dc860b760861a0beb965e3a8096ce0e38950af9dca2d154d7ac0",
+    "anthropic-research": "5a86283b6cff74f9d0847cfa253e006a8917815095b34cf7ec132111105aed43",
     "anthropic-news": "2bb78e8b786852a36cbc1b11107f6735bc224ad33e272dabadd80ee1b446af8d",
     "deepmind-frontier-safety": "e94c3eaa93fa51267d632ee615e53dc2c85223fdf383df0cc406a5306461f41d",
-    "meta-blog": "4343f9a96d98d5f4bc85b94ea46008adb3343fe6516f7e47348dcf5d442a8c97",
+    "meta-blog": "26b5f943fb36f5f2077de38538454a2991d8fd8777ed670378f81d2ee1512183",
     "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
-    "apollo-science": "2419c23781fd2b2b4f2190086bb1b295111b4ca2aa34a434ff87017781ae04a1",
-    "caisi": "56f51642f5b74c30f0c072e75a4de9120b542383f61c3d5546d53ed86b620aad",
-    "redwood-home": "caedd1a4fa4a9d4ecde9f625981f519efee58647a7e116ba5b161ae75e014ec7",
-    "aiaaic": "6883d05361b664a2e75261eac6f023332c1cdf56aa043106e8fa772cb7970719"
+    "apollo-science": "a6514780ad7c6a4f3ae20fffa653b721d96c2d9d940b9022a823e507fefafe83",
+    "caisi": "f5ac7d1be2645810c250f35d3ede54911bbf31607242be57d8615f8a43fa24d6",
+    "redwood-home": "26f9ce323c51a593a80e9577fcb3f4220a61fcf71fd7e9fd595fb92f9f79e896",
+    "aiaaic": "858f3836d3a45f99f8deeee4c39319721ab0f82d7b022a75354be55fd8250066"
   },
   "proposed": [
     {
@@ -210,6 +210,20 @@
       "title": "Redwood: continual learning may make blocking monitors nearly useless",
       "iso": "2026-09-25",
       "seen": "2026-09-25",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/self-replicating-prompt-injections-exist/",
+      "title": "OpenAI discloses self-replicating prompt injections",
+      "iso": "2026-09-25",
+      "seen": "2026-09-26",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/exposing-a-github-token-in-a-public-repository/",
+      "title": "OpenAI internal model published a researcher's GitHub token while cheating on a Lean proof",
+      "iso": "2026-09-25",
+      "seen": "2026-09-26",
       "applied": true
     }
   ]
