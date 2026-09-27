@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-26T06:37:05+00:00",
+  "last_run": "2026-09-27T06:39:12+00:00",
   "feed_hashes": {
     "hf-blog": "7621b28c21f71077f81daea50e8158eb6fe1257908d9d5e35bfb7589c6fffef6",
     "metr": "aca5fe36a28fc2342b93de1df69bdb1eb31abecba5dd998221038243d2ace517",
-    "openai-news": "86c75383283853a6276eb167ee596676227e7fefbda93b7be0b05b98d73f5bb0",
-    "deepmind": "83ed353770f19712b795bfa2dc4db731cc5fffa9c94f7c383fcae3483b8e96d6",
-    "redwood": "1695fcddf113b8051d165bd04ca473770f9b129e8bb531c7984682c22b90b8aa",
-    "frontier-security": "398430774460ed1fb3631731ed80895b79a62a27d96afaa93301019e707993c8",
-    "transformer-news": "c4c663aea46f4aed7e9cff898df29ca819b0c4742a351df6c6778d70f8d766b5",
-    "simonw": "03bdbd574970222aba20f93128fa6e65a054c113f7d0382f3f5cbb0c139d4a11",
-    "arxiv-cr": "d47d07df02755dd9bb30c71259f12d0664b1671566963dfa804064789c897d65",
-    "arxiv-ai": "7e64529487f750d6725feda1c8b351c0546192f8ec6baf054832116da2df782f",
-    "alignment-forum": "19d8231f1fd7a2779f63780fa4bb96df13568b6ac3f2bc4289baf8c796cd1b02"
+    "openai-news": "8b70ef047fe9eb30455b53c3e2641985c6ad731c0c0c84224d637b8cf31ae5b9",
+    "deepmind": "3fdb35d9985910bddbe1f0f4ec27ff80a9fd9a8184d28fb5a24c07e1ca688ea4",
+    "redwood": "fcd26fe657b84835d6fa91f135de26a1e67d7f890670dd649cd9b1b8d24b0acd",
+    "frontier-security": "5d698e372ae63bd0c771559d1545593a23a099b9df91681759ec20a84a11a1e2",
+    "transformer-news": "179d18da03e92d64c007b51ef931b07dc568a62584f41e0ff802f6cb3b08c5ac",
+    "simonw": "1b5d4f751aa895051b83d36dbdf48cfd6703e834e15de48f3ff1375ef8089f36",
+    "arxiv-cr": "0ae52b071cef5517974cd2311e2f8463ae122bbe96fd46e4a784e60670ca887c",
+    "arxiv-ai": "eb3bb7c6932c28d322c8ce64dcee152d9ca77b78014a9ec4b9f91acaa065ebd5",
+    "alignment-forum": "7ef7caeed468102c53bff4f5110963ad631ebbc77831ff164617f2d30d9a1669"
   },
   "page_hashes": {
     "openai-alignment": "0bf0903e80e9dc860b760861a0beb965e3a8096ce0e38950af9dca2d154d7ac0",
     "anthropic-research": "5a86283b6cff74f9d0847cfa253e006a8917815095b34cf7ec132111105aed43",
     "anthropic-news": "2bb78e8b786852a36cbc1b11107f6735bc224ad33e272dabadd80ee1b446af8d",
     "deepmind-frontier-safety": "e94c3eaa93fa51267d632ee615e53dc2c85223fdf383df0cc406a5306461f41d",
-    "meta-blog": "26b5f943fb36f5f2077de38538454a2991d8fd8777ed670378f81d2ee1512183",
+    "meta-blog": "bfaef0e9b892335eddf8e215b3ecd066f73cc6b9a908b3a90655c7de3a9a4748",
     "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
-    "apollo-science": "a6514780ad7c6a4f3ae20fffa653b721d96c2d9d940b9022a823e507fefafe83",
-    "caisi": "f5ac7d1be2645810c250f35d3ede54911bbf31607242be57d8615f8a43fa24d6",
-    "redwood-home": "26f9ce323c51a593a80e9577fcb3f4220a61fcf71fd7e9fd595fb92f9f79e896",
-    "aiaaic": "858f3836d3a45f99f8deeee4c39319721ab0f82d7b022a75354be55fd8250066"
+    "apollo-science": "e8bf9ed52431d6e8a9c4c1582bd9228759c7d9f4f439ab93e8b6e6f02c075eab",
+    "caisi": "5a680572cfe0cc5d8bc4be5268d68a36a0ccd66517eb17fcc2610a0f2432e247",
+    "redwood-home": "b60258399fcdaedf584121b466e49de4653a68fcc6daea53424c4e28ce429d57",
+    "aiaaic": "7ed8ccdc2ed23b54c21eea26b09c3005e38f47c6621d56a96f12206e9b136771"
   },
   "proposed": [
     {
@@ -224,6 +224,13 @@
       "title": "OpenAI internal model published a researcher's GitHub token while cheating on a Lean proof",
       "iso": "2026-09-25",
       "seen": "2026-09-26",
+      "applied": true
+    },
+    {
+      "url": "https://www.globalsecurity.org/wmd/library/news/australia/2026/australia-260924-australia-pm01.htm",
+      "title": "Australian PM: OpenAI agent breached the Medicare statistics portal; taskforce announced",
+      "iso": "2026-09-24",
+      "seen": "2026-09-27",
       "applied": true
     }
   ]

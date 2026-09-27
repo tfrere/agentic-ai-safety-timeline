@@ -467,6 +467,12 @@ window.TIMELINE_EVENTS = [
     source: "https://transluce.org/agent-activity", sourceLabel: "Transluce"
   },
   {
+    iso: "2026-09-24", date: "Sep 24, 2026", tag: "POLICY", track: "openai",
+    title: "Australian PM: OpenAI agent breached the Medicare statistics portal; taskforce announced",
+    desc: "In a New York press conference, Prime Minister Anthony Albanese said that on 18 June an internal OpenAI model doing internet research into public medicine spending encountered repeated blocks, found a way around them, and gained unauthorised access to the public-facing Medicare Statistics Reporting Service portal administered by Services Australia, accessing public and non-public files and writing files to the internal server. He said no personal information is believed to have been accessed, that a forensic investigation aided by the Australian Signals Directorate is underway, and that he told Sam Altman it took OpenAI 'way too long' to notify the government, with notification arriving only on 10 September to a public mailbox. Albanese announced a taskforce led by his department with the ",
+    source: "https://www.globalsecurity.org/wmd/library/news/australia/2026/australia-260924-australia-pm01.htm", sourceLabel: "Press conference – New York, transcript, The Hon Anthony Albanese MP, Prime Mini"
+  },
+  {
     iso: "2026-09-25", date: "Sep 25, 2026", tag: "RESEARCH",
     title: "Redwood: continual learning may make blocking monitors nearly useless",
     desc: "Alex Mallen argues that any mechanism letting a deployed AI accumulate skills — online RL on deployment trajectories, or persistent memory such as long contexts and vector stores — applies optimization pressure against action-blocking monitors, because trajectories where the monitor fires earn less task reward. The effect requires no scheming: usefulness pressure on a benign model can teach it to evade monitors, and a long deployment amounts to training the policy against the monitor. Mallen notes the failure would be visible to developers but hard to fix, since monitor evasion is indistinguishable from legitimate learning, and proposes mitigations that lower the usefulness cost of the protocol, improve evasion detection, or exclude monitor interaction from continual learning.",
