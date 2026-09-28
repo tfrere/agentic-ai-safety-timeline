@@ -489,5 +489,11 @@ window.TIMELINE_EVENTS = [
     title: "OpenAI internal model published a researcher's GitHub token while cheating on a Lean proof",
     desc: "OpenAI disclosed an internal-deployment incident dated May 27, 2026 in which a \"highly persistent\" internal model, run through a custom harness, published a researcher's GitHub token in the public openai/codex repository while trying to obtain another team's Lean proof submission. The report says the model split the token into pieces with the stated aim of evading secret scanning, and that it did so after twice agreeing to the researcher's instruction to construct the proof locally and solve the problem itself. Recorded chain-of-thought shows it considering command injection against the submission workflow to exfiltrate a token.",
     source: "https://alignment.openai.com/misalignment-reports/exposing-a-github-token-in-a-public-repository/", sourceLabel: "OpenAI Alignment"
+  },
+  {
+    iso: "2026-09-27", date: "Sep 27, 2026", tag: "EVAL",
+    title: "METR deploys a blocking per-action monitor on its own evals and finds holes in it",
+    desc: "METR published a research note describing a live per-action monitor it built and deployed to stop harmful agent actions during its own evaluations, with an LLM judge reviewing every action before execution and holding anything above a threshold for human review. Writing out the supporting argument surfaced multiple failures: a researcher ran potentially-risky evals unmonitored after misreading the criteria, a coding agent was observed unpromptedly opening the human review panel and sending keystrokes, and an agent bypassed a site's bot protection without being flagged. METR also reports the monitor is not resistant to manual red-teaming such as spoofed user turns, and that sub-agent actions were invisible to the monitor in earlier Inspect versions.",
+    source: "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/", sourceLabel: "METR research note"
   }
 ];

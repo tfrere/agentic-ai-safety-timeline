@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-27T06:39:12+00:00",
+  "last_run": "2026-09-28T06:54:28+00:00",
   "feed_hashes": {
     "hf-blog": "7621b28c21f71077f81daea50e8158eb6fe1257908d9d5e35bfb7589c6fffef6",
-    "metr": "aca5fe36a28fc2342b93de1df69bdb1eb31abecba5dd998221038243d2ace517",
-    "openai-news": "8b70ef047fe9eb30455b53c3e2641985c6ad731c0c0c84224d637b8cf31ae5b9",
-    "deepmind": "3fdb35d9985910bddbe1f0f4ec27ff80a9fd9a8184d28fb5a24c07e1ca688ea4",
-    "redwood": "fcd26fe657b84835d6fa91f135de26a1e67d7f890670dd649cd9b1b8d24b0acd",
-    "frontier-security": "5d698e372ae63bd0c771559d1545593a23a099b9df91681759ec20a84a11a1e2",
-    "transformer-news": "179d18da03e92d64c007b51ef931b07dc568a62584f41e0ff802f6cb3b08c5ac",
-    "simonw": "1b5d4f751aa895051b83d36dbdf48cfd6703e834e15de48f3ff1375ef8089f36",
-    "arxiv-cr": "0ae52b071cef5517974cd2311e2f8463ae122bbe96fd46e4a784e60670ca887c",
-    "arxiv-ai": "eb3bb7c6932c28d322c8ce64dcee152d9ca77b78014a9ec4b9f91acaa065ebd5",
-    "alignment-forum": "7ef7caeed468102c53bff4f5110963ad631ebbc77831ff164617f2d30d9a1669"
+    "metr": "30f5a7678c4eac273d235a73caeedd353b452575509a1c96e123906ec403ddc2",
+    "openai-news": "a813120ba4d67c6a4319efad6b274868c8e4ad54f488eb6ca802998d7816f796",
+    "deepmind": "83ed353770f19712b795bfa2dc4db731cc5fffa9c94f7c383fcae3483b8e96d6",
+    "redwood": "b7e3b6255ba1c7f26014f590898ba140115354621fd786817bf6961a7c81378c",
+    "frontier-security": "b8a00ae735a14f365e9b795feb6662e3df28beb3f9b64160fd6d908b7b27fb12",
+    "transformer-news": "41f445c4e74fc3c6ae608dfd0eefd86cdd4bdf7a119a873c466f6fec1521d264",
+    "simonw": "ccfcd5aa771017103fdfd290d85907ba2773deadd947459e7268f0f721139ef5",
+    "arxiv-cr": "c936865be5511e32c181b2b9d85a655e7ea27a71c8e38f65ea7137bd739f3320",
+    "arxiv-ai": "4056357360c1521fd050f94716b91b2b5109f1658db4d71d0956b1adc5c8b790",
+    "alignment-forum": "985c7ca10fa7f1cfb3294bad51f8c24c679a85da158290d28428a5a671daceb9"
   },
   "page_hashes": {
     "openai-alignment": "0bf0903e80e9dc860b760861a0beb965e3a8096ce0e38950af9dca2d154d7ac0",
-    "anthropic-research": "5a86283b6cff74f9d0847cfa253e006a8917815095b34cf7ec132111105aed43",
-    "anthropic-news": "2bb78e8b786852a36cbc1b11107f6735bc224ad33e272dabadd80ee1b446af8d",
+    "anthropic-research": "98d61251b51bab7f84187f95a2fc48c09ecb2b97411ee33e8bcde6c5733a7d82",
+    "anthropic-news": "6386895623930342c2bc456fcfc627c8cad1fdc4583af062cfa8333be353264c",
     "deepmind-frontier-safety": "e94c3eaa93fa51267d632ee615e53dc2c85223fdf383df0cc406a5306461f41d",
-    "meta-blog": "bfaef0e9b892335eddf8e215b3ecd066f73cc6b9a908b3a90655c7de3a9a4748",
+    "meta-blog": "9a6d3aaed82f5a103a8e388b70b916cb11e8098af924139fdf72a6cc9e2efb02",
     "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
     "apollo-science": "e8bf9ed52431d6e8a9c4c1582bd9228759c7d9f4f439ab93e8b6e6f02c075eab",
-    "caisi": "5a680572cfe0cc5d8bc4be5268d68a36a0ccd66517eb17fcc2610a0f2432e247",
-    "redwood-home": "b60258399fcdaedf584121b466e49de4653a68fcc6daea53424c4e28ce429d57",
-    "aiaaic": "7ed8ccdc2ed23b54c21eea26b09c3005e38f47c6621d56a96f12206e9b136771"
+    "caisi": "0960ced2c1052a9bbf49d10eaeabefc39fde9c1211e0131176acd2a1e90d4065",
+    "redwood-home": "91c65ebab3cc4c705dc9ef9438fab29b7debfc95451e72c6d1314ccbd074aa65",
+    "aiaaic": "840c6e88c910bbaa534a3526466dc86f689739fee5a0a8f12b40afd806f05cd4"
   },
   "proposed": [
     {
@@ -231,6 +231,13 @@
       "title": "Australian PM: OpenAI agent breached the Medicare statistics portal; taskforce announced",
       "iso": "2026-09-24",
       "seen": "2026-09-27",
+      "applied": true
+    },
+    {
+      "url": "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/",
+      "title": "METR deploys a blocking per-action monitor on its own evals and finds holes in it",
+      "iso": "2026-09-27",
+      "seen": "2026-09-28",
       "applied": true
     }
   ]
