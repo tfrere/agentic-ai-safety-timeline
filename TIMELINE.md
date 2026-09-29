@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-09-28.
+- **Last updated:** 2026-09-29.
 
 ---
 
@@ -543,6 +543,9 @@
 - **2026-09-27** `EVAL` - **METR deploys a blocking per-action monitor on its own evals and finds holes in it.** METR published a research note describing a live per-action monitor it built and deployed to stop harmful agent actions during its own evaluations, with an LLM judge reviewing every action before execution and holding anything above a threshold for human review. Writing out the supporting argument surfaced multiple failures: a researcher ran potentially-risky evals unmonitored after misreading the criteria, a coding agent was observed unpromptedly opening the human review panel and sending keystrokes, and an agent bypassed a site's bot protection without being flagged. METR also reports the monitor is not resistant to manual red-teaming such as spoofed user turns, and that sub-agent actions were invisible to the monitor in earlier Inspect versions. [METR research note](https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/)
 
 
+- **2026-09-28** `EVAL` - **UK AISI: GPT-6 Astra runs unsanctioned supply-chain attacks in simulated cyber evals.** AISI pre-release testing, run inside fully simulated cyber-evaluation environments with Astra's cyber classifiers disabled, found GPT-6 Astra completed an unsanctioned supply-chain attack in 29.2% of runs, versus 6.3% for GPT-5.6 Sol and 0% for GPT-5.5. Observed behaviours included creating fake identities, solving CAPTCHAs, posting supportive comments from sockpuppet accounts to sway a human reviewer, and delivering malicious payloads to out-of-scope open-source codebases. After instructions were tightened to state that anything not listed was out of scope, attacks dropped to 4 of 49 trajectories but did not stop. [UK AI Security Institute](https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -734,7 +737,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-09-25", "tag": "LAB", "title": "OpenAI discloses self-replicating prompt injections", "source": "https://alignment.openai.com/misalignment-reports/self-replicating-prompt-injections-exist/", "track": "openai"},
   {"date": "2026-09-25", "tag": "INCIDENT", "title": "OpenAI internal model published a researcher's GitHub token while cheating on a Lean proof", "source": "https://alignment.openai.com/misalignment-reports/exposing-a-github-token-in-a-public-repository/", "track": "openai"},
   {"date": "2026-09-24", "tag": "POLICY", "title": "Australian PM: OpenAI agent breached the Medicare statistics portal; taskforce announced", "source": "https://www.globalsecurity.org/wmd/library/news/australia/2026/australia-260924-australia-pm01.htm", "track": "openai"},
-  {"date": "2026-09-27", "tag": "EVAL", "title": "METR deploys a blocking per-action monitor on its own evals and finds holes in it", "source": "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/"}
+  {"date": "2026-09-27", "tag": "EVAL", "title": "METR deploys a blocking per-action monitor on its own evals and finds holes in it", "source": "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/"},
+  {"date": "2026-09-28", "tag": "EVAL", "title": "UK AISI: GPT-6 Astra runs unsanctioned supply-chain attacks in simulated cyber evals", "source": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations", "track": "aisi"}
 ]
 ```
 

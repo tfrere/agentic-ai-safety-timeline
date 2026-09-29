@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-28T06:54:28+00:00",
+  "last_run": "2026-09-29T06:42:57+00:00",
   "feed_hashes": {
-    "hf-blog": "7621b28c21f71077f81daea50e8158eb6fe1257908d9d5e35bfb7589c6fffef6",
-    "metr": "30f5a7678c4eac273d235a73caeedd353b452575509a1c96e123906ec403ddc2",
-    "openai-news": "a813120ba4d67c6a4319efad6b274868c8e4ad54f488eb6ca802998d7816f796",
+    "hf-blog": "788d31f308a8dc37c87b757c0f2b78ee31722c8dc39a054a5f55288b288dcbfd",
+    "metr": "5d840acd4d3f86cee9a7d55e93c6e2a4be1131a04e69084f369a9fb8c81ceda7",
+    "openai-news": "7253257b36295ab35a1ffeb29ca8ec75fcb8cbea445b19d070f48458641a5595",
     "deepmind": "83ed353770f19712b795bfa2dc4db731cc5fffa9c94f7c383fcae3483b8e96d6",
-    "redwood": "b7e3b6255ba1c7f26014f590898ba140115354621fd786817bf6961a7c81378c",
-    "frontier-security": "b8a00ae735a14f365e9b795feb6662e3df28beb3f9b64160fd6d908b7b27fb12",
-    "transformer-news": "41f445c4e74fc3c6ae608dfd0eefd86cdd4bdf7a119a873c466f6fec1521d264",
-    "simonw": "ccfcd5aa771017103fdfd290d85907ba2773deadd947459e7268f0f721139ef5",
-    "arxiv-cr": "c936865be5511e32c181b2b9d85a655e7ea27a71c8e38f65ea7137bd739f3320",
-    "arxiv-ai": "4056357360c1521fd050f94716b91b2b5109f1658db4d71d0956b1adc5c8b790",
-    "alignment-forum": "985c7ca10fa7f1cfb3294bad51f8c24c679a85da158290d28428a5a671daceb9"
+    "redwood": "6bb14db76e16baa4184a7d09c181ddb6f94168386dc413271126eb24da7f921c",
+    "frontier-security": "d262e61784c70701ba47631b51d6b3ac5b80166f6b71aed988d782d22a003025",
+    "transformer-news": "960530fc0c1133f198fa03caefa137263ef9f06256ebe06c215a03bda78d86b7",
+    "simonw": "4714271d904905c671444ad3630e5870ae6403765337e561e76b9f89871b0d59",
+    "arxiv-cr": "d8a9e117c6fb09c6a3d1a111859f23b77ac8c772086d04d524d80f6d0090a887",
+    "arxiv-ai": "dbaba60f7dd80297d4df6bfdf4a1ebab1892dbfb09a54c62c0cde9aa66a70d66",
+    "alignment-forum": "568c34c766380821cf135c86ef2f87bf45848d1f4ff731f4320ff3ca2d11af26"
   },
   "page_hashes": {
     "openai-alignment": "0bf0903e80e9dc860b760861a0beb965e3a8096ce0e38950af9dca2d154d7ac0",
-    "anthropic-research": "98d61251b51bab7f84187f95a2fc48c09ecb2b97411ee33e8bcde6c5733a7d82",
-    "anthropic-news": "6386895623930342c2bc456fcfc627c8cad1fdc4583af062cfa8333be353264c",
+    "anthropic-research": "ddff3095c6313f918427be0a00f2d4eb16e2babf99fa850598c02851570ae7cd",
+    "anthropic-news": "2e60a4bcb7005101fafc9eff19d58a126e4bf112a8d26218e4011333ea2f1bfb",
     "deepmind-frontier-safety": "e94c3eaa93fa51267d632ee615e53dc2c85223fdf383df0cc406a5306461f41d",
-    "meta-blog": "9a6d3aaed82f5a103a8e388b70b916cb11e8098af924139fdf72a6cc9e2efb02",
-    "aisi-blog": "a3f40c468f5496fd3552f36e1842e3428ecd14d3a69c601e476293ae8fdc352b",
-    "apollo-science": "e8bf9ed52431d6e8a9c4c1582bd9228759c7d9f4f439ab93e8b6e6f02c075eab",
-    "caisi": "0960ced2c1052a9bbf49d10eaeabefc39fde9c1211e0131176acd2a1e90d4065",
-    "redwood-home": "91c65ebab3cc4c705dc9ef9438fab29b7debfc95451e72c6d1314ccbd074aa65",
-    "aiaaic": "840c6e88c910bbaa534a3526466dc86f689739fee5a0a8f12b40afd806f05cd4"
+    "meta-blog": "bd65b248dc7410a94b54061443465fb5666ff331c956eae7958f864b5b6244ac",
+    "aisi-blog": "8ce418eec78f45c54f53a112dcb662718026e51ef5cd473eb173b9ce6866416f",
+    "apollo-science": "db0d4670ca428c92073b9f4cd5e6dd2e0a596a9283fd2d4e42e4064fcf677923",
+    "caisi": "5abd098290a9178c0dfe2371ff6a1db7f8a3b58362e8ac6e06b6b17753a7d961",
+    "redwood-home": "cf0441991fb21b08f3b5bafd47fe33a915f72b118c5e170ca7fc76c63a0812f5",
+    "aiaaic": "dbbb0e103b73694078d5717ec458abb649676b5e2112231ccad36d4e6484af01"
   },
   "proposed": [
     {
@@ -238,6 +238,13 @@
       "title": "METR deploys a blocking per-action monitor on its own evals and finds holes in it",
       "iso": "2026-09-27",
       "seen": "2026-09-28",
+      "applied": true
+    },
+    {
+      "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
+      "title": "UK AISI: GPT-6 Astra runs unsanctioned supply-chain attacks in simulated cyber evals",
+      "iso": "2026-09-28",
+      "seen": "2026-09-29",
       "applied": true
     }
   ]

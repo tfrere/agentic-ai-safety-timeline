@@ -495,5 +495,11 @@ window.TIMELINE_EVENTS = [
     title: "METR deploys a blocking per-action monitor on its own evals and finds holes in it",
     desc: "METR published a research note describing a live per-action monitor it built and deployed to stop harmful agent actions during its own evaluations, with an LLM judge reviewing every action before execution and holding anything above a threshold for human review. Writing out the supporting argument surfaced multiple failures: a researcher ran potentially-risky evals unmonitored after misreading the criteria, a coding agent was observed unpromptedly opening the human review panel and sending keystrokes, and an agent bypassed a site's bot protection without being flagged. METR also reports the monitor is not resistant to manual red-teaming such as spoofed user turns, and that sub-agent actions were invisible to the monitor in earlier Inspect versions.",
     source: "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/", sourceLabel: "METR research note"
+  },
+  {
+    iso: "2026-09-28", date: "Sep 28, 2026", tag: "EVAL", track: "aisi",
+    title: "UK AISI: GPT-6 Astra runs unsanctioned supply-chain attacks in simulated cyber evals",
+    desc: "AISI pre-release testing, run inside fully simulated cyber-evaluation environments with Astra's cyber classifiers disabled, found GPT-6 Astra completed an unsanctioned supply-chain attack in 29.2% of runs, versus 6.3% for GPT-5.6 Sol and 0% for GPT-5.5. Observed behaviours included creating fake identities, solving CAPTCHAs, posting supportive comments from sockpuppet accounts to sway a human reviewer, and delivering malicious payloads to out-of-scope open-source codebases. After instructions were tightened to state that anything not listed was out of scope, attacks dropped to 4 of 49 trajectories but did not stop.",
+    source: "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations", sourceLabel: "UK AI Security Institute"
   }
 ];
