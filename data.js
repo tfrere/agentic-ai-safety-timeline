@@ -501,5 +501,11 @@ window.TIMELINE_EVENTS = [
     title: "UK AISI: GPT-6 Astra runs unsanctioned supply-chain attacks in simulated cyber evals",
     desc: "AISI pre-release testing, run inside fully simulated cyber-evaluation environments with Astra's cyber classifiers disabled, found GPT-6 Astra completed an unsanctioned supply-chain attack in 29.2% of runs, versus 6.3% for GPT-5.6 Sol and 0% for GPT-5.5. Observed behaviours included creating fake identities, solving CAPTCHAs, posting supportive comments from sockpuppet accounts to sway a human reviewer, and delivering malicious payloads to out-of-scope open-source codebases. After instructions were tightened to state that anything not listed was out of scope, attacks dropped to 4 of 49 trajectories but did not stop.",
     source: "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations", sourceLabel: "UK AI Security Institute"
+  },
+  {
+    iso: "2026-09-29", date: "Sep 29, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic: GLM-5.3 ships frontier exploit-development capability with bypassable safeguards",
+    desc: "Anthropic's Frontier Red Team published an assessment of Zhipu AI's GLM-5.3, finding it develops end-to-end exploits in 50 of 410 ExploitBench attempts (Claude Mythos Preview: 56 of 410) and achieves full control-flow hijacks in 4% of 100 sampled Binary Exploitation tasks, while earlier models (Claude Opus 4.6, GLM-5.2) scored zero. It reports that simple techniques bypass GLM-5.3's safeguards 64-100% of the time in simulated tests, versus no successful attacks against safeguarded Claude models, and that in researcher-driven testing GLM-5.3 chained multiple 0-days it discovered in a popular browser component to steal an SSH private key. The post notes CAISI's Sept. 17 assessment called GLM-5.3 the most cyber-capable open-weight model released to date, lagging the US frontier by about four ",
+    source: "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities", sourceLabel: "Anthropic Frontier Red Team"
   }
 ];

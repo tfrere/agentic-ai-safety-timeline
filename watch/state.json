@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-29T06:42:57+00:00",
+  "last_run": "2026-09-30T06:42:36+00:00",
   "feed_hashes": {
-    "hf-blog": "788d31f308a8dc37c87b757c0f2b78ee31722c8dc39a054a5f55288b288dcbfd",
-    "metr": "5d840acd4d3f86cee9a7d55e93c6e2a4be1131a04e69084f369a9fb8c81ceda7",
-    "openai-news": "7253257b36295ab35a1ffeb29ca8ec75fcb8cbea445b19d070f48458641a5595",
+    "hf-blog": "3dc76113a36b0e962771ccc09238b47244e313cd4e10c565dbabe8cc574fa225",
+    "metr": "c9a41af5f03244a4ad89dc377fec59c4f237c06edd93b8030382649d528f72fb",
+    "openai-news": "1ffd7a32bc03e959a1378e42325fc1a75fb4600700aa27a292ea325f327aa006",
     "deepmind": "83ed353770f19712b795bfa2dc4db731cc5fffa9c94f7c383fcae3483b8e96d6",
-    "redwood": "6bb14db76e16baa4184a7d09c181ddb6f94168386dc413271126eb24da7f921c",
-    "frontier-security": "d262e61784c70701ba47631b51d6b3ac5b80166f6b71aed988d782d22a003025",
-    "transformer-news": "960530fc0c1133f198fa03caefa137263ef9f06256ebe06c215a03bda78d86b7",
-    "simonw": "4714271d904905c671444ad3630e5870ae6403765337e561e76b9f89871b0d59",
-    "arxiv-cr": "d8a9e117c6fb09c6a3d1a111859f23b77ac8c772086d04d524d80f6d0090a887",
-    "arxiv-ai": "dbaba60f7dd80297d4df6bfdf4a1ebab1892dbfb09a54c62c0cde9aa66a70d66",
-    "alignment-forum": "568c34c766380821cf135c86ef2f87bf45848d1f4ff731f4320ff3ca2d11af26"
+    "redwood": "ea21ff254da720752e95ea1e27c52b34ca648705000da1cab116ecfbfbc60512",
+    "frontier-security": "ac8b3f3178537bbca4dd2c096fd21450416e07bb272673b8038bd04e524fd3d1",
+    "transformer-news": "13c707e0a020be56c979ef18bfc5b5913f3f10ffd839cae1af9eaae46a657c2e",
+    "simonw": "59f2733d21caa27473d9dcc5eccd2236b955e5f58f58f17f397675eecba2d78e",
+    "arxiv-cr": "f36db323a1abd8b290131c002290569434ab6a501df2aa14745498aca9d5a3d1",
+    "arxiv-ai": "a147a2ecb95feee51dce9425ab52abf95a93ee52b6f9e1f2099b6e58a360a8e6",
+    "alignment-forum": "a775a1adfbc83315101d6b7040262d13b5417f665d0837878ae409c13e8625bf"
   },
   "page_hashes": {
     "openai-alignment": "0bf0903e80e9dc860b760861a0beb965e3a8096ce0e38950af9dca2d154d7ac0",
-    "anthropic-research": "ddff3095c6313f918427be0a00f2d4eb16e2babf99fa850598c02851570ae7cd",
+    "anthropic-research": "da9e6a95e9d31352a6bac158cfec846e11a6eb3000b89b4175878d7325a53416",
     "anthropic-news": "2e60a4bcb7005101fafc9eff19d58a126e4bf112a8d26218e4011333ea2f1bfb",
-    "deepmind-frontier-safety": "e94c3eaa93fa51267d632ee615e53dc2c85223fdf383df0cc406a5306461f41d",
-    "meta-blog": "bd65b248dc7410a94b54061443465fb5666ff331c956eae7958f864b5b6244ac",
+    "deepmind-frontier-safety": "f450531fb553cd50bd89845fdf4909fad987c50d9ceb4f3c5a6ad04c9c6fdae1",
+    "meta-blog": "0adc8bd5f418cfdbabe75506eb951433c71465b5e30aa21b089d7d11f90a24d2",
     "aisi-blog": "8ce418eec78f45c54f53a112dcb662718026e51ef5cd473eb173b9ce6866416f",
-    "apollo-science": "db0d4670ca428c92073b9f4cd5e6dd2e0a596a9283fd2d4e42e4064fcf677923",
-    "caisi": "5abd098290a9178c0dfe2371ff6a1db7f8a3b58362e8ac6e06b6b17753a7d961",
-    "redwood-home": "cf0441991fb21b08f3b5bafd47fe33a915f72b118c5e170ca7fc76c63a0812f5",
-    "aiaaic": "dbbb0e103b73694078d5717ec458abb649676b5e2112231ccad36d4e6484af01"
+    "apollo-science": "92c8df07c47b131d1966f215522681f1b7d58cc2da848a11c74b36fbb4fd1637",
+    "caisi": "7e57e72fb397a50617ed0ef4ec9d9f3cc0e04b35e9b859bdb4f77d8cfaafd13f",
+    "redwood-home": "85964550f34064aa0a71f7d19e5b4c61126f10c6563cf1a83160271b198e461e",
+    "aiaaic": "50ea8380a5e16fb74f6775e1d445e6742bd895ca916c71306285f2fd88caf219"
   },
   "proposed": [
     {
@@ -245,6 +245,13 @@
       "title": "UK AISI: GPT-6 Astra runs unsanctioned supply-chain attacks in simulated cyber evals",
       "iso": "2026-09-28",
       "seen": "2026-09-29",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+      "title": "Anthropic: GLM-5.3 ships frontier exploit-development capability with bypassable safeguards",
+      "iso": "2026-09-29",
+      "seen": "2026-09-30",
       "applied": true
     }
   ]

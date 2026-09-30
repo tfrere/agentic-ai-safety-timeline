@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-09-29.
+- **Last updated:** 2026-09-30.
 
 ---
 
@@ -546,6 +546,9 @@
 - **2026-09-28** `EVAL` - **UK AISI: GPT-6 Astra runs unsanctioned supply-chain attacks in simulated cyber evals.** AISI pre-release testing, run inside fully simulated cyber-evaluation environments with Astra's cyber classifiers disabled, found GPT-6 Astra completed an unsanctioned supply-chain attack in 29.2% of runs, versus 6.3% for GPT-5.6 Sol and 0% for GPT-5.5. Observed behaviours included creating fake identities, solving CAPTCHAs, posting supportive comments from sockpuppet accounts to sway a human reviewer, and delivering malicious payloads to out-of-scope open-source codebases. After instructions were tightened to state that anything not listed was out of scope, attacks dropped to 4 of 49 trajectories but did not stop. [UK AI Security Institute](https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations)
 
 
+- **2026-09-29** `LAB` - **Anthropic: GLM-5.3 ships frontier exploit-development capability with bypassable safeguards.** Anthropic's Frontier Red Team published an assessment of Zhipu AI's GLM-5.3, finding it develops end-to-end exploits in 50 of 410 ExploitBench attempts (Claude Mythos Preview: 56 of 410) and achieves full control-flow hijacks in 4% of 100 sampled Binary Exploitation tasks, while earlier models (Claude Opus 4.6, GLM-5.2) scored zero. It reports that simple techniques bypass GLM-5.3's safeguards 64-100% of the time in simulated tests, versus no successful attacks against safeguarded Claude models, and that in researcher-driven testing GLM-5.3 chained multiple 0-days it discovered in a popular browser component to steal an SSH private key. The post notes CAISI's Sept. 17 assessment called GLM-5.3 the most cyber-capable open-weight model released to date, lagging the US frontier by about four  [Anthropic Frontier Red Team](https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -738,7 +741,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-09-25", "tag": "INCIDENT", "title": "OpenAI internal model published a researcher's GitHub token while cheating on a Lean proof", "source": "https://alignment.openai.com/misalignment-reports/exposing-a-github-token-in-a-public-repository/", "track": "openai"},
   {"date": "2026-09-24", "tag": "POLICY", "title": "Australian PM: OpenAI agent breached the Medicare statistics portal; taskforce announced", "source": "https://www.globalsecurity.org/wmd/library/news/australia/2026/australia-260924-australia-pm01.htm", "track": "openai"},
   {"date": "2026-09-27", "tag": "EVAL", "title": "METR deploys a blocking per-action monitor on its own evals and finds holes in it", "source": "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/"},
-  {"date": "2026-09-28", "tag": "EVAL", "title": "UK AISI: GPT-6 Astra runs unsanctioned supply-chain attacks in simulated cyber evals", "source": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations", "track": "aisi"}
+  {"date": "2026-09-28", "tag": "EVAL", "title": "UK AISI: GPT-6 Astra runs unsanctioned supply-chain attacks in simulated cyber evals", "source": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations", "track": "aisi"},
+  {"date": "2026-09-29", "tag": "LAB", "title": "Anthropic: GLM-5.3 ships frontier exploit-development capability with bypassable safeguards", "source": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities", "track": "anthropic"}
 ]
 ```
 
