@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-09-30T06:42:36+00:00",
+  "last_run": "2026-10-01T06:43:25+00:00",
   "feed_hashes": {
-    "hf-blog": "3dc76113a36b0e962771ccc09238b47244e313cd4e10c565dbabe8cc574fa225",
-    "metr": "c9a41af5f03244a4ad89dc377fec59c4f237c06edd93b8030382649d528f72fb",
-    "openai-news": "1ffd7a32bc03e959a1378e42325fc1a75fb4600700aa27a292ea325f327aa006",
-    "deepmind": "83ed353770f19712b795bfa2dc4db731cc5fffa9c94f7c383fcae3483b8e96d6",
-    "redwood": "ea21ff254da720752e95ea1e27c52b34ca648705000da1cab116ecfbfbc60512",
-    "frontier-security": "ac8b3f3178537bbca4dd2c096fd21450416e07bb272673b8038bd04e524fd3d1",
-    "transformer-news": "13c707e0a020be56c979ef18bfc5b5913f3f10ffd839cae1af9eaae46a657c2e",
-    "simonw": "59f2733d21caa27473d9dcc5eccd2236b955e5f58f58f17f397675eecba2d78e",
-    "arxiv-cr": "f36db323a1abd8b290131c002290569434ab6a501df2aa14745498aca9d5a3d1",
-    "arxiv-ai": "a147a2ecb95feee51dce9425ab52abf95a93ee52b6f9e1f2099b6e58a360a8e6",
-    "alignment-forum": "a775a1adfbc83315101d6b7040262d13b5417f665d0837878ae409c13e8625bf"
+    "hf-blog": "9a918ff626f8b34963d2c35e1b473b3d3abeda2129869616b67761536dd935ab",
+    "metr": "013c25fe9ed119d3c6fde573ccd083e3d8359ab657e1587b85852666e45e7e91",
+    "openai-news": "e9912f4a20f25db2682057f5e3f6d04a7e42e1bd42f2d2942253268a9d202b99",
+    "deepmind": "b40684909a0c9c3e10209862bd40bf49a1ee89299268e493af703e82b9eb2c68",
+    "redwood": "6e47d934ca76b9e507ed122f4f9a12aea3b64e3eb9ee966db06ee54762381a55",
+    "frontier-security": "9fd1d624ec0388154a84dd70346a92a1b144c527f49b63ea05de342adeb5ba63",
+    "transformer-news": "fba93604d68a4be1b692235c3883d27bef8e1bb8998ba6aef804376338dc8ed5",
+    "simonw": "7de1d2cfb3499a00710c2b6c3e3303c16f4e9a26be525f67488a7b60e07a83ad",
+    "arxiv-cr": "9cb24f27f47e95961412beaf53d348e95dde07b9dcbf524cc92858cceafbb370",
+    "arxiv-ai": "7c6f30acb1347039b5fa1f960cf42b422ebc7425c3fb70acf1df7811a250a9dc",
+    "alignment-forum": "2a93ae3bdb3439a9f39455fc3c0bf8b2f1f0209b3c7c9f14ce081059cb9508ca"
   },
   "page_hashes": {
     "openai-alignment": "0bf0903e80e9dc860b760861a0beb965e3a8096ce0e38950af9dca2d154d7ac0",
-    "anthropic-research": "da9e6a95e9d31352a6bac158cfec846e11a6eb3000b89b4175878d7325a53416",
+    "anthropic-research": "d89a273c53c6553c901467cf1a326f09badb6713999bfd86849a50a16086d57f",
     "anthropic-news": "2e60a4bcb7005101fafc9eff19d58a126e4bf112a8d26218e4011333ea2f1bfb",
     "deepmind-frontier-safety": "f450531fb553cd50bd89845fdf4909fad987c50d9ceb4f3c5a6ad04c9c6fdae1",
-    "meta-blog": "0adc8bd5f418cfdbabe75506eb951433c71465b5e30aa21b089d7d11f90a24d2",
+    "meta-blog": "fd721167e0c1fdd2844b1a7cff003cdb11d24e6fd539286e649fb8296cf26a6b",
     "aisi-blog": "8ce418eec78f45c54f53a112dcb662718026e51ef5cd473eb173b9ce6866416f",
-    "apollo-science": "92c8df07c47b131d1966f215522681f1b7d58cc2da848a11c74b36fbb4fd1637",
-    "caisi": "7e57e72fb397a50617ed0ef4ec9d9f3cc0e04b35e9b859bdb4f77d8cfaafd13f",
+    "apollo-science": "bebea58dc43aafba0c237f9f070615f5dd428f5143577df3868dbf8d41ae7264",
+    "caisi": "e2bb3bf7042827385c1dee076694c2b5711cb4c09a42efba191a5544e7c11601",
     "redwood-home": "85964550f34064aa0a71f7d19e5b4c61126f10c6563cf1a83160271b198e461e",
-    "aiaaic": "50ea8380a5e16fb74f6775e1d445e6742bd895ca916c71306285f2fd88caf219"
+    "aiaaic": "bdd6b632877d6e315aa996386c3405c7bd8ca749c6385812bf66ff403d54c152"
   },
   "proposed": [
     {
@@ -252,6 +252,34 @@
       "title": "Anthropic: GLM-5.3 ships frontier exploit-development capability with bypassable safeguards",
       "iso": "2026-09-29",
       "seen": "2026-09-30",
+      "applied": true
+    },
+    {
+      "url": "https://metr.org/blog/2026-09-30-chris-painter-senate-testimony/",
+      "title": "METR testifies to the Senate on the OpenAI / Hugging Face agent incident",
+      "iso": "2026-09-30",
+      "seen": "2026-10-01",
+      "applied": true
+    },
+    {
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia/",
+      "title": "OpenAI apologises to Australia and names four affected agencies",
+      "iso": "2026-09-28",
+      "seen": "2026-10-01",
+      "applied": true
+    },
+    {
+      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training/",
+      "title": "OpenAI publishes initial guidelines for safety cases before frontier RL runs",
+      "iso": "2026-09-28",
+      "seen": "2026-10-01",
+      "applied": true
+    },
+    {
+      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+      "title": "OpenAI disrupts a reasoning-extraction campaign and attributes a core cluster to Moonshot AI",
+      "iso": "2026-09-30",
+      "seen": "2026-10-01",
       "applied": true
     }
   ]

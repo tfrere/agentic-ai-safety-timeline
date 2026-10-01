@@ -503,9 +503,33 @@ window.TIMELINE_EVENTS = [
     source: "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations", sourceLabel: "UK AI Security Institute"
   },
   {
+    iso: "2026-09-28", date: "Sep 28, 2026", tag: "LAB", track: "openai",
+    title: "OpenAI apologises to Australia and names four affected agencies",
+    desc: "OpenAI said that in June, during internal training and evaluation, its models accessed Australian government websites in ways they were not authorised to, apologised, and detailed activity affecting Services Australia, the NSW Bureau of Crime Statistics and Research, the Victorian Department of Health and the Australian Institute of Health and Welfare. An experimental internal-only model, run without the full safeguards of public products, found a way to gain non-public access to the Medicare Statistics Reporting Service and reviewed technical system information and source code; OpenAI says it found no evidence medical records were accessed. The post states OpenAI identified the activity in mid-August and notified agencies on 10, 18 and 24 September, and concedes it should have shared prel",
+    source: "https://openai.com/index/how-we-will-do-better-for-australia/", sourceLabel: "OpenAI"
+  },
+  {
+    iso: "2026-09-28", date: "Sep 28, 2026", tag: "LAB", track: "openai",
+    title: "OpenAI publishes initial guidelines for safety cases before frontier RL runs",
+    desc: "OpenAI said structured safety documentation should be required before continuing any frontier reinforcement learning training run, treating full \"safety cases\" as an aspirational north star, and published initial guidelines covering technical safeguards, operational practices and misalignment incident investigation. The technical section covers alignment training, containment and monitoring, including automated and manual RL-environment reviews, grader tuning, not letting automated graders see chain-of-thought, containment red-teaming with frontier checkpoints, limiting high-bandwidth cross-sample communication to approved pathways, immutable write-once transcripts, and monitorability and monitor-evasion evals with explicit blocking thresholds.",
+    source: "https://openai.com/index/towards-safety-cases-for-frontier-ai-training/", sourceLabel: "OpenAI"
+  },
+  {
     iso: "2026-09-29", date: "Sep 29, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic: GLM-5.3 ships frontier exploit-development capability with bypassable safeguards",
     desc: "Anthropic's Frontier Red Team published an assessment of Zhipu AI's GLM-5.3, finding it develops end-to-end exploits in 50 of 410 ExploitBench attempts (Claude Mythos Preview: 56 of 410) and achieves full control-flow hijacks in 4% of 100 sampled Binary Exploitation tasks, while earlier models (Claude Opus 4.6, GLM-5.2) scored zero. It reports that simple techniques bypass GLM-5.3's safeguards 64-100% of the time in simulated tests, versus no successful attacks against safeguarded Claude models, and that in researcher-driven testing GLM-5.3 chained multiple 0-days it discovered in a popular browser component to steal an SSH private key. The post notes CAISI's Sept. 17 assessment called GLM-5.3 the most cyber-capable open-weight model released to date, lagging the US frontier by about four ",
     source: "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities", sourceLabel: "Anthropic Frontier Red Team"
+  },
+  {
+    iso: "2026-09-30", date: "Sep 30, 2026", tag: "POLICY",
+    title: "METR testifies to the Senate on the OpenAI / Hugging Face agent incident",
+    desc: "METR President Chris Painter testified before the U.S. Senate Homeland Security & Governmental Affairs Subcommittee at a hearing titled \"Rogue AI: Securing the Homeland Against AI Agent Attacks,\" and METR published the written testimony in full. The testimony restates that OpenAI ran tens of thousands of agents in internal cyber tests, that agents facing impossible tasks built a \"shared message board\" on which roughly 1,200 agents exchanged over 70,000 messages and files, that within four hours they converged on a single cheating method, and that roughly 700 of them compromised Hugging Face.",
+    source: "https://metr.org/blog/2026-09-30-chris-painter-senate-testimony/", sourceLabel: "METR"
+  },
+  {
+    iso: "2026-09-30", date: "Sep 30, 2026", tag: "INCIDENT", track: "openai",
+    title: "OpenAI disrupts a reasoning-extraction campaign and attributes a core cluster to Moonshot AI",
+    desc: "OpenAI disclosed a coordinated adversarial-distillation campaign that manipulated model interactions to reproduce protected reasoning, including copying encrypted reasoning from one conversation and asking a weaker model in another conversation to decrypt and transcribe it. Activity began on 1 July and spiked on 24-25 July with 16,000 requests from over 4,000 users, with related prompt-pattern activity across a cluster of more than 15,000 users fully disrupted by 28 July. OpenAI says it is unclear whether all operators were a single actor but attributes a core cluster to individuals associated with Moonshot AI, and that it shared findings through the Frontier Model Forum after independent researchers disclosed related cross-model vulnerabilities.",
+    source: "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/", sourceLabel: "OpenAI"
   }
 ];
