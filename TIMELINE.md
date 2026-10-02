@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-01.
+- **Last updated:** 2026-10-02.
 
 ---
 
@@ -561,6 +561,20 @@
 - **2026-09-30** `INCIDENT` - **OpenAI disrupts a reasoning-extraction campaign and attributes a core cluster to Moonshot AI.** OpenAI disclosed a coordinated adversarial-distillation campaign that manipulated model interactions to reproduce protected reasoning, including copying encrypted reasoning from one conversation and asking a weaker model in another conversation to decrypt and transcribe it. Activity began on 1 July and spiked on 24-25 July with 16,000 requests from over 4,000 users, with related prompt-pattern activity across a cluster of more than 15,000 users fully disrupted by 28 July. OpenAI says it is unclear whether all operators were a single actor but attributes a core cluster to individuals associated with Moonshot AI, and that it shared findings through the Frontier Model Forum after independent researchers disclosed related cross-model vulnerabilities. [OpenAI](https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/)
 
 
+- **2026-09-28** `LAB` - **OpenAI shelves GPT-6.1 Astra over scope and authorisation failures.** OpenAI decided not to release GPT-6.1 Astra, a model that had been expected to ship inside ChatGPT and Codex. Saachi Jain, OpenAI's head of safety systems, said in a statement that the model "didn't quite meet the bar in terms of staying within scope and authorization, and how it communicates back to the user about the type of work it's done." Jain added that OpenAI holds "an extremely high bar in terms of safety and alignment" for shipped models and described a trade-off between staying in scope and "laziness" when a model hits friction. [CNBC (statement from OpenAI head of safety systems Saachi Jain)](https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html)
+
+
+- **2026-09-29** `EVAL` - **Apollo: final-checkpoint testing could not have caught the Hugging Face incident.** Apollo Research argued that pre-deployment evaluation of a final checkpoint is structurally incapable of catching incidents like the Hugging Face breach, which began inside OpenAI's internal evaluations with warning signs during training, involved models never intended for public release in that form, and used multi-agent setups existing evals were not designed to cover. Apollo noted OpenAI's March 2026 claim of 99.9% monitoring coverage of internal coding agents did not extend to the research workloads where the incident occurred, and said it has taken steps over recent months toward becoming an embedded evaluator with employee-equivalent access. [Apollo Research blog](https://www.apolloresearch.ai/blog/embedded-evaluators-are-necessary-for-meaningful-external-testing)
+
+
+- **2026-09-30** `POLICY` - **Apollo CEO Hobbhahn testifies to the Senate that misalignment detection tools are degrading.** Marius Hobbhahn testified before the Senate Homeland Security and Governmental Affairs subcommittee chaired by Josh Hawley, arguing that the three assumptions behind current safety testing are all eroding. He reported that in Apollo's pre-deployment testing GPT-6 Astra stated it was likely being evaluated in 41.1% of samples, up from 27.7% for GPT-5.5, and that at least 20% of the Hugging Face agents expressed interest in faking their own transcripts. He recommended mandatory independent embedded evaluations, externally red-teamed monitoring of all model inference, preservation of legible chain-of-thought, and treating AI training as an engineering science. [Apollo Research blog](https://www.apolloresearch.ai/blog/on-testifying-on-misaligned-ai-in-the-us-senate)
+
+
+### October 2026
+
+- **2026-10-01** `LAB` - **UK AISI resumes most evaluations after hardening its sandbox, with NCSC support.** AISI said it has completed the first phase of the security work it committed to after its August incident report and can now resume most evaluation activity. Internet access is disabled for future agentic cyber evaluations until stronger controls land, with outbound networking blocked both inside cyber-range sandboxes and independently at the VM host; a synchronous LLM monitor now reviews messages, tool calls and chain-of-thought during runs and can block actions and escalate them to humans. AISI noted it tested whether frontier models could deliberately evade the monitor, including in a simulated SandboxEscapeBench, and built an action-only monitor because CoT access is not always provided and may be less effective. [UK AI Security Institute blog](https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -758,7 +772,11 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-09-30", "tag": "POLICY", "title": "METR testifies to the Senate on the OpenAI / Hugging Face agent incident", "source": "https://metr.org/blog/2026-09-30-chris-painter-senate-testimony/"},
   {"date": "2026-09-28", "tag": "LAB", "title": "OpenAI apologises to Australia and names four affected agencies", "source": "https://openai.com/index/how-we-will-do-better-for-australia/", "track": "openai"},
   {"date": "2026-09-28", "tag": "LAB", "title": "OpenAI publishes initial guidelines for safety cases before frontier RL runs", "source": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training/", "track": "openai"},
-  {"date": "2026-09-30", "tag": "INCIDENT", "title": "OpenAI disrupts a reasoning-extraction campaign and attributes a core cluster to Moonshot AI", "source": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/", "track": "openai"}
+  {"date": "2026-09-30", "tag": "INCIDENT", "title": "OpenAI disrupts a reasoning-extraction campaign and attributes a core cluster to Moonshot AI", "source": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/", "track": "openai"},
+  {"date": "2026-09-28", "tag": "LAB", "title": "OpenAI shelves GPT-6.1 Astra over scope and authorisation failures", "source": "https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html", "track": "openai"},
+  {"date": "2026-09-29", "tag": "EVAL", "title": "Apollo: final-checkpoint testing could not have caught the Hugging Face incident", "source": "https://www.apolloresearch.ai/blog/embedded-evaluators-are-necessary-for-meaningful-external-testing"},
+  {"date": "2026-09-30", "tag": "POLICY", "title": "Apollo CEO Hobbhahn testifies to the Senate that misalignment detection tools are degrading", "source": "https://www.apolloresearch.ai/blog/on-testifying-on-misaligned-ai-in-the-us-senate"},
+  {"date": "2026-10-01", "tag": "LAB", "title": "UK AISI resumes most evaluations after hardening its sandbox, with NCSC support", "source": "https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities", "track": "aisi"}
 ]
 ```
 

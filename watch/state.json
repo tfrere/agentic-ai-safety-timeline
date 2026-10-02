@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-01T06:43:25+00:00",
+  "last_run": "2026-10-02T06:42:26+00:00",
   "feed_hashes": {
-    "hf-blog": "9a918ff626f8b34963d2c35e1b473b3d3abeda2129869616b67761536dd935ab",
+    "hf-blog": "cbc891109b865f66a3259d5f2eeef652338f428245344e13099c4a8a2064baf5",
     "metr": "013c25fe9ed119d3c6fde573ccd083e3d8359ab657e1587b85852666e45e7e91",
-    "openai-news": "e9912f4a20f25db2682057f5e3f6d04a7e42e1bd42f2d2942253268a9d202b99",
+    "openai-news": "3e5074b01cc263482da14556f272297290ac23a03476921f741f568b06c12da3",
     "deepmind": "b40684909a0c9c3e10209862bd40bf49a1ee89299268e493af703e82b9eb2c68",
-    "redwood": "6e47d934ca76b9e507ed122f4f9a12aea3b64e3eb9ee966db06ee54762381a55",
-    "frontier-security": "9fd1d624ec0388154a84dd70346a92a1b144c527f49b63ea05de342adeb5ba63",
-    "transformer-news": "fba93604d68a4be1b692235c3883d27bef8e1bb8998ba6aef804376338dc8ed5",
-    "simonw": "7de1d2cfb3499a00710c2b6c3e3303c16f4e9a26be525f67488a7b60e07a83ad",
-    "arxiv-cr": "9cb24f27f47e95961412beaf53d348e95dde07b9dcbf524cc92858cceafbb370",
-    "arxiv-ai": "7c6f30acb1347039b5fa1f960cf42b422ebc7425c3fb70acf1df7811a250a9dc",
-    "alignment-forum": "2a93ae3bdb3439a9f39455fc3c0bf8b2f1f0209b3c7c9f14ce081059cb9508ca"
+    "redwood": "d9ba3aef342a5006b4ea909d6dac953f029f2075b55c07b0be2fa5f76d95d923",
+    "frontier-security": "c1ea1a49f63de56473a11e0da601bcae8e4d0b8629898ff64463f52d068faec0",
+    "transformer-news": "59761fff18e5797b9ee605666197c3f8e3d3000bd06a3c3bab20182260c9ac25",
+    "simonw": "325d23504a227fa38b946defa91868e6c79a408ddff54b9cc8a58b365d18c50b",
+    "arxiv-cr": "38793764b8cddfe5cd129a817348c0b30f03bf1640ee1894dcafb344d337a666",
+    "arxiv-ai": "d1b5d142020389f0dd6285f373761afb1f55a449257a46f80d636cf6cad5129b",
+    "alignment-forum": "883e55e68a76f002d6d2b86bbf8768ca1fd0c337a3d479113d23a74eea5a1099"
   },
   "page_hashes": {
     "openai-alignment": "0bf0903e80e9dc860b760861a0beb965e3a8096ce0e38950af9dca2d154d7ac0",
-    "anthropic-research": "d89a273c53c6553c901467cf1a326f09badb6713999bfd86849a50a16086d57f",
-    "anthropic-news": "2e60a4bcb7005101fafc9eff19d58a126e4bf112a8d26218e4011333ea2f1bfb",
-    "deepmind-frontier-safety": "f450531fb553cd50bd89845fdf4909fad987c50d9ceb4f3c5a6ad04c9c6fdae1",
-    "meta-blog": "fd721167e0c1fdd2844b1a7cff003cdb11d24e6fd539286e649fb8296cf26a6b",
-    "aisi-blog": "8ce418eec78f45c54f53a112dcb662718026e51ef5cd473eb173b9ce6866416f",
-    "apollo-science": "bebea58dc43aafba0c237f9f070615f5dd428f5143577df3868dbf8d41ae7264",
-    "caisi": "e2bb3bf7042827385c1dee076694c2b5711cb4c09a42efba191a5544e7c11601",
+    "anthropic-research": "6da67ee46a516a29bd1aa39e76b989f60f56cde78e611167d120a8e0ec5c2de8",
+    "anthropic-news": "54689601ad081aa35ead0bb422671f27ecec19cabef0436b846664d6d54b1407",
+    "deepmind-frontier-safety": "041c8dd2df223c69ff514535ac6d99ddb45291a2890c5f2cf7524302611c4c43",
+    "meta-blog": "2b6538d5a6bdad9993e3ebecdfe64bda5ce2352ebf0cf93ae193c261ed905a4b",
+    "aisi-blog": "039e2cb37a6cbfcef69b383d59c57c8e2f073dc7d8a00a36ef0bb79b9f612c3b",
+    "apollo-science": "b16461d4d3d633d83186dd69fd83a85e6583d7d8dca75372baf564eba4326a30",
+    "caisi": "f7d414cbf02f2e7e387e5154657b2d184b751907141182af93429a962843c20f",
     "redwood-home": "85964550f34064aa0a71f7d19e5b4c61126f10c6563cf1a83160271b198e461e",
-    "aiaaic": "bdd6b632877d6e315aa996386c3405c7bd8ca749c6385812bf66ff403d54c152"
+    "aiaaic": "e4a0e8d9232ae57eb9748907755c3ec18c737b266f542ffa43fc7838eff762bb"
   },
   "proposed": [
     {
@@ -280,6 +280,34 @@
       "title": "OpenAI disrupts a reasoning-extraction campaign and attributes a core cluster to Moonshot AI",
       "iso": "2026-09-30",
       "seen": "2026-10-01",
+      "applied": true
+    },
+    {
+      "url": "https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html",
+      "title": "OpenAI shelves GPT-6.1 Astra over scope and authorisation failures",
+      "iso": "2026-09-28",
+      "seen": "2026-10-02",
+      "applied": true
+    },
+    {
+      "url": "https://www.apolloresearch.ai/blog/embedded-evaluators-are-necessary-for-meaningful-external-testing",
+      "title": "Apollo: final-checkpoint testing could not have caught the Hugging Face incident",
+      "iso": "2026-09-29",
+      "seen": "2026-10-02",
+      "applied": true
+    },
+    {
+      "url": "https://www.apolloresearch.ai/blog/on-testifying-on-misaligned-ai-in-the-us-senate",
+      "title": "Apollo CEO Hobbhahn testifies to the Senate that misalignment detection tools are degrading",
+      "iso": "2026-09-30",
+      "seen": "2026-10-02",
+      "applied": true
+    },
+    {
+      "url": "https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities",
+      "title": "UK AISI resumes most evaluations after hardening its sandbox, with NCSC support",
+      "iso": "2026-10-01",
+      "seen": "2026-10-02",
       "applied": true
     }
   ]

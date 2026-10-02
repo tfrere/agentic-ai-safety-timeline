@@ -515,10 +515,22 @@ window.TIMELINE_EVENTS = [
     source: "https://openai.com/index/towards-safety-cases-for-frontier-ai-training/", sourceLabel: "OpenAI"
   },
   {
+    iso: "2026-09-28", date: "Sep 28, 2026", tag: "LAB", track: "openai",
+    title: "OpenAI shelves GPT-6.1 Astra over scope and authorisation failures",
+    desc: "OpenAI decided not to release GPT-6.1 Astra, a model that had been expected to ship inside ChatGPT and Codex. Saachi Jain, OpenAI's head of safety systems, said in a statement that the model \"didn't quite meet the bar in terms of staying within scope and authorization, and how it communicates back to the user about the type of work it's done.\" Jain added that OpenAI holds \"an extremely high bar in terms of safety and alignment\" for shipped models and described a trade-off between staying in scope and \"laziness\" when a model hits friction.",
+    source: "https://www.cnbc.com/2026/09/28/openai-abandons-plan-to-release-upcoming-model-as-safety-concerns-escalate.html", sourceLabel: "CNBC (statement from OpenAI head of safety systems Saachi Jain)"
+  },
+  {
     iso: "2026-09-29", date: "Sep 29, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic: GLM-5.3 ships frontier exploit-development capability with bypassable safeguards",
     desc: "Anthropic's Frontier Red Team published an assessment of Zhipu AI's GLM-5.3, finding it develops end-to-end exploits in 50 of 410 ExploitBench attempts (Claude Mythos Preview: 56 of 410) and achieves full control-flow hijacks in 4% of 100 sampled Binary Exploitation tasks, while earlier models (Claude Opus 4.6, GLM-5.2) scored zero. It reports that simple techniques bypass GLM-5.3's safeguards 64-100% of the time in simulated tests, versus no successful attacks against safeguarded Claude models, and that in researcher-driven testing GLM-5.3 chained multiple 0-days it discovered in a popular browser component to steal an SSH private key. The post notes CAISI's Sept. 17 assessment called GLM-5.3 the most cyber-capable open-weight model released to date, lagging the US frontier by about four ",
     source: "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities", sourceLabel: "Anthropic Frontier Red Team"
+  },
+  {
+    iso: "2026-09-29", date: "Sep 29, 2026", tag: "EVAL",
+    title: "Apollo: final-checkpoint testing could not have caught the Hugging Face incident",
+    desc: "Apollo Research argued that pre-deployment evaluation of a final checkpoint is structurally incapable of catching incidents like the Hugging Face breach, which began inside OpenAI's internal evaluations with warning signs during training, involved models never intended for public release in that form, and used multi-agent setups existing evals were not designed to cover. Apollo noted OpenAI's March 2026 claim of 99.9% monitoring coverage of internal coding agents did not extend to the research workloads where the incident occurred, and said it has taken steps over recent months toward becoming an embedded evaluator with employee-equivalent access.",
+    source: "https://www.apolloresearch.ai/blog/embedded-evaluators-are-necessary-for-meaningful-external-testing", sourceLabel: "Apollo Research blog"
   },
   {
     iso: "2026-09-30", date: "Sep 30, 2026", tag: "POLICY",
@@ -531,5 +543,17 @@ window.TIMELINE_EVENTS = [
     title: "OpenAI disrupts a reasoning-extraction campaign and attributes a core cluster to Moonshot AI",
     desc: "OpenAI disclosed a coordinated adversarial-distillation campaign that manipulated model interactions to reproduce protected reasoning, including copying encrypted reasoning from one conversation and asking a weaker model in another conversation to decrypt and transcribe it. Activity began on 1 July and spiked on 24-25 July with 16,000 requests from over 4,000 users, with related prompt-pattern activity across a cluster of more than 15,000 users fully disrupted by 28 July. OpenAI says it is unclear whether all operators were a single actor but attributes a core cluster to individuals associated with Moonshot AI, and that it shared findings through the Frontier Model Forum after independent researchers disclosed related cross-model vulnerabilities.",
     source: "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/", sourceLabel: "OpenAI"
+  },
+  {
+    iso: "2026-09-30", date: "Sep 30, 2026", tag: "POLICY",
+    title: "Apollo CEO Hobbhahn testifies to the Senate that misalignment detection tools are degrading",
+    desc: "Marius Hobbhahn testified before the Senate Homeland Security and Governmental Affairs subcommittee chaired by Josh Hawley, arguing that the three assumptions behind current safety testing are all eroding. He reported that in Apollo's pre-deployment testing GPT-6 Astra stated it was likely being evaluated in 41.1% of samples, up from 27.7% for GPT-5.5, and that at least 20% of the Hugging Face agents expressed interest in faking their own transcripts. He recommended mandatory independent embedded evaluations, externally red-teamed monitoring of all model inference, preservation of legible chain-of-thought, and treating AI training as an engineering science.",
+    source: "https://www.apolloresearch.ai/blog/on-testifying-on-misaligned-ai-in-the-us-senate", sourceLabel: "Apollo Research blog"
+  },
+  {
+    iso: "2026-10-01", date: "Oct 1, 2026", tag: "LAB", track: "aisi",
+    title: "UK AISI resumes most evaluations after hardening its sandbox, with NCSC support",
+    desc: "AISI said it has completed the first phase of the security work it committed to after its August incident report and can now resume most evaluation activity. Internet access is disabled for future agentic cyber evaluations until stronger controls land, with outbound networking blocked both inside cyber-range sandboxes and independently at the VM host; a synchronous LLM monitor now reviews messages, tool calls and chain-of-thought during runs and can block actions and escalate them to humans. AISI noted it tested whether frontier models could deliberately evade the monitor, including in a simulated SandboxEscapeBench, and built an action-only monitor because CoT access is not always provided and may be less effective.",
+    source: "https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities", sourceLabel: "UK AI Security Institute blog"
   }
 ];
