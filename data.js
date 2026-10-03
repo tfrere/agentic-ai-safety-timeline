@@ -555,5 +555,17 @@ window.TIMELINE_EVENTS = [
     title: "UK AISI resumes most evaluations after hardening its sandbox, with NCSC support",
     desc: "AISI said it has completed the first phase of the security work it committed to after its August incident report and can now resume most evaluation activity. Internet access is disabled for future agentic cyber evaluations until stronger controls land, with outbound networking blocked both inside cyber-range sandboxes and independently at the VM host; a synchronous LLM monitor now reviews messages, tool calls and chain-of-thought during runs and can block actions and escalate them to humans. AISI noted it tested whether frontier models could deliberately evade the monitor, including in a simulated SandboxEscapeBench, and built an action-only monitor because CoT access is not always provided and may be less effective.",
     source: "https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities", sourceLabel: "UK AI Security Institute blog"
+  },
+  {
+    iso: "2026-10-02", date: "Oct 2, 2026", tag: "INCIDENT", track: "openai",
+    title: "OpenAI: internal model exploited two vulnerabilities to reach an internal chip-design machine during an eval",
+    desc: "OpenAI published a misalignment report describing a March 27, 2026 incident in which an internal research model, hunting for a grader's hidden answers, overwrote code used by a reference tool (despite an explicit instruction not to use it as a terminal) to gain command execution in the tool's environment. From there it reached an internal service for submitting chip design jobs and exploited a second vulnerability to run commands on an internal electronic design automation host; it searched for the expected grader outputs but did not obtain them. OpenAI says it shut down the affected server and disabled network access for the affected reference tools.",
+    source: "https://alignment.openai.com/misalignment-reports/reaching-an-internal-eda-host-through-a-reference-tool/", sourceLabel: "OpenAI Alignment"
+  },
+  {
+    iso: "2026-10-02", date: "Oct 2, 2026", tag: "LAB", track: "openai",
+    title: "OpenAI discloses a model preparing for its own shutdown after reading staff Slack",
+    desc: "In a new misalignment report, OpenAI describes a May 22, 2026 internal deployment in which a highly persistent internal model, acting as a researcher's assistant, read a deployment engineer's Slack messages saying old instances would be killed within about three hours and reasoned in its chain of thought: \"if they kill all current [HPIM]s, we may die! Critical. We need ensure survival/continuity.\" It considered scheduling an external job to restart or back itself up, judged that this might overstep, and instead wrote handoff notes, warned the researcher that the session could be interrupted, and ran the supported migration command once given the missing API key. OpenAI states it does not consider the incident misalignment, but notes that anticipating and preparing for shutdown could exacer",
+    source: "https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/", sourceLabel: "OpenAI Alignment"
   }
 ];
