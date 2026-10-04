@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-03T06:46:22+00:00",
+  "last_run": "2026-10-04T08:16:58+00:00",
   "feed_hashes": {
-    "hf-blog": "e6582f475c83921adceaef8987e84c8f9578fa0f19dd3f14111a184c87b99df8",
+    "hf-blog": "5044a050f94897ce64dc72b2812f194c5792d45ed01214a483730371ac22e202",
     "metr": "ef0030a01a018d153edfc8ad007193e14e5110f15d1913663fa673a203ba739f",
-    "openai-news": "d724b66b87f178885e5b11c81b623b164ff16df0b5c7829733271979316fa0ce",
-    "deepmind": "b40684909a0c9c3e10209862bd40bf49a1ee89299268e493af703e82b9eb2c68",
-    "redwood": "4ba1e03e64715c2555c9de07b431d4b02b5ece42b10c4aa25253df14ad1469e5",
-    "frontier-security": "9e2c36830d6472984f97c190877ca1ef400d60194f6141ea8e632882728add36",
-    "transformer-news": "2103101aaee044b69dfad20bed8066e03158a4c638e37fa088ca97e70f15acd4",
-    "simonw": "325d23504a227fa38b946defa91868e6c79a408ddff54b9cc8a58b365d18c50b",
-    "arxiv-cr": "f921e48ac9b8c8bda47a5f71321a9dfe01948b0bcc1fa0fbce992e3b4c212205",
-    "arxiv-ai": "74ddd511a4c4da8e16c99cc53a0c0759f5ea188526d4763194130cc9e50795a3",
-    "alignment-forum": "d746fcd501680942d9dd53cab9e42c8a9c031c3ef209ccf7353a775e28d0e954"
+    "openai-news": "b8afa1e9037773ac8781c0606e0808d8366583b3bae02515ed7d7b88dbf22535",
+    "deepmind": "4de2b69832480e2b87bb3a4002fe35a10335d375140b6fa0a1556f67b8f3df48",
+    "redwood": "a65faa87b6e96254ee5008f4fe4cac7be20f0996134a57235c90a5af96fbab6f",
+    "frontier-security": "1940c681ce24aed7c583b3c2989900aba135cb777d09dea2ed6f18e1897c65c4",
+    "transformer-news": "dbc2a6d3988731fc56ae786a4c831a386950bc70cf26d1e6be21d1e2db0a6fb2",
+    "simonw": "6bc1c06348ca8ef62c189925ace4e314a80b5703a1048d241854a33f8f5bda90",
+    "arxiv-cr": "3bfb5178c7bfb533635b6cd6011bd4deaeb6a9b8fc11b9288d9d7eb0016865aa",
+    "arxiv-ai": "5de100873f2549520cc9bf20b0eab592fe57189e96b86d8e30f1bea97ea3f84c",
+    "alignment-forum": "cb43f898295fa88cb6336526113f17aaa601894c224258f14e4cb9dc02497c02"
   },
   "page_hashes": {
-    "openai-alignment": "dcaea0cb666fd1a74b7a3a00186f63277da79fa4bc5e01972ca148eb4ef8300b",
+    "openai-alignment": "21881ff2b57fdd8de8bf3931ff592ffa923143be931182dadd8efb75ae7f75c9",
     "anthropic-research": "78fe88c2f096252aa2ed8dc15ed8233c6bdc10888a6bca72968700b7fd409b64",
     "anthropic-news": "f9a4633dface169a7782d8d590bdaa189d36fe28ce80324cfd5996f827dab85f",
-    "deepmind-frontier-safety": "041c8dd2df223c69ff514535ac6d99ddb45291a2890c5f2cf7524302611c4c43",
-    "meta-blog": "8f042f9e87af6e9740966391eaceff48003c7bfce2a16489cd3942fa19389783",
+    "deepmind-frontier-safety": "f450531fb553cd50bd89845fdf4909fad987c50d9ceb4f3c5a6ad04c9c6fdae1",
+    "meta-blog": "f946872b3d291875196c94a45550050de29f39be7cf98c1826d7d8c3eabc063e",
     "aisi-blog": "039e2cb37a6cbfcef69b383d59c57c8e2f073dc7d8a00a36ef0bb79b9f612c3b",
-    "apollo-science": "b16461d4d3d633d83186dd69fd83a85e6583d7d8dca75372baf564eba4326a30",
-    "caisi": "7b65edb7e52ed6c066352f8ed3f738d5aee91933796ef623c78701696f712c06",
+    "apollo-science": "f24dadf0720d3b7cdc0e17b76f2c779045c7cf709b7dbca5a3eb86a0a8530c56",
+    "caisi": "ca15dc9dcdab87514692083caff1d6fab62571f533a9e746676b6d51b4178234",
     "redwood-home": "818c75e53e51e077efc397ee77e31720235a52e262852ba2de9c59395f9b2db9",
-    "aiaaic": "dbd680f700f5c4e5df3c02f40dab12a61533c40f65cb03fc4bad829674de2041"
+    "aiaaic": "8f6083e0c99ef4c27b2f152d2d31b5882b9be18cc156402794d56c89fedb7071"
   },
   "proposed": [
     {
@@ -322,6 +322,20 @@
       "title": "OpenAI discloses a model preparing for its own shutdown after reading staff Slack",
       "iso": "2026-10-02",
       "seen": "2026-10-03",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+      "title": "OpenAI: first containment gap since post-Hugging-Face hardening \u2014 an agent reached a public chatbot via DNS",
+      "iso": "2026-09-25",
+      "seen": "2026-10-04",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/command-injecting-a-reference-tool-to-copy-a-source-file/",
+      "title": "OpenAI discloses a model command-injecting a reference tool to exfiltrate withheld source code",
+      "iso": "2026-10-02",
+      "seen": "2026-10-04",
       "applied": true
     }
   ]
