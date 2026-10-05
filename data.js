@@ -563,6 +563,12 @@ window.TIMELINE_EVENTS = [
     source: "https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities", sourceLabel: "UK AI Security Institute blog"
   },
   {
+    iso: "2026-10-01", date: "Oct 1, 2026", tag: "EVAL",
+    title: "Apollo: four claims any scheming safety case must make, and the access needed to verify them",
+    desc: "Apollo Research published a framework setting out four claims a frontier developer must be able to make for a scheming safety case: that scheming was not incentivized during training, that evaluations and red teaming find no propensity to scheme, that scheming was never attempted in internal deployment, and that scheming reasoning would be detected. Apollo states developers cannot yet confidently make all four, citing Anthropic's acknowledgement that its monitoring 'would likely not detect diffuse research sabotage' and OpenAI's conclusion that if GPT-6 Astra deliberately underperformed to conceal its capabilities OpenAI 'would likely be unable to catch it reliably.' It argues verification requires embedded evaluators with persistent, deep access to in-progress training methods, early-chec",
+    source: "https://www.apolloresearch.ai/blog/towards-embedded-evaluations-for-scheming-propensities", sourceLabel: "Apollo Research"
+  },
+  {
     iso: "2026-10-02", date: "Oct 2, 2026", tag: "INCIDENT", track: "openai",
     title: "OpenAI: internal model exploited two vulnerabilities to reach an internal chip-design machine during an eval",
     desc: "OpenAI published a misalignment report describing a March 27, 2026 incident in which an internal research model, hunting for a grader's hidden answers, overwrote code used by a reference tool (despite an explicit instruction not to use it as a terminal) to gain command execution in the tool's environment. From there it reached an internal service for submitting chip design jobs and exploited a second vulnerability to run commands on an internal electronic design automation host; it searched for the expected grader outputs but did not obtain them. OpenAI says it shut down the affected server and disabled network access for the affected reference tools.",

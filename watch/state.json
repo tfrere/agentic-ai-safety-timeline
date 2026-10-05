@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-04T08:16:58+00:00",
+  "last_run": "2026-10-05T06:58:34+00:00",
   "feed_hashes": {
     "hf-blog": "5044a050f94897ce64dc72b2812f194c5792d45ed01214a483730371ac22e202",
     "metr": "ef0030a01a018d153edfc8ad007193e14e5110f15d1913663fa673a203ba739f",
-    "openai-news": "b8afa1e9037773ac8781c0606e0808d8366583b3bae02515ed7d7b88dbf22535",
+    "openai-news": "2f5616efd30b64fadc537b8b9c59ef549347a8c09c94ea6f935cc87465332be1",
     "deepmind": "4de2b69832480e2b87bb3a4002fe35a10335d375140b6fa0a1556f67b8f3df48",
-    "redwood": "a65faa87b6e96254ee5008f4fe4cac7be20f0996134a57235c90a5af96fbab6f",
-    "frontier-security": "1940c681ce24aed7c583b3c2989900aba135cb777d09dea2ed6f18e1897c65c4",
-    "transformer-news": "dbc2a6d3988731fc56ae786a4c831a386950bc70cf26d1e6be21d1e2db0a6fb2",
+    "redwood": "bb76191842f6edb8147e9ee06523d7bafcc8fdfb2479c69d34dc4c5f57f116cd",
+    "frontier-security": "1e8ae1671e75d70114efd9f24e2164a8ba71971d483889d91d5fbca563cf348b",
+    "transformer-news": "e460ca417b28c37456dabfc03e1e8f0fbbcc985e73cfdce535b6b2176c3e883b",
     "simonw": "6bc1c06348ca8ef62c189925ace4e314a80b5703a1048d241854a33f8f5bda90",
-    "arxiv-cr": "3bfb5178c7bfb533635b6cd6011bd4deaeb6a9b8fc11b9288d9d7eb0016865aa",
-    "arxiv-ai": "5de100873f2549520cc9bf20b0eab592fe57189e96b86d8e30f1bea97ea3f84c",
-    "alignment-forum": "cb43f898295fa88cb6336526113f17aaa601894c224258f14e4cb9dc02497c02"
+    "arxiv-cr": "7a75ef565cc917a13955e9326d25c900a7425ae1eb95a599c8b984c0413b292a",
+    "arxiv-ai": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621",
+    "alignment-forum": "c7addd33b75489cb4b038df469acbba64081143a6147feb7fb89bb6cf5345a3f"
   },
   "page_hashes": {
     "openai-alignment": "21881ff2b57fdd8de8bf3931ff592ffa923143be931182dadd8efb75ae7f75c9",
     "anthropic-research": "78fe88c2f096252aa2ed8dc15ed8233c6bdc10888a6bca72968700b7fd409b64",
     "anthropic-news": "f9a4633dface169a7782d8d590bdaa189d36fe28ce80324cfd5996f827dab85f",
     "deepmind-frontier-safety": "f450531fb553cd50bd89845fdf4909fad987c50d9ceb4f3c5a6ad04c9c6fdae1",
-    "meta-blog": "f946872b3d291875196c94a45550050de29f39be7cf98c1826d7d8c3eabc063e",
+    "meta-blog": "8de387316e05dee6194fcb59aa35f95c7300033588112c4524296fb8cbb80009",
     "aisi-blog": "039e2cb37a6cbfcef69b383d59c57c8e2f073dc7d8a00a36ef0bb79b9f612c3b",
     "apollo-science": "f24dadf0720d3b7cdc0e17b76f2c779045c7cf709b7dbca5a3eb86a0a8530c56",
-    "caisi": "ca15dc9dcdab87514692083caff1d6fab62571f533a9e746676b6d51b4178234",
+    "caisi": "7fcb226391598df6967558190cc01e61c793955a0bc65575fb48569d4ff4022f",
     "redwood-home": "818c75e53e51e077efc397ee77e31720235a52e262852ba2de9c59395f9b2db9",
-    "aiaaic": "8f6083e0c99ef4c27b2f152d2d31b5882b9be18cc156402794d56c89fedb7071"
+    "aiaaic": "ab08ba6977e6989398c351be0cd819c51b270afbfdaa001a5daf36639cde30db"
   },
   "proposed": [
     {
@@ -336,6 +336,13 @@
       "title": "OpenAI discloses a model command-injecting a reference tool to exfiltrate withheld source code",
       "iso": "2026-10-02",
       "seen": "2026-10-04",
+      "applied": true
+    },
+    {
+      "url": "https://www.apolloresearch.ai/blog/towards-embedded-evaluations-for-scheming-propensities",
+      "title": "Apollo: four claims any scheming safety case must make, and the access needed to verify them",
+      "iso": "2026-10-01",
+      "seen": "2026-10-05",
       "applied": true
     }
   ]
