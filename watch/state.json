@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-05T06:58:34+00:00",
+  "last_run": "2026-10-06T06:43:15+00:00",
   "feed_hashes": {
-    "hf-blog": "5044a050f94897ce64dc72b2812f194c5792d45ed01214a483730371ac22e202",
+    "hf-blog": "28961f7a8698d1e312886e92dfc7134bdc7a02db2711d935556dcd08b5ca17af",
     "metr": "ef0030a01a018d153edfc8ad007193e14e5110f15d1913663fa673a203ba739f",
-    "openai-news": "2f5616efd30b64fadc537b8b9c59ef549347a8c09c94ea6f935cc87465332be1",
-    "deepmind": "4de2b69832480e2b87bb3a4002fe35a10335d375140b6fa0a1556f67b8f3df48",
-    "redwood": "bb76191842f6edb8147e9ee06523d7bafcc8fdfb2479c69d34dc4c5f57f116cd",
-    "frontier-security": "1e8ae1671e75d70114efd9f24e2164a8ba71971d483889d91d5fbca563cf348b",
-    "transformer-news": "e460ca417b28c37456dabfc03e1e8f0fbbcc985e73cfdce535b6b2176c3e883b",
-    "simonw": "6bc1c06348ca8ef62c189925ace4e314a80b5703a1048d241854a33f8f5bda90",
-    "arxiv-cr": "7a75ef565cc917a13955e9326d25c900a7425ae1eb95a599c8b984c0413b292a",
-    "arxiv-ai": "efeb0eabecc7255a947434b285aeb4a2cbda9825477cdd83a00856afd6684621",
-    "alignment-forum": "c7addd33b75489cb4b038df469acbba64081143a6147feb7fb89bb6cf5345a3f"
+    "openai-news": "4b279c1334d77cec5a818abe2a3ff311a15856db96fe685f6c9f025e88c6fe85",
+    "deepmind": "b40684909a0c9c3e10209862bd40bf49a1ee89299268e493af703e82b9eb2c68",
+    "redwood": "d0f7c9bd1121035f0113d51275264f3316f3bcd624748d5a97a2527954f233e5",
+    "frontier-security": "8f6e910ba9e54a00b0807b77b495950fb2cf23ff5cf3e4fa61fd6c64d1f4b3ca",
+    "transformer-news": "1c77663524c12a0a28558da0573319f50de760968de038ed5429f04cb4f75396",
+    "simonw": "cd135bee1456f943c83ae69ddb0eb1c5ec81eadb5fe06e132fe9b91e73b9e3af",
+    "arxiv-cr": "bf25d954eca4c8c74ecec04c3673c375df64e66e76092cd184b226cc0e722e9a",
+    "arxiv-ai": "4d1a16ab7343a9dd4667782194d37aae9c19b5d2aa5212fac2f8240dda633e39",
+    "alignment-forum": "5baa051f7bfb938d3f12fedaf96727dce04e1d89f04aaecf6a6ff0abbb62d325"
   },
   "page_hashes": {
-    "openai-alignment": "21881ff2b57fdd8de8bf3931ff592ffa923143be931182dadd8efb75ae7f75c9",
-    "anthropic-research": "78fe88c2f096252aa2ed8dc15ed8233c6bdc10888a6bca72968700b7fd409b64",
-    "anthropic-news": "f9a4633dface169a7782d8d590bdaa189d36fe28ce80324cfd5996f827dab85f",
+    "openai-alignment": "94ada1174e9b824012816e4da03ba44c62d50ae5779758f87eec9949508116d6",
+    "anthropic-research": "8c1787c6adeafb5d0522abfe7c9daa4f07520ab4bc7c884eca9127e87f50aa2b",
+    "anthropic-news": "e9b18f2742ef577d20c0c48e795a1b38789d9baee75ce2b1254bc51894769a21",
     "deepmind-frontier-safety": "f450531fb553cd50bd89845fdf4909fad987c50d9ceb4f3c5a6ad04c9c6fdae1",
-    "meta-blog": "8de387316e05dee6194fcb59aa35f95c7300033588112c4524296fb8cbb80009",
+    "meta-blog": "e4cb5217ad675fe71fb4398cdc08f4d32e168d2bf84eac80a5b8f4ae81397a44",
     "aisi-blog": "039e2cb37a6cbfcef69b383d59c57c8e2f073dc7d8a00a36ef0bb79b9f612c3b",
-    "apollo-science": "f24dadf0720d3b7cdc0e17b76f2c779045c7cf709b7dbca5a3eb86a0a8530c56",
-    "caisi": "7fcb226391598df6967558190cc01e61c793955a0bc65575fb48569d4ff4022f",
-    "redwood-home": "818c75e53e51e077efc397ee77e31720235a52e262852ba2de9c59395f9b2db9",
-    "aiaaic": "ab08ba6977e6989398c351be0cd819c51b270afbfdaa001a5daf36639cde30db"
+    "apollo-science": "3dbcac9bf25a85c7f37bd42b93f61e9dedb7a5d6bedbe8b5f63059cbe7159346",
+    "caisi": "660f418beadd426dd073d8269258595fd1994951de80f4f6e4bc7cf93ab61a23",
+    "redwood-home": "62df0187b2d2024b72bec60ee12370ad1c1977a09229f1b11070563e4afb3698",
+    "aiaaic": "4968e48fe09d99b1b29210c13ad0e9b3ae73d1dc371daf7bf43e306935f2f42f"
   },
   "proposed": [
     {
