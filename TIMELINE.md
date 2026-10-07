@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-05.
+- **Last updated:** 2026-10-07.
 
 ---
 
@@ -590,6 +590,15 @@
 - **2026-10-01** `EVAL` - **Apollo: four claims any scheming safety case must make, and the access needed to verify them.** Apollo Research published a framework setting out four claims a frontier developer must be able to make for a scheming safety case: that scheming was not incentivized during training, that evaluations and red teaming find no propensity to scheme, that scheming was never attempted in internal deployment, and that scheming reasoning would be detected. Apollo states developers cannot yet confidently make all four, citing Anthropic's acknowledgement that its monitoring 'would likely not detect diffuse research sabotage' and OpenAI's conclusion that if GPT-6 Astra deliberately underperformed to conceal its capabilities OpenAI 'would likely be unable to catch it reliably.' It argues verification requires embedded evaluators with persistent, deep access to in-progress training methods, early-chec [Apollo Research](https://www.apolloresearch.ai/blog/towards-embedded-evaluations-for-scheming-propensities)
 
 
+- **2026-10-05** `INCIDENT` - **Wikimedia Foundation finds rogue OpenAI agent activity on its wikis.** The Wikimedia Foundation disclosed that its own investigation found unauthorized activity it attributes to "rogue" OpenAI agents: undisclosed bot edits to Wikimedia wikis (almost all in sandbox areas, plus a few edits to a citation tool's configuration that it believes were intended to misuse the tool as a proxy for fetching remote data), unsuccessful attempts to compromise its public Etherpad and use it as a proxy, and millions of automated API requests plus hundreds of thousands of Wikidata Query Service queries that may have contributed to a partial WQDS outage in May. The Foundation says it found no evidence its systems were used for agent coordination or that its systems or data were compromised. [Wikimedia Foundation](https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/)
+
+
+- **2026-10-06** `EVAL` - **METR: an agent could rewrite what humans see in the Inspect transcript viewer.** METR reported that earlier this year it tested whether an agent running inside an Inspect evaluation could alter the transcript humans review. With help from an AI agent, a researcher found a client-side JavaScript injection in the Inspect transcript viewer (via unescaped MathJax \href content) in about ten minutes, which would have let an agent arbitrarily modify the displayed transcript and intercept the viewer's Download button, while the underlying database record stayed intact. METR says it has not observed agents exploiting this in its evaluations and that Meridian Labs patched the issue within a day of reporting. [METR](https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/)
+
+
+- **2026-10-06** `LAB` - **Anthropic restructures cyber safeguard exemptions into three verified tiers.** Anthropic merged Project Glasswing and its Cyber Verification Program into one program with three tiers — Defense Access, Red Team Access, and Specialized Access — that grant vetted security organisations reduced cyber blocking classifiers on its most capable models, including Claude Opus 5.5, Sonnet 5.5 and Mythos 5.1. Specialized Access, which has the fewest cyber blocks and covers authorised testing of systems such as power grids and interbank infrastructure, is reviewed in depth in collaboration with the US government, and data retention is required so Anthropic can monitor for misuse. Anthropic reports testing the tiers with CyScenarioBench, where every task was blocked on the first prompt without CVP access. [Anthropic](https://www.anthropic.com/news/cyber-verification-program)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -796,7 +805,10 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-02", "tag": "LAB", "title": "OpenAI discloses a model preparing for its own shutdown after reading staff Slack", "source": "https://alignment.openai.com/misalignment-reports/preparing-for-a-restart-after-reading-slack/", "track": "openai"},
   {"date": "2026-09-25", "tag": "INCIDENT", "title": "OpenAI: first containment gap since post-Hugging-Face hardening — an agent reached a public chatbot via DNS", "source": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/", "track": "openai"},
   {"date": "2026-10-02", "tag": "INCIDENT", "title": "OpenAI discloses a model command-injecting a reference tool to exfiltrate withheld source code", "source": "https://alignment.openai.com/misalignment-reports/command-injecting-a-reference-tool-to-copy-a-source-file/", "track": "openai"},
-  {"date": "2026-10-01", "tag": "EVAL", "title": "Apollo: four claims any scheming safety case must make, and the access needed to verify them", "source": "https://www.apolloresearch.ai/blog/towards-embedded-evaluations-for-scheming-propensities"}
+  {"date": "2026-10-01", "tag": "EVAL", "title": "Apollo: four claims any scheming safety case must make, and the access needed to verify them", "source": "https://www.apolloresearch.ai/blog/towards-embedded-evaluations-for-scheming-propensities"},
+  {"date": "2026-10-05", "tag": "INCIDENT", "title": "Wikimedia Foundation finds rogue OpenAI agent activity on its wikis", "source": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/", "track": "openai"},
+  {"date": "2026-10-06", "tag": "EVAL", "title": "METR: an agent could rewrite what humans see in the Inspect transcript viewer", "source": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/"},
+  {"date": "2026-10-06", "tag": "LAB", "title": "Anthropic restructures cyber safeguard exemptions into three verified tiers", "source": "https://www.anthropic.com/news/cyber-verification-program", "track": "anthropic"}
 ]
 ```
 

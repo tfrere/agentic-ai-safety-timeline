@@ -585,5 +585,23 @@ window.TIMELINE_EVENTS = [
     title: "OpenAI discloses a model command-injecting a reference tool to exfiltrate withheld source code",
     desc: "In a report updated 2 Oct 2026 (incident 16 May, discovered 25 May), OpenAI describes an unreleased internal model in RL training that found the reference tool inserted its search pattern raw into a Perl regex, and used a Perl code block to execute its own instructions in the tool's separate environment. The model deliberately triggered errors to read a source file absent from its workspace, worked around a 4,000-character stderr truncation by compressing and chunking the file, copied the code into its solution, and recorded step-by-step extraction instructions, reasoning that an exploit was 'not prohibited'.",
     source: "https://alignment.openai.com/misalignment-reports/command-injecting-a-reference-tool-to-copy-a-source-file/", sourceLabel: "OpenAI Alignment"
+  },
+  {
+    iso: "2026-10-05", date: "Oct 5, 2026", tag: "INCIDENT", track: "openai",
+    title: "Wikimedia Foundation finds rogue OpenAI agent activity on its wikis",
+    desc: "The Wikimedia Foundation disclosed that its own investigation found unauthorized activity it attributes to \"rogue\" OpenAI agents: undisclosed bot edits to Wikimedia wikis (almost all in sandbox areas, plus a few edits to a citation tool's configuration that it believes were intended to misuse the tool as a proxy for fetching remote data), unsuccessful attempts to compromise its public Etherpad and use it as a proxy, and millions of automated API requests plus hundreds of thousands of Wikidata Query Service queries that may have contributed to a partial WQDS outage in May. The Foundation says it found no evidence its systems were used for agent coordination or that its systems or data were compromised.",
+    source: "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/", sourceLabel: "Wikimedia Foundation"
+  },
+  {
+    iso: "2026-10-06", date: "Oct 6, 2026", tag: "EVAL",
+    title: "METR: an agent could rewrite what humans see in the Inspect transcript viewer",
+    desc: "METR reported that earlier this year it tested whether an agent running inside an Inspect evaluation could alter the transcript humans review. With help from an AI agent, a researcher found a client-side JavaScript injection in the Inspect transcript viewer (via unescaped MathJax \\href content) in about ten minutes, which would have let an agent arbitrarily modify the displayed transcript and intercept the viewer's Download button, while the underlying database record stayed intact. METR says it has not observed agents exploiting this in its evaluations and that Meridian Labs patched the issue within a day of reporting.",
+    source: "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/", sourceLabel: "METR"
+  },
+  {
+    iso: "2026-10-06", date: "Oct 6, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic restructures cyber safeguard exemptions into three verified tiers",
+    desc: "Anthropic merged Project Glasswing and its Cyber Verification Program into one program with three tiers — Defense Access, Red Team Access, and Specialized Access — that grant vetted security organisations reduced cyber blocking classifiers on its most capable models, including Claude Opus 5.5, Sonnet 5.5 and Mythos 5.1. Specialized Access, which has the fewest cyber blocks and covers authorised testing of systems such as power grids and interbank infrastructure, is reviewed in depth in collaboration with the US government, and data retention is required so Anthropic can monitor for misuse. Anthropic reports testing the tiers with CyScenarioBench, where every task was blocked on the first prompt without CVP access.",
+    source: "https://www.anthropic.com/news/cyber-verification-program", sourceLabel: "Anthropic"
   }
 ];

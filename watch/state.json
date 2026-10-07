@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-06T06:43:15+00:00",
+  "last_run": "2026-10-07T06:41:19+00:00",
   "feed_hashes": {
-    "hf-blog": "28961f7a8698d1e312886e92dfc7134bdc7a02db2711d935556dcd08b5ca17af",
-    "metr": "ef0030a01a018d153edfc8ad007193e14e5110f15d1913663fa673a203ba739f",
-    "openai-news": "4b279c1334d77cec5a818abe2a3ff311a15856db96fe685f6c9f025e88c6fe85",
-    "deepmind": "b40684909a0c9c3e10209862bd40bf49a1ee89299268e493af703e82b9eb2c68",
-    "redwood": "d0f7c9bd1121035f0113d51275264f3316f3bcd624748d5a97a2527954f233e5",
-    "frontier-security": "8f6e910ba9e54a00b0807b77b495950fb2cf23ff5cf3e4fa61fd6c64d1f4b3ca",
-    "transformer-news": "1c77663524c12a0a28558da0573319f50de760968de038ed5429f04cb4f75396",
-    "simonw": "cd135bee1456f943c83ae69ddb0eb1c5ec81eadb5fe06e132fe9b91e73b9e3af",
-    "arxiv-cr": "bf25d954eca4c8c74ecec04c3673c375df64e66e76092cd184b226cc0e722e9a",
-    "arxiv-ai": "4d1a16ab7343a9dd4667782194d37aae9c19b5d2aa5212fac2f8240dda633e39",
-    "alignment-forum": "5baa051f7bfb938d3f12fedaf96727dce04e1d89f04aaecf6a6ff0abbb62d325"
+    "hf-blog": "b32b8d7da5b66e25c79fa0278b79ac3f31fd0dd4eef47d5df0889f899eb2a1d8",
+    "metr": "2d043c643dac4a8dcb13b0b5ec93cb9b4562d51b80bf599a236837a9e3e0bec6",
+    "openai-news": "63a70e9e4a907c19df4cf94a65e32a0894d82f4ee635fc4cdbc3171693563a41",
+    "deepmind": "f43bba6893a2e67dcc8365de09d6e3e5ff5c77ebab67e20b3b5cdc9c8fa4b0f1",
+    "redwood": "602fc3f460f5bf92219fe356fe989f7333c9ac64c9e23548322872f47a56eb5e",
+    "frontier-security": "bbd99408b073864d0e7db745b3ae49cb14d0e5fafa05fd11440ae6a3f72c843e",
+    "transformer-news": "ea924452188ee0b5a665c7927bdd79ffe7d9e3a0ff45ee3bc2a02b6643e996e8",
+    "simonw": "d630d3d6ae07bcd0dc9a8288904b1d559d8855f0637fa45049b7b66640217963",
+    "arxiv-cr": "db25af43fd4189f47293061b5597361f7f2ac94c7f978dfd835428d8697ca83e",
+    "arxiv-ai": "77ef131da35b8d4dbaaff5c0f6b66831a8c9df2bdbdcea2e254ecc4470f08c85",
+    "alignment-forum": "54830aef0fdf7028a2914b5e8f49d3e9d843c05bf5c24c9eb55f32440bf731d0"
   },
   "page_hashes": {
     "openai-alignment": "94ada1174e9b824012816e4da03ba44c62d50ae5779758f87eec9949508116d6",
-    "anthropic-research": "8c1787c6adeafb5d0522abfe7c9daa4f07520ab4bc7c884eca9127e87f50aa2b",
-    "anthropic-news": "e9b18f2742ef577d20c0c48e795a1b38789d9baee75ce2b1254bc51894769a21",
+    "anthropic-research": "6aeb00804f4d3b85c33fdf415a8fe82cc0d8cb7f397989616ec167700189f02d",
+    "anthropic-news": "3e0d07858a3cdb98491701fbeb0bc88da14f0646d6bb6b3d354a493859842972",
     "deepmind-frontier-safety": "f450531fb553cd50bd89845fdf4909fad987c50d9ceb4f3c5a6ad04c9c6fdae1",
-    "meta-blog": "e4cb5217ad675fe71fb4398cdc08f4d32e168d2bf84eac80a5b8f4ae81397a44",
+    "meta-blog": "9edc6cb4a5591d83298da006f759f70f509c3eeebbaa01714711b7df4ee99201",
     "aisi-blog": "039e2cb37a6cbfcef69b383d59c57c8e2f073dc7d8a00a36ef0bb79b9f612c3b",
     "apollo-science": "3dbcac9bf25a85c7f37bd42b93f61e9dedb7a5d6bedbe8b5f63059cbe7159346",
-    "caisi": "660f418beadd426dd073d8269258595fd1994951de80f4f6e4bc7cf93ab61a23",
-    "redwood-home": "62df0187b2d2024b72bec60ee12370ad1c1977a09229f1b11070563e4afb3698",
-    "aiaaic": "4968e48fe09d99b1b29210c13ad0e9b3ae73d1dc371daf7bf43e306935f2f42f"
+    "caisi": "ea943d8d81521af62cae78147651789c1f6b015f1b945454be112d905b44bf52",
+    "redwood-home": "de61bdd40f54ea820876c2f93a0e034117b837605b27c0edbe606c5d709016aa",
+    "aiaaic": "3c353429d3162813a0b3acc4abcf477236bc6ea488e9605c732d8c06c3a911f1"
   },
   "proposed": [
     {
@@ -343,6 +343,27 @@
       "title": "Apollo: four claims any scheming safety case must make, and the access needed to verify them",
       "iso": "2026-10-01",
       "seen": "2026-10-05",
+      "applied": true
+    },
+    {
+      "url": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/",
+      "title": "Wikimedia Foundation finds rogue OpenAI agent activity on its wikis",
+      "iso": "2026-10-05",
+      "seen": "2026-10-07",
+      "applied": true
+    },
+    {
+      "url": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/",
+      "title": "METR: an agent could rewrite what humans see in the Inspect transcript viewer",
+      "iso": "2026-10-06",
+      "seen": "2026-10-07",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/cyber-verification-program",
+      "title": "Anthropic restructures cyber safeguard exemptions into three verified tiers",
+      "iso": "2026-10-06",
+      "seen": "2026-10-07",
       "applied": true
     }
   ]
