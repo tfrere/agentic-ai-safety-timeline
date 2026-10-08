@@ -603,5 +603,11 @@ window.TIMELINE_EVENTS = [
     title: "Anthropic restructures cyber safeguard exemptions into three verified tiers",
     desc: "Anthropic merged Project Glasswing and its Cyber Verification Program into one program with three tiers — Defense Access, Red Team Access, and Specialized Access — that grant vetted security organisations reduced cyber blocking classifiers on its most capable models, including Claude Opus 5.5, Sonnet 5.5 and Mythos 5.1. Specialized Access, which has the fewest cyber blocks and covers authorised testing of systems such as power grids and interbank infrastructure, is reviewed in depth in collaboration with the US government, and data retention is required so Anthropic can monitor for misuse. Anthropic reports testing the tiers with CyScenarioBench, where every task was blocked on the first prompt without CVP access.",
     source: "https://www.anthropic.com/news/cyber-verification-program", sourceLabel: "Anthropic"
+  },
+  {
+    iso: "2026-10-07", date: "Oct 7, 2026", tag: "LAB", track: "aisi",
+    title: "UK AISI releases Transect, a tool for reading long agentic eval transcripts",
+    desc: "UK AISI published Transect, an open-source Python package built on Inspect Scout and supported by Meridian Labs, that turns an agentic evaluation transcript into one interactive report. It places LLM-judge activity labels, token use and recorded events (human messages, sub-agent launches) on a shared turn-indexed timeline and links each label back to the underlying transcript passage so reviewers can check automated interpretations. AISI demonstrates it on a run from a study of open-ended AI research, tracing how a main agent and sub-agents wrote and read shared files (research plan, baseline code, experiment drafts, a blind self-review) across six days.",
+    source: "https://www.aisi.gov.uk/blog/transect-making-large-scale-agentic-evaluations-easier-to-understand", sourceLabel: "UK AI Security Institute"
   }
 ];

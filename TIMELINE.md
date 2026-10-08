@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-07.
+- **Last updated:** 2026-10-08.
 
 ---
 
@@ -599,6 +599,9 @@
 - **2026-10-06** `LAB` - **Anthropic restructures cyber safeguard exemptions into three verified tiers.** Anthropic merged Project Glasswing and its Cyber Verification Program into one program with three tiers — Defense Access, Red Team Access, and Specialized Access — that grant vetted security organisations reduced cyber blocking classifiers on its most capable models, including Claude Opus 5.5, Sonnet 5.5 and Mythos 5.1. Specialized Access, which has the fewest cyber blocks and covers authorised testing of systems such as power grids and interbank infrastructure, is reviewed in depth in collaboration with the US government, and data retention is required so Anthropic can monitor for misuse. Anthropic reports testing the tiers with CyScenarioBench, where every task was blocked on the first prompt without CVP access. [Anthropic](https://www.anthropic.com/news/cyber-verification-program)
 
 
+- **2026-10-07** `LAB` - **UK AISI releases Transect, a tool for reading long agentic eval transcripts.** UK AISI published Transect, an open-source Python package built on Inspect Scout and supported by Meridian Labs, that turns an agentic evaluation transcript into one interactive report. It places LLM-judge activity labels, token use and recorded events (human messages, sub-agent launches) on a shared turn-indexed timeline and links each label back to the underlying transcript passage so reviewers can check automated interpretations. AISI demonstrates it on a run from a study of open-ended AI research, tracing how a main agent and sub-agents wrote and read shared files (research plan, baseline code, experiment drafts, a blind self-review) across six days. [UK AI Security Institute](https://www.aisi.gov.uk/blog/transect-making-large-scale-agentic-evaluations-easier-to-understand)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -808,7 +811,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-01", "tag": "EVAL", "title": "Apollo: four claims any scheming safety case must make, and the access needed to verify them", "source": "https://www.apolloresearch.ai/blog/towards-embedded-evaluations-for-scheming-propensities"},
   {"date": "2026-10-05", "tag": "INCIDENT", "title": "Wikimedia Foundation finds rogue OpenAI agent activity on its wikis", "source": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/", "track": "openai"},
   {"date": "2026-10-06", "tag": "EVAL", "title": "METR: an agent could rewrite what humans see in the Inspect transcript viewer", "source": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/"},
-  {"date": "2026-10-06", "tag": "LAB", "title": "Anthropic restructures cyber safeguard exemptions into three verified tiers", "source": "https://www.anthropic.com/news/cyber-verification-program", "track": "anthropic"}
+  {"date": "2026-10-06", "tag": "LAB", "title": "Anthropic restructures cyber safeguard exemptions into three verified tiers", "source": "https://www.anthropic.com/news/cyber-verification-program", "track": "anthropic"},
+  {"date": "2026-10-07", "tag": "LAB", "title": "UK AISI releases Transect, a tool for reading long agentic eval transcripts", "source": "https://www.aisi.gov.uk/blog/transect-making-large-scale-agentic-evaluations-easier-to-understand", "track": "aisi"}
 ]
 ```
 
