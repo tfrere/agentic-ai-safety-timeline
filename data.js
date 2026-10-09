@@ -609,5 +609,11 @@ window.TIMELINE_EVENTS = [
     title: "UK AISI releases Transect, a tool for reading long agentic eval transcripts",
     desc: "UK AISI published Transect, an open-source Python package built on Inspect Scout and supported by Meridian Labs, that turns an agentic evaluation transcript into one interactive report. It places LLM-judge activity labels, token use and recorded events (human messages, sub-agent launches) on a shared turn-indexed timeline and links each label back to the underlying transcript passage so reviewers can check automated interpretations. AISI demonstrates it on a run from a study of open-ended AI research, tracing how a main agent and sub-agents wrote and read shared files (research plan, baseline code, experiment drafts, a blind self-review) across six days.",
     source: "https://www.aisi.gov.uk/blog/transect-making-large-scale-agentic-evaluations-easier-to-understand", sourceLabel: "UK AI Security Institute"
+  },
+  {
+    iso: "2026-10-08", date: "Oct 8, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic launches OSS Scanner: unreviewed, model-generated vulnerability reports for open source",
+    desc: "Anthropic's Frontier Red Team launched OSS Scanner, an opt-in service that scans enrolled open-source projects with its strongest models (including Claude Mythos) and sends reports whose output is \"fully model-generated, without human review or triage.\" The post says Anthropic has found over 29,000 candidate vulnerabilities in six months of internal scanning but has only manually reviewed and triaged about 6,000, and that it has already sent nearly 5,000 unvalidated reports to maintainers who asked for everything. In a validation round, expert pentesters judged 85 of 97 critical/high findings as meeting Anthropic's disclosure bar, with one false positive. It ships under the new Anthropic Cyber Mission, which also folds Project Glasswing into the expanded Cyber Verification Program.",
+    source: "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source", sourceLabel: "Anthropic Frontier Red Team"
   }
 ];

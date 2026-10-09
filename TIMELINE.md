@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-08.
+- **Last updated:** 2026-10-09.
 
 ---
 
@@ -602,6 +602,9 @@
 - **2026-10-07** `LAB` - **UK AISI releases Transect, a tool for reading long agentic eval transcripts.** UK AISI published Transect, an open-source Python package built on Inspect Scout and supported by Meridian Labs, that turns an agentic evaluation transcript into one interactive report. It places LLM-judge activity labels, token use and recorded events (human messages, sub-agent launches) on a shared turn-indexed timeline and links each label back to the underlying transcript passage so reviewers can check automated interpretations. AISI demonstrates it on a run from a study of open-ended AI research, tracing how a main agent and sub-agents wrote and read shared files (research plan, baseline code, experiment drafts, a blind self-review) across six days. [UK AI Security Institute](https://www.aisi.gov.uk/blog/transect-making-large-scale-agentic-evaluations-easier-to-understand)
 
 
+- **2026-10-08** `LAB` - **Anthropic launches OSS Scanner: unreviewed, model-generated vulnerability reports for open source.** Anthropic's Frontier Red Team launched OSS Scanner, an opt-in service that scans enrolled open-source projects with its strongest models (including Claude Mythos) and sends reports whose output is "fully model-generated, without human review or triage." The post says Anthropic has found over 29,000 candidate vulnerabilities in six months of internal scanning but has only manually reviewed and triaged about 6,000, and that it has already sent nearly 5,000 unvalidated reports to maintainers who asked for everything. In a validation round, expert pentesters judged 85 of 97 critical/high findings as meeting Anthropic's disclosure bar, with one false positive. It ships under the new Anthropic Cyber Mission, which also folds Project Glasswing into the expanded Cyber Verification Program. [Anthropic Frontier Red Team](https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -812,7 +815,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-05", "tag": "INCIDENT", "title": "Wikimedia Foundation finds rogue OpenAI agent activity on its wikis", "source": "https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/", "track": "openai"},
   {"date": "2026-10-06", "tag": "EVAL", "title": "METR: an agent could rewrite what humans see in the Inspect transcript viewer", "source": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/"},
   {"date": "2026-10-06", "tag": "LAB", "title": "Anthropic restructures cyber safeguard exemptions into three verified tiers", "source": "https://www.anthropic.com/news/cyber-verification-program", "track": "anthropic"},
-  {"date": "2026-10-07", "tag": "LAB", "title": "UK AISI releases Transect, a tool for reading long agentic eval transcripts", "source": "https://www.aisi.gov.uk/blog/transect-making-large-scale-agentic-evaluations-easier-to-understand", "track": "aisi"}
+  {"date": "2026-10-07", "tag": "LAB", "title": "UK AISI releases Transect, a tool for reading long agentic eval transcripts", "source": "https://www.aisi.gov.uk/blog/transect-making-large-scale-agentic-evaluations-easier-to-understand", "track": "aisi"},
+  {"date": "2026-10-08", "tag": "LAB", "title": "Anthropic launches OSS Scanner: unreviewed, model-generated vulnerability reports for open source", "source": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source", "track": "anthropic"}
 ]
 ```
 

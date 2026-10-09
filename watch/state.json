@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-08T06:44:41+00:00",
+  "last_run": "2026-10-09T06:43:54+00:00",
   "feed_hashes": {
-    "hf-blog": "1b5f063cfe4030aeee376e8f80f92a7969bc9e98d62e1fd0c5215f1443d76d3c",
-    "metr": "2d043c643dac4a8dcb13b0b5ec93cb9b4562d51b80bf599a236837a9e3e0bec6",
-    "openai-news": "acab7ec4dfdb34b71605ec7e335a3c5f448e9a41334385eb1950cf16601e08bf",
-    "deepmind": "f43bba6893a2e67dcc8365de09d6e3e5ff5c77ebab67e20b3b5cdc9c8fa4b0f1",
-    "redwood": "34eeafb0e6e4b14d2d6b05042693021fec1c2f2f9575fe4ccae435055bac97cf",
-    "frontier-security": "688e847617acd737bae5c665cd13d37457ce6aba195cdb0385705455aff7b7c4",
-    "transformer-news": "437569f1dec537e2d9fb0076c54c30662830a9777c312ba877f97c6f045130ea",
-    "simonw": "5d8929b3406cbcaa5827eeee9cd0caf81d9733541f541121624df80c1d656dde",
-    "arxiv-cr": "eecf309e3a1c49e3c41fea8be40e910849d4cc295c1c63f15bbb7558f8342eaf",
-    "arxiv-ai": "1e6ae007326a420f7f0acd54f4ac8fe89baff9ec342b60cae2c211737115e033",
-    "alignment-forum": "543f1af747ddc3236c8f87f030a4f0c78a8688469b1b27367de392c5dc4cd18c"
+    "hf-blog": "7e5ff26d813a7259059888e49b555ac8bdd15a87d1d1543e8c5b9cb050044a52",
+    "metr": "6ba3400bbc8e46e2b1ea9ef87f7707e82474ee96cf062e9596506ded95e50d2a",
+    "openai-news": "684a85c195a7295af3979bb8c507787ee22dbc71adead5fd13c0a221d3479e8f",
+    "deepmind": "ad3b87a4df7c1940a34b523f1485346a30e726efb32d87e24f0aae1acc8ef3a2",
+    "redwood": "5ad62d6c3ad1950339f887e396955485f7c4ef0496f7d52bc865194d705dd936",
+    "frontier-security": "425df9e9036fbfdc3dd5da03eb86a1bd3d9a69cc0de0f15019cb2da4f50acb56",
+    "transformer-news": "e540b219cf067c31129587f185e9d2555cb6ba4e5f8c560d71ad7e16aae00ec4",
+    "simonw": "7644c566378dbfd4b28b376a84719d19bba5c17e13916cb20ab1c3a422143d96",
+    "arxiv-cr": "80c568d2f7c0ea3fdc490b251d3836ba188be6ea797119b7ed5e7a39e2466937",
+    "arxiv-ai": "ff90b73e9efa92a7127fb0bbdb196b34e787c955ab332153ec805c862331ca67",
+    "alignment-forum": "a6f5d142824e575fa48742042294d4c0e9108bf0a876f41710441492698803aa"
   },
   "page_hashes": {
     "openai-alignment": "94ada1174e9b824012816e4da03ba44c62d50ae5779758f87eec9949508116d6",
-    "anthropic-research": "c1f152a9b3663f2a329ea8ab9d6f0ab80d6937204160b2b4792905efac991c72",
-    "anthropic-news": "0db2d787fef7963dd2ca05548debf6bb779fdcf061aa9ffe1eb16b651b460ab9",
-    "deepmind-frontier-safety": "f450531fb553cd50bd89845fdf4909fad987c50d9ceb4f3c5a6ad04c9c6fdae1",
-    "meta-blog": "06ac28d8d2bba7e2446e0a32289af8cbcc965b00f8ed5debcb8295c10b055724",
-    "aisi-blog": "2da32c4c4637d47dc609ca7ec07a2237781a2082782568426f3fe312e6f218f4",
+    "anthropic-research": "204aa96eca6251200c40b823c653a9a2f7a4b4826ffe8834c1d68622ba99ea5a",
+    "anthropic-news": "fb9bacfafb416c869644a8c00dc823fe1ce07ba95b039f44eda699774b51cc85",
+    "deepmind-frontier-safety": "205703ddd5082d96ce054294f329170c5832e6d866cb4577093c32dbb9d76051",
+    "meta-blog": "eeb1b34b9069e560c5f836a988bd0e6fdaae45b21eb2654e6fd4612a3508b783",
+    "aisi-blog": "57f691e19cd2b23ad362e9455646447c1d252888038ec7e486880ae41d309c0f",
     "apollo-science": "3dbcac9bf25a85c7f37bd42b93f61e9dedb7a5d6bedbe8b5f63059cbe7159346",
-    "caisi": "e0feb3caff75af7d1014a625b1306b20a8305a74aa53bdaa4b84ba5ce135bd0d",
-    "redwood-home": "5e8464f35e9e8d2197168b57f437fc73c8507527b23a2da494e9b453ab759a6d",
-    "aiaaic": "cc8a61c1680e8f374918a21e0ab675fd569001ffac9396129a4cfb36c6ac894b"
+    "caisi": "39cf4cc5256d240b912d80785ac3d25fd0d4ab96b18177a90c940900a3aec742",
+    "redwood-home": "d83751213c7b8bdf2ffbd0f349e341114481328b325def62eb1cb010e99031f1",
+    "aiaaic": "83ace9b65da40c37e18b92e2ac4ca67ae532e71ada8207a84ef9927d24bdb4fc"
   },
   "proposed": [
     {
@@ -371,6 +371,13 @@
       "title": "UK AISI releases Transect, a tool for reading long agentic eval transcripts",
       "iso": "2026-10-07",
       "seen": "2026-10-08",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+      "title": "Anthropic launches OSS Scanner: unreviewed, model-generated vulnerability reports for open source",
+      "iso": "2026-10-08",
+      "seen": "2026-10-09",
       "applied": true
     }
   ]
