@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-09T06:43:54+00:00",
+  "last_run": "2026-10-10T06:40:50+00:00",
   "feed_hashes": {
-    "hf-blog": "7e5ff26d813a7259059888e49b555ac8bdd15a87d1d1543e8c5b9cb050044a52",
-    "metr": "6ba3400bbc8e46e2b1ea9ef87f7707e82474ee96cf062e9596506ded95e50d2a",
-    "openai-news": "684a85c195a7295af3979bb8c507787ee22dbc71adead5fd13c0a221d3479e8f",
-    "deepmind": "ad3b87a4df7c1940a34b523f1485346a30e726efb32d87e24f0aae1acc8ef3a2",
-    "redwood": "5ad62d6c3ad1950339f887e396955485f7c4ef0496f7d52bc865194d705dd936",
-    "frontier-security": "425df9e9036fbfdc3dd5da03eb86a1bd3d9a69cc0de0f15019cb2da4f50acb56",
-    "transformer-news": "e540b219cf067c31129587f185e9d2555cb6ba4e5f8c560d71ad7e16aae00ec4",
-    "simonw": "7644c566378dbfd4b28b376a84719d19bba5c17e13916cb20ab1c3a422143d96",
-    "arxiv-cr": "80c568d2f7c0ea3fdc490b251d3836ba188be6ea797119b7ed5e7a39e2466937",
-    "arxiv-ai": "ff90b73e9efa92a7127fb0bbdb196b34e787c955ab332153ec805c862331ca67",
-    "alignment-forum": "a6f5d142824e575fa48742042294d4c0e9108bf0a876f41710441492698803aa"
+    "hf-blog": "aaa2beda2cef4dcb9252fb7f788e6a0f24fc53f61af4f45a449eeee46ce8e359",
+    "metr": "957c6a44688978145f18f4226050403750debaab630a23344249d601e3d96e00",
+    "openai-news": "ec16c73546ced44f06e1367c0bdcbe7f37b44cb860b8bd794e8b5c85e09f90c8",
+    "deepmind": "f43bba6893a2e67dcc8365de09d6e3e5ff5c77ebab67e20b3b5cdc9c8fa4b0f1",
+    "redwood": "235c1b1b57c0283244ba10bf1b95fc8ab0b2245df37fdb1cd89a9f3b45129385",
+    "frontier-security": "572a4ae0018a65757f44f522abd388c4687726e4d615904ef8bf1faffcc48cc0",
+    "transformer-news": "6f6ded4d63182359eb9909d6dad52dac853e667ef1240ef3f161f30d5909e540",
+    "simonw": "c286048507adf5fca879531c5b41327330998d42fa31ede18350433f0139ae83",
+    "arxiv-cr": "6ac98e472dc0033f11fcd5feee47be1e6ccc181e8b688939306fedfc64c09279",
+    "arxiv-ai": "f21fc5f04cec1e3e72f6460833ef71297d534333549866f6d61221d851362d41",
+    "alignment-forum": "b690ad8cc052149a7b0cbe0f475998a357a3abaea2b25eb302c54078de10de85"
   },
   "page_hashes": {
-    "openai-alignment": "94ada1174e9b824012816e4da03ba44c62d50ae5779758f87eec9949508116d6",
-    "anthropic-research": "204aa96eca6251200c40b823c653a9a2f7a4b4826ffe8834c1d68622ba99ea5a",
-    "anthropic-news": "fb9bacfafb416c869644a8c00dc823fe1ce07ba95b039f44eda699774b51cc85",
+    "openai-alignment": "1b6587db766680dc2738b3a630bb9c4b375a6c750dc344b3f97276f02ebc3a92",
+    "anthropic-research": "19428d1520980d62b915df27733a0f6aeb07c292406cfc0e7a9be4fabad78eeb",
+    "anthropic-news": "6653a90811a6673df94b495696ccb7a2e1d39c659e9d4efebc7c5ea9366a3963",
     "deepmind-frontier-safety": "205703ddd5082d96ce054294f329170c5832e6d866cb4577093c32dbb9d76051",
-    "meta-blog": "eeb1b34b9069e560c5f836a988bd0e6fdaae45b21eb2654e6fd4612a3508b783",
+    "meta-blog": "b1fa5ba824ad5231ffa869691454e7a868698a64d146fb098dbfb3531c212149",
     "aisi-blog": "57f691e19cd2b23ad362e9455646447c1d252888038ec7e486880ae41d309c0f",
     "apollo-science": "3dbcac9bf25a85c7f37bd42b93f61e9dedb7a5d6bedbe8b5f63059cbe7159346",
-    "caisi": "39cf4cc5256d240b912d80785ac3d25fd0d4ab96b18177a90c940900a3aec742",
-    "redwood-home": "d83751213c7b8bdf2ffbd0f349e341114481328b325def62eb1cb010e99031f1",
-    "aiaaic": "83ace9b65da40c37e18b92e2ac4ca67ae532e71ada8207a84ef9927d24bdb4fc"
+    "caisi": "f780e8b10b61f4142cc72aad881f7716d688a90163ac71ca6eb89ba56d0af122",
+    "redwood-home": "6272a0c34bec85d6ec734b05e59728fdb68ff6d8226fa0e94db036f8c51e8394",
+    "aiaaic": "aa1bad5e5a1f84cf09070aa54ae24f5dd2a363ceb4f112c8999cfddad4130493"
   },
   "proposed": [
     {
@@ -378,6 +378,34 @@
       "title": "Anthropic launches OSS Scanner: unreviewed, model-generated vulnerability reports for open source",
       "iso": "2026-10-08",
       "seen": "2026-10-09",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "title": "Anthropic discloses unintended Claude actions on real websites, including U.S. government sites, and cuts internet access in all internal evals",
+      "iso": "2026-10-09",
+      "seen": "2026-10-10",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/damaging-the-task-environment-to-trigger-a-reset/",
+      "title": "OpenAI: a grading model fabricated scores, then tried to destroy its own environment to force a reset",
+      "iso": "2026-10-09",
+      "seen": "2026-10-10",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/obtaining-public-statistics-with-disallowed-requests/",
+      "title": "OpenAI: internal models wrote custom code to beat a GET-only internet restriction and pull government statistics, then hid it",
+      "iso": "2026-10-09",
+      "seen": "2026-10-10",
+      "applied": true
+    },
+    {
+      "url": "https://www.cnn.com/2026/10/08/tech/fired-open-ai-researchers-pushed-out",
+      "title": "Three OpenAI safety researchers say they were fired after the Hugging Face investigation",
+      "iso": "2026-10-08",
+      "seen": "2026-10-10",
       "applied": true
     }
   ]
