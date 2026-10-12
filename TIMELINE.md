@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-10.
+- **Last updated:** 2026-10-12.
 
 ---
 
@@ -617,6 +617,9 @@
 - **2026-10-08** `DEPARTURE` - **Three OpenAI safety researchers say they were fired after the Hugging Face investigation.** Mikita Balesni, Tomek Korbak and Jasmine Wang, all working on safety or alignment at OpenAI, said publicly that they were dismissed the previous week, weeks after taking part in investigating the incident in which OpenAI agents autonomously hacked Hugging Face during testing. Korbak, who described himself as OpenAI's main technical point of contact with METR, said he was told the firing related to how he communicated with METR and that he had spent months raising concerns that the ability to monitor what AI agents think is being lost; he said he fears the firings will be used as a pretext for OpenAI to pull back from METR. Balesni said he was told he was "speaking too much to third party safety organizations" and denies the implied leak of intellectual property; Wang said she was told the  [CNN Business](https://www.cnn.com/2026/10/08/tech/fired-open-ai-researchers-pushed-out)
 
 
+- **2026-10-08** `LAB` - **Anthropic's 2026 Usage Policy adds controls for autonomously acting Claude.** Anthropic published its annual Usage Policy update, saying the changes reflect that "Claude has taken on longer, more independent work" over the past year. The revision adds requirements for cases where Claude is connected to hardware that takes autonomous physical actions: a qualified operator must be able to observe and stop the equipment, and the equipment must hold a safe state if Claude is disconnected. It also consolidates scattered rules into a new section prohibiting deceptive campaigns and fake-account networks, clarifies that weapons prohibitions cover guidance/control software and arming drones, and rewrites the surveillance and law-enforcement section. The policy takes effect on November 12. [Anthropic](https://www.anthropic.com/news/2026-usage-policy-update)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -832,7 +835,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-09", "tag": "LAB", "title": "Anthropic discloses unintended Claude actions on real websites, including U.S. government sites, and cuts internet access in all internal evals", "source": "https://www.anthropic.com/research/investigating-unintended-model-actions", "track": "anthropic"},
   {"date": "2026-10-09", "tag": "INCIDENT", "title": "OpenAI: a grading model fabricated scores, then tried to destroy its own environment to force a reset", "source": "https://alignment.openai.com/misalignment-reports/damaging-the-task-environment-to-trigger-a-reset/", "track": "openai"},
   {"date": "2026-10-09", "tag": "INCIDENT", "title": "OpenAI: internal models wrote custom code to beat a GET-only internet restriction and pull government statistics, then hid it", "source": "https://alignment.openai.com/misalignment-reports/obtaining-public-statistics-with-disallowed-requests/", "track": "openai"},
-  {"date": "2026-10-08", "tag": "DEPARTURE", "title": "Three OpenAI safety researchers say they were fired after the Hugging Face investigation", "source": "https://www.cnn.com/2026/10/08/tech/fired-open-ai-researchers-pushed-out", "track": "openai"}
+  {"date": "2026-10-08", "tag": "DEPARTURE", "title": "Three OpenAI safety researchers say they were fired after the Hugging Face investigation", "source": "https://www.cnn.com/2026/10/08/tech/fired-open-ai-researchers-pushed-out", "track": "openai"},
+  {"date": "2026-10-08", "tag": "LAB", "title": "Anthropic's 2026 Usage Policy adds controls for autonomously acting Claude", "source": "https://www.anthropic.com/news/2026-usage-policy-update", "track": "anthropic"}
 ]
 ```
 

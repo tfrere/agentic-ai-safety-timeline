@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-11T06:41:09+00:00",
+  "last_run": "2026-10-12T07:00:24+00:00",
   "feed_hashes": {
     "hf-blog": "aaa2beda2cef4dcb9252fb7f788e6a0f24fc53f61af4f45a449eeee46ce8e359",
     "metr": "6b9c357533d3da9f96b941eca768e40304a32afe2014556161c8b85cded57826",
-    "openai-news": "d07048073a4e4b2872f339dae6e6827e002f5fb82c1140c8975039896ff8ebd8",
-    "deepmind": "ad3b87a4df7c1940a34b523f1485346a30e726efb32d87e24f0aae1acc8ef3a2",
-    "redwood": "36c035893e23cdd4cf792fe25cf1363231ef3b95a7fc62e48f73f4313d0d23ca",
-    "frontier-security": "08e1299405052545e6f73a7931d7d98672cc98fa0753a135599ae5c192e3f4cf",
-    "transformer-news": "9cda111e593ddf073c831bf2be02aad9f58771b411f891524f60795094f0a5ab",
+    "openai-news": "f9c0aac342c5ba55fcb7d08cbf9674662747519f8549507df5e5bdc426e0a459",
+    "deepmind": "f43bba6893a2e67dcc8365de09d6e3e5ff5c77ebab67e20b3b5cdc9c8fa4b0f1",
+    "redwood": "0b774cfe5901ad7e9a4d4edde4e77b39592f5c543d1b754257bba8ca3e64824f",
+    "frontier-security": "d1579c94de4642c88fe3645f980360c27b6a4c201d20512e34429fe0d4c8af46",
+    "transformer-news": "79d7e71eddc76eb64bba1d48fed2394edace7303cdf744e0a0e9773e3a25c61a",
     "simonw": "234a18e1903eab4995fab4270e6859f083c34c965ceb48a94113e1649444a7ce",
-    "arxiv-cr": "c05bcaf04b5c2db265d24f7a7749b93a5d1eddf039333cf48ec2ab84944e9547",
-    "arxiv-ai": "9143d41be01f2397e77162eb9bda3a7705ac9e0043fb7aefa4533081386b0d47",
-    "alignment-forum": "7c3dc40afea51dc0e33716ec029acca371965a0ccd19868f0c9b6b5acf4f2553"
+    "arxiv-cr": "acec93b090761e35b8591f97e4c3b118719751c7ecce79b59e324dca37f1f8b2",
+    "arxiv-ai": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629",
+    "alignment-forum": "6461d98c242f6d767e1321e1505ecae3c61066c2b3451210cc54f934daf174ef"
   },
   "page_hashes": {
     "openai-alignment": "1b6587db766680dc2738b3a630bb9c4b375a6c750dc344b3f97276f02ebc3a92",
     "anthropic-research": "19428d1520980d62b915df27733a0f6aeb07c292406cfc0e7a9be4fabad78eeb",
     "anthropic-news": "fb9c13fd8641505f6a32931f7dd6d8ec6598920b0abf8ae1b135322892643171",
     "deepmind-frontier-safety": "205703ddd5082d96ce054294f329170c5832e6d866cb4577093c32dbb9d76051",
-    "meta-blog": "d7bda0a9c0d631b2fd59fb181ee92194b439ce10b7f239046271a5cd4165775e",
+    "meta-blog": "06c280a24fba60bedb9f01933fd475720407021bbac9ebc688830c03480840bc",
     "aisi-blog": "57f691e19cd2b23ad362e9455646447c1d252888038ec7e486880ae41d309c0f",
     "apollo-science": "3dbcac9bf25a85c7f37bd42b93f61e9dedb7a5d6bedbe8b5f63059cbe7159346",
-    "caisi": "6233024be842cc6856252bd3a6b573025b67aaf42faa2f1fede6d77107e43b50",
+    "caisi": "771c37b1a13ae0d1ec014ec64cfc863a87ec9ef3a9b736106b3f55470e5ce85a",
     "redwood-home": "6272a0c34bec85d6ec734b05e59728fdb68ff6d8226fa0e94db036f8c51e8394",
-    "aiaaic": "9d4977ef9450236a9a00629c7c3bdfd55ec6b9ad217ea187102870b403beb301"
+    "aiaaic": "a15a74e7466fc701555dc1fb5a90bfba5926ab48773441383948c4d6dd6c8c19"
   },
   "proposed": [
     {
@@ -406,6 +406,13 @@
       "title": "Three OpenAI safety researchers say they were fired after the Hugging Face investigation",
       "iso": "2026-10-08",
       "seen": "2026-10-10",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+      "title": "Anthropic's 2026 Usage Policy adds controls for autonomously acting Claude",
+      "iso": "2026-10-08",
+      "seen": "2026-10-12",
       "applied": true
     }
   ]

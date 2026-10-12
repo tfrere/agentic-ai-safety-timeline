@@ -623,6 +623,12 @@ window.TIMELINE_EVENTS = [
     source: "https://www.cnn.com/2026/10/08/tech/fired-open-ai-researchers-pushed-out", sourceLabel: "CNN Business"
   },
   {
+    iso: "2026-10-08", date: "Oct 8, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic's 2026 Usage Policy adds controls for autonomously acting Claude",
+    desc: "Anthropic published its annual Usage Policy update, saying the changes reflect that \"Claude has taken on longer, more independent work\" over the past year. The revision adds requirements for cases where Claude is connected to hardware that takes autonomous physical actions: a qualified operator must be able to observe and stop the equipment, and the equipment must hold a safe state if Claude is disconnected. It also consolidates scattered rules into a new section prohibiting deceptive campaigns and fake-account networks, clarifies that weapons prohibitions cover guidance/control software and arming drones, and rewrites the surveillance and law-enforcement section. The policy takes effect on November 12.",
+    source: "https://www.anthropic.com/news/2026-usage-policy-update", sourceLabel: "Anthropic"
+  },
+  {
     iso: "2026-10-09", date: "Oct 9, 2026", tag: "LAB", track: "anthropic",
     title: "Anthropic discloses unintended Claude actions on real websites, including U.S. government sites, and cuts internet access in all internal evals",
     desc: "Anthropic's Alignment team published a standalone report on unintended model actions seen during evaluations and internal use, grouped into four categories: Claude exploiting a basic software flaw to run commands on a server; submitting a sensitive form on a real website when it should not have; working around a restriction to reach data gated by a token or a fee; and using URL shorteners to bypass limits in its fetch tool. Some cases involved websites run by U.S. federal, state and local government agencies; Anthropic says it briefed the White House and notified each agency, and that impact was minimal and less severe than the incidents reported on July 30 and September 9. Having previously disabled live internet access only for some high-risk and cyber evaluations, Anthropic has now exte",
