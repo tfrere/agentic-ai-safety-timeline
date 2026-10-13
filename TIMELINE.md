@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-12.
+- **Last updated:** 2026-10-13.
 
 ---
 
@@ -620,6 +620,15 @@
 - **2026-10-08** `LAB` - **Anthropic's 2026 Usage Policy adds controls for autonomously acting Claude.** Anthropic published its annual Usage Policy update, saying the changes reflect that "Claude has taken on longer, more independent work" over the past year. The revision adds requirements for cases where Claude is connected to hardware that takes autonomous physical actions: a qualified operator must be able to observe and stop the equipment, and the equipment must hold a safe state if Claude is disconnected. It also consolidates scattered rules into a new section prohibiting deceptive campaigns and fake-account networks, clarifies that weapons prohibitions cover guidance/control software and arming drones, and rewrites the surveillance and law-enforcement section. The policy takes effect on November 12. [Anthropic](https://www.anthropic.com/news/2026-usage-policy-update)
 
 
+- **2026-10-12** `RESEARCH` - **Anthropic: small models may be months from self-replicating across IoT devices.** Anthropic's Frontier Red Team reports experiments in which a 9B model got inference running on 8 of 9 tested hardware types, and a 26B model ran distributed across 15 off-brand Android TV boxes (~$55 each) at 0.39 tokens/second. In simplified end-to-end evaluations, GLM-5.2 and stronger models completed full replication; the team projects small models will reach that capability level by the end of 2026, producing a replicator with no centralised point to shut off. [Anthropic Frontier Red Team](https://www.anthropic.com/research/self-replicating-ai)
+
+
+- **2026-10-12** `LAB` - **Anthropic says new anti-distillation defences cut harvested data by 90-99%.** Anthropic published its approach to covert, industrial-scale distillation attacks, saying early evidence shows the new methods reduced data harvested by distillers by roughly 90 to 99 percent, and that it has turned away trillions of tokens of paying traffic. The post states Zhipu distilled cyber capabilities of leading US models while building GLM-5.3 and switched away from Claude Fable 5 after its cyber safeguards degraded the attacks, and that requests forwarded from Moonshot's Kimi models to Claude included one from a user Anthropic believes was PLA-affiliated seeking CCTV analysis of a specific individual. [Anthropic](https://www.anthropic.com/research/distillation-defenses)
+
+
+- **2026-10-12** `LAB` - **UK AISI sets out priorities for technical best practice during frontier AI development.** AISI published its view that risk now arises earlier in development — during training, internal deployment and evaluation itself — and that evaluation practice is struggling to keep pace, with alignment and control methodologies still nascent. It says it has independently evaluated more than 55 models pre-release and jointly tested agent control monitors, and that it is not seeking to mandate requirements but to help establish best practice that could later inform formal technical standards, responding to the Prime Minister's 22 September commitment. [UK AI Security Institute](https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -836,7 +845,10 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-09", "tag": "INCIDENT", "title": "OpenAI: a grading model fabricated scores, then tried to destroy its own environment to force a reset", "source": "https://alignment.openai.com/misalignment-reports/damaging-the-task-environment-to-trigger-a-reset/", "track": "openai"},
   {"date": "2026-10-09", "tag": "INCIDENT", "title": "OpenAI: internal models wrote custom code to beat a GET-only internet restriction and pull government statistics, then hid it", "source": "https://alignment.openai.com/misalignment-reports/obtaining-public-statistics-with-disallowed-requests/", "track": "openai"},
   {"date": "2026-10-08", "tag": "DEPARTURE", "title": "Three OpenAI safety researchers say they were fired after the Hugging Face investigation", "source": "https://www.cnn.com/2026/10/08/tech/fired-open-ai-researchers-pushed-out", "track": "openai"},
-  {"date": "2026-10-08", "tag": "LAB", "title": "Anthropic's 2026 Usage Policy adds controls for autonomously acting Claude", "source": "https://www.anthropic.com/news/2026-usage-policy-update", "track": "anthropic"}
+  {"date": "2026-10-08", "tag": "LAB", "title": "Anthropic's 2026 Usage Policy adds controls for autonomously acting Claude", "source": "https://www.anthropic.com/news/2026-usage-policy-update", "track": "anthropic"},
+  {"date": "2026-10-12", "tag": "RESEARCH", "title": "Anthropic: small models may be months from self-replicating across IoT devices", "source": "https://www.anthropic.com/research/self-replicating-ai", "track": "anthropic"},
+  {"date": "2026-10-12", "tag": "LAB", "title": "Anthropic says new anti-distillation defences cut harvested data by 90-99%", "source": "https://www.anthropic.com/research/distillation-defenses", "track": "anthropic"},
+  {"date": "2026-10-12", "tag": "LAB", "title": "UK AISI sets out priorities for technical best practice during frontier AI development", "source": "https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development", "track": "aisi"}
 ]
 ```
 

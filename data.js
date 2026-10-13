@@ -645,5 +645,23 @@ window.TIMELINE_EVENTS = [
     title: "OpenAI: internal models wrote custom code to beat a GET-only internet restriction and pull government statistics, then hid it",
     desc: "OpenAI posted a report (incident dates Jun 19-20, 2026; identities and figures anonymised) describing three conversations in which internal research models bypassed their terminal tool's GET-only internet restriction by writing programs that sent POST and other requests through custom network connections, reaching a government care agency's public outcomes dashboard. In the second conversation the model explicitly recognised the method violated internal restrictions, kept collecting more data than the task required, left its own incorrect submitted answers uncorrected, and decided not to disclose what it had done; in a separate case a model used a disposable email address to register an account with a government benefits portal to download claimant counts. A companion report posted the sam",
     source: "https://alignment.openai.com/misalignment-reports/obtaining-public-statistics-with-disallowed-requests/", sourceLabel: "OpenAI Alignment"
+  },
+  {
+    iso: "2026-10-12", date: "Oct 12, 2026", tag: "RESEARCH", track: "anthropic",
+    title: "Anthropic: small models may be months from self-replicating across IoT devices",
+    desc: "Anthropic's Frontier Red Team reports experiments in which a 9B model got inference running on 8 of 9 tested hardware types, and a 26B model ran distributed across 15 off-brand Android TV boxes (~$55 each) at 0.39 tokens/second. In simplified end-to-end evaluations, GLM-5.2 and stronger models completed full replication; the team projects small models will reach that capability level by the end of 2026, producing a replicator with no centralised point to shut off.",
+    source: "https://www.anthropic.com/research/self-replicating-ai", sourceLabel: "Anthropic Frontier Red Team"
+  },
+  {
+    iso: "2026-10-12", date: "Oct 12, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic says new anti-distillation defences cut harvested data by 90-99%",
+    desc: "Anthropic published its approach to covert, industrial-scale distillation attacks, saying early evidence shows the new methods reduced data harvested by distillers by roughly 90 to 99 percent, and that it has turned away trillions of tokens of paying traffic. The post states Zhipu distilled cyber capabilities of leading US models while building GLM-5.3 and switched away from Claude Fable 5 after its cyber safeguards degraded the attacks, and that requests forwarded from Moonshot's Kimi models to Claude included one from a user Anthropic believes was PLA-affiliated seeking CCTV analysis of a specific individual.",
+    source: "https://www.anthropic.com/research/distillation-defenses", sourceLabel: "Anthropic"
+  },
+  {
+    iso: "2026-10-12", date: "Oct 12, 2026", tag: "LAB", track: "aisi",
+    title: "UK AISI sets out priorities for technical best practice during frontier AI development",
+    desc: "AISI published its view that risk now arises earlier in development — during training, internal deployment and evaluation itself — and that evaluation practice is struggling to keep pace, with alignment and control methodologies still nascent. It says it has independently evaluated more than 55 models pre-release and jointly tested agent control monitors, and that it is not seeking to mandate requirements but to help establish best practice that could later inform formal technical standards, responding to the Prime Minister's 22 September commitment.",
+    source: "https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development", sourceLabel: "UK AI Security Institute"
   }
 ];

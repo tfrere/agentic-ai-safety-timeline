@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-12T07:00:24+00:00",
+  "last_run": "2026-10-13T06:47:05+00:00",
   "feed_hashes": {
     "hf-blog": "aaa2beda2cef4dcb9252fb7f788e6a0f24fc53f61af4f45a449eeee46ce8e359",
-    "metr": "6b9c357533d3da9f96b941eca768e40304a32afe2014556161c8b85cded57826",
-    "openai-news": "f9c0aac342c5ba55fcb7d08cbf9674662747519f8549507df5e5bdc426e0a459",
+    "metr": "2db829d8fc6e52adf55ff21747e76ea9577e42d3edaca37ea0de47a1abe6f697",
+    "openai-news": "3323163a320fd0950254508518cc0a9cbf6c26af9e09d7fe8d4fcc05e282eebc",
     "deepmind": "f43bba6893a2e67dcc8365de09d6e3e5ff5c77ebab67e20b3b5cdc9c8fa4b0f1",
-    "redwood": "0b774cfe5901ad7e9a4d4edde4e77b39592f5c543d1b754257bba8ca3e64824f",
-    "frontier-security": "d1579c94de4642c88fe3645f980360c27b6a4c201d20512e34429fe0d4c8af46",
-    "transformer-news": "79d7e71eddc76eb64bba1d48fed2394edace7303cdf744e0a0e9773e3a25c61a",
-    "simonw": "234a18e1903eab4995fab4270e6859f083c34c965ceb48a94113e1649444a7ce",
-    "arxiv-cr": "acec93b090761e35b8591f97e4c3b118719751c7ecce79b59e324dca37f1f8b2",
-    "arxiv-ai": "a184354f2a3819af1576f92bfbd22f48ac4e233a52a947673b9de45426f2b629",
-    "alignment-forum": "6461d98c242f6d767e1321e1505ecae3c61066c2b3451210cc54f934daf174ef"
+    "redwood": "169875d2849894c19d0ff332cc4b9108c5ea95b90aae875c5c27829bb62e7e7b",
+    "frontier-security": "16cc0ab6d578437db8f0ed688e972619b39f8c87bcaa4f190aad402d7630ac0c",
+    "transformer-news": "d73b38df6e99bec400c028f5e524db4c05eb328e8ef6133ece70d6f314bf4674",
+    "simonw": "7a8886ebe3f6391ae319f3398c487e5a52a573f7a8279a105ed6ecfd0b5c9f8a",
+    "arxiv-cr": "9c0cda0d62b8ae9675bfdc47d9d8ccf0de1ef03cb28763a3cb35774c8009696d",
+    "arxiv-ai": "82f58327ebf0a0c0c5a8be16f2d4ce7d79745c132896092ed30b1ecc9e6b62c6",
+    "alignment-forum": "10a1b0bbee7cace54391e7455a3554fdc1c001cb0896b2ac299d3dc2d9392420"
   },
   "page_hashes": {
     "openai-alignment": "1b6587db766680dc2738b3a630bb9c4b375a6c750dc344b3f97276f02ebc3a92",
-    "anthropic-research": "19428d1520980d62b915df27733a0f6aeb07c292406cfc0e7a9be4fabad78eeb",
+    "anthropic-research": "f0d7a3cff4cc5d1fc0975a4fa2951b14dd5a8688c244b36ba601c7b17872d583",
     "anthropic-news": "fb9c13fd8641505f6a32931f7dd6d8ec6598920b0abf8ae1b135322892643171",
-    "deepmind-frontier-safety": "205703ddd5082d96ce054294f329170c5832e6d866cb4577093c32dbb9d76051",
-    "meta-blog": "06c280a24fba60bedb9f01933fd475720407021bbac9ebc688830c03480840bc",
-    "aisi-blog": "57f691e19cd2b23ad362e9455646447c1d252888038ec7e486880ae41d309c0f",
+    "deepmind-frontier-safety": "97e8d27d1a72c5ec84e8930a3ad3d4f79ff9b550c6bf09c04ed7d17c4b1cbd63",
+    "meta-blog": "f0aa734496117943bb96380a752911f3448e8622d39e0d9801d6987e1f6c2d46",
+    "aisi-blog": "335b7d89ee6880b6bfa189a50e096b862d14aaba95db9969ee0ef9dfb6a80cb5",
     "apollo-science": "3dbcac9bf25a85c7f37bd42b93f61e9dedb7a5d6bedbe8b5f63059cbe7159346",
-    "caisi": "771c37b1a13ae0d1ec014ec64cfc863a87ec9ef3a9b736106b3f55470e5ce85a",
-    "redwood-home": "6272a0c34bec85d6ec734b05e59728fdb68ff6d8226fa0e94db036f8c51e8394",
-    "aiaaic": "a15a74e7466fc701555dc1fb5a90bfba5926ab48773441383948c4d6dd6c8c19"
+    "caisi": "da10255e34c2e2266650194c81d671d703924bbb59745b51d86748383225e21a",
+    "redwood-home": "fca117144a12484b8538a8ffaf644c3de23bbc5c770ced613ebf3f9eee01692a",
+    "aiaaic": "468300b2489333e5a64f037a561425756fde1c5daa6a74aaf0af6b1e7fef6859"
   },
   "proposed": [
     {
@@ -413,6 +413,27 @@
       "title": "Anthropic's 2026 Usage Policy adds controls for autonomously acting Claude",
       "iso": "2026-10-08",
       "seen": "2026-10-12",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/research/self-replicating-ai",
+      "title": "Anthropic: small models may be months from self-replicating across IoT devices",
+      "iso": "2026-10-12",
+      "seen": "2026-10-13",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/research/distillation-defenses",
+      "title": "Anthropic says new anti-distillation defences cut harvested data by 90-99%",
+      "iso": "2026-10-12",
+      "seen": "2026-10-13",
+      "applied": true
+    },
+    {
+      "url": "https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development",
+      "title": "UK AISI sets out priorities for technical best practice during frontier AI development",
+      "iso": "2026-10-12",
+      "seen": "2026-10-13",
       "applied": true
     }
   ]
