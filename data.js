@@ -663,5 +663,11 @@ window.TIMELINE_EVENTS = [
     title: "UK AISI sets out priorities for technical best practice during frontier AI development",
     desc: "AISI published its view that risk now arises earlier in development — during training, internal deployment and evaluation itself — and that evaluation practice is struggling to keep pace, with alignment and control methodologies still nascent. It says it has independently evaluated more than 55 models pre-release and jointly tested agent control monitors, and that it is not seeking to mandate requirements but to help establish best practice that could later inform formal technical standards, responding to the Prime Minister's 22 September commitment.",
     source: "https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development", sourceLabel: "UK AI Security Institute"
+  },
+  {
+    iso: "2026-10-13", date: "Oct 13, 2026", tag: "LAB", track: "google",
+    title: "Google makes Gemini 4 Argon generally available after a phased cyber-defender rollout",
+    desc: "Google announced that Gemini 4 Argon, its new frontier model, is globally available via the Gemini API in AI Studio, in Google Antigravity for AI Ultra subscribers, and in the Gemini app and AI Mode in Search. Argon was first announced on 30 September 2026 with access limited to trusted cyber defenders through the Fairwind Program, with Google stating that 'safely releasing frontier capabilities at this level requires a phased approach' and that it was engaged in the U.S. government's voluntary process for pre-release model access while gradually expanding access. Google says Argon is used to find and patch critical cybersecurity vulnerabilities, and published a Gemini 4 Argon model card dated 13 October 2026.",
+    source: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/", sourceLabel: "blog.google — Gemini 4 Argon: Built to solve your hardest problems (13 Oct 2026)"
   }
 ];

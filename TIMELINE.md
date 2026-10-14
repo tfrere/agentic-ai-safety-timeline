@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-13.
+- **Last updated:** 2026-10-14.
 
 ---
 
@@ -629,6 +629,9 @@
 - **2026-10-12** `LAB` - **UK AISI sets out priorities for technical best practice during frontier AI development.** AISI published its view that risk now arises earlier in development — during training, internal deployment and evaluation itself — and that evaluation practice is struggling to keep pace, with alignment and control methodologies still nascent. It says it has independently evaluated more than 55 models pre-release and jointly tested agent control monitors, and that it is not seeking to mandate requirements but to help establish best practice that could later inform formal technical standards, responding to the Prime Minister's 22 September commitment. [UK AI Security Institute](https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development)
 
 
+- **2026-10-13** `LAB` - **Google makes Gemini 4 Argon generally available after a phased cyber-defender rollout.** Google announced that Gemini 4 Argon, its new frontier model, is globally available via the Gemini API in AI Studio, in Google Antigravity for AI Ultra subscribers, and in the Gemini app and AI Mode in Search. Argon was first announced on 30 September 2026 with access limited to trusted cyber defenders through the Fairwind Program, with Google stating that 'safely releasing frontier capabilities at this level requires a phased approach' and that it was engaged in the U.S. government's voluntary process for pre-release model access while gradually expanding access. Google says Argon is used to find and patch critical cybersecurity vulnerabilities, and published a Gemini 4 Argon model card dated 13 October 2026. [blog.google — Gemini 4 Argon: Built to solve your hardest problems (13 Oct 2026)](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -848,7 +851,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-08", "tag": "LAB", "title": "Anthropic's 2026 Usage Policy adds controls for autonomously acting Claude", "source": "https://www.anthropic.com/news/2026-usage-policy-update", "track": "anthropic"},
   {"date": "2026-10-12", "tag": "RESEARCH", "title": "Anthropic: small models may be months from self-replicating across IoT devices", "source": "https://www.anthropic.com/research/self-replicating-ai", "track": "anthropic"},
   {"date": "2026-10-12", "tag": "LAB", "title": "Anthropic says new anti-distillation defences cut harvested data by 90-99%", "source": "https://www.anthropic.com/research/distillation-defenses", "track": "anthropic"},
-  {"date": "2026-10-12", "tag": "LAB", "title": "UK AISI sets out priorities for technical best practice during frontier AI development", "source": "https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development", "track": "aisi"}
+  {"date": "2026-10-12", "tag": "LAB", "title": "UK AISI sets out priorities for technical best practice during frontier AI development", "source": "https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development", "track": "aisi"},
+  {"date": "2026-10-13", "tag": "LAB", "title": "Google makes Gemini 4 Argon generally available after a phased cyber-defender rollout", "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/", "track": "google"}
 ]
 ```
 
