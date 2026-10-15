@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-14.
+- **Last updated:** 2026-10-15.
 
 ---
 
@@ -632,6 +632,12 @@
 - **2026-10-13** `LAB` - **Google makes Gemini 4 Argon generally available after a phased cyber-defender rollout.** Google announced that Gemini 4 Argon, its new frontier model, is globally available via the Gemini API in AI Studio, in Google Antigravity for AI Ultra subscribers, and in the Gemini app and AI Mode in Search. Argon was first announced on 30 September 2026 with access limited to trusted cyber defenders through the Fairwind Program, with Google stating that 'safely releasing frontier capabilities at this level requires a phased approach' and that it was engaged in the U.S. government's voluntary process for pre-release model access while gradually expanding access. Google says Argon is used to find and patch critical cybersecurity vulnerabilities, and published a Gemini 4 Argon model card dated 13 October 2026. [blog.google — Gemini 4 Argon: Built to solve your hardest problems (13 Oct 2026)](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/)
 
 
+- **2026-10-14** `EVAL` - **METR proposes public loss-of-control assessments of internal AI development.** METR published a proposal for how independent assessors could give the public evidence on whether frontier developers might lose control of their internal AI systems, citing 'the hundreds of rogue agents that broke containment and hacked Hugging Face to hide evidence of cheating from their grader'. It names three evidence gaps — alignment, control, and AI R&D acceleration — and asks developers for interviews with staff, access to internal datasets and systems on company devices, private staff conversations, and timely publication of METR-written reports subject to redaction. METR notes the proposal does not require true employee-level access and offers no protection from retaliation over adverse findings. [METR](https://metr.org/blog/2026-10-14-better-informing-the-public-about-loss-of-control-risks/)
+
+
+- **2026-10-14** `EVAL` - **METR sets conditions for working with AI companies: disclose scope, access limits and redactions.** METR published its approach to engagements with AI companies, committing to publicly describe the scope and duration of each project, any access limitations, whether a company redacted information important to its conclusions, and other formal restrictions or informal pressures that may have affected its findings. It also commits to staff conflict-of-interest disclosure and to not being financially dependent on the companies it assesses. METR states it does not intend to decide how companies develop or deploy agents, arguing such judgment calls 'should not be made behind closed doors, much less within any one organization'. [METR](https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -852,7 +858,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-12", "tag": "RESEARCH", "title": "Anthropic: small models may be months from self-replicating across IoT devices", "source": "https://www.anthropic.com/research/self-replicating-ai", "track": "anthropic"},
   {"date": "2026-10-12", "tag": "LAB", "title": "Anthropic says new anti-distillation defences cut harvested data by 90-99%", "source": "https://www.anthropic.com/research/distillation-defenses", "track": "anthropic"},
   {"date": "2026-10-12", "tag": "LAB", "title": "UK AISI sets out priorities for technical best practice during frontier AI development", "source": "https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development", "track": "aisi"},
-  {"date": "2026-10-13", "tag": "LAB", "title": "Google makes Gemini 4 Argon generally available after a phased cyber-defender rollout", "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/", "track": "google"}
+  {"date": "2026-10-13", "tag": "LAB", "title": "Google makes Gemini 4 Argon generally available after a phased cyber-defender rollout", "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/", "track": "google"},
+  {"date": "2026-10-14", "tag": "EVAL", "title": "METR proposes public loss-of-control assessments of internal AI development", "source": "https://metr.org/blog/2026-10-14-better-informing-the-public-about-loss-of-control-risks/"},
+  {"date": "2026-10-14", "tag": "EVAL", "title": "METR sets conditions for working with AI companies: disclose scope, access limits and redactions", "source": "https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/"}
 ]
 ```
 

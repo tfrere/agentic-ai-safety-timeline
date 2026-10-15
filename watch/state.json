@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-14T06:39:54+00:00",
+  "last_run": "2026-10-15T06:39:30+00:00",
   "feed_hashes": {
-    "hf-blog": "097963ebb1bc4c5971d13e18692cd610a07f2faefd7d2715be4dfbe0f084e658",
-    "metr": "2f12ee45649ee2b98f291e0cf0bb9436d7bb36d3d832e9ff91aa86740b353f4a",
-    "openai-news": "33c7ed8966a79538e81c6d679ccba34470e37ddde046715952df7132536bc39b",
-    "deepmind": "dfd9dd64a4bc161a3a708109814be5890d1bf30a4817e980df83fcdd58a18310",
-    "redwood": "da6b0c43608a2c1861f0a050fa36d91d08f2be5b5258c1e0119b7d789e71bcee",
-    "frontier-security": "4a4043523b6f8193b5343367fb1094de00cb5f876cfd4d0fe5594d1048b4bf8d",
-    "transformer-news": "e8e012e807a2fc1e6cd25e17d17ef6b65e51510385c0ce1c6665aafda6a13715",
-    "simonw": "e5903a3c5871c7b324722ddc89477c5308d4e9613a5900701ddf2cb3e820a8b0",
-    "arxiv-cr": "452260b7b8d6d83b59921acf1193879b1389edc5b6a58ec56aa50ac8e05acc9e",
-    "arxiv-ai": "65b22bf7267fad5272e4a275a6225475a920acc6ed3f4c5db832e1d31d41af6c",
-    "alignment-forum": "e719fa465446862aad84c3d3098f8da721dd4899da50fdb670836671cc8f4157"
+    "hf-blog": "3c1dcbaa66e3857eedb1b67273b7fb056c7d1059597c2f2eb769a9e344f03a96",
+    "metr": "9f0d91518b9f34fc562f1d403fffb56aa56fec3083818101886b90df874276af",
+    "openai-news": "eb79be303bd0903ade4b096f31dc2c614507471a08d08e680a9a20fbd1b400b4",
+    "deepmind": "364c9326b92e27e6cd4e9de451a903fe0618ca207a2113ae44eaed379442ca3b",
+    "redwood": "7bfc2904026b03934c0dbc021876cc2427f20e403239a6b68a6756e454535023",
+    "frontier-security": "7dd4ad3f3feef9babaa46d22517c601a75a0521324511564fa46c05757bb6783",
+    "transformer-news": "94967b3fb4faa0cf1d66c46c8e444f5dc1b7e6882ee16ae7921a8a67b279ad12",
+    "simonw": "a6ff6657619013a7046432b8c42fa8b22759be7e1801b8c11d3bae2907867643",
+    "arxiv-cr": "234fedc8f5226a6928a9eccb7d636664b55d60c897d1decd147e818aaf37c283",
+    "arxiv-ai": "f901774f179913bdce42bcfbfa8c795acaf0c7121f88e20db4cd25d015f7e1af",
+    "alignment-forum": "476b3375da1679deaa96445ed2fb523fc4dc89118bbe9a12dc0d06d0afc38272"
   },
   "page_hashes": {
     "openai-alignment": "1b6587db766680dc2738b3a630bb9c4b375a6c750dc344b3f97276f02ebc3a92",
     "anthropic-research": "883e69c9bcb77e37942a76adfe92ee7a411c0bc81cdfe6c51a9c37c5e90083fb",
-    "anthropic-news": "670fa757a6818185e51f034658e5d0061ae32806debbcfb2d603cf937848cd53",
-    "deepmind-frontier-safety": "0bbf1aa8f3cd42565a18bff8b441f792e9b64b680ce6cf1e32d4cfb1928f81e3",
-    "meta-blog": "622ebdeea478603d2509eb65ce5e7e1c9cf10792516e5095a78523eadaee2ce1",
+    "anthropic-news": "cc1566662d8a07dea923117f5261654dd8988e82a3cde8705f035e9689587d38",
+    "deepmind-frontier-safety": "a4ab8ed74ebb62276936311975ccf96b9e173d924e9e3cb37229b41a314c3876",
+    "meta-blog": "9ef1d6f186a9ff0e94d46af51c61f074064873f707e769a4216bf247b690e36e",
     "aisi-blog": "335b7d89ee6880b6bfa189a50e096b862d14aaba95db9969ee0ef9dfb6a80cb5",
-    "apollo-science": "3dbcac9bf25a85c7f37bd42b93f61e9dedb7a5d6bedbe8b5f63059cbe7159346",
-    "caisi": "e29e1e7211913ed27be1a282cf91c90405bf0df4ecd0f517754eb5cd6c6f266a",
+    "apollo-science": "0f3273f83b947a064a9802040698e0bd09d233157f27b909e0de544c675304e5",
+    "caisi": "84de7368311c01d3afcf076949aa9ccdd45d4fd174552a0575ad565429225667",
     "redwood-home": "5e90fd7dafb0f387ff7bcfb2b6e07e79a666da789fec4195d21b683e28cb0636",
-    "aiaaic": "5945367c090a877de0689175ef9fd8fbaed709f94e6dfac5245c977f08a86aca"
+    "aiaaic": "137efb36f8fb906610f33107652770853ffbc4e9fedb4421e06f2d37a883e027"
   },
   "proposed": [
     {
@@ -441,6 +441,20 @@
       "title": "Google makes Gemini 4 Argon generally available after a phased cyber-defender rollout",
       "iso": "2026-10-13",
       "seen": "2026-10-14",
+      "applied": true
+    },
+    {
+      "url": "https://metr.org/blog/2026-10-14-better-informing-the-public-about-loss-of-control-risks/",
+      "title": "METR proposes public loss-of-control assessments of internal AI development",
+      "iso": "2026-10-14",
+      "seen": "2026-10-15",
+      "applied": true
+    },
+    {
+      "url": "https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/",
+      "title": "METR sets conditions for working with AI companies: disclose scope, access limits and redactions",
+      "iso": "2026-10-14",
+      "seen": "2026-10-15",
       "applied": true
     }
   ]
