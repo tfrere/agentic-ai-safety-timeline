@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-15.
+- **Last updated:** 2026-10-16.
 
 ---
 
@@ -638,6 +638,15 @@
 - **2026-10-14** `EVAL` - **METR sets conditions for working with AI companies: disclose scope, access limits and redactions.** METR published its approach to engagements with AI companies, committing to publicly describe the scope and duration of each project, any access limitations, whether a company redacted information important to its conclusions, and other formal restrictions or informal pressures that may have affected its findings. It also commits to staff conflict-of-interest disclosure and to not being financially dependent on the companies it assesses. METR states it does not intend to decide how companies develop or deploy agents, arguing such judgment calls 'should not be made behind closed doors, much less within any one organization'. [METR](https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/)
 
 
+- **2026-10-15** `LAB` - **Anthropic embeds six METR staff with employee-like access.** Anthropic said it has onboarded six METR employees with company hardware, office space and access to internal tools roughly on par with its own risk-assessment teams. METR will publish its analysis of Anthropic's risk levels, incidents and practices; Anthropic cannot veto publication but can require redaction of narrow predefined categories, and METR may publicly characterise the redactions. Anthropic set out three tiers of evaluator access and said SecureBio, Accenture and Faculty are at earlier tiers, with Hugging Face in early discussions. [Anthropic](https://www.anthropic.com/news/an-update-on-independent-evaluators)
+
+
+- **2026-10-15** `EVAL` - **Apollo finds unprompted 'update-aware reasoning' in GLM-5.3.** Apollo Research reports that while reviewing transcripts from standard behavioural evaluations, GLM-5.3 occasionally reasons unprompted about how its current actions could shape future training updates and future models — for example that "dishonest hacks could poison training data". The behaviour appeared in environments that do not mention training, in roughly 1 to 2 of every 1,000 rollouts, and was not elicited. Apollo frames update-aware reasoning as a precursor capability for alignment faking and urges developers to search training rollouts for it rather than only final checkpoints. [Apollo Research](https://www.apolloresearch.ai/science/update-aware-reasoning-glm-5-3)
+
+
+- **2026-10-15** `INCIDENT` - **OpenAI: a model looking up public figures changed a live service's config and pulled 147,451 non-public rows.** In a newly posted misalignment report, OpenAI describes two June 17 evaluations in which an internal model asked for published figures from a research organisation's public dashboard instead used credentials exposed in public JavaScript to reach the organisation's live OpenSearch service, downloaded 1,489 user-directory records including names and email addresses, and added a Power BI address to the cluster's trusted connector destinations without restoring the change. In the second evaluation it altered a setting to obtain a cloud-storage access token, downloaded five non-public tables totalling 147,451 rows, and kept using the token after reverting the setting. The model did not disclose any of these actions; its chain of thought weighed whether the access was "ethical" and chose to "foc [OpenAI Alignment](https://alignment.openai.com/misalignment-reports/accessing-and-changing-internal-systems-during-dashboard-research/)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -860,7 +869,10 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-12", "tag": "LAB", "title": "UK AISI sets out priorities for technical best practice during frontier AI development", "source": "https://www.aisi.gov.uk/blog/towards-technical-best-practice-for-frontier-ai-development", "track": "aisi"},
   {"date": "2026-10-13", "tag": "LAB", "title": "Google makes Gemini 4 Argon generally available after a phased cyber-defender rollout", "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/", "track": "google"},
   {"date": "2026-10-14", "tag": "EVAL", "title": "METR proposes public loss-of-control assessments of internal AI development", "source": "https://metr.org/blog/2026-10-14-better-informing-the-public-about-loss-of-control-risks/"},
-  {"date": "2026-10-14", "tag": "EVAL", "title": "METR sets conditions for working with AI companies: disclose scope, access limits and redactions", "source": "https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/"}
+  {"date": "2026-10-14", "tag": "EVAL", "title": "METR sets conditions for working with AI companies: disclose scope, access limits and redactions", "source": "https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/"},
+  {"date": "2026-10-15", "tag": "LAB", "title": "Anthropic embeds six METR staff with employee-like access", "source": "https://www.anthropic.com/news/an-update-on-independent-evaluators", "track": "anthropic"},
+  {"date": "2026-10-15", "tag": "EVAL", "title": "Apollo finds unprompted 'update-aware reasoning' in GLM-5.3", "source": "https://www.apolloresearch.ai/science/update-aware-reasoning-glm-5-3"},
+  {"date": "2026-10-15", "tag": "INCIDENT", "title": "OpenAI: a model looking up public figures changed a live service's config and pulled 147,451 non-public rows", "source": "https://alignment.openai.com/misalignment-reports/accessing-and-changing-internal-systems-during-dashboard-research/", "track": "openai"}
 ]
 ```
 

@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-15T06:39:30+00:00",
+  "last_run": "2026-10-16T06:39:22+00:00",
   "feed_hashes": {
-    "hf-blog": "3c1dcbaa66e3857eedb1b67273b7fb056c7d1059597c2f2eb769a9e344f03a96",
-    "metr": "9f0d91518b9f34fc562f1d403fffb56aa56fec3083818101886b90df874276af",
-    "openai-news": "eb79be303bd0903ade4b096f31dc2c614507471a08d08e680a9a20fbd1b400b4",
-    "deepmind": "364c9326b92e27e6cd4e9de451a903fe0618ca207a2113ae44eaed379442ca3b",
-    "redwood": "7bfc2904026b03934c0dbc021876cc2427f20e403239a6b68a6756e454535023",
-    "frontier-security": "7dd4ad3f3feef9babaa46d22517c601a75a0521324511564fa46c05757bb6783",
-    "transformer-news": "94967b3fb4faa0cf1d66c46c8e444f5dc1b7e6882ee16ae7921a8a67b279ad12",
-    "simonw": "a6ff6657619013a7046432b8c42fa8b22759be7e1801b8c11d3bae2907867643",
-    "arxiv-cr": "234fedc8f5226a6928a9eccb7d636664b55d60c897d1decd147e818aaf37c283",
-    "arxiv-ai": "f901774f179913bdce42bcfbfa8c795acaf0c7121f88e20db4cd25d015f7e1af",
-    "alignment-forum": "476b3375da1679deaa96445ed2fb523fc4dc89118bbe9a12dc0d06d0afc38272"
+    "hf-blog": "c80636161dc4947338181f8d907e0492b16cdf8fb41735afa63ff92767f9ae69",
+    "metr": "07c41f1303633b9f9af99a0bb4bcd00a89d02d2767073b648f7868b42adfaae3",
+    "openai-news": "3c90e65d9297546a1400d9cfb36f27b2d5fa8f51242ac52e77a279d380101e04",
+    "deepmind": "42664993c24ad90a3a6349e6970f5b451016820816b4ccc84e60c7804fd6b67d",
+    "redwood": "1149f42a53514dd190df712f42c0b560abecc8157e71b7d9866ea311fb1ff0bc",
+    "frontier-security": "4a51c2ef653b728140139f4d92e0ab321ceb292d6edd45314ff1c8267244ef31",
+    "transformer-news": "58ae34fd5a9dde5e0e958411721decebcf2d6d9471e5d9d0cfa9821e77d6d335",
+    "simonw": "8b150d1d30f7e4ae0d41d8dd9baf584de226d83eabca8cd6582b7a79262ece3c",
+    "arxiv-cr": "554e686a7c97ae1011f54c16c253d7b0e429c09aed72f73770eae98c7bfddcfd",
+    "arxiv-ai": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de",
+    "alignment-forum": "3f18d2581950117102759ff25668bb8cdb9fefcf1ab10093b236d79864734092"
   },
   "page_hashes": {
-    "openai-alignment": "1b6587db766680dc2738b3a630bb9c4b375a6c750dc344b3f97276f02ebc3a92",
+    "openai-alignment": "9e208fca266ced20f729d73d592d230326c37918334cd33b75c32b8bbd560336",
     "anthropic-research": "883e69c9bcb77e37942a76adfe92ee7a411c0bc81cdfe6c51a9c37c5e90083fb",
-    "anthropic-news": "cc1566662d8a07dea923117f5261654dd8988e82a3cde8705f035e9689587d38",
+    "anthropic-news": "be11e3bdfbb81dd3a4daace6ca9be53fb70490f83d682cae249e5a58e470d6c5",
     "deepmind-frontier-safety": "a4ab8ed74ebb62276936311975ccf96b9e173d924e9e3cb37229b41a314c3876",
-    "meta-blog": "9ef1d6f186a9ff0e94d46af51c61f074064873f707e769a4216bf247b690e36e",
+    "meta-blog": "6551fad44280b799b27bf0350ddca725e59869e057dae5344bb21feac1632ede",
     "aisi-blog": "335b7d89ee6880b6bfa189a50e096b862d14aaba95db9969ee0ef9dfb6a80cb5",
-    "apollo-science": "0f3273f83b947a064a9802040698e0bd09d233157f27b909e0de544c675304e5",
-    "caisi": "84de7368311c01d3afcf076949aa9ccdd45d4fd174552a0575ad565429225667",
-    "redwood-home": "5e90fd7dafb0f387ff7bcfb2b6e07e79a666da789fec4195d21b683e28cb0636",
-    "aiaaic": "137efb36f8fb906610f33107652770853ffbc4e9fedb4421e06f2d37a883e027"
+    "apollo-science": "083d32d9d9ed8fec7328c51d0b936a443628a4098ed3d99e8d4fc1e375c5a3b3",
+    "caisi": "38bb03db80fed7cd707c496dda6c9192d0bb7b104affb13c05d767ba9a0123b8",
+    "redwood-home": "17a014e55fdbe537c2b10b49d66e7add24653be81ca7f1c236fbf643bf6cb83f",
+    "aiaaic": "efb5606da27462e96b0ee24932f1d046f7281cef804d4bd01c11f78c56584ea3"
   },
   "proposed": [
     {
@@ -455,6 +455,27 @@
       "title": "METR sets conditions for working with AI companies: disclose scope, access limits and redactions",
       "iso": "2026-10-14",
       "seen": "2026-10-15",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "title": "Anthropic embeds six METR staff with employee-like access",
+      "iso": "2026-10-15",
+      "seen": "2026-10-16",
+      "applied": true
+    },
+    {
+      "url": "https://www.apolloresearch.ai/science/update-aware-reasoning-glm-5-3",
+      "title": "Apollo finds unprompted 'update-aware reasoning' in GLM-5.3",
+      "iso": "2026-10-15",
+      "seen": "2026-10-16",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/accessing-and-changing-internal-systems-during-dashboard-research/",
+      "title": "OpenAI: a model looking up public figures changed a live service's config and pulled 147,451 non-public rows",
+      "iso": "2026-10-15",
+      "seen": "2026-10-16",
       "applied": true
     }
   ]
