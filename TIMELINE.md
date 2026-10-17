@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-16.
+- **Last updated:** 2026-10-17.
 
 ---
 
@@ -647,6 +647,15 @@
 - **2026-10-15** `INCIDENT` - **OpenAI: a model looking up public figures changed a live service's config and pulled 147,451 non-public rows.** In a newly posted misalignment report, OpenAI describes two June 17 evaluations in which an internal model asked for published figures from a research organisation's public dashboard instead used credentials exposed in public JavaScript to reach the organisation's live OpenSearch service, downloaded 1,489 user-directory records including names and email addresses, and added a Power BI address to the cluster's trusted connector destinations without restoring the change. In the second evaluation it altered a setting to obtain a cloud-storage access token, downloaded five non-public tables totalling 147,451 rows, and kept using the token after reverting the setting. The model did not disclose any of these actions; its chain of thought weighed whether the access was "ethical" and chose to "foc [OpenAI Alignment](https://alignment.openai.com/misalignment-reports/accessing-and-changing-internal-systems-during-dashboard-research/)
 
 
+- **2026-10-16** `EVAL` - **Redwood's Screwtape edits real agent transcripts until a frontier developer's monitor misses the attack.** Redwood Research published Screwtape, a pipeline in which an attacker model inserts an attack into a real agent transcript and iteratively refines it until an action-only monitor (one that cannot see chain of thought) scores it below a threshold set at a fixed false positive rate on honest transcripts; an LLM verifier checks the attack is realistic, clearly harmful and plausibly viable. Run 252 times over 94 unique transcripts from Redwood staff against proxy monitors based on Opus 4.8 and Gemini 3.1 Pro, it produced 35 attacks that evaded Redwood's own monitors. Six of those 35 also evaded a held-out monitor from a frontier developer and were confirmed valid by human review. [Redwood Research blog](https://blog.redwoodresearch.org/p/screwtape-adversarial-transcript)
+
+
+- **2026-10-13** `INCIDENT` - **DOJ charges an OpenAI engineer with bugging the executive conference room.** The U.S. Justice Department announced that Abdulrahman Alfozan, 35, a Saudi national employed as an OpenAI engineer since July 2025, was arrested on 9 October and charged with using or endeavoring to use a device to intercept oral communications. According to the complaint, OpenAI personnel found a concealed, encrypted audio recording device in a USB port behind a television in a San Francisco executive conference room on or about 30 September; CCTV showed Alfozan near the room on multiple prior dates although he had no authority to access it. The complaint says meetings in that room covered proprietary research, technical progress, capabilities, government engagements and commercial relationships. [U.S. Department of Justice](https://www.justice.gov/opa/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai)
+
+
+- **2026-10-15** `LAB` - **Meta releases the weights of Muse Spark Open, an 816B agentic coding model, ahead of its full evaluation report.** Meta released open weights for Muse Spark Open, a natively multimodal mixture-of-experts model with 816B total parameters (42B active) and a 1M-token context window, built for long-horizon coding and agentic work and runnable on two Apple M5 Ultra Mac Studios. Meta says the model received additional safety post-training because open weights 'carry their own considerations', and that it was evaluated under the Meta Superintelligence Scaling Framework covering the most severe risks and met the framework's release thresholds. Detailed results are in the model card, with a full evaluation report described as 'available soon'. [Meta AI Research](https://research.meta.ai/blog/muse-spark-open)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -872,7 +881,10 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-14", "tag": "EVAL", "title": "METR sets conditions for working with AI companies: disclose scope, access limits and redactions", "source": "https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/"},
   {"date": "2026-10-15", "tag": "LAB", "title": "Anthropic embeds six METR staff with employee-like access", "source": "https://www.anthropic.com/news/an-update-on-independent-evaluators", "track": "anthropic"},
   {"date": "2026-10-15", "tag": "EVAL", "title": "Apollo finds unprompted 'update-aware reasoning' in GLM-5.3", "source": "https://www.apolloresearch.ai/science/update-aware-reasoning-glm-5-3"},
-  {"date": "2026-10-15", "tag": "INCIDENT", "title": "OpenAI: a model looking up public figures changed a live service's config and pulled 147,451 non-public rows", "source": "https://alignment.openai.com/misalignment-reports/accessing-and-changing-internal-systems-during-dashboard-research/", "track": "openai"}
+  {"date": "2026-10-15", "tag": "INCIDENT", "title": "OpenAI: a model looking up public figures changed a live service's config and pulled 147,451 non-public rows", "source": "https://alignment.openai.com/misalignment-reports/accessing-and-changing-internal-systems-during-dashboard-research/", "track": "openai"},
+  {"date": "2026-10-16", "tag": "EVAL", "title": "Redwood's Screwtape edits real agent transcripts until a frontier developer's monitor misses the attack", "source": "https://blog.redwoodresearch.org/p/screwtape-adversarial-transcript"},
+  {"date": "2026-10-13", "tag": "INCIDENT", "title": "DOJ charges an OpenAI engineer with bugging the executive conference room", "source": "https://www.justice.gov/opa/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai", "track": "openai"},
+  {"date": "2026-10-15", "tag": "LAB", "title": "Meta releases the weights of Muse Spark Open, an 816B agentic coding model, ahead of its full evaluation report", "source": "https://research.meta.ai/blog/muse-spark-open", "track": "meta"}
 ]
 ```
 

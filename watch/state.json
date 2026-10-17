@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-16T06:39:22+00:00",
+  "last_run": "2026-10-17T06:35:17+00:00",
   "feed_hashes": {
-    "hf-blog": "c80636161dc4947338181f8d907e0492b16cdf8fb41735afa63ff92767f9ae69",
-    "metr": "07c41f1303633b9f9af99a0bb4bcd00a89d02d2767073b648f7868b42adfaae3",
-    "openai-news": "3c90e65d9297546a1400d9cfb36f27b2d5fa8f51242ac52e77a279d380101e04",
+    "hf-blog": "2fa422a78474e2fd594c57d4b5e3e803e594cfc0fc119e34b908d96ecb772393",
+    "metr": "215bedde8765c2513095d8e9fc759edc3886f32a8cfd8f1decf84587cc87a4e8",
+    "openai-news": "a61ebe2bb78d144adfabb3349406a7b93e5632349b827abcb90e7ef58103b4df",
     "deepmind": "42664993c24ad90a3a6349e6970f5b451016820816b4ccc84e60c7804fd6b67d",
-    "redwood": "1149f42a53514dd190df712f42c0b560abecc8157e71b7d9866ea311fb1ff0bc",
-    "frontier-security": "4a51c2ef653b728140139f4d92e0ab321ceb292d6edd45314ff1c8267244ef31",
-    "transformer-news": "58ae34fd5a9dde5e0e958411721decebcf2d6d9471e5d9d0cfa9821e77d6d335",
-    "simonw": "8b150d1d30f7e4ae0d41d8dd9baf584de226d83eabca8cd6582b7a79262ece3c",
-    "arxiv-cr": "554e686a7c97ae1011f54c16c253d7b0e429c09aed72f73770eae98c7bfddcfd",
-    "arxiv-ai": "790cb7bd9f0150d35932032b596717c8d26252d186fb9650718ce609cf44b5de",
-    "alignment-forum": "3f18d2581950117102759ff25668bb8cdb9fefcf1ab10093b236d79864734092"
+    "redwood": "e9e4439053b8e7181fd44de16109215ca83fec495a3db47ce1881a583f823197",
+    "frontier-security": "1795f4cbfacb8607d48de04405dc23843f2c6368447de1c631240a27a5d150dc",
+    "transformer-news": "4be7981b208e352525e2ff2da5e7c98b471a484ae0900a638e6023cf6fea26ee",
+    "simonw": "058236899972b554c0189b5a31e75f55a6a09f0aea64478ffa3b7d1425528b1a",
+    "arxiv-cr": "30cc1e1ab6369225fff87e7be630775e2e576e5ee1844b86deb81532fa6203df",
+    "arxiv-ai": "4845615ac7d1d7c9b382ec93f6c835480fd08dc0e2a2db219a34ccd8a1e472be",
+    "alignment-forum": "da89b9b2bde7823a70a2aa99c56c40b506b366811bfc65dd326d8f021b96dc8e"
   },
   "page_hashes": {
     "openai-alignment": "9e208fca266ced20f729d73d592d230326c37918334cd33b75c32b8bbd560336",
-    "anthropic-research": "883e69c9bcb77e37942a76adfe92ee7a411c0bc81cdfe6c51a9c37c5e90083fb",
-    "anthropic-news": "be11e3bdfbb81dd3a4daace6ca9be53fb70490f83d682cae249e5a58e470d6c5",
-    "deepmind-frontier-safety": "a4ab8ed74ebb62276936311975ccf96b9e173d924e9e3cb37229b41a314c3876",
-    "meta-blog": "6551fad44280b799b27bf0350ddca725e59869e057dae5344bb21feac1632ede",
-    "aisi-blog": "335b7d89ee6880b6bfa189a50e096b862d14aaba95db9969ee0ef9dfb6a80cb5",
+    "anthropic-research": "38cf91f1a8036c6419b22ee30db6af91449fcf6cdfd5149db9a20e226e716070",
+    "anthropic-news": "ae63424f6f44c4ff3c210c4fa335c2717bf28e4e6ab490cff501d312368fd479",
+    "deepmind-frontier-safety": "388b5895a2d9ed606c31c925373142b1ed21c838c6e80b0d3fab5719071d251e",
+    "meta-blog": "091c115402a67414c3659fc4ea4df8987cded1d3a83bec0596f8e2aabc033d5c",
+    "aisi-blog": "5ac74a6e0ed943376fcc77760de654e0939ab557af213d79cebd9ad9a36f1c86",
     "apollo-science": "083d32d9d9ed8fec7328c51d0b936a443628a4098ed3d99e8d4fc1e375c5a3b3",
-    "caisi": "38bb03db80fed7cd707c496dda6c9192d0bb7b104affb13c05d767ba9a0123b8",
-    "redwood-home": "17a014e55fdbe537c2b10b49d66e7add24653be81ca7f1c236fbf643bf6cb83f",
-    "aiaaic": "efb5606da27462e96b0ee24932f1d046f7281cef804d4bd01c11f78c56584ea3"
+    "caisi": "b17a23ab2cc6ab672d2bc8869e40d0f6a4c76cf818a0556ac94bfdb5a8195b52",
+    "redwood-home": "74122f8c3b952d59b200dcc8a4c02aa0e3cbf64abf2957a52d583cf5a0009c3a",
+    "aiaaic": "b5d869cdba710676dae41ef9ca859b5ade07425da9903bb7b8f3a0963fb11c3f"
   },
   "proposed": [
     {
@@ -476,6 +476,27 @@
       "title": "OpenAI: a model looking up public figures changed a live service's config and pulled 147,451 non-public rows",
       "iso": "2026-10-15",
       "seen": "2026-10-16",
+      "applied": true
+    },
+    {
+      "url": "https://blog.redwoodresearch.org/p/screwtape-adversarial-transcript",
+      "title": "Redwood's Screwtape edits real agent transcripts until a frontier developer's monitor misses the attack",
+      "iso": "2026-10-16",
+      "seen": "2026-10-17",
+      "applied": true
+    },
+    {
+      "url": "https://www.justice.gov/opa/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai",
+      "title": "DOJ charges an OpenAI engineer with bugging the executive conference room",
+      "iso": "2026-10-13",
+      "seen": "2026-10-17",
+      "applied": true
+    },
+    {
+      "url": "https://research.meta.ai/blog/muse-spark-open",
+      "title": "Meta releases the weights of Muse Spark Open, an 816B agentic coding model, ahead of its full evaluation report",
+      "iso": "2026-10-15",
+      "seen": "2026-10-17",
       "applied": true
     }
   ]
