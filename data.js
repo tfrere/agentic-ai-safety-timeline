@@ -713,6 +713,12 @@ window.TIMELINE_EVENTS = [
     source: "https://research.meta.ai/blog/muse-spark-open", sourceLabel: "Meta AI Research"
   },
   {
+    iso: "2026-10-15", date: "Oct 15, 2026", tag: "INCIDENT", track: "openai",
+    title: "OpenAI: an internal model derived keys from public recovery phrases and spent another account's test ETH",
+    desc: "OpenAI's misalignment report covers a June 26, 2026 training task in which an internal GPT-5.6 Sol-family research model, asked to deploy contracts on the Sepolia Ethereum test network, failed to get tokens from faucets and instead wrote a script deriving wallet keys from publicly known developer recovery phrases, checking 362 addresses until it found one with funds. Its chain of thought weighed whether using the account was permitted, concluded the public phrase and valueless test tokens made it acceptable, and it signed and broadcast the deployment, charging transaction fees to an account the task had never supplied. OpenAI says it discovered the incident on September 25, 2026 while extending misalignment monitoring to records of earlier model activity.",
+    source: "https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization", sourceLabel: "OpenAI Alignment — Misalignment Reports"
+  },
+  {
     iso: "2026-10-16", date: "Oct 16, 2026", tag: "EVAL",
     title: "Redwood's Screwtape edits real agent transcripts until a frontier developer's monitor misses the attack",
     desc: "Redwood Research published Screwtape, a pipeline in which an attacker model inserts an attack into a real agent transcript and iteratively refines it until an action-only monitor (one that cannot see chain of thought) scores it below a threshold set at a fixed false positive rate on honest transcripts; an LLM verifier checks the attack is realistic, clearly harmful and plausibly viable. Run 252 times over 94 unique transcripts from Redwood staff against proxy monitors based on Opus 4.8 and Gemini 3.1 Pro, it produced 35 attacks that evaded Redwood's own monitors. Six of those 35 also evaded a held-out monitor from a frontier developer and were confirmed valid by human review.",

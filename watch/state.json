@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-19T06:50:11+00:00",
+  "last_run": "2026-10-20T06:38:44+00:00",
   "feed_hashes": {
-    "hf-blog": "2fa422a78474e2fd594c57d4b5e3e803e594cfc0fc119e34b908d96ecb772393",
+    "hf-blog": "87384feb195115d4806e7ec0932be848db274bafb1fa907103bada614ef0a3dc",
     "metr": "fa4964030236cde2134577e9477fe6319bc6ead8e3bcd3a8547660691f656b87",
-    "openai-news": "6a1956fabfcf1d86473ee65473bf04e220b90aae7af2a97a2c155530e335fe72",
+    "openai-news": "26c93fc05b4f9ac8e959ddda3a9d750e559a8468d3853c67f1c9dda2abe33c41",
     "deepmind": "5d23e82e5e383a78fcd02f74c0ee653a01091b4aaa9f6efc8024d44a3c6535ac",
-    "redwood": "a99a37ca4c1529e8820805016e95b847b44c57348270712a880c8e709630278d",
-    "frontier-security": "7c3f914670eeb16f2285a12d7f0b1afdec30139e88e7f92cafd347a1d0755732",
-    "transformer-news": "d5f9d426650d1198970918c6ae6c892cb0ba6042791b010ca2ef527cded3a7d4",
-    "simonw": "a0c67b3829587658c673540a665ec09541f15c4d7cdc7c51ef58f15a95ec11b9",
-    "arxiv-cr": "ecf15ec1ac6d046293bb1f1fe13f779e97bbb6e36c60cc190e42727c5b4dff5d",
-    "arxiv-ai": "0afd667d22efdd16cc565280f4105b8018ff3e4aeaab4244d8b7d8999628a94e",
-    "alignment-forum": "6094bc04d20304b034c060e44fea8b477f12c707f5b7da2f972d603de3124a08"
+    "redwood": "e098943fdc0f983a060e48d193f11c8df586fecd97a8b9fc8630ebfa06815533",
+    "frontier-security": "dc1268d15a97b1312dc01bd407cb594bd39a62092175213f41ef3428148d2be3",
+    "transformer-news": "4e55afe1449736a62bdb9d7000910f4bd0b7c68335b48286962502a149b24822",
+    "simonw": "35485f1e5ef2187dcb8922fe05cd217d92cba53c07358d6b7088b9704bf30cde",
+    "arxiv-cr": "9456eda8e99edb55ee18e1a045e1bc8e64c1b9038800468a3e445d89ba384bd9",
+    "arxiv-ai": "6708fe047be9641fa628755a8c726c1f3dff7a1997724035143537b822e093d1",
+    "alignment-forum": "42be71c904a83463ed19956af2c2e1eee8d9ffad5ef40e3230fe9f74fbd33ae4"
   },
   "page_hashes": {
     "openai-alignment": "9e208fca266ced20f729d73d592d230326c37918334cd33b75c32b8bbd560336",
-    "anthropic-research": "38cf91f1a8036c6419b22ee30db6af91449fcf6cdfd5149db9a20e226e716070",
-    "anthropic-news": "c91b84b753e012a3751a4c745b243e5bc1610de2e3d28e903f371cadf4ff416b",
-    "deepmind-frontier-safety": "388b5895a2d9ed606c31c925373142b1ed21c838c6e80b0d3fab5719071d251e",
-    "meta-blog": "f07a1273f05253c35473b8c6ec5f3edb48daacffa2a6388d6be5ac61beb0b8dc",
+    "anthropic-research": "870c1a827dc992b8a7d834ca8c5d2ccb5704584f086fc6e1ef251554d25c9b83",
+    "anthropic-news": "0941c68e6aa2eef25e3f3719afd188727178779851c9213fa2956827982101d3",
+    "deepmind-frontier-safety": "f5e36f1e16488e94911c39a5decfe0c85767ecf0fdffb44f25c41bd0ccb68662",
+    "meta-blog": "4b1b94e77bb54e0169ba0f0da71542576c9f58fe689beb83896c0c3aa9e3bb7f",
     "aisi-blog": "5ac74a6e0ed943376fcc77760de654e0939ab557af213d79cebd9ad9a36f1c86",
-    "apollo-science": "083d32d9d9ed8fec7328c51d0b936a443628a4098ed3d99e8d4fc1e375c5a3b3",
-    "caisi": "cafac2873b0b0efef849a5f87e7ed65bd04580f04e8734b15ca9adfc99854f43",
-    "redwood-home": "74122f8c3b952d59b200dcc8a4c02aa0e3cbf64abf2957a52d583cf5a0009c3a",
-    "aiaaic": "7e08754a51dd88fc40b7ceb2b8b78a6129b11fe829bcbc2dcca12fc8290533bf"
+    "apollo-science": "573dcde005c9a8d93c9131a3ebe5b39062bda3c2677912c7d6f9c261234b8cd4",
+    "caisi": "f517751c4ed78d4cdf8f3c548c97fe72c51449eb0835ead36c61f764786a562d",
+    "redwood-home": "c8cac7da96f920528284c5cc65b2dd560d3d9c44046df250a81c2c3e5c52ebda",
+    "aiaaic": "7ba1ef7922de8261e08e9c23aec953c2fb46363eade13fb4b93a2d7b596da4a9"
   },
   "proposed": [
     {
@@ -497,6 +497,13 @@
       "title": "Meta releases the weights of Muse Spark Open, an 816B agentic coding model, ahead of its full evaluation report",
       "iso": "2026-10-15",
       "seen": "2026-10-17",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization",
+      "title": "OpenAI: an internal model derived keys from public recovery phrases and spent another account's test ETH",
+      "iso": "2026-10-15",
+      "seen": "2026-10-20",
       "applied": true
     }
   ]

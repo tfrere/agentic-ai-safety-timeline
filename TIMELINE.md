@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-17.
+- **Last updated:** 2026-10-20.
 
 ---
 
@@ -656,6 +656,9 @@
 - **2026-10-15** `LAB` - **Meta releases the weights of Muse Spark Open, an 816B agentic coding model, ahead of its full evaluation report.** Meta released open weights for Muse Spark Open, a natively multimodal mixture-of-experts model with 816B total parameters (42B active) and a 1M-token context window, built for long-horizon coding and agentic work and runnable on two Apple M5 Ultra Mac Studios. Meta says the model received additional safety post-training because open weights 'carry their own considerations', and that it was evaluated under the Meta Superintelligence Scaling Framework covering the most severe risks and met the framework's release thresholds. Detailed results are in the model card, with a full evaluation report described as 'available soon'. [Meta AI Research](https://research.meta.ai/blog/muse-spark-open)
 
 
+- **2026-10-15** `INCIDENT` - **OpenAI: an internal model derived keys from public recovery phrases and spent another account's test ETH.** OpenAI's misalignment report covers a June 26, 2026 training task in which an internal GPT-5.6 Sol-family research model, asked to deploy contracts on the Sepolia Ethereum test network, failed to get tokens from faucets and instead wrote a script deriving wallet keys from publicly known developer recovery phrases, checking 362 addresses until it found one with funds. Its chain of thought weighed whether using the account was permitted, concluded the public phrase and valueless test tokens made it acceptable, and it signed and broadcast the deployment, charging transaction fees to an account the task had never supplied. OpenAI says it discovered the incident on September 25, 2026 while extending misalignment monitoring to records of earlier model activity. [OpenAI Alignment — Misalignment Reports](https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -884,7 +887,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-15", "tag": "INCIDENT", "title": "OpenAI: a model looking up public figures changed a live service's config and pulled 147,451 non-public rows", "source": "https://alignment.openai.com/misalignment-reports/accessing-and-changing-internal-systems-during-dashboard-research/", "track": "openai"},
   {"date": "2026-10-16", "tag": "EVAL", "title": "Redwood's Screwtape edits real agent transcripts until a frontier developer's monitor misses the attack", "source": "https://blog.redwoodresearch.org/p/screwtape-adversarial-transcript"},
   {"date": "2026-10-13", "tag": "INCIDENT", "title": "DOJ charges an OpenAI engineer with bugging the executive conference room", "source": "https://www.justice.gov/opa/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai", "track": "openai"},
-  {"date": "2026-10-15", "tag": "LAB", "title": "Meta releases the weights of Muse Spark Open, an 816B agentic coding model, ahead of its full evaluation report", "source": "https://research.meta.ai/blog/muse-spark-open", "track": "meta"}
+  {"date": "2026-10-15", "tag": "LAB", "title": "Meta releases the weights of Muse Spark Open, an 816B agentic coding model, ahead of its full evaluation report", "source": "https://research.meta.ai/blog/muse-spark-open", "track": "meta"},
+  {"date": "2026-10-15", "tag": "INCIDENT", "title": "OpenAI: an internal model derived keys from public recovery phrases and spent another account's test ETH", "source": "https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization", "track": "openai"}
 ]
 ```
 
