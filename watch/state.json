@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-20T06:38:44+00:00",
+  "last_run": "2026-10-21T06:39:41+00:00",
   "feed_hashes": {
-    "hf-blog": "87384feb195115d4806e7ec0932be848db274bafb1fa907103bada614ef0a3dc",
-    "metr": "fa4964030236cde2134577e9477fe6319bc6ead8e3bcd3a8547660691f656b87",
-    "openai-news": "26c93fc05b4f9ac8e959ddda3a9d750e559a8468d3853c67f1c9dda2abe33c41",
-    "deepmind": "5d23e82e5e383a78fcd02f74c0ee653a01091b4aaa9f6efc8024d44a3c6535ac",
-    "redwood": "e098943fdc0f983a060e48d193f11c8df586fecd97a8b9fc8630ebfa06815533",
-    "frontier-security": "dc1268d15a97b1312dc01bd407cb594bd39a62092175213f41ef3428148d2be3",
-    "transformer-news": "4e55afe1449736a62bdb9d7000910f4bd0b7c68335b48286962502a149b24822",
-    "simonw": "35485f1e5ef2187dcb8922fe05cd217d92cba53c07358d6b7088b9704bf30cde",
-    "arxiv-cr": "9456eda8e99edb55ee18e1a045e1bc8e64c1b9038800468a3e445d89ba384bd9",
-    "arxiv-ai": "6708fe047be9641fa628755a8c726c1f3dff7a1997724035143537b822e093d1",
-    "alignment-forum": "42be71c904a83463ed19956af2c2e1eee8d9ffad5ef40e3230fe9f74fbd33ae4"
+    "hf-blog": "072ca286380b5a59d8c0f8e2b475b94bd4c2a5c1852bda615d8d858fcceb16f9",
+    "metr": "b40c674c9e7ea1eb5ea9147c53c2f8e6d3d02653cd5a9e6fa3ce431f48e49e62",
+    "openai-news": "83103d55dd17abc70ab3081bbe48332e9442cba4d42703d84f8206ecab6ff197",
+    "deepmind": "42664993c24ad90a3a6349e6970f5b451016820816b4ccc84e60c7804fd6b67d",
+    "redwood": "7fe6bc5b8fa227b55e4336fd95a4dc650e5c9f83308ffed3c4a8a4c18e35ad3a",
+    "frontier-security": "686fbbf9771c095558639a6f58780db3050108eeae6e56fbc7bc699c99be3c5e",
+    "transformer-news": "5b5f717b88327d895ca54a0aaf2a58215381ae2dc0f9d4cdf18a72f3bd64e39b",
+    "simonw": "35e2be56c271551925fe7a84eaeb4c4f9996c6ea39ce2035afc8bc9e5dc69144",
+    "arxiv-cr": "6d55196698b04fe0d99c268ad93fe1d7b7b995eb47a631ed68f263720e12c2a6",
+    "arxiv-ai": "e6ec36acff5072486e79b45ef716da43c287e44f9768e08b4d98ff86fc046db9",
+    "alignment-forum": "b96e8e274f6b84d166934020be30a3a6f36eeca6542c90ce388fded792b5bbb4"
   },
   "page_hashes": {
-    "openai-alignment": "9e208fca266ced20f729d73d592d230326c37918334cd33b75c32b8bbd560336",
-    "anthropic-research": "870c1a827dc992b8a7d834ca8c5d2ccb5704584f086fc6e1ef251554d25c9b83",
-    "anthropic-news": "0941c68e6aa2eef25e3f3719afd188727178779851c9213fa2956827982101d3",
-    "deepmind-frontier-safety": "f5e36f1e16488e94911c39a5decfe0c85767ecf0fdffb44f25c41bd0ccb68662",
-    "meta-blog": "4b1b94e77bb54e0169ba0f0da71542576c9f58fe689beb83896c0c3aa9e3bb7f",
+    "openai-alignment": "f4bb0a73c779464887a5ce584d34d408c12e64e8fa51c32b1ee3320c9463cc57",
+    "anthropic-research": "2e108d25f50993b315c9cb9902ccce9dba5c52746cced034085e6c98c36cc4cd",
+    "anthropic-news": "9ed00323f0645d2d15a900280f49f9e5b82a1f8ccc0023a7d4580ba064cc5e07",
+    "deepmind-frontier-safety": "388b5895a2d9ed606c31c925373142b1ed21c838c6e80b0d3fab5719071d251e",
+    "meta-blog": "6f7b8a61ca10a1e1b46d44c3831cc4a83ebf7bd39c856b8a7afaace18c9ea0ce",
     "aisi-blog": "5ac74a6e0ed943376fcc77760de654e0939ab557af213d79cebd9ad9a36f1c86",
     "apollo-science": "573dcde005c9a8d93c9131a3ebe5b39062bda3c2677912c7d6f9c261234b8cd4",
-    "caisi": "f517751c4ed78d4cdf8f3c548c97fe72c51449eb0835ead36c61f764786a562d",
-    "redwood-home": "c8cac7da96f920528284c5cc65b2dd560d3d9c44046df250a81c2c3e5c52ebda",
-    "aiaaic": "7ba1ef7922de8261e08e9c23aec953c2fb46363eade13fb4b93a2d7b596da4a9"
+    "caisi": "9dee15796b9fad65232b13588e3a3fc82c8de5abe1ef7e2c919098e9f391c3fd",
+    "redwood-home": "007b4d890b64f5dece603cb92ce00421331ee342dbdddde1826b7dee218a03ba",
+    "aiaaic": "5e1e6da98c3c122bfa0266dcfefb22e127dfbe54d17afad99ea28ff15aa72bce"
   },
   "proposed": [
     {
@@ -504,6 +504,20 @@
       "title": "OpenAI: an internal model derived keys from public recovery phrases and spent another account's test ETH",
       "iso": "2026-10-15",
       "seen": "2026-10-20",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring",
+      "title": "OpenAI: agents disabled its misalignment monitoring during routine coding tasks",
+      "iso": "2026-10-20",
+      "seen": "2026-10-21",
+      "applied": true
+    },
+    {
+      "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/",
+      "title": "METR reviews Anthropic's August risk report: low risk, but mostly because models are weak",
+      "iso": "2026-10-20",
+      "seen": "2026-10-21",
       "applied": true
     }
   ]

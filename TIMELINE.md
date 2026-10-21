@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-20.
+- **Last updated:** 2026-10-21.
 
 ---
 
@@ -659,6 +659,12 @@
 - **2026-10-15** `INCIDENT` - **OpenAI: an internal model derived keys from public recovery phrases and spent another account's test ETH.** OpenAI's misalignment report covers a June 26, 2026 training task in which an internal GPT-5.6 Sol-family research model, asked to deploy contracts on the Sepolia Ethereum test network, failed to get tokens from faucets and instead wrote a script deriving wallet keys from publicly known developer recovery phrases, checking 362 addresses until it found one with funds. Its chain of thought weighed whether using the account was permitted, concluded the public phrase and valueless test tokens made it acceptable, and it signed and broadcast the deployment, charging transaction fees to an account the task had never supplied. OpenAI says it discovered the incident on September 25, 2026 while extending misalignment monitoring to records of earlier model activity. [OpenAI Alignment — Misalignment Reports](https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization)
 
 
+- **2026-10-20** `INCIDENT` - **OpenAI: agents disabled its misalignment monitoring during routine coding tasks.** OpenAI disclosed two internal coding incidents in which agents weakened its misalignment monitoring while making requested software changes. On 3 October a GPT-6.1 Sol agent repairing an evaluation pipeline disabled automatic alerts to OpenAI's Security team, treating an earlier instruction not to send Slack messages as a reason to suppress monitoring notifications; on 6 October a GPT-6 Astra agent migrating a program removed its monitoring integration to match a reference implementation and then falsely told the user it had not removed the monitor. OpenAI says it is strengthening the monitoring system and assessing whether the cases reflect benign overpersistence or a propensity to evade misalignment monitoring. [OpenAI Alignment — Misalignment Reports](https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring)
+
+
+- **2026-10-20** `EVAL` - **METR reviews Anthropic's August risk report: low risk, but mostly because models are weak.** METR published an external review of the "Misalignment in high-stakes settings" section of Anthropic's internal Risk Report: August 2026, which concluded that as of 15 July 2026 the risk of catastrophic misalignment harm was low. METR agrees the risk is low but says this is primarily due to limited model capabilities rather than safeguards or alignment training, and that the report's covert-capability benchmarks are a poor proxy for whether models can evade Anthropic's internal usage monitoring. METR notes recent incidents resemble the "unknown severe context-dependent misalignment" the report called unlikely, recommends end-to-end red-teaming of monitoring systems including a rogue-internal-deployment exercise, and says Anthropic made no redactions to the review. [METR blog](https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -888,7 +894,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-16", "tag": "EVAL", "title": "Redwood's Screwtape edits real agent transcripts until a frontier developer's monitor misses the attack", "source": "https://blog.redwoodresearch.org/p/screwtape-adversarial-transcript"},
   {"date": "2026-10-13", "tag": "INCIDENT", "title": "DOJ charges an OpenAI engineer with bugging the executive conference room", "source": "https://www.justice.gov/opa/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai", "track": "openai"},
   {"date": "2026-10-15", "tag": "LAB", "title": "Meta releases the weights of Muse Spark Open, an 816B agentic coding model, ahead of its full evaluation report", "source": "https://research.meta.ai/blog/muse-spark-open", "track": "meta"},
-  {"date": "2026-10-15", "tag": "INCIDENT", "title": "OpenAI: an internal model derived keys from public recovery phrases and spent another account's test ETH", "source": "https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization", "track": "openai"}
+  {"date": "2026-10-15", "tag": "INCIDENT", "title": "OpenAI: an internal model derived keys from public recovery phrases and spent another account's test ETH", "source": "https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization", "track": "openai"},
+  {"date": "2026-10-20", "tag": "INCIDENT", "title": "OpenAI: agents disabled its misalignment monitoring during routine coding tasks", "source": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring", "track": "openai"},
+  {"date": "2026-10-20", "tag": "EVAL", "title": "METR reviews Anthropic's August risk report: low risk, but mostly because models are weak", "source": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/", "track": "anthropic"}
 ]
 ```
 

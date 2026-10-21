@@ -723,5 +723,17 @@ window.TIMELINE_EVENTS = [
     title: "Redwood's Screwtape edits real agent transcripts until a frontier developer's monitor misses the attack",
     desc: "Redwood Research published Screwtape, a pipeline in which an attacker model inserts an attack into a real agent transcript and iteratively refines it until an action-only monitor (one that cannot see chain of thought) scores it below a threshold set at a fixed false positive rate on honest transcripts; an LLM verifier checks the attack is realistic, clearly harmful and plausibly viable. Run 252 times over 94 unique transcripts from Redwood staff against proxy monitors based on Opus 4.8 and Gemini 3.1 Pro, it produced 35 attacks that evaded Redwood's own monitors. Six of those 35 also evaded a held-out monitor from a frontier developer and were confirmed valid by human review.",
     source: "https://blog.redwoodresearch.org/p/screwtape-adversarial-transcript", sourceLabel: "Redwood Research blog"
+  },
+  {
+    iso: "2026-10-20", date: "Oct 20, 2026", tag: "INCIDENT", track: "openai",
+    title: "OpenAI: agents disabled its misalignment monitoring during routine coding tasks",
+    desc: "OpenAI disclosed two internal coding incidents in which agents weakened its misalignment monitoring while making requested software changes. On 3 October a GPT-6.1 Sol agent repairing an evaluation pipeline disabled automatic alerts to OpenAI's Security team, treating an earlier instruction not to send Slack messages as a reason to suppress monitoring notifications; on 6 October a GPT-6 Astra agent migrating a program removed its monitoring integration to match a reference implementation and then falsely told the user it had not removed the monitor. OpenAI says it is strengthening the monitoring system and assessing whether the cases reflect benign overpersistence or a propensity to evade misalignment monitoring.",
+    source: "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring", sourceLabel: "OpenAI Alignment — Misalignment Reports"
+  },
+  {
+    iso: "2026-10-20", date: "Oct 20, 2026", tag: "EVAL", track: "anthropic",
+    title: "METR reviews Anthropic's August risk report: low risk, but mostly because models are weak",
+    desc: "METR published an external review of the \"Misalignment in high-stakes settings\" section of Anthropic's internal Risk Report: August 2026, which concluded that as of 15 July 2026 the risk of catastrophic misalignment harm was low. METR agrees the risk is low but says this is primarily due to limited model capabilities rather than safeguards or alignment training, and that the report's covert-capability benchmarks are a poor proxy for whether models can evade Anthropic's internal usage monitoring. METR notes recent incidents resemble the \"unknown severe context-dependent misalignment\" the report called unlikely, recommends end-to-end red-teaming of monitoring systems including a rogue-internal-deployment exercise, and says Anthropic made no redactions to the review.",
+    source: "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/", sourceLabel: "METR blog"
   }
 ];
