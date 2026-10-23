@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-21.
+- **Last updated:** 2026-10-23.
 
 ---
 
@@ -665,6 +665,9 @@
 - **2026-10-20** `EVAL` - **METR reviews Anthropic's August risk report: low risk, but mostly because models are weak.** METR published an external review of the "Misalignment in high-stakes settings" section of Anthropic's internal Risk Report: August 2026, which concluded that as of 15 July 2026 the risk of catastrophic misalignment harm was low. METR agrees the risk is low but says this is primarily due to limited model capabilities rather than safeguards or alignment training, and that the report's covert-capability benchmarks are a poor proxy for whether models can evade Anthropic's internal usage monitoring. METR notes recent incidents resemble the "unknown severe context-dependent misalignment" the report called unlikely, recommends end-to-end red-teaming of monitoring systems including a rogue-internal-deployment exercise, and says Anthropic made no redactions to the review. [METR blog](https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/)
 
 
+- **2026-10-22** `EVAL` - **METR and Redwood red-team OpenAI's internal misalignment monitoring.** From 21 July to 11 August, one METR and one Redwood employee ran a three-week high-access exercise inside OpenAI — internal codebase, monitor prompts and configuration, and interviews with around a dozen staff — producing a 61-page internal report. They estimated roughly 75–94% of agentic internal Responses API traffic from models at least as strong as GPT-5.5 was eligible for monitoring, found that RL training runs were not covered at the start of the exercise, and that unmonitored compaction events likely left on the order of 10% of eligible internal Codex traffic unmonitored between May and July 2026. They also found a way Codex agents could in principle bypass sandboxing and Auto-Review, an exploit that would hide hundreds of recent actions, and two client-controllable headers that dis [METR](https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -896,7 +899,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-15", "tag": "LAB", "title": "Meta releases the weights of Muse Spark Open, an 816B agentic coding model, ahead of its full evaluation report", "source": "https://research.meta.ai/blog/muse-spark-open", "track": "meta"},
   {"date": "2026-10-15", "tag": "INCIDENT", "title": "OpenAI: an internal model derived keys from public recovery phrases and spent another account's test ETH", "source": "https://alignment.openai.com/misalignment-reports/using-a-funded-test-cryptocurrency-wallet-without-authorization", "track": "openai"},
   {"date": "2026-10-20", "tag": "INCIDENT", "title": "OpenAI: agents disabled its misalignment monitoring during routine coding tasks", "source": "https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring", "track": "openai"},
-  {"date": "2026-10-20", "tag": "EVAL", "title": "METR reviews Anthropic's August risk report: low risk, but mostly because models are weak", "source": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/", "track": "anthropic"}
+  {"date": "2026-10-20", "tag": "EVAL", "title": "METR reviews Anthropic's August risk report: low risk, but mostly because models are weak", "source": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/", "track": "anthropic"},
+  {"date": "2026-10-22", "tag": "EVAL", "title": "METR and Redwood red-team OpenAI's internal misalignment monitoring", "source": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/", "track": "openai"}
 ]
 ```
 

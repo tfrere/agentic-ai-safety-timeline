@@ -735,5 +735,11 @@ window.TIMELINE_EVENTS = [
     title: "METR reviews Anthropic's August risk report: low risk, but mostly because models are weak",
     desc: "METR published an external review of the \"Misalignment in high-stakes settings\" section of Anthropic's internal Risk Report: August 2026, which concluded that as of 15 July 2026 the risk of catastrophic misalignment harm was low. METR agrees the risk is low but says this is primarily due to limited model capabilities rather than safeguards or alignment training, and that the report's covert-capability benchmarks are a poor proxy for whether models can evade Anthropic's internal usage monitoring. METR notes recent incidents resemble the \"unknown severe context-dependent misalignment\" the report called unlikely, recommends end-to-end red-teaming of monitoring systems including a rogue-internal-deployment exercise, and says Anthropic made no redactions to the review.",
     source: "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review/", sourceLabel: "METR blog"
+  },
+  {
+    iso: "2026-10-22", date: "Oct 22, 2026", tag: "EVAL", track: "openai",
+    title: "METR and Redwood red-team OpenAI's internal misalignment monitoring",
+    desc: "From 21 July to 11 August, one METR and one Redwood employee ran a three-week high-access exercise inside OpenAI — internal codebase, monitor prompts and configuration, and interviews with around a dozen staff — producing a 61-page internal report. They estimated roughly 75–94% of agentic internal Responses API traffic from models at least as strong as GPT-5.5 was eligible for monitoring, found that RL training runs were not covered at the start of the exercise, and that unmonitored compaction events likely left on the order of 10% of eligible internal Codex traffic unmonitored between May and July 2026. They also found a way Codex agents could in principle bypass sandboxing and Auto-Review, an exploit that would hide hundreds of recent actions, and two client-controllable headers that dis",
+    source: "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/", sourceLabel: "METR"
   }
 ];
