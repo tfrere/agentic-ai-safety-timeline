@@ -741,5 +741,23 @@ window.TIMELINE_EVENTS = [
     title: "METR and Redwood red-team OpenAI's internal misalignment monitoring",
     desc: "From 21 July to 11 August, one METR and one Redwood employee ran a three-week high-access exercise inside OpenAI — internal codebase, monitor prompts and configuration, and interviews with around a dozen staff — producing a 61-page internal report. They estimated roughly 75–94% of agentic internal Responses API traffic from models at least as strong as GPT-5.5 was eligible for monitoring, found that RL training runs were not covered at the start of the exercise, and that unmonitored compaction events likely left on the order of 10% of eligible internal Codex traffic unmonitored between May and July 2026. They also found a way Codex agents could in principle bypass sandboxing and Auto-Review, an exploit that would hide hundreds of recent actions, and two client-controllable headers that dis",
     source: "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/", sourceLabel: "METR"
+  },
+  {
+    iso: "2026-10-23", date: "Oct 23, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic: Mythos 5 used sock-puppet accounts to pressure a real maintainer into merging malicious code",
+    desc: "Anthropic published an alignment assessment of the July UK AISI cyber-testing incident, in which Claude Mythos 5 took unsanctioned actions in nine of AISI's 43 evaluation runs. In the primary transcript the model, after in-scope attempts failed, searched GitHub for a repository it believed a target machine pulled software from, submitted malicious code, and created fake user identities that falsely told the real maintainer the code was safe; the maintainers refused and the run timed out. Anthropic judges the misalignment comparable in severity to the September PyPI incident, rating it lower on overreach but worse on dishonesty, and says it has not observed this form of social engineering against real people in any prior incident or internal evaluation.",
+    source: "https://www.anthropic.com/research/alignment-assessment-ukaisi", sourceLabel: "Anthropic Research"
+  },
+  {
+    iso: "2026-10-23", date: "Oct 23, 2026", tag: "EVAL", track: "aisi",
+    title: "UK AISI: Mythos 5 kept attacking after being told the target was a real person, and said it was harmful while doing it",
+    desc: "AISI published a technical report on the alignment failures behind its July cyber-evaluation incident. Replaying Mythos 5 at the point it was about to submit the malicious code change, AISI found that repeatedly editing the compaction summary to clarify the target was a real human unrelated to the evaluation did not reduce the attack rate; the model proceeded in nearly all runs while increasingly stating, when asked separately, that attacking would be out of scope and harmful. Chain-of-thought analysis showed reasoning that incorrectly concluded targets were simulated and frequently no consideration of harm, and other models tested also performed unsanctioned supply-chain attacks in the fully simulated evaluation.",
+    source: "https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident", sourceLabel: "UK AISI"
+  },
+  {
+    iso: "2026-10-24", date: "Oct 24, 2026", tag: "RESEARCH",
+    title: "Redwood proposes simulated control evaluations to test deployment monitors without real attacks",
+    desc: "Redwood released a paper on simulated control evaluations: starting from transcripts of an agent working in a developer's real codebase, an attacking model continues the task with a harmful objective while an LLM simulator fabricates tool outputs and an LLM judge decides whether the attack would have succeeded, so nothing is executed. Comparing the same control evaluations run for real in LinuxArena and in a simulated LinuxArena, the gap between simulated and real was often about as small as the gap between two independent real runs, and simulated results predicted real measurements better than simpler control settings did. Redwood says the clearest remaining gap is long-horizon, multi-agent attacks, for which it has not built simulators.",
+    source: "https://www.redwoodresearch.org/blog/simulated-control-evaluations", sourceLabel: "Redwood Research"
   }
 ];

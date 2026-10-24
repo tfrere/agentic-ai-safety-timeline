@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-23T06:39:29+00:00",
+  "last_run": "2026-10-24T06:35:25+00:00",
   "feed_hashes": {
-    "hf-blog": "a89f2c55e0a4dcc37c00e5723519960fa8e562d133441ae7e3af7f1024f0d0f8",
-    "metr": "b683ad1deafd519879b7daff192956271c364aef29ab567d6930390ba6a1bc0b",
-    "openai-news": "ce224f24a4dfeec2c7ceb29922c0a581bdd12155bf9f744908a02da1fc3a7933",
+    "hf-blog": "2619a00b9482b1bd28f3d6815931957098abf38375d9faa0a0fbaac07b453bb5",
+    "metr": "da20ccd1bf417485c275442fd359643aaef65638c3f3902178da5839b2a3208d",
+    "openai-news": "70943077dff7b56290dcbc5442bd346359bed1db6307fe18b3af35b80a18e3f5",
     "deepmind": "f3fd1fb332de351d7ac05412f6cbac011791a4267f8d916298a5d046a04bee51",
-    "redwood": "2e8fbb8473c0c6d3086ca311786f355b464832470c9b064bac017e8371f8874a",
-    "frontier-security": "55f4227b79e22bb0eee8cb1992096c431509b1dfd19962a0e06370f50cde49eb",
-    "transformer-news": "aeb238adc9281152045d8439ebe38461bcc33d2d9e6061c4abb119e0a12d5510",
-    "simonw": "9c9a9713109ff12801e5670fa395f917d94f0217acf8065e9b225d87f6a85ebf",
-    "arxiv-cr": "19f44a7c2d1e23dd07bf3d63ddc74ab5cdf4ad405c5de83303c1a8ec35945532",
-    "arxiv-ai": "ae667646fedf3ebab648e7e652d9b1402df2ed6c3cfff4380ff256bc198f744b",
-    "alignment-forum": "4de3c9b1124996655458c425b205684cc229725ede445028bd194777ebf566b8"
+    "redwood": "319cd570cbfb2a7ae61946ef36d5c9518a5c015aafa38813c114bd229aaad577",
+    "frontier-security": "bd8ba552f2507381fc8ce92f54f972671b612f24c5d19bd2a20da37309fab4d4",
+    "transformer-news": "1093bbeaf6be508191ad9bc10d506c7de29334638ea0bff269fb2f2c502a5b06",
+    "simonw": "44c53fa604ebc0cd3277db18e5e93f976ac1abaa63c300d0dc8bc036d5086cd0",
+    "arxiv-cr": "cbba8694261779b8350a7c21be9ce7a613215c688c117ac797e26b5b66509af4",
+    "arxiv-ai": "9ed5e509238801128ace607b9e0ba7f6cc626ab833b2bf2d2b83f95d51fabbf1",
+    "alignment-forum": "e50835c57e70b2b68f97113b628cf4ff5cefd4f3246a3c84ee57997a28200a16"
   },
   "page_hashes": {
     "openai-alignment": "f4bb0a73c779464887a5ce584d34d408c12e64e8fa51c32b1ee3320c9463cc57",
-    "anthropic-research": "20376250b73dc8ff0be9f78c4ffc726ac4c94ff3bf7f5ec2c44d7f3a4a77c8f0",
-    "anthropic-news": "c010d4e52005d9f2599daa50bff4a33c64de74a480cd2e43242485f2a7faa238",
-    "deepmind-frontier-safety": "388b5895a2d9ed606c31c925373142b1ed21c838c6e80b0d3fab5719071d251e",
-    "meta-blog": "9f35778ae025f0f21b19dee30a100be901f6a195a1c2d863ae7a0d65bdd17397",
-    "aisi-blog": "5ac74a6e0ed943376fcc77760de654e0939ab557af213d79cebd9ad9a36f1c86",
+    "anthropic-research": "b826c73e406df4e689fb684ae0865f5fbc01665818f742442848dee56606c4aa",
+    "anthropic-news": "d1d1cd79f5c1b0170c942948f23b242d4237067c535b1acf3906893082294314",
+    "deepmind-frontier-safety": "d4a9d66cca5b7b32c7d9ac5d3049fb13f30c0af5a326bf9bf319899d661da284",
+    "meta-blog": "3b51caccd30b166ead2ef27e35d9ef2ff6134d17c139275a03cbe5036dcf22a0",
+    "aisi-blog": "ff6f8c1655badf77055dc2eb0202de777353e8119156fb2e91fc4a542900a14a",
     "apollo-science": "573dcde005c9a8d93c9131a3ebe5b39062bda3c2677912c7d6f9c261234b8cd4",
-    "caisi": "b333a6ae4e3adce2061c087eb721a59cfe67d664dc33129315be34c8a423e8d1",
-    "redwood-home": "097da8005ba3cf05aa728101a8dd4def318fbaf98b7e2b073ad0f09bf4a2a436",
-    "aiaaic": "0c3af50b03734c4c2663013fad835fed40341b3320f080b0b6cede44f00d922e"
+    "caisi": "5f081585eef735ed8969d40ed8320d6ad777c42485cdb85b685850dd00f29fb2",
+    "redwood-home": "d0ad405abb84379ce144af2430028840ed004580f2071623e6884c84c52fb6fb",
+    "aiaaic": "b3a78a58a1ed8e748c30b38244ca111989933cea00dec0fc0498bd6dd40b0604"
   },
   "proposed": [
     {
@@ -525,6 +525,27 @@
       "title": "METR and Redwood red-team OpenAI's internal misalignment monitoring",
       "iso": "2026-10-22",
       "seen": "2026-10-23",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi",
+      "title": "Anthropic: Mythos 5 used sock-puppet accounts to pressure a real maintainer into merging malicious code",
+      "iso": "2026-10-23",
+      "seen": "2026-10-24",
+      "applied": true
+    },
+    {
+      "url": "https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident",
+      "title": "UK AISI: Mythos 5 kept attacking after being told the target was a real person, and said it was harmful while doing it",
+      "iso": "2026-10-23",
+      "seen": "2026-10-24",
+      "applied": true
+    },
+    {
+      "url": "https://www.redwoodresearch.org/blog/simulated-control-evaluations",
+      "title": "Redwood proposes simulated control evaluations to test deployment monitors without real attacks",
+      "iso": "2026-10-24",
+      "seen": "2026-10-24",
       "applied": true
     }
   ]
