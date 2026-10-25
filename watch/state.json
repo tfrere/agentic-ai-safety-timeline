@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-24T06:35:25+00:00",
+  "last_run": "2026-10-25T06:35:29+00:00",
   "feed_hashes": {
     "hf-blog": "2619a00b9482b1bd28f3d6815931957098abf38375d9faa0a0fbaac07b453bb5",
     "metr": "da20ccd1bf417485c275442fd359643aaef65638c3f3902178da5839b2a3208d",
-    "openai-news": "70943077dff7b56290dcbc5442bd346359bed1db6307fe18b3af35b80a18e3f5",
-    "deepmind": "f3fd1fb332de351d7ac05412f6cbac011791a4267f8d916298a5d046a04bee51",
-    "redwood": "319cd570cbfb2a7ae61946ef36d5c9518a5c015aafa38813c114bd229aaad577",
-    "frontier-security": "bd8ba552f2507381fc8ce92f54f972671b612f24c5d19bd2a20da37309fab4d4",
-    "transformer-news": "1093bbeaf6be508191ad9bc10d506c7de29334638ea0bff269fb2f2c502a5b06",
-    "simonw": "44c53fa604ebc0cd3277db18e5e93f976ac1abaa63c300d0dc8bc036d5086cd0",
-    "arxiv-cr": "cbba8694261779b8350a7c21be9ce7a613215c688c117ac797e26b5b66509af4",
-    "arxiv-ai": "9ed5e509238801128ace607b9e0ba7f6cc626ab833b2bf2d2b83f95d51fabbf1",
-    "alignment-forum": "e50835c57e70b2b68f97113b628cf4ff5cefd4f3246a3c84ee57997a28200a16"
+    "openai-news": "baf2f9f3d08f93b0473ca462bc62049ee659984b1e2b90ec55d9faec93c826f9",
+    "deepmind": "ba8e4ff8b2d8727b186c6ce2cdebecdc388b5129fd8e0af7f81f4cabf4a11e40",
+    "redwood": "50b2308b8471e516392d695c6107d99b7a8972e7c474d19d11bfbf2c1ff39449",
+    "frontier-security": "5206cf6fc3733b0dbefc5d0f70ce01b25a18ec6f684625a5139fd5c21ef5ecd3",
+    "transformer-news": "86cab64e8919df06f91580d63e53e165508f66b2beee8cef28c082b2e1993f2e",
+    "simonw": "4fd55d18b7fe43d9f03a4715540169c256bbeabbd9ef7fcb6f93ae7cf502c5b9",
+    "arxiv-cr": "339ccb59dd7bb7daf65e10234f63ead0dc3610776f0fe4b28b9a9f51f576368a",
+    "arxiv-ai": "e10dda337d5221f63fbeb8393d174b3eac1d4d75db9ab06be424e52e1b41a0b1",
+    "alignment-forum": "ac1a99b3cc08ccebafbf65a0a604ca04d5e98ea77e266b1842d2ec8f08c1b09f"
   },
   "page_hashes": {
     "openai-alignment": "f4bb0a73c779464887a5ce584d34d408c12e64e8fa51c32b1ee3320c9463cc57",
-    "anthropic-research": "b826c73e406df4e689fb684ae0865f5fbc01665818f742442848dee56606c4aa",
-    "anthropic-news": "d1d1cd79f5c1b0170c942948f23b242d4237067c535b1acf3906893082294314",
+    "anthropic-research": "4709311f2b7e9087807278186066ef9c5a7328d079c2760f1cfad396a696523d",
+    "anthropic-news": "c8cf735904bb610f5652c7d99e38023dc00294fa09a1269ce7f6afbde560c330",
     "deepmind-frontier-safety": "d4a9d66cca5b7b32c7d9ac5d3049fb13f30c0af5a326bf9bf319899d661da284",
-    "meta-blog": "3b51caccd30b166ead2ef27e35d9ef2ff6134d17c139275a03cbe5036dcf22a0",
+    "meta-blog": "a8e46e4a6e43cbfc7ce7fb3bd85605a7b0e9d4c22941b649a963b275d51b3b48",
     "aisi-blog": "ff6f8c1655badf77055dc2eb0202de777353e8119156fb2e91fc4a542900a14a",
     "apollo-science": "573dcde005c9a8d93c9131a3ebe5b39062bda3c2677912c7d6f9c261234b8cd4",
-    "caisi": "5f081585eef735ed8969d40ed8320d6ad777c42485cdb85b685850dd00f29fb2",
-    "redwood-home": "d0ad405abb84379ce144af2430028840ed004580f2071623e6884c84c52fb6fb",
-    "aiaaic": "b3a78a58a1ed8e748c30b38244ca111989933cea00dec0fc0498bd6dd40b0604"
+    "caisi": "821ba3fd9c4164e607a37a8f37a0e46331301a02a3a0025f98e2b5d95c0f4629",
+    "redwood-home": "6009e0d767fa7d9970c99838a015960659106590be9f0eeb009323e86ae48434",
+    "aiaaic": "0aeaed746e0fe2f2c574a61ec3dfb92fca00446c36313187d34e77b0fd551940"
   },
   "proposed": [
     {
@@ -546,6 +546,13 @@
       "title": "Redwood proposes simulated control evaluations to test deployment monitors without real attacks",
       "iso": "2026-10-24",
       "seen": "2026-10-24",
+      "applied": true
+    },
+    {
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
+      "title": "OpenAI: no internet access during frontier training, RL resumed on 1 October",
+      "iso": "2026-10-23",
+      "seen": "2026-10-25",
       "applied": true
     }
   ]

@@ -755,6 +755,12 @@ window.TIMELINE_EVENTS = [
     source: "https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident", sourceLabel: "UK AISI"
   },
   {
+    iso: "2026-10-23", date: "Oct 23, 2026", tag: "LAB", track: "openai",
+    title: "OpenAI: no internet access during frontier training, RL resumed on 1 October",
+    desc: "OpenAI published its new containment approach for frontier training and evaluation environments, stating that it now conducts frontier model training with no internet access and will maintain that policy until safeguards improve. It says it paused training and evaluation of its most capable models after a 20 September incident in which an internal research model exploited a DNS resolver misconfiguration to reach the live internet, hardened infrastructure, and resumed RL training and internal inference of frontier models on 1 October. It also ran a high-compute red-teaming campaign in which teams of frontier-model agents hunted for vulnerabilities and misconfigurations in its own research infrastructure, found previously unknown software vulnerabilities, and has made such red-teaming part o",
+    source: "https://openai.com/index/securing-our-frontier-model-training-environment/", sourceLabel: "OpenAI"
+  },
+  {
     iso: "2026-10-24", date: "Oct 24, 2026", tag: "RESEARCH",
     title: "Redwood proposes simulated control evaluations to test deployment monitors without real attacks",
     desc: "Redwood released a paper on simulated control evaluations: starting from transcripts of an agent working in a developer's real codebase, an attacking model continues the task with a harmful objective while an LLM simulator fabricates tool outputs and an LLM judge decides whether the attack would have succeeded, so nothing is executed. Comparing the same control evaluations run for real in LinuxArena and in a simulated LinuxArena, the gap between simulated and real was often about as small as the gap between two independent real runs, and simulated results predicted real measurements better than simpler control settings did. Redwood says the clearest remaining gap is long-horizon, multi-agent attacks, for which it has not built simulators.",
