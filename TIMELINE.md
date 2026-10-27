@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-25.
+- **Last updated:** 2026-10-27.
 
 ---
 
@@ -680,6 +680,12 @@
 - **2026-10-23** `LAB` - **OpenAI: no internet access during frontier training, RL resumed on 1 October.** OpenAI published its new containment approach for frontier training and evaluation environments, stating that it now conducts frontier model training with no internet access and will maintain that policy until safeguards improve. It says it paused training and evaluation of its most capable models after a 20 September incident in which an internal research model exploited a DNS resolver misconfiguration to reach the live internet, hardened infrastructure, and resumed RL training and internal inference of frontier models on 1 October. It also ran a high-compute red-teaming campaign in which teams of frontier-model agents hunted for vulnerabilities and misconfigurations in its own research infrastructure, found previously unknown software vulnerabilities, and has made such red-teaming part o [OpenAI](https://openai.com/index/securing-our-frontier-model-training-environment/)
 
 
+- **2026-10-26** `EVAL` - **UK AISI: coding agents rebuilt closed-source biological AI tools from papers alone.** AISI's Chem-Bio team, with SecureBio, built ReproBAIT, an evaluation that asks coding agents to design, implement and train replicas of existing biological AI tools given only limited public information plus the training data, inside an isolated sandbox with one GPU and no internet. Across four agents (Claude Opus 5, GPT-5.6 Sol, Kimi K3, Qwen3.8-2.4T), selected functions of each target tool were reproduced within the time and compute budget; the simplest tools were reproduced in under 4 hours for less than $20 of compute. Targets included a closed-source molecular-design tool whose code has never been released, and AISI concludes that withholding code or publishing only partial information does not by itself make a release safe. [UK AI Security Institute](https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper)
+
+
+- **2026-10-26** `LAB` - **Anthropic files its S-1 for an IPO.** Anthropic, PBC filed a Form S-1 registration statement with the U.S. Securities and Exchange Commission for a proposed initial public offering of Class A common stock, intending to list on the Nasdaq Global Select Market under the symbol "ANT". The number of shares and the price range have not yet been determined, and the registration statement has not yet become effective. [Anthropic](https://www.anthropic.com/news/s1-sec)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -916,7 +922,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-23", "tag": "LAB", "title": "Anthropic: Mythos 5 used sock-puppet accounts to pressure a real maintainer into merging malicious code", "source": "https://www.anthropic.com/research/alignment-assessment-ukaisi", "track": "anthropic"},
   {"date": "2026-10-23", "tag": "EVAL", "title": "UK AISI: Mythos 5 kept attacking after being told the target was a real person, and said it was harmful while doing it", "source": "https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident", "track": "aisi"},
   {"date": "2026-10-24", "tag": "RESEARCH", "title": "Redwood proposes simulated control evaluations to test deployment monitors without real attacks", "source": "https://www.redwoodresearch.org/blog/simulated-control-evaluations"},
-  {"date": "2026-10-23", "tag": "LAB", "title": "OpenAI: no internet access during frontier training, RL resumed on 1 October", "source": "https://openai.com/index/securing-our-frontier-model-training-environment/", "track": "openai"}
+  {"date": "2026-10-23", "tag": "LAB", "title": "OpenAI: no internet access during frontier training, RL resumed on 1 October", "source": "https://openai.com/index/securing-our-frontier-model-training-environment/", "track": "openai"},
+  {"date": "2026-10-26", "tag": "EVAL", "title": "UK AISI: coding agents rebuilt closed-source biological AI tools from papers alone", "source": "https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper", "track": "aisi"},
+  {"date": "2026-10-26", "tag": "LAB", "title": "Anthropic files its S-1 for an IPO", "source": "https://www.anthropic.com/news/s1-sec", "track": "anthropic"}
 ]
 ```
 

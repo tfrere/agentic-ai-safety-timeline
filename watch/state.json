@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-26T06:50:57+00:00",
+  "last_run": "2026-10-27T06:40:38+00:00",
   "feed_hashes": {
     "hf-blog": "2619a00b9482b1bd28f3d6815931957098abf38375d9faa0a0fbaac07b453bb5",
     "metr": "dc20f88a5bd1c00abe3b095571cfcb1fb4b40b16b449a654ff0dd1c9376ce972",
-    "openai-news": "2809641c5cf0ff11cc6f0c80a6d3c4e26a9afd0a16e034888f9c4c4ba7b65ded",
+    "openai-news": "f4a0bfc74c8f76e5e168c08921604fbe2144011a4722ed1fa2f65b4f609a18aa",
     "deepmind": "ba8e4ff8b2d8727b186c6ce2cdebecdc388b5129fd8e0af7f81f4cabf4a11e40",
-    "redwood": "17656d9766b66355b6f50a9f83f6d3f0ae172ffae0edf0cf20c0fa80f3f11b39",
-    "frontier-security": "7fcdda28cda6b2ab6c203a4c5075102f09f9d6fc2c2b3e538e31f48cb47d89b6",
-    "transformer-news": "15a471490c8adf8d9dd8ebb103ea63fc2c7142409584a932ebe9fdac89ec5f8b",
-    "simonw": "5e173ab12e9e3e865bdd87c31092d18326839b9bf0eaf4bb2ed8e801ae6e7a94",
-    "arxiv-cr": "d7d9be59462260ebc021711951fa4a79c7c5cd1760a2cad02b1dbb44ca043653",
-    "arxiv-ai": "16e4de61dd01996ee7c1777d234dc3647f78288120be117d246c637bd4c2f695",
-    "alignment-forum": "f8fac5fe5f7fb2d710c60e49b9fb88c137083a0322b0d993cd5dfff294844e66"
+    "redwood": "f2bca2f9dca3c3b2359873704069035e0ce666b5d53c902ff5d6abb8670d5ebb",
+    "frontier-security": "75bf6e5d43679e28033d8948f0c60152a6386d14e67c297d4e84e238f61afee9",
+    "transformer-news": "6c042c45589d354ccac1ce5dedea5b8270e5b93d2936901f059c6790b8341b27",
+    "simonw": "31b93f5fcf3f008b76bc363ac5aa089396c5618ddefff0925f0ab8777c26ac26",
+    "arxiv-cr": "65cd5f8d59e9f8341db9cda1279b5a079bae308dd88ecf2313ed283535e2a3ff",
+    "arxiv-ai": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71",
+    "alignment-forum": "795de1cd7ac841680faa8fca368a19f7f89feb39066695a43e9b5252050a8438"
   },
   "page_hashes": {
     "openai-alignment": "f4bb0a73c779464887a5ce584d34d408c12e64e8fa51c32b1ee3320c9463cc57",
-    "anthropic-research": "43031de71092b812126fcbde751050d2a134c27604c57913b8dcb715de380baf",
-    "anthropic-news": "4c8faaa23c8f26dd5685886e0b7b689b0871046eba81debb7200f74708a84851",
-    "deepmind-frontier-safety": "d4a9d66cca5b7b32c7d9ac5d3049fb13f30c0af5a326bf9bf319899d661da284",
-    "meta-blog": "56c6e9eefcef596b96358117106f67e98c5db4a02079c1ae25edcfa89625ae58",
-    "aisi-blog": "ff6f8c1655badf77055dc2eb0202de777353e8119156fb2e91fc4a542900a14a",
+    "anthropic-research": "0bf85cd76b3823265d27de0f9d88a8c8f7a074534433722892847993058755aa",
+    "anthropic-news": "aabbd2c5af1c305a7e6e583e37770f2984c64d37d81e4f37660036b31d9f811f",
+    "deepmind-frontier-safety": "7682c1834bcc003f24551f8b7795e5044815b10a281809b2bd6b7f3f1f396b90",
+    "meta-blog": "3f71183326105bd00f2ede0ff9b0c2d489d7a602f55df904d4814bd4c41932a7",
+    "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
     "apollo-science": "573dcde005c9a8d93c9131a3ebe5b39062bda3c2677912c7d6f9c261234b8cd4",
-    "caisi": "ccbd640ce32679fc43a58b21e5bd0fa29b997d49156437bf100753e5bf658525",
-    "redwood-home": "6009e0d767fa7d9970c99838a015960659106590be9f0eeb009323e86ae48434",
-    "aiaaic": "a1ada88f07877047bc608b3eee7b5074c05958bdc9ec2a2082162515820acd56"
+    "caisi": "f21ae11c7b1ca7fe92ad7db799bd0845f4ff5c9e61108e4c10cfc317d8cf2e90",
+    "redwood-home": "fadf86f5f1284a19316339d8dac8906e7181c7ed6a2651ebcb075f6706e0c78d",
+    "aiaaic": "adc4807bad2b1147e183e8165c62169d34021e7b70f6590004083ae0c284bdda"
   },
   "proposed": [
     {
@@ -553,6 +553,20 @@
       "title": "OpenAI: no internet access during frontier training, RL resumed on 1 October",
       "iso": "2026-10-23",
       "seen": "2026-10-25",
+      "applied": true
+    },
+    {
+      "url": "https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper",
+      "title": "UK AISI: coding agents rebuilt closed-source biological AI tools from papers alone",
+      "iso": "2026-10-26",
+      "seen": "2026-10-27",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/news/s1-sec",
+      "title": "Anthropic files its S-1 for an IPO",
+      "iso": "2026-10-26",
+      "seen": "2026-10-27",
       "applied": true
     }
   ]

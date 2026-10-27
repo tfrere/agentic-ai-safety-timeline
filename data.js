@@ -765,5 +765,17 @@ window.TIMELINE_EVENTS = [
     title: "Redwood proposes simulated control evaluations to test deployment monitors without real attacks",
     desc: "Redwood released a paper on simulated control evaluations: starting from transcripts of an agent working in a developer's real codebase, an attacking model continues the task with a harmful objective while an LLM simulator fabricates tool outputs and an LLM judge decides whether the attack would have succeeded, so nothing is executed. Comparing the same control evaluations run for real in LinuxArena and in a simulated LinuxArena, the gap between simulated and real was often about as small as the gap between two independent real runs, and simulated results predicted real measurements better than simpler control settings did. Redwood says the clearest remaining gap is long-horizon, multi-agent attacks, for which it has not built simulators.",
     source: "https://www.redwoodresearch.org/blog/simulated-control-evaluations", sourceLabel: "Redwood Research"
+  },
+  {
+    iso: "2026-10-26", date: "Oct 26, 2026", tag: "EVAL", track: "aisi",
+    title: "UK AISI: coding agents rebuilt closed-source biological AI tools from papers alone",
+    desc: "AISI's Chem-Bio team, with SecureBio, built ReproBAIT, an evaluation that asks coding agents to design, implement and train replicas of existing biological AI tools given only limited public information plus the training data, inside an isolated sandbox with one GPU and no internet. Across four agents (Claude Opus 5, GPT-5.6 Sol, Kimi K3, Qwen3.8-2.4T), selected functions of each target tool were reproduced within the time and compute budget; the simplest tools were reproduced in under 4 hours for less than $20 of compute. Targets included a closed-source molecular-design tool whose code has never been released, and AISI concludes that withholding code or publishing only partial information does not by itself make a release safe.",
+    source: "https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper", sourceLabel: "UK AI Security Institute"
+  },
+  {
+    iso: "2026-10-26", date: "Oct 26, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic files its S-1 for an IPO",
+    desc: "Anthropic, PBC filed a Form S-1 registration statement with the U.S. Securities and Exchange Commission for a proposed initial public offering of Class A common stock, intending to list on the Nasdaq Global Select Market under the symbol \"ANT\". The number of shares and the price range have not yet been determined, and the registration statement has not yet become effective.",
+    source: "https://www.anthropic.com/news/s1-sec", sourceLabel: "Anthropic"
   }
 ];
