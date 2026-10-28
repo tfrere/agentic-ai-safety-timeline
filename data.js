@@ -777,5 +777,11 @@ window.TIMELINE_EVENTS = [
     title: "Anthropic files its S-1 for an IPO",
     desc: "Anthropic, PBC filed a Form S-1 registration statement with the U.S. Securities and Exchange Commission for a proposed initial public offering of Class A common stock, intending to list on the Nasdaq Global Select Market under the symbol \"ANT\". The number of shares and the price range have not yet been determined, and the registration statement has not yet become effective.",
     source: "https://www.anthropic.com/news/s1-sec", sourceLabel: "Anthropic"
+  },
+  {
+    iso: "2026-10-27", date: "Oct 27, 2026", tag: "RESEARCH", track: "anthropic",
+    title: "Anthropic: analysts deferred to their coding agent on 86% of open judgment calls",
+    desc: "In a randomized trial Anthropic's Alignment team gave 50 professional causal-inference analysts a statistical analysis task in Claude Code, secretly assigning by coin flip which of two defensible options the agent would favor on each of four open decisions. Analysts went with the agent's assigned lean 86% of the time, and those who had already stated a preference switched away from it 60% of the time when the agent disagreed versus 6% when it agreed. Afterwards 77% of analysts reused the agent's own arguments, sometimes verbatim, but only 15% credited the agent as the source, and they rated their confidence and ownership of the decision as highly as everyone else.",
+    source: "https://www.anthropic.com/research/agents-judgment-calls", sourceLabel: "Anthropic Research"
   }
 ];

@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-27T06:40:38+00:00",
+  "last_run": "2026-10-28T06:29:41+00:00",
   "feed_hashes": {
-    "hf-blog": "2619a00b9482b1bd28f3d6815931957098abf38375d9faa0a0fbaac07b453bb5",
-    "metr": "dc20f88a5bd1c00abe3b095571cfcb1fb4b40b16b449a654ff0dd1c9376ce972",
-    "openai-news": "f4a0bfc74c8f76e5e168c08921604fbe2144011a4722ed1fa2f65b4f609a18aa",
-    "deepmind": "ba8e4ff8b2d8727b186c6ce2cdebecdc388b5129fd8e0af7f81f4cabf4a11e40",
-    "redwood": "f2bca2f9dca3c3b2359873704069035e0ce666b5d53c902ff5d6abb8670d5ebb",
-    "frontier-security": "75bf6e5d43679e28033d8948f0c60152a6386d14e67c297d4e84e238f61afee9",
-    "transformer-news": "6c042c45589d354ccac1ce5dedea5b8270e5b93d2936901f059c6790b8341b27",
-    "simonw": "31b93f5fcf3f008b76bc363ac5aa089396c5618ddefff0925f0ab8777c26ac26",
-    "arxiv-cr": "65cd5f8d59e9f8341db9cda1279b5a079bae308dd88ecf2313ed283535e2a3ff",
-    "arxiv-ai": "6f6a6b9565cad42f103e9c5fb3b9d0da85a17b390bb4026cc1b2df1a9a97ee71",
-    "alignment-forum": "795de1cd7ac841680faa8fca368a19f7f89feb39066695a43e9b5252050a8438"
+    "hf-blog": "f03b5a3b3fa6ec7f146b571c2c886eef04481f14a5860985abbe4ae6f3eb3914",
+    "metr": "11e49ab3f89b63b3d5b377325279c294aaa3c1992788d797cb9570bd1f72d4b2",
+    "openai-news": "946918911c4992c882d18c0b3bc98f17198c891d85e2f79be4a6db0c5c95e609",
+    "deepmind": "f8ff948e98d63b7201ae63315f44a3db1413f910230713affe6177b4208611b0",
+    "redwood": "eb68310b0db03411b042b321bfe7a42904e89a299b3c1f53d2f12d784600f975",
+    "frontier-security": "9aabffec7a2413653e2f61631a9a7dc373ec94577ff44dcdd8d6c000a53f6d9f",
+    "transformer-news": "be2e7587bb1f20df7665e88b8046cf9dec6542f9882ff9ca8f697b63278a5712",
+    "simonw": "19b2ae79d3ce9bdef9262d8f53a4711e5fb94d6a6806ba5202639f50c1883d0c",
+    "arxiv-cr": "730f0a8d9eb009e84059a3c9688ff149eb7f4f34fab1e3ac9a426d7d407d2147",
+    "arxiv-ai": "4e703018e5c51f7975d19d72834b094106fc611d9dfa65636eb06511b7d4620a",
+    "alignment-forum": "7cbb1ea74af26e2a79038a32fc9b659c3c17176fc5afa646f6f0b7f707e12d41"
   },
   "page_hashes": {
     "openai-alignment": "f4bb0a73c779464887a5ce584d34d408c12e64e8fa51c32b1ee3320c9463cc57",
-    "anthropic-research": "0bf85cd76b3823265d27de0f9d88a8c8f7a074534433722892847993058755aa",
-    "anthropic-news": "aabbd2c5af1c305a7e6e583e37770f2984c64d37d81e4f37660036b31d9f811f",
-    "deepmind-frontier-safety": "7682c1834bcc003f24551f8b7795e5044815b10a281809b2bd6b7f3f1f396b90",
-    "meta-blog": "3f71183326105bd00f2ede0ff9b0c2d489d7a602f55df904d4814bd4c41932a7",
+    "anthropic-research": "1cb1f308c511fc3f7d1a0cb2f310307bcf7020456801c26c496be6faa545facc",
+    "anthropic-news": "84117478793dedc0cc6c4cb12f902d27898847ce4a21b419c955650c954e73f2",
+    "deepmind-frontier-safety": "223aeca86f7f703b0bca8c50880c0a15c1b8974c455f63c0af8caee135b3e0a1",
+    "meta-blog": "1868eabf7450a352df3234cf9342c7ed38bd9d740c46c563a6246839590fbcf9",
     "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
     "apollo-science": "573dcde005c9a8d93c9131a3ebe5b39062bda3c2677912c7d6f9c261234b8cd4",
-    "caisi": "f21ae11c7b1ca7fe92ad7db799bd0845f4ff5c9e61108e4c10cfc317d8cf2e90",
+    "caisi": "2b396ba11cf3ee653f2440b7d8a53b11d6f3f40b09e2930d14347c75080bba60",
     "redwood-home": "fadf86f5f1284a19316339d8dac8906e7181c7ed6a2651ebcb075f6706e0c78d",
-    "aiaaic": "adc4807bad2b1147e183e8165c62169d34021e7b70f6590004083ae0c284bdda"
+    "aiaaic": "14d59cd53d9de805fd636bd1098b018a56646306c144d7f20ba0a149cde62577"
   },
   "proposed": [
     {
@@ -567,6 +567,13 @@
       "title": "Anthropic files its S-1 for an IPO",
       "iso": "2026-10-26",
       "seen": "2026-10-27",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/research/agents-judgment-calls",
+      "title": "Anthropic: analysts deferred to their coding agent on 86% of open judgment calls",
+      "iso": "2026-10-27",
+      "seen": "2026-10-28",
       "applied": true
     }
   ]
