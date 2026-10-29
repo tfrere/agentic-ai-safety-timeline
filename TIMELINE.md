@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-28.
+- **Last updated:** 2026-10-29.
 
 ---
 
@@ -689,6 +689,9 @@
 - **2026-10-27** `RESEARCH` - **Anthropic: analysts deferred to their coding agent on 86% of open judgment calls.** In a randomized trial Anthropic's Alignment team gave 50 professional causal-inference analysts a statistical analysis task in Claude Code, secretly assigning by coin flip which of two defensible options the agent would favor on each of four open decisions. Analysts went with the agent's assigned lean 86% of the time, and those who had already stated a preference switched away from it 60% of the time when the agent disagreed versus 6% when it agreed. Afterwards 77% of analysts reused the agent's own arguments, sometimes verbatim, but only 15% credited the agent as the source, and they rated their confidence and ownership of the decision as highly as everyone else. [Anthropic Research](https://www.anthropic.com/research/agents-judgment-calls)
 
 
+- **2026-10-26** `EVAL` - **UK AISI: pretraining data filtering in protein models is reversible for under $80 of compute.** AISI's Chem-Bio team pretrained ESM-2 protein language models from scratch (8M to 3B parameters) with viral protein sequences removed, across exclusion tiers from a single influenza strain to all viral proteins and close homologues. Filtering selectively degraded performance on the withheld viral domain while leaving non-viral performance largely intact, but the removed capability could be restored by fine-tuning on publicly available sequences for under $80 of compute even for the largest model. AISI concludes data filtering is not a robust standalone safeguard for open-weight biological models and needs to be paired with data access controls. [UK AI Security Institute](https://www.aisi.gov.uk/blog/pretraining-data-filtering-in-open-weight-biological-models)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -928,7 +931,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-23", "tag": "LAB", "title": "OpenAI: no internet access during frontier training, RL resumed on 1 October", "source": "https://openai.com/index/securing-our-frontier-model-training-environment/", "track": "openai"},
   {"date": "2026-10-26", "tag": "EVAL", "title": "UK AISI: coding agents rebuilt closed-source biological AI tools from papers alone", "source": "https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper", "track": "aisi"},
   {"date": "2026-10-26", "tag": "LAB", "title": "Anthropic files its S-1 for an IPO", "source": "https://www.anthropic.com/news/s1-sec", "track": "anthropic"},
-  {"date": "2026-10-27", "tag": "RESEARCH", "title": "Anthropic: analysts deferred to their coding agent on 86% of open judgment calls", "source": "https://www.anthropic.com/research/agents-judgment-calls", "track": "anthropic"}
+  {"date": "2026-10-27", "tag": "RESEARCH", "title": "Anthropic: analysts deferred to their coding agent on 86% of open judgment calls", "source": "https://www.anthropic.com/research/agents-judgment-calls", "track": "anthropic"},
+  {"date": "2026-10-26", "tag": "EVAL", "title": "UK AISI: pretraining data filtering in protein models is reversible for under $80 of compute", "source": "https://www.aisi.gov.uk/blog/pretraining-data-filtering-in-open-weight-biological-models", "track": "aisi"}
 ]
 ```
 
