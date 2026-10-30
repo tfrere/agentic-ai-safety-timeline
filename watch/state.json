@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-10-29T06:29:46+00:00",
+  "last_run": "2026-10-30T06:29:32+00:00",
   "feed_hashes": {
-    "hf-blog": "4896c21674c315a03c7652d55df5e62fe95030a92e76f90ca3cc554bc0b0937a",
-    "metr": "11e49ab3f89b63b3d5b377325279c294aaa3c1992788d797cb9570bd1f72d4b2",
-    "openai-news": "52003c38b640c286ed161a7e0bc9d85b34febaa4d14decdb65fa5574ec936a89",
-    "deepmind": "138be41eb04783c116dade2ae0ae7eddc01ab6f67e894726ca423f4b575eb484",
-    "redwood": "397bbb29cc70a05344c1d805a667670a7e18e9b9b1b975aff855373ec885611c",
-    "frontier-security": "ad4d583f26f0e3cc9822e3509e523d21a2eb212c66ed1ad15a30cd5a5e90c673",
-    "transformer-news": "c998b275d7d08f8b2eba3a55e5b18c6ff669ab9d9772a18e11570c7dcf29deb4",
-    "simonw": "1574e87b02ff93c40b69000e140f589593ba89e5994e04dd0f02c77358a4c0b2",
-    "arxiv-cr": "b100f1ce40b2e6fc5deec84487fc431ca4f077656c6de7351638b010699643be",
-    "arxiv-ai": "b2de0b567bedbbc6f8aaf30fd0c8577002ec14a9fa8b676e070dbffced2b39e7",
-    "alignment-forum": "6ff179cf20e7eae225e44533d800a8e9eedf9da3853e11f481c6e9f9246d494b"
+    "hf-blog": "7b71c6a8e297b08f2c5c3dd6649f6baddc68ce289879326aa7f25815988192ae",
+    "metr": "c6d819bcfb1fcce48d51b0d4c893e2933257b671b3816728e89300c1fcd5b225",
+    "openai-news": "34eb87f88f870370a25be201ee0bd48834297372b02cf194cd38f14fdca8fe50",
+    "deepmind": "3effa43b3ed91399a7e3abcaef0f91fd44150cde5f9846fa8ee27dccb4ab3404",
+    "redwood": "9385ead2f544212fbd5e960bd267064042c72267c5eedcf83fe67d21107ce83f",
+    "frontier-security": "b5474b3d726626ca3d040ffc1dafda01dadd68a442b9ec7da5c8f62a2e50c32b",
+    "transformer-news": "62e93df1504f54847b955b2844991ff02261ea90b0c0689187a8035412aa53c2",
+    "simonw": "83f27366e998a04617a0077614dbf0e5fe171cb81599a87719b83ed3110c00bc",
+    "arxiv-cr": "f5dfa5b81b4cc2f7b195a2d6b29bc497dca75b7a1ef6a40cf47b32fc14415f8e",
+    "arxiv-ai": "fdb9b61931ba046fae22338da608ba59b1da09d249f1babb8e6ba125a73c607c",
+    "alignment-forum": "ef5791e16b4ff965c1fc2bbcc31a2a1af69d90dfa588266b52650efa23b5c317"
   },
   "page_hashes": {
     "openai-alignment": "f4bb0a73c779464887a5ce584d34d408c12e64e8fa51c32b1ee3320c9463cc57",
-    "anthropic-research": "bc4001b3a718f48e2e7d97cbb75ce39b3b65dfdb97eae5e903f598ae21791c0c",
-    "anthropic-news": "15975f892428e82ec0ccba7c90dcbc9f4d4788665d4a862001d6ae17d6f5efaf",
-    "deepmind-frontier-safety": "bd9573fa4262b45653a25262ddc16984d631330bc949ab508132c1be18190c7b",
-    "meta-blog": "c38ee39406f9060925233d15d49b867bb9da646ebf3bd5415a9cdb461f78416c",
+    "anthropic-research": "18b1130e8c4a77e22db647eb342f57c5beb224f6be05d696e2300ffc97478fa1",
+    "anthropic-news": "3fb614af4536a83757105b1947085ab9e58a0c6fee5a183ceff376ce56d94094",
+    "deepmind-frontier-safety": "560f6ff39c9d98b93a42f7ad97b3d940626c122509854ca6f7f321a4c87acf2a",
+    "meta-blog": "8c4b29c5fbf57616ac53139a7dee22d9015103665ceeca98e393f500fb1cbda5",
     "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
     "apollo-science": "573dcde005c9a8d93c9131a3ebe5b39062bda3c2677912c7d6f9c261234b8cd4",
-    "caisi": "e8c34cfea2431e0ea03d9c37b714efaf97eba4a10a6355fdfcb3e9dca2c11884",
-    "redwood-home": "afafc62d30205d7b499d3bce5c2887286f3fdfe7555024f3fbe6f1ff679e0ed9",
-    "aiaaic": "0f86964544e0d6df41151e8de7dd49b80444ce750545f4695c756584effd906e"
+    "caisi": "9524c503adcaef66a952f0364e23cf57eb5c4c1e6ec886ca309f4df75f691eb9",
+    "redwood-home": "a90cf8a373394624d3d64ee3d5644650bba65f9c375d531a11a038792a8bb1fb",
+    "aiaaic": "c964625e6b31c306eeb8e9ec17aafa4c9c48af648cbf85d5a799ee8628682fc1"
   },
   "proposed": [
     {
@@ -581,6 +581,13 @@
       "title": "UK AISI: pretraining data filtering in protein models is reversible for under $80 of compute",
       "iso": "2026-10-26",
       "seen": "2026-10-29",
+      "applied": true
+    },
+    {
+      "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment/",
+      "title": "OpenAI describes its layered misalignment detection stack",
+      "iso": "2026-10-29",
+      "seen": "2026-10-30",
       "applied": true
     }
   ]

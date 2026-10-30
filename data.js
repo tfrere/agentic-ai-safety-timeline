@@ -789,5 +789,11 @@ window.TIMELINE_EVENTS = [
     title: "Anthropic: analysts deferred to their coding agent on 86% of open judgment calls",
     desc: "In a randomized trial Anthropic's Alignment team gave 50 professional causal-inference analysts a statistical analysis task in Claude Code, secretly assigning by coin flip which of two defensible options the agent would favor on each of four open decisions. Analysts went with the agent's assigned lean 86% of the time, and those who had already stated a preference switched away from it 60% of the time when the agent disagreed versus 6% when it agreed. Afterwards 77% of analysts reused the agent's own arguments, sometimes verbatim, but only 15% credited the agent as the source, and they rated their confidence and ownership of the decision as highly as everyone else.",
     source: "https://www.anthropic.com/research/agents-judgment-calls", sourceLabel: "Anthropic Research"
+  },
+  {
+    iso: "2026-10-29", date: "Oct 29, 2026", tag: "LAB", track: "openai",
+    title: "OpenAI describes its layered misalignment detection stack",
+    desc: "OpenAI published an account of how it monitors for frontier model misalignment and unauthorized agent behaviour, describing monitoring as one layer in a defense-in-depth strategy. The system is built as a multilayer architecture in which the initial layer (L0) uses lightweight classifiers called activation probes that look for concerning patterns in the model's internal activations, with heavier review reserved for flagged cases so responders can intervene before incidents escalate.",
+    source: "https://openai.com/index/how-we-detect-frontier-model-misalignment/", sourceLabel: "OpenAI"
   }
 ];
