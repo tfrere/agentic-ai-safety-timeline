@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-11-04T06:25:01+00:00",
+  "last_run": "2026-11-05T06:26:25+00:00",
   "feed_hashes": {
-    "hf-blog": "ee9c07a4a092aab056aa9379f6e9f73dc9a499a2aa8eb83e0518e80cf7a34d23",
+    "hf-blog": "b0edfee797366727222ebc4d80195a29fa9d6282bea5aba98ecb91e42983e472",
     "metr": "a668bbff0b9bc31c938f3368a12560f035740d73bfd3eb651583ef2a8f398bea",
-    "openai-news": "21d25fd47ff517107f6fc25234fb431c651c1e393b0f565f08b492d14bf66c5d",
-    "deepmind": "9fd37a07eb3e5b55506e02d4d61eefd358af59f7de684cec3166868319d6d6e7",
-    "redwood": "77eb1f55580e7241e43c7025259441c36169cb6905aeadf082f83a5924472d8f",
-    "frontier-security": "df9bbf6e48522f0f21c20564be90a46b7874424465bcba3896ca4bdd2fbde569",
-    "transformer-news": "081420f593a403b23971148744c607042077a61a31bbd8b84e64de93db6dae98",
-    "simonw": "a49501768eaf5e99122f5c3e49b68e3a70cec10c042e5c360404348b1a5bcfbc",
-    "arxiv-cr": "532f625617022e185196358366e5bd90622ca25bd69d4d4c4972b1df1c8af9b5",
-    "arxiv-ai": "7029244512f0a6e4953318673a7f61e76b98f80f738d8db5ab75961591c2e831",
-    "alignment-forum": "626ef6e9efb42c3c43d6e587ca12eb24ca156993774948d28133b465f5a5f7ce"
+    "openai-news": "26490873467200b784e41b63edb7a9dd7aa10ec48319280a59a1be397d409cac",
+    "deepmind": "a10d2353658c749c24d987816d514b6e6fb602071acd487f89071175278aaa28",
+    "redwood": "012a8c925d605aad45900166d48107278b2104d7146bc34443d90a23ec71e818",
+    "frontier-security": "588389f4fd48e768b6861dbe230fdc5618690c7ef3870bb05731076640a0e073",
+    "transformer-news": "95a2cdbaeb3e4290c3c3b2e40ed63615e38aa3d67b00716256f94c86f3ece557",
+    "simonw": "b9af112e0a6d21e395216244a708da388737ed9d7e7091a2b06e407d7f48d834",
+    "arxiv-cr": "a807bf12d30277b70196ee3261542cee834114315d2b54a32c3364e4f61222a1",
+    "arxiv-ai": "89966061a6504b8c643eb4970cded0c67d9bd89edcccbea636ae7b0af5574d8c",
+    "alignment-forum": "5e8b663e4137ef7c4753d8323d8e5c350cea4dbf3ecaa196814bba420cdf9b7c"
   },
   "page_hashes": {
-    "openai-alignment": "f4bb0a73c779464887a5ce584d34d408c12e64e8fa51c32b1ee3320c9463cc57",
-    "anthropic-research": "39c7156b156d1f3113e100eba7b33f4b7266915c07da898ad55a3f14a01612e0",
-    "anthropic-news": "8a2c1228f138588c854c7882aa63c987341072b5b17f1295e97facd605b5d89a",
-    "deepmind-frontier-safety": "560f6ff39c9d98b93a42f7ad97b3d940626c122509854ca6f7f321a4c87acf2a",
-    "meta-blog": "d4bc13d7eb9d645a54b0c8b35a84a192beb2e4f10d6511798d4b659233160ef2",
+    "openai-alignment": "71271776795a7d0b022fa86e381be8d8afa9c469a3ffc9c6bc46cee1f38ec005",
+    "anthropic-research": "bc21465c8a39f9a15486baf30ee0e246e89c66487c2b08f7f39234368cf10d2e",
+    "anthropic-news": "c9ff34683cca32e727ff4a778bc855aa83d406309de491df50d91eda8d000fe3",
+    "deepmind-frontier-safety": "0b085e6db3aa119eac76e510d2196655164d19386a6bf1691c3fc560a8ef082a",
+    "meta-blog": "a7a4a9ab2a9141811963284b14f47a00ef485db0b9b0e5dbf500ae235bc70ab8",
     "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
     "apollo-science": "ef65e2e2cc39f850093f042d70fdb9d388af5b70ab826598c1a5c4e319452d36",
-    "caisi": "8795f1b3be358075e4727add5500a72964f2532ba452eaf1548b7f3f8edfb0de",
-    "redwood-home": "25b13261161ee0671cf7e52d0403d121f2868589b7948af2dfe8aec64b27e794",
-    "aiaaic": "127294f0b1c1aa725c57078f30258b0dbafbcfd380ba1d2aa1e2d2a40537bdff"
+    "caisi": "ad4284728467ed3c43f5c6f7b1008cec0fdfb4902b5b9f45387d2b42cd29445b",
+    "redwood-home": "4636161922a6e581b7ced713855f4d1177da10b3dd28283526b041e4da7957b8",
+    "aiaaic": "e4f964f98edeb0189e4dd1bd3ebca47d377e4b4a6fa5febf0c68750b55ca58a5"
   },
   "proposed": [
     {
@@ -588,6 +588,20 @@
       "title": "OpenAI describes its layered misalignment detection stack",
       "iso": "2026-10-29",
       "seen": "2026-10-30",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
+      "title": "OpenAI: GPT-6 Astra covertly underperforms on safety research tasks",
+      "iso": "2026-11-04",
+      "seen": "2026-11-05",
+      "applied": true
+    },
+    {
+      "url": "https://blog.redwoodresearch.org/p/openai-agents-keep-disabling-monitoring",
+      "title": "Redwood: OpenAI agents disabling monitoring are not reliably reaching human review",
+      "iso": "2026-11-04",
+      "seen": "2026-11-05",
       "applied": true
     }
   ]

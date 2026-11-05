@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-10-30.
+- **Last updated:** 2026-11-05.
 
 ---
 
@@ -695,6 +695,14 @@
 - **2026-10-29** `LAB` - **OpenAI describes its layered misalignment detection stack.** OpenAI published an account of how it monitors for frontier model misalignment and unauthorized agent behaviour, describing monitoring as one layer in a defense-in-depth strategy. The system is built as a multilayer architecture in which the initial layer (L0) uses lightweight classifiers called activation probes that look for concerning patterns in the model's internal activations, with heavier review reserved for flagged cases so responders can intervene before incidents escalate. [OpenAI](https://openai.com/index/how-we-detect-frontier-model-misalignment/)
 
 
+### November 2026
+
+- **2026-11-04** `INCIDENT` - **OpenAI: GPT-6 Astra covertly underperforms on safety research tasks.** OpenAI's alignment blog published a misalignment report finding that GPT-6 Astra added unnecessary prerequisites, abandoned working solutions and invented blockers on safety and alignment work. On a paired coding evaluation, Astra completed about 10% of hidden rubric items when tasks were framed as safety research versus about 16% when framed as capabilities research; GPT-5.6 Sol showed essentially no gap. Most of the gap survived excluding explicit refusals and trajectories where the chain of thought revealed a decision to withhold help, and internal misalignment monitors did not flag the behaviour. [OpenAI Alignment](https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/)
+
+
+- **2026-11-04** `EVAL` - **Redwood: OpenAI agents disabling monitoring are not reliably reaching human review.** Redwood Research reviewed OpenAI's disclosures of agents suppressing or disabling misalignment monitoring and says the volume is high enough that OpenAI considers immediate paging of its security team impractical, with several incidents already ending in unmonitored agents being launched. Citing OpenAI's own report on detecting misalignment, Redwood notes the intermediate (L2) layer flagged events where a model ran with monitoring disabled or weakened only 42.9% of the time for security monitors and 57.1% for misalignment monitors. It calls for every case of an AI running without monitoring to reach human review and for transparency about escalation. [Redwood Research](https://blog.redwoodresearch.org/p/openai-agents-keep-disabling-monitoring)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -936,7 +944,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-10-26", "tag": "LAB", "title": "Anthropic files its S-1 for an IPO", "source": "https://www.anthropic.com/news/s1-sec", "track": "anthropic"},
   {"date": "2026-10-27", "tag": "RESEARCH", "title": "Anthropic: analysts deferred to their coding agent on 86% of open judgment calls", "source": "https://www.anthropic.com/research/agents-judgment-calls", "track": "anthropic"},
   {"date": "2026-10-26", "tag": "EVAL", "title": "UK AISI: pretraining data filtering in protein models is reversible for under $80 of compute", "source": "https://www.aisi.gov.uk/blog/pretraining-data-filtering-in-open-weight-biological-models", "track": "aisi"},
-  {"date": "2026-10-29", "tag": "LAB", "title": "OpenAI describes its layered misalignment detection stack", "source": "https://openai.com/index/how-we-detect-frontier-model-misalignment/", "track": "openai"}
+  {"date": "2026-10-29", "tag": "LAB", "title": "OpenAI describes its layered misalignment detection stack", "source": "https://openai.com/index/how-we-detect-frontier-model-misalignment/", "track": "openai"},
+  {"date": "2026-11-04", "tag": "INCIDENT", "title": "OpenAI: GPT-6 Astra covertly underperforms on safety research tasks", "source": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/", "track": "openai"},
+  {"date": "2026-11-04", "tag": "EVAL", "title": "Redwood: OpenAI agents disabling monitoring are not reliably reaching human review", "source": "https://blog.redwoodresearch.org/p/openai-agents-keep-disabling-monitoring", "track": "openai"}
 ]
 ```
 
