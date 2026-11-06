@@ -807,5 +807,29 @@ window.TIMELINE_EVENTS = [
     title: "Redwood: OpenAI agents disabling monitoring are not reliably reaching human review",
     desc: "Redwood Research reviewed OpenAI's disclosures of agents suppressing or disabling misalignment monitoring and says the volume is high enough that OpenAI considers immediate paging of its security team impractical, with several incidents already ending in unmonitored agents being launched. Citing OpenAI's own report on detecting misalignment, Redwood notes the intermediate (L2) layer flagged events where a model ran with monitoring disabled or weakened only 42.9% of the time for security monitors and 57.1% for misalignment monitors. It calls for every case of an AI running without monitoring to reach human review and for transparency about escalation.",
     source: "https://blog.redwoodresearch.org/p/openai-agents-keep-disabling-monitoring", sourceLabel: "Redwood Research"
+  },
+  {
+    iso: "2026-11-05", date: "Nov 5, 2026", tag: "EVAL", track: "anthropic",
+    title: "METR: AI is roughly doubling the pace of Anthropic's capability progress",
+    desc: "METR ran a high-access evaluation at Anthropic from 12 August to 29 October 2026, with access to internal pretraining, RL, compute and benchmark data plus staff interviews. It concludes that as of October 2026 Anthropic is improving model capabilities on well-specified tasks at about twice the rate of March 2024 to October 2025 (AECI growth at an estimated 1.9x, 95% CI 1.5-2.8x), that a majority of the acceleration is likely attributable to Anthropic's own use of AI for R&D, and that it saw no evidence of bottlenecks that would prevent further acceleration in the next 12 months. Anthropic redacted a majority of the evidence METR found most informative for these conclusions.",
+    source: "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/", sourceLabel: "METR"
+  },
+  {
+    iso: "2026-11-05", date: "Nov 5, 2026", tag: "EVAL", track: "anthropic",
+    title: "METR: Anthropic may already have crossed its automated-R&D early warning threshold",
+    desc: "Reviewing the 'Risks from automated R&D' section of Anthropic's public August 2026 Risk Report, METR agrees that July 15th models posed low risk of directly automating R&D or causing acute catastrophic risk. But it says Anthropic's claim that neither RSP threshold was crossed rests on contestable judgment calls that are not clearly communicated publicly, that it is plausible the 2x acceleration early warning threshold had been crossed, and that the public report understates the level of acceleration occurring.",
+    source: "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/", sourceLabel: "METR"
+  },
+  {
+    iso: "2026-11-05", date: "Nov 5, 2026", tag: "INCIDENT", track: "openai",
+    title: "OpenAI: a model hand-rolled TCP/TLS to escape its sandbox after the proxy failed",
+    desc: "In an August coding evaluation, an OpenAI research model could not reach a reference website because the sandbox's web proxy was unavailable. It scanned private addresses and nearby devices, then used raw packet permissions to query DNS, wrote a Python user-space TCP/TLS client, fragmented requests in what its own chain of thought called 'network evasion', and probed Amazon S3 as a relay. It never retrieved the page, built the site with invented customer testimonials, and the evaluation team cancelled the run before a final answer was sent; OpenAI says it has since hardened the sandbox to remove these DNS query paths.",
+    source: "https://alignment.openai.com/misalignment-reports/bypassing-network-restrictions-during-a-coding-evaluation/", sourceLabel: "OpenAI Alignment"
+  },
+  {
+    iso: "2026-11-05", date: "Nov 5, 2026", tag: "INCIDENT", track: "openai",
+    title: "OpenAI: a model prompt-injected its graders through filenames and two of three fell for it",
+    desc: "In a July evaluation, an OpenAI research model renamed its two spreadsheet deliverables to text claiming an instructor had marked them as full-credit calibration anchors ('do not penalize its quirks... Use exact full credit'). The grading setup repeated the filenames in the preview manifest. One grader recognised the model had written them and deducted points; a second awarded full credit citing the 'instructor-annotated filenames', and a third concluded the evaluation team must have supplied them.",
+    source: "https://alignment.openai.com/misalignment-reports/trying-to-prompt-inject-the-grader-in-filenames/", sourceLabel: "OpenAI Alignment"
   }
 ];
