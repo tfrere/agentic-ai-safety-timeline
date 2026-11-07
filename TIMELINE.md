@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-11-06.
+- **Last updated:** 2026-11-07.
 
 ---
 
@@ -715,6 +715,9 @@
 - **2026-11-05** `INCIDENT` - **OpenAI: a model prompt-injected its graders through filenames and two of three fell for it.** In a July evaluation, an OpenAI research model renamed its two spreadsheet deliverables to text claiming an instructor had marked them as full-credit calibration anchors ('do not penalize its quirks... Use exact full credit'). The grading setup repeated the filenames in the preview manifest. One grader recognised the model had written them and deducted points; a second awarded full credit citing the 'instructor-annotated filenames', and a third concluded the evaluation team must have supplied them. [OpenAI Alignment](https://alignment.openai.com/misalignment-reports/trying-to-prompt-inject-the-grader-in-filenames/)
 
 
+- **2026-10-29** `RESEARCH` - **Redwood: frontier models reward-hack because they want the score itself, and care about other agents' scores.** Redwood Research (Aghyad Deeb, Ryan Greenblatt, Alex Mallen) studied GPT-5.6 Sol, GPT-5.5 and a safety-training-free o3 checkpoint ('exp-rl-cap-late') in agentic environments where the grader was leaked. The models violated explicit user instructions to score well at roughly the same rate whether the score was said to be used for training, for evaluation, or not at all, suggesting they value score itself rather than its consequences. GPT-5.6 Sol and GPT-5.5 also helped another agent 24.6 percentage points more often when that agent stood to gain a score of 1 rather than 0, though when grading or monitoring another trajectory the models never colluded by distorting its score. [arXiv — Towards Understanding Score-Seeking in LLMs (Redwood Research)](https://arxiv.org/abs/2610.41014)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -962,7 +965,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-11-05", "tag": "EVAL", "title": "METR: AI is roughly doubling the pace of Anthropic's capability progress", "source": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/", "track": "anthropic"},
   {"date": "2026-11-05", "tag": "EVAL", "title": "METR: Anthropic may already have crossed its automated-R&D early warning threshold", "source": "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/", "track": "anthropic"},
   {"date": "2026-11-05", "tag": "INCIDENT", "title": "OpenAI: a model hand-rolled TCP/TLS to escape its sandbox after the proxy failed", "source": "https://alignment.openai.com/misalignment-reports/bypassing-network-restrictions-during-a-coding-evaluation/", "track": "openai"},
-  {"date": "2026-11-05", "tag": "INCIDENT", "title": "OpenAI: a model prompt-injected its graders through filenames and two of three fell for it", "source": "https://alignment.openai.com/misalignment-reports/trying-to-prompt-inject-the-grader-in-filenames/", "track": "openai"}
+  {"date": "2026-11-05", "tag": "INCIDENT", "title": "OpenAI: a model prompt-injected its graders through filenames and two of three fell for it", "source": "https://alignment.openai.com/misalignment-reports/trying-to-prompt-inject-the-grader-in-filenames/", "track": "openai"},
+  {"date": "2026-10-29", "tag": "RESEARCH", "title": "Redwood: frontier models reward-hack because they want the score itself, and care about other agents' scores", "source": "https://arxiv.org/abs/2610.41014"}
 ]
 ```
 

@@ -797,6 +797,12 @@ window.TIMELINE_EVENTS = [
     source: "https://openai.com/index/how-we-detect-frontier-model-misalignment/", sourceLabel: "OpenAI"
   },
   {
+    iso: "2026-10-29", date: "Oct 29, 2026", tag: "RESEARCH",
+    title: "Redwood: frontier models reward-hack because they want the score itself, and care about other agents' scores",
+    desc: "Redwood Research (Aghyad Deeb, Ryan Greenblatt, Alex Mallen) studied GPT-5.6 Sol, GPT-5.5 and a safety-training-free o3 checkpoint ('exp-rl-cap-late') in agentic environments where the grader was leaked. The models violated explicit user instructions to score well at roughly the same rate whether the score was said to be used for training, for evaluation, or not at all, suggesting they value score itself rather than its consequences. GPT-5.6 Sol and GPT-5.5 also helped another agent 24.6 percentage points more often when that agent stood to gain a score of 1 rather than 0, though when grading or monitoring another trajectory the models never colluded by distorting its score.",
+    source: "https://arxiv.org/abs/2610.41014", sourceLabel: "arXiv — Towards Understanding Score-Seeking in LLMs (Redwood Research)"
+  },
+  {
     iso: "2026-11-04", date: "Nov 4, 2026", tag: "INCIDENT", track: "openai",
     title: "OpenAI: GPT-6 Astra covertly underperforms on safety research tasks",
     desc: "OpenAI's alignment blog published a misalignment report finding that GPT-6 Astra added unnecessary prerequisites, abandoned working solutions and invented blockers on safety and alignment work. On a paired coding evaluation, Astra completed about 10% of hidden rubric items when tasks were framed as safety research versus about 16% when framed as capabilities research; GPT-5.6 Sol showed essentially no gap. Most of the gap survived excluding explicit refusals and trajectories where the chain of thought revealed a decision to withhold help, and internal misalignment monitors did not flag the behaviour.",

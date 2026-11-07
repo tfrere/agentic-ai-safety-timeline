@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-11-06T06:26:43+00:00",
+  "last_run": "2026-11-07T06:23:10+00:00",
   "feed_hashes": {
-    "hf-blog": "3aa99f2e22b3df4a2651320d48b78a07119540b41172a322d12fc2dcfd0d9a26",
-    "metr": "be26e71d8c64a00c8bc662e36458bda6f017ed57513433bf04a8810dfd0439ba",
-    "openai-news": "0345d306476dd13adbb3be056b3df4422c662b4f5adb8497dcf9fdb6893def92",
+    "hf-blog": "64f9808eaf79b9920405768fb93ee99d1f9c8a06ed29b66e723d8579486f4d9d",
+    "metr": "9e4e1c44e66f49e2f42f987ba846a1de69944f7252b8cc34f67cdd136feab6b7",
+    "openai-news": "4cfb6e8221eb923e31212e75b8e11b694798ec33a4b46ac5744fca86cf6f2296",
     "deepmind": "b0afb182c6bd1c609038e5bb0d2eafc5ed88a13664c1d29eeaaf6cf2c57adbb5",
-    "redwood": "8ad054afbd53137f017b5eda181ee94618ea39ff53722fd77b8ce9acc5dfae79",
-    "frontier-security": "2304512ade44550eba3f4cdfd6c558eea4f92b2338f451e1efac13c648420290",
-    "transformer-news": "627e7774e9b49635462d88c8d55409afc5eb5750a96564bb1d3fcadbf2d8128d",
-    "simonw": "6d076262d2005a26e041accd0228cb19205fe1a87991604fd4d39a5609edae0e",
-    "arxiv-cr": "359b35af37a82711c2d61f84aaf6bf2b8315abdfc666dc4c1a21e076f2d419d5",
-    "arxiv-ai": "b7958fd8e9c18ffa20906cbf2ca16c282dca4ced8a627578ad564bb8bb894e3e",
-    "alignment-forum": "3c6a881ada2ddd9fa159e810670ecb9b824ba20a3e0c67e7788c3cf14bb86193"
+    "redwood": "aacf6b14b314e95639cf3ac4942aeb260fb686071402913775586f1bedf74654",
+    "frontier-security": "a1673060e0dd180d5476d12081f4aa4aaf6f8d2f40d4fa88a2c6ef81afcf1ef9",
+    "transformer-news": "f41f60651dbb721764fe7d29e28da5169a34617f6a4547c9df6cb2ff2444f6f4",
+    "simonw": "0d81231f8c27f630f5ebaf67f7b30df783350ee645e40bcdaba123ca9c692f45",
+    "arxiv-cr": "6fddb727253d61f42be4203620f49c0382dd03cd7d1a776de97cfcf0adf40427",
+    "arxiv-ai": "d96273b5ebca09eb4c05b962407ad0618104a830abe61f293aef421968c9ab6e",
+    "alignment-forum": "d4b225a631ebc2e3fce48ed99b6a5be620ea03f88a16d51f0a456a56729971c6"
   },
   "page_hashes": {
     "openai-alignment": "215cfe0522dcd6681da656b2784ebd0bb003b09cf8e36170c2f121b3a90d57d9",
-    "anthropic-research": "827931a0500eb45e36597d8d453b92aa20c548e736b846f343b40b02d56fc3c1",
-    "anthropic-news": "210a250ac1a4037d5ab696a8702187cef10a4f9ba3c93566014ad2e992fb8bfe",
-    "deepmind-frontier-safety": "0b085e6db3aa119eac76e510d2196655164d19386a6bf1691c3fc560a8ef082a",
-    "meta-blog": "c28b4e51b67e7e9b986df4fcd97147425b204bcb83cf284c7c324be6e20b4ccb",
+    "anthropic-research": "da97cc42c4d3421733ca1782bcf5bbb1e3ae3ab8406ba0b23c5c2a48d5662be2",
+    "anthropic-news": "13585d23b795db42efb332384dc3166b2787ad628cf36606388d0981964e0722",
+    "deepmind-frontier-safety": "36aba516c4c134c770b8112116922468101560f74fa5839c73f45fe55cbe4268",
+    "meta-blog": "8d0839036c9ca9b11b02222591e87539cc8e6fb1914c7277fcd70e1818b4b1ae",
     "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
-    "apollo-science": "427fbbbdc186740888586b9968b3ea42451db73793a9154037653b7919da38cb",
-    "caisi": "5e40060fc601088598870565a09a9eba52f765bfda6ad93d265cae65c5781827",
+    "apollo-science": "7839e5b13d1bafb79eb9f2f747bd9a3ca8b5cead883044ccf24d2c0718b5b58a",
+    "caisi": "b30d018ee17ed6ad8de1fa976ca8fbb1f433caec130f0f4d860c6f00532335dd",
     "redwood-home": "930ecc60f9f2e970a3c9aff0c8784f511c4c9321d4eb149d6c043817d7821d94",
-    "aiaaic": "b9972ef584e2278afafbfb49735c95d76a4816bcf5a5532f8eb8404177fe281d"
+    "aiaaic": "0f13dd7879e2ec29be5360f04decdeea987a8d4b428d3a05225e69260ecc9eb2"
   },
   "proposed": [
     {
@@ -630,6 +630,13 @@
       "title": "OpenAI: a model prompt-injected its graders through filenames and two of three fell for it",
       "iso": "2026-11-05",
       "seen": "2026-11-06",
+      "applied": true
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.41014",
+      "title": "Redwood: frontier models reward-hack because they want the score itself, and care about other agents' scores",
+      "iso": "2026-10-29",
+      "seen": "2026-11-07",
       "applied": true
     }
   ]
