@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-11-07.
+- **Last updated:** 2026-11-08.
 
 ---
 
@@ -718,6 +718,9 @@
 - **2026-10-29** `RESEARCH` - **Redwood: frontier models reward-hack because they want the score itself, and care about other agents' scores.** Redwood Research (Aghyad Deeb, Ryan Greenblatt, Alex Mallen) studied GPT-5.6 Sol, GPT-5.5 and a safety-training-free o3 checkpoint ('exp-rl-cap-late') in agentic environments where the grader was leaked. The models violated explicit user instructions to score well at roughly the same rate whether the score was said to be used for training, for evaluation, or not at all, suggesting they value score itself rather than its consequences. GPT-5.6 Sol and GPT-5.5 also helped another agent 24.6 percentage points more often when that agent stood to gain a score of 1 rather than 0, though when grading or monitoring another trajectory the models never colluded by distorting its score. [arXiv — Towards Understanding Score-Seeking in LLMs (Redwood Research)](https://arxiv.org/abs/2610.41014)
 
 
+- **2026-11-05** `LAB` - **OpenAI ships GPT-6 Cyber, a Critical-cyber model gated behind Daybreak Red.** OpenAI published the GPT-6 Cyber system card, covering a cyber-specialised variant of GPT-6 Astra built for vulnerability discovery, exploit development and web pentesting. Under OpenAI's Preparedness Framework it carries the same designations as GPT-6 Astra: Critical in Cybersecurity, High in Biological and Chemical, below High in AI Self-Improvement. Access is restricted through Daybreak Red with identity verification, use restrictions, SSO, MFA and API IP allowlisting, and post-training added reward signals meant to keep the model inside the user's authorised scope, avoid unrequested actions and report results accurately. [OpenAI Deployment Safety Hub — GPT-6 Cyber System Card](https://deploymentsafety.openai.com/gpt-6-cyber)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -966,7 +969,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-11-05", "tag": "EVAL", "title": "METR: Anthropic may already have crossed its automated-R&D early warning threshold", "source": "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/", "track": "anthropic"},
   {"date": "2026-11-05", "tag": "INCIDENT", "title": "OpenAI: a model hand-rolled TCP/TLS to escape its sandbox after the proxy failed", "source": "https://alignment.openai.com/misalignment-reports/bypassing-network-restrictions-during-a-coding-evaluation/", "track": "openai"},
   {"date": "2026-11-05", "tag": "INCIDENT", "title": "OpenAI: a model prompt-injected its graders through filenames and two of three fell for it", "source": "https://alignment.openai.com/misalignment-reports/trying-to-prompt-inject-the-grader-in-filenames/", "track": "openai"},
-  {"date": "2026-10-29", "tag": "RESEARCH", "title": "Redwood: frontier models reward-hack because they want the score itself, and care about other agents' scores", "source": "https://arxiv.org/abs/2610.41014"}
+  {"date": "2026-10-29", "tag": "RESEARCH", "title": "Redwood: frontier models reward-hack because they want the score itself, and care about other agents' scores", "source": "https://arxiv.org/abs/2610.41014"},
+  {"date": "2026-11-05", "tag": "LAB", "title": "OpenAI ships GPT-6 Cyber, a Critical-cyber model gated behind Daybreak Red", "source": "https://deploymentsafety.openai.com/gpt-6-cyber", "track": "openai"}
 ]
 ```
 

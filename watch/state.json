@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-11-07T06:23:10+00:00",
+  "last_run": "2026-11-08T06:23:49+00:00",
   "feed_hashes": {
     "hf-blog": "64f9808eaf79b9920405768fb93ee99d1f9c8a06ed29b66e723d8579486f4d9d",
     "metr": "9e4e1c44e66f49e2f42f987ba846a1de69944f7252b8cc34f67cdd136feab6b7",
-    "openai-news": "4cfb6e8221eb923e31212e75b8e11b694798ec33a4b46ac5744fca86cf6f2296",
+    "openai-news": "ba8fc8bfdea55d78a69a6b7abbaa8f8c551898cc0710393a74fe3c363368e325",
     "deepmind": "b0afb182c6bd1c609038e5bb0d2eafc5ed88a13664c1d29eeaaf6cf2c57adbb5",
-    "redwood": "aacf6b14b314e95639cf3ac4942aeb260fb686071402913775586f1bedf74654",
-    "frontier-security": "a1673060e0dd180d5476d12081f4aa4aaf6f8d2f40d4fa88a2c6ef81afcf1ef9",
-    "transformer-news": "f41f60651dbb721764fe7d29e28da5169a34617f6a4547c9df6cb2ff2444f6f4",
-    "simonw": "0d81231f8c27f630f5ebaf67f7b30df783350ee645e40bcdaba123ca9c692f45",
-    "arxiv-cr": "6fddb727253d61f42be4203620f49c0382dd03cd7d1a776de97cfcf0adf40427",
-    "arxiv-ai": "d96273b5ebca09eb4c05b962407ad0618104a830abe61f293aef421968c9ab6e",
-    "alignment-forum": "d4b225a631ebc2e3fce48ed99b6a5be620ea03f88a16d51f0a456a56729971c6"
+    "redwood": "0eff4151ba4d198612a91d284b0fe47d12d6e79340d9aa2c69eb8277b1bfc14c",
+    "frontier-security": "e830cf92eeb1d665d5575927bc6248b41c1c3e527db15c5e742442f7a3850091",
+    "transformer-news": "60f059f1bf124753af4ffe3054562dc8c7d26f84b1c3d718f28fc98dff28b6d0",
+    "simonw": "61db7a49bcdae3d0909fb505ca12001081d2592d0ee661ed4fde41a7c960de85",
+    "arxiv-cr": "ff646085e19dfbc4940bc348095595e08ceb12895274d9570f95749c83ab9f34",
+    "arxiv-ai": "e80076ae69cdb8f9ff6cabf4f0187da0b58d14d28beb2e2caffa461ac610275a",
+    "alignment-forum": "39ac8ef5f7c4b963daec6198313eebb30b5c549ab1edb2e1d253af3b7d3650e8"
   },
   "page_hashes": {
     "openai-alignment": "215cfe0522dcd6681da656b2784ebd0bb003b09cf8e36170c2f121b3a90d57d9",
-    "anthropic-research": "da97cc42c4d3421733ca1782bcf5bbb1e3ae3ab8406ba0b23c5c2a48d5662be2",
-    "anthropic-news": "13585d23b795db42efb332384dc3166b2787ad628cf36606388d0981964e0722",
+    "anthropic-research": "c17263e80b07e539e7465da5b9a843b28a4c42e5ab68866177a3c5e508a15124",
+    "anthropic-news": "03b48b326be38e3b1e783eccbc7f1f8f304bbc86172f20cf6d0b314bac50a5f6",
     "deepmind-frontier-safety": "36aba516c4c134c770b8112116922468101560f74fa5839c73f45fe55cbe4268",
-    "meta-blog": "8d0839036c9ca9b11b02222591e87539cc8e6fb1914c7277fcd70e1818b4b1ae",
+    "meta-blog": "326f1d86146a84dbef5af665d0e7cdd0992f7127ebcb9e7fc92415b85edd3899",
     "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
     "apollo-science": "7839e5b13d1bafb79eb9f2f747bd9a3ca8b5cead883044ccf24d2c0718b5b58a",
-    "caisi": "b30d018ee17ed6ad8de1fa976ca8fbb1f433caec130f0f4d860c6f00532335dd",
+    "caisi": "29395aaeab86be97e3c96b985bcb89b65d35d387a3e388ac7c2d51563112f424",
     "redwood-home": "930ecc60f9f2e970a3c9aff0c8784f511c4c9321d4eb149d6c043817d7821d94",
-    "aiaaic": "0f13dd7879e2ec29be5360f04decdeea987a8d4b428d3a05225e69260ecc9eb2"
+    "aiaaic": "c874cc4bc50bfcb8d694b065d5d1fcc6c021b1d26f52e2579982488395975115"
   },
   "proposed": [
     {
@@ -637,6 +637,13 @@
       "title": "Redwood: frontier models reward-hack because they want the score itself, and care about other agents' scores",
       "iso": "2026-10-29",
       "seen": "2026-11-07",
+      "applied": true
+    },
+    {
+      "url": "https://deploymentsafety.openai.com/gpt-6-cyber",
+      "title": "OpenAI ships GPT-6 Cyber, a Critical-cyber model gated behind Daybreak Red",
+      "iso": "2026-11-05",
+      "seen": "2026-11-08",
       "applied": true
     }
   ]
