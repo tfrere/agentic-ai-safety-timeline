@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-11-09T06:33:19+00:00",
+  "last_run": "2026-11-10T06:25:16+00:00",
   "feed_hashes": {
-    "hf-blog": "64f9808eaf79b9920405768fb93ee99d1f9c8a06ed29b66e723d8579486f4d9d",
-    "metr": "9e4e1c44e66f49e2f42f987ba846a1de69944f7252b8cc34f67cdd136feab6b7",
-    "openai-news": "7f30e86d1120a6c39505f26414281c77d2abe7ff602083037cd35005c25a5961",
+    "hf-blog": "a75a6d41b8f5dec543fd3576818df3346e885dbdfc4f7e99ef1e36940084c8dc",
+    "metr": "80ab12353ad006ffe02defae825dd91de8d067f2453e3450200c62a4daa657f1",
+    "openai-news": "ce26dec450a506a7a426908b58a6a0563c45f65f004b0c72111a28758776b9d6",
     "deepmind": "d04e4f295a10562ac4cb3933c27b1001c8dc6b694c181231ce25a5a66f244f00",
-    "redwood": "292a0fb273dbc0b210894f683d818444d08d39c9eeb2bc79a243296a8a69b265",
-    "frontier-security": "4f3d8543e3f014d7ebd19446f5a007078c83c6bd91f0d886a9e2b218eab90c15",
-    "transformer-news": "798a210d96344b82ba1881f62af3b8b7a3b94d47e12b769421a28ead622cc17f",
-    "simonw": "9ba86e289c12eae65d32c546e45a9bf903ead962630e379f57d719395e520f29",
-    "arxiv-cr": "98b53ecb73d532a83ed105e486c48e4d46116e2e19c4d491c6bab7e95b726164",
-    "arxiv-ai": "e8ffc536b174340ecbae9a095cac6175657e84af5db0b9f114b42dd9311f3bc8",
-    "alignment-forum": "9827ffbb71de179b39ce5b61dbfa3eddd75ced8fb7926861d25fa5483430f064"
+    "redwood": "1a034edea511a8d0fb884f3212d69b38c67e5070dd4c611af62cf6b2727061a6",
+    "frontier-security": "eea2ecc9dbf0b9219d7a265d1accc3a4237416a0096ad035a597fddba0d1aed3",
+    "transformer-news": "9fa5811f6660defe738f9c75458364c8a450ff20a4d64b953ac70a973d007d58",
+    "simonw": "b95284e02f4a3d815a7cdaaa99d26a38bf55d8cae2d83d6a85704b55134d8b4c",
+    "arxiv-cr": "4df85cb4dcb8bf56d8d04bf5aeed5f3691cc57d91c971b66235c00884a1821dc",
+    "arxiv-ai": "bb682075660d36e28d47bf5995efdeaa61606c6e99c7a6dc2c55217a5eee1b7c",
+    "alignment-forum": "42d7d5eeb826b7514f4a6b971c7cf29d1da17cf5be9db359007760ce7c893bd9"
   },
   "page_hashes": {
     "openai-alignment": "215cfe0522dcd6681da656b2784ebd0bb003b09cf8e36170c2f121b3a90d57d9",
-    "anthropic-research": "c59cea3cb3cc18b92a1869dbae2e23a1268dd15d2f75b42bf3e3f691fab2636d",
-    "anthropic-news": "aa95b09eb63754c886447d6115c5e2051575464a5c99977272ce91979272cc7b",
+    "anthropic-research": "9f806389adee878f7b250d25f9c23e3f24a5aebdbc05eee241f6d08f15296f07",
+    "anthropic-news": "121fe5a27cd8e40d299ba645724b031d745ca1be121fedf2b3a7f8ceef414e54",
     "deepmind-frontier-safety": "36aba516c4c134c770b8112116922468101560f74fa5839c73f45fe55cbe4268",
-    "meta-blog": "02fbfc77fe620c579896fc55c5719bf3ca412fce8d68b9f8062987aadafa2373",
+    "meta-blog": "9bea827f1f671c781be19047b5e701166a434a9387f051232ff88f03e2162019",
     "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
     "apollo-science": "7839e5b13d1bafb79eb9f2f747bd9a3ca8b5cead883044ccf24d2c0718b5b58a",
-    "caisi": "5d38d9ef3de07381866dee0f4640aad22aa8cd7a6caf5205df9209cec7f9a8bc",
-    "redwood-home": "930ecc60f9f2e970a3c9aff0c8784f511c4c9321d4eb149d6c043817d7821d94",
-    "aiaaic": "8574ee0e8f76ba0fb36d53477c4709ac8e31e324e256f5c3ea9eb84b8998c890"
+    "caisi": "a8a134126f6513d2583d446f2f011065b20b69e64c4c4eb50cc13bfa1f1f0103",
+    "redwood-home": "6f7352ad3aabb5c05ca5eafe13c6ff1ea542d626f39582bbd5c4f25af548a93d",
+    "aiaaic": "cc7541b9d023f3e73a91795558cfb3ee1069d8f95ae4276cc4f16a325d7a2a8f"
   },
   "proposed": [
     {
@@ -644,6 +644,13 @@
       "title": "OpenAI ships GPT-6 Cyber, a Critical-cyber model gated behind Daybreak Red",
       "iso": "2026-11-05",
       "seen": "2026-11-08",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "title": "Anthropic ships Fable 5.2 / Mythos 5.2 with new sandbox-escape evaluations",
+      "iso": "2026-11-09",
+      "seen": "2026-11-10",
       "applied": true
     }
   ]

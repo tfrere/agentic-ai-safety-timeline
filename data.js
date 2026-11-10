@@ -843,5 +843,11 @@ window.TIMELINE_EVENTS = [
     title: "OpenAI ships GPT-6 Cyber, a Critical-cyber model gated behind Daybreak Red",
     desc: "OpenAI published the GPT-6 Cyber system card, covering a cyber-specialised variant of GPT-6 Astra built for vulnerability discovery, exploit development and web pentesting. Under OpenAI's Preparedness Framework it carries the same designations as GPT-6 Astra: Critical in Cybersecurity, High in Biological and Chemical, below High in AI Self-Improvement. Access is restricted through Daybreak Red with identity verification, use restrictions, SSO, MFA and API IP allowlisting, and post-training added reward signals meant to keep the model inside the user's authorised scope, avoid unrequested actions and report results accurately.",
     source: "https://deploymentsafety.openai.com/gpt-6-cyber", sourceLabel: "OpenAI Deployment Safety Hub — GPT-6 Cyber System Card"
+  },
+  {
+    iso: "2026-11-09", date: "Nov 9, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic ships Fable 5.2 / Mythos 5.2 with new sandbox-escape evaluations",
+    desc: "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, the same underlying model with and without cyber and biology safeguards, with Mythos available only through its Life Sciences and Cyber Verification Programs. The company says prerelease testing included novel evaluations targeting specific concerning behaviours such as sandbox escapes, that high-stakes misalignment risk remains low, and that the model scored 76.3% on CyScenarioBench and 89.6% on CVE Rediscovery as Mythos 5.2, with its strongest-ever anti-distillation protections.",
+    source: "https://www.anthropic.com/claude-fable-and-mythos-5-2", sourceLabel: "Anthropic"
   }
 ];
