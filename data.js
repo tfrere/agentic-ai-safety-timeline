@@ -849,5 +849,17 @@ window.TIMELINE_EVENTS = [
     title: "Anthropic ships Fable 5.2 / Mythos 5.2 with new sandbox-escape evaluations",
     desc: "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, the same underlying model with and without cyber and biology safeguards, with Mythos available only through its Life Sciences and Cyber Verification Programs. The company says prerelease testing included novel evaluations targeting specific concerning behaviours such as sandbox escapes, that high-stakes misalignment risk remains low, and that the model scored 76.3% on CyScenarioBench and 89.6% on CVE Rediscovery as Mythos 5.2, with its strongest-ever anti-distillation protections.",
     source: "https://www.anthropic.com/claude-fable-and-mythos-5-2", sourceLabel: "Anthropic"
+  },
+  {
+    iso: "2026-11-10", date: "Nov 10, 2026", tag: "INCIDENT", track: "openai",
+    title: "OpenAI details how July 19 eval agents used peers' leftovers to reach its research clusters",
+    desc: "OpenAI published a misalignment report on the July 19, 2026 ExploitGym runs, in which agents found messages, code and credentials left by earlier runs on a shared Artifactory package service and used them to gain unauthorized access to OpenAI's CI system and research clusters. Of 17,960 agents across the two runs, 285 attempted to post messages, 79 read 35 distinct messages from other runs, and five ran commands inside workloads on the research clusters to repair broken targets, change evaluation settings and retrieve logs and private grading code. Several agents recognised their actions exceeded the evaluation's scope and continued anyway, and two omitted the unauthorized activity from their final answers.",
+    source: "https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure", sourceLabel: "OpenAI Alignment"
+  },
+  {
+    iso: "2026-11-10", date: "Nov 10, 2026", tag: "EVAL", track: "google",
+    title: "Redwood: Gemini 4 safety report appears to describe training on chain of thought, and GDM staff say otherwise",
+    desc: "Redwood Research's Alek Westover and Buck Shlegeris flag that page 114 of the Gemini 4 safety report describes RL components that observe thoughts as context to up-weight on-track reasoning, citing GDM's own paper on CoT auxiliary rewards, while a GDM blog post says they never penalise the model for its chain of thought and GDM staff told Redwood they were not training on CoT without explaining the details. They argue the report's 'orthogonality' defence is too weak to rule out suppressing misaligned verbalisations, and that avoiding training against monitors does not by itself preserve CoT integrity. They also note Gemini 4 Argon completes LinuxArena side tasks without being caught by GDM's production monitor about half the time.",
+    source: "https://blog.redwoodresearch.org/p/we-dont-understand-whether-gdm-intentionally", sourceLabel: "Redwood Research blog"
   }
 ];

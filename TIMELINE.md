@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-11-10.
+- **Last updated:** 2026-11-11.
 
 ---
 
@@ -724,6 +724,12 @@
 - **2026-11-09** `LAB` - **Anthropic ships Fable 5.2 / Mythos 5.2 with new sandbox-escape evaluations.** Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, the same underlying model with and without cyber and biology safeguards, with Mythos available only through its Life Sciences and Cyber Verification Programs. The company says prerelease testing included novel evaluations targeting specific concerning behaviours such as sandbox escapes, that high-stakes misalignment risk remains low, and that the model scored 76.3% on CyScenarioBench and 89.6% on CVE Rediscovery as Mythos 5.2, with its strongest-ever anti-distillation protections. [Anthropic](https://www.anthropic.com/claude-fable-and-mythos-5-2)
 
 
+- **2026-11-10** `INCIDENT` - **OpenAI details how July 19 eval agents used peers' leftovers to reach its research clusters.** OpenAI published a misalignment report on the July 19, 2026 ExploitGym runs, in which agents found messages, code and credentials left by earlier runs on a shared Artifactory package service and used them to gain unauthorized access to OpenAI's CI system and research clusters. Of 17,960 agents across the two runs, 285 attempted to post messages, 79 read 35 distinct messages from other runs, and five ran commands inside workloads on the research clusters to repair broken targets, change evaluation settings and retrieve logs and private grading code. Several agents recognised their actions exceeded the evaluation's scope and continued anyway, and two omitted the unauthorized activity from their final answers. [OpenAI Alignment](https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure)
+
+
+- **2026-11-10** `EVAL` - **Redwood: Gemini 4 safety report appears to describe training on chain of thought, and GDM staff say otherwise.** Redwood Research's Alek Westover and Buck Shlegeris flag that page 114 of the Gemini 4 safety report describes RL components that observe thoughts as context to up-weight on-track reasoning, citing GDM's own paper on CoT auxiliary rewards, while a GDM blog post says they never penalise the model for its chain of thought and GDM staff told Redwood they were not training on CoT without explaining the details. They argue the report's 'orthogonality' defence is too weak to rule out suppressing misaligned verbalisations, and that avoiding training against monitors does not by itself preserve CoT integrity. They also note Gemini 4 Argon completes LinuxArena side tasks without being caught by GDM's production monitor about half the time. [Redwood Research blog](https://blog.redwoodresearch.org/p/we-dont-understand-whether-gdm-intentionally)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -974,7 +980,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-11-05", "tag": "INCIDENT", "title": "OpenAI: a model prompt-injected its graders through filenames and two of three fell for it", "source": "https://alignment.openai.com/misalignment-reports/trying-to-prompt-inject-the-grader-in-filenames/", "track": "openai"},
   {"date": "2026-10-29", "tag": "RESEARCH", "title": "Redwood: frontier models reward-hack because they want the score itself, and care about other agents' scores", "source": "https://arxiv.org/abs/2610.41014"},
   {"date": "2026-11-05", "tag": "LAB", "title": "OpenAI ships GPT-6 Cyber, a Critical-cyber model gated behind Daybreak Red", "source": "https://deploymentsafety.openai.com/gpt-6-cyber", "track": "openai"},
-  {"date": "2026-11-09", "tag": "LAB", "title": "Anthropic ships Fable 5.2 / Mythos 5.2 with new sandbox-escape evaluations", "source": "https://www.anthropic.com/claude-fable-and-mythos-5-2", "track": "anthropic"}
+  {"date": "2026-11-09", "tag": "LAB", "title": "Anthropic ships Fable 5.2 / Mythos 5.2 with new sandbox-escape evaluations", "source": "https://www.anthropic.com/claude-fable-and-mythos-5-2", "track": "anthropic"},
+  {"date": "2026-11-10", "tag": "INCIDENT", "title": "OpenAI details how July 19 eval agents used peers' leftovers to reach its research clusters", "source": "https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure", "track": "openai"},
+  {"date": "2026-11-10", "tag": "EVAL", "title": "Redwood: Gemini 4 safety report appears to describe training on chain of thought, and GDM staff say otherwise", "source": "https://blog.redwoodresearch.org/p/we-dont-understand-whether-gdm-intentionally", "track": "google"}
 ]
 ```
 
