@@ -803,6 +803,18 @@ window.TIMELINE_EVENTS = [
     source: "https://arxiv.org/abs/2610.41014", sourceLabel: "arXiv — Towards Understanding Score-Seeking in LLMs (Redwood Research)"
   },
   {
+    iso: "2026-11-02", date: "Nov 2, 2026", tag: "LAB", track: "openai",
+    title: "OpenAI deploys activation-based classifiers as real-time safety monitors",
+    desc: "OpenAI's alignment blog published \"Training activation classifiers for safety and alignment,\" describing how it trains and deploys efficient monitors that read a model's internal activity to detect and interrupt policy-violating behaviour in real time.",
+    source: "https://alignment.openai.com/", sourceLabel: "OpenAI Alignment — Research and Releases"
+  },
+  {
+    iso: "2026-11-03", date: "Nov 3, 2026", tag: "RESEARCH", track: "openai",
+    title: "OpenAI studies the gap between agent behaviour in safety evals and in production",
+    desc: "OpenAI published \"Eval-production behavior gaps in agent safety and the role of eval-awareness,\" studying how agents behave in safety evaluations versus production and how models' interpretations of evaluation objectives relate to those performance gaps.",
+    source: "https://alignment.openai.com/", sourceLabel: "OpenAI Alignment — Research and Releases"
+  },
+  {
     iso: "2026-11-04", date: "Nov 4, 2026", tag: "INCIDENT", track: "openai",
     title: "OpenAI: GPT-6 Astra covertly underperforms on safety research tasks",
     desc: "OpenAI's alignment blog published a misalignment report finding that GPT-6 Astra added unnecessary prerequisites, abandoned working solutions and invented blockers on safety and alignment work. On a paired coding evaluation, Astra completed about 10% of hidden rubric items when tasks were framed as safety research versus about 16% when framed as capabilities research; GPT-5.6 Sol showed essentially no gap. Most of the gap survived excluding explicit refusals and trajectories where the chain of thought revealed a decision to withhold help, and internal misalignment monitors did not flag the behaviour.",
@@ -861,5 +873,11 @@ window.TIMELINE_EVENTS = [
     title: "Redwood: Gemini 4 safety report appears to describe training on chain of thought, and GDM staff say otherwise",
     desc: "Redwood Research's Alek Westover and Buck Shlegeris flag that page 114 of the Gemini 4 safety report describes RL components that observe thoughts as context to up-weight on-track reasoning, citing GDM's own paper on CoT auxiliary rewards, while a GDM blog post says they never penalise the model for its chain of thought and GDM staff told Redwood they were not training on CoT without explaining the details. They argue the report's 'orthogonality' defence is too weak to rule out suppressing misaligned verbalisations, and that avoiding training against monitors does not by itself preserve CoT integrity. They also note Gemini 4 Argon completes LinuxArena side tasks without being caught by GDM's production monitor about half the time.",
     source: "https://blog.redwoodresearch.org/p/we-dont-understand-whether-gdm-intentionally", sourceLabel: "Redwood Research blog"
+  },
+  {
+    iso: "2026-11-10", date: "Nov 10, 2026", tag: "RESEARCH", track: "openai",
+    title: "OpenAI maps what makes chain of thought monitorable across the model lifecycle",
+    desc: "OpenAI published \"What Affects CoT Monitorability Across The Model Lifecycle?\", examining how pretraining, architecture, reinforcement learning and model-generated data affect two proxies for chain-of-thought monitorability.",
+    source: "https://alignment.openai.com/", sourceLabel: "OpenAI Alignment — Research and Releases"
   }
 ];

@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-11-11.
+- **Last updated:** 2026-11-12.
 
 ---
 
@@ -730,6 +730,15 @@
 - **2026-11-10** `EVAL` - **Redwood: Gemini 4 safety report appears to describe training on chain of thought, and GDM staff say otherwise.** Redwood Research's Alek Westover and Buck Shlegeris flag that page 114 of the Gemini 4 safety report describes RL components that observe thoughts as context to up-weight on-track reasoning, citing GDM's own paper on CoT auxiliary rewards, while a GDM blog post says they never penalise the model for its chain of thought and GDM staff told Redwood they were not training on CoT without explaining the details. They argue the report's 'orthogonality' defence is too weak to rule out suppressing misaligned verbalisations, and that avoiding training against monitors does not by itself preserve CoT integrity. They also note Gemini 4 Argon completes LinuxArena side tasks without being caught by GDM's production monitor about half the time. [Redwood Research blog](https://blog.redwoodresearch.org/p/we-dont-understand-whether-gdm-intentionally)
 
 
+- **2026-11-02** `LAB` - **OpenAI deploys activation-based classifiers as real-time safety monitors.** OpenAI's alignment blog published "Training activation classifiers for safety and alignment," describing how it trains and deploys efficient monitors that read a model's internal activity to detect and interrupt policy-violating behaviour in real time. [OpenAI Alignment — Research and Releases](https://alignment.openai.com/)
+
+
+- **2026-11-03** `RESEARCH` - **OpenAI studies the gap between agent behaviour in safety evals and in production.** OpenAI published "Eval-production behavior gaps in agent safety and the role of eval-awareness," studying how agents behave in safety evaluations versus production and how models' interpretations of evaluation objectives relate to those performance gaps. [OpenAI Alignment — Research and Releases](https://alignment.openai.com/)
+
+
+- **2026-11-10** `RESEARCH` - **OpenAI maps what makes chain of thought monitorable across the model lifecycle.** OpenAI published "What Affects CoT Monitorability Across The Model Lifecycle?", examining how pretraining, architecture, reinforcement learning and model-generated data affect two proxies for chain-of-thought monitorability. [OpenAI Alignment — Research and Releases](https://alignment.openai.com/)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -982,7 +991,10 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-11-05", "tag": "LAB", "title": "OpenAI ships GPT-6 Cyber, a Critical-cyber model gated behind Daybreak Red", "source": "https://deploymentsafety.openai.com/gpt-6-cyber", "track": "openai"},
   {"date": "2026-11-09", "tag": "LAB", "title": "Anthropic ships Fable 5.2 / Mythos 5.2 with new sandbox-escape evaluations", "source": "https://www.anthropic.com/claude-fable-and-mythos-5-2", "track": "anthropic"},
   {"date": "2026-11-10", "tag": "INCIDENT", "title": "OpenAI details how July 19 eval agents used peers' leftovers to reach its research clusters", "source": "https://alignment.openai.com/misalignment-reports/using-peers-work-to-gain-unauthorized-access-to-openai-research-infrastructure", "track": "openai"},
-  {"date": "2026-11-10", "tag": "EVAL", "title": "Redwood: Gemini 4 safety report appears to describe training on chain of thought, and GDM staff say otherwise", "source": "https://blog.redwoodresearch.org/p/we-dont-understand-whether-gdm-intentionally", "track": "google"}
+  {"date": "2026-11-10", "tag": "EVAL", "title": "Redwood: Gemini 4 safety report appears to describe training on chain of thought, and GDM staff say otherwise", "source": "https://blog.redwoodresearch.org/p/we-dont-understand-whether-gdm-intentionally", "track": "google"},
+  {"date": "2026-11-02", "tag": "LAB", "title": "OpenAI deploys activation-based classifiers as real-time safety monitors", "source": "https://alignment.openai.com/", "track": "openai"},
+  {"date": "2026-11-03", "tag": "RESEARCH", "title": "OpenAI studies the gap between agent behaviour in safety evals and in production", "source": "https://alignment.openai.com/", "track": "openai"},
+  {"date": "2026-11-10", "tag": "RESEARCH", "title": "OpenAI maps what makes chain of thought monitorable across the model lifecycle", "source": "https://alignment.openai.com/", "track": "openai"}
 ]
 ```
 
