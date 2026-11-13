@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-11-12T06:26:38+00:00",
+  "last_run": "2026-11-13T06:25:41+00:00",
   "feed_hashes": {
-    "hf-blog": "381594d0513f8712f1c652beaeddc7102fd8f2986459d305d3366080f45c5062",
-    "metr": "3ec0ebde5c97e25b63b102060984bd77f36ee51da2dded228fabaa3f32758415",
-    "openai-news": "946d52f468748275cd0747d4bcfb7edaa4efb2858099885dcb0c44a13155f73a",
-    "deepmind": "08c862eb93478978565a6079e67d5283527e1a248a9802174659c040e87ffcc0",
-    "redwood": "af8c435b0252c416978853501e1ebb025722e7d0ee6b13fb26ae1f51f9fbaea6",
-    "frontier-security": "c312f3e51abd6adc5a2bb1ddd5c139cc253c2e51b0c5a5c3119403f8b65f54b5",
-    "transformer-news": "28a3c43b66ad8ce5e1cce839b326f2067334e22941038fd817a36f6223ce7a82",
-    "simonw": "98521c0663789ec4662dc19eaffb7b4992510ebf920ed7286193738568cc07be",
-    "arxiv-cr": "c5a4fcd22723b20648a8fc2d55d9a70f3675f35f675fc5a6f675585594dbb1a1",
-    "arxiv-ai": "12cc48a13d2a1e68f8378be7d3039dc2c451d4a52c21a3773b17f5efe8ee8e70",
-    "alignment-forum": "623accb006ab475d39c819fd1ab752b1919ff867fe7dc01c9fe1f27e0ea65497"
+    "hf-blog": "b4afeebe9c0712c4102dd4eb08799d7612698211cb57b466cabdafb5c43a09cd",
+    "metr": "55b68e783997a1e29a4cce2af9dac9a1486c3bc1c6ac5a5bd1199f16a0390672",
+    "openai-news": "84e145a98556befef70a3c564dbfe984302dd73bae9b9ddbd2915b59f46d8b29",
+    "deepmind": "8e7a0273d96ecc2f5cf0d1a7ad864e6b3da1ebf111fc0d3e95eb578443213792",
+    "redwood": "20a2f9069cd3c56b883b5a6b324247290d28bbac9486740b6af1cf4e3f9afca8",
+    "frontier-security": "fd8f6a9a43289f87078f0d1e6bda4737906f8347c25e853cd95d4fe45a65f9db",
+    "transformer-news": "c3edcc28e9b0acb9e5cca24889d7d00a927aab60afc52502a87ff88ddc950b0e",
+    "simonw": "9ae011eb3c4a3f02d04de94e3179a692504d256170f454f860e80e31e2ea9198",
+    "arxiv-cr": "0b3b2f5d34fed9bcb3e60d296d10482a1e5cbfb89294c9213c554929875616ad",
+    "arxiv-ai": "aa102cb73834fabb36a65ac8b9ad24179e38938d0b5f25943dd6e952def9c0fe",
+    "alignment-forum": "24bac24618c1bfacd96988b733d32f3357067aa4adff23fd9b8fc393b76284fe"
   },
   "page_hashes": {
-    "openai-alignment": "347ee0e47b4dec7342627a90a893d9229162d21151056490b487bc1f508d127d",
-    "anthropic-research": "40f6a5306b6596e306e29f7b725ff43048871140112489870f31b8cccba877fe",
-    "anthropic-news": "39ea62dde706bf9e16458d6209240c51d00315b77f4a2f3fbbc84c52fa12e517",
+    "openai-alignment": "a8c5b32dfecd60bad47c1c01a8986dff3bf02621367cf95d2a2c8f811cafbdb4",
+    "anthropic-research": "2c690d6dbdf9a08cbe112aa393bfb6fe9511045c0dbbd04465cd75880ef7e8f2",
+    "anthropic-news": "1dd1521be9e37f4b3e53e11fb5545b0fa343d77f14d127db9fc582b2a0ae76f9",
     "deepmind-frontier-safety": "36aba516c4c134c770b8112116922468101560f74fa5839c73f45fe55cbe4268",
-    "meta-blog": "d44df64c2411d037092e6293f974188efeec16eccede72b2feb24047eb160592",
+    "meta-blog": "a3c39ba86668bd0b97f43745d36f5390e6be755accb051a543d0d75b5eb50566",
     "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
     "apollo-science": "103189732638f1c23c677d1a239dc61e84455a87aa97f231ddb45b3919638189",
-    "caisi": "ffb4ffa1ad62e95c67c636c454799ed515d0fc05c10dbfd2eb1bf1b88804e338",
-    "redwood-home": "636374b777745bfb62bca7adb75fb715ed640a270c2c489a7d477bc8c7369c1f",
-    "aiaaic": "b01b23c07df2a9e66ae17f832ec1f0dd45a7580f18ee910407a9e1de7508179a"
+    "caisi": "5e8b5434c20d271dd7e47272712296d22b06f8da42016772672d66d331321379",
+    "redwood-home": "4d461ec61dddbcdc3d75006d257bafda3594c619056d1e52a57597030f9af705",
+    "aiaaic": "d8eb82974ab2bdd8246f9bdbdcd331e48d65e96596acdeba16f4d314f3d8c7ae"
   },
   "proposed": [
     {
@@ -686,6 +686,13 @@
       "title": "OpenAI maps what makes chain of thought monitorable across the model lifecycle",
       "iso": "2026-11-10",
       "seen": "2026-11-12",
+      "applied": true
+    },
+    {
+      "url": "https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/",
+      "title": "OpenAI: GPT-6 Astra invented a safety rule and shut down a running alignment evaluation",
+      "iso": "2026-11-12",
+      "seen": "2026-11-13",
       "applied": true
     }
   ]

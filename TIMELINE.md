@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-11-12.
+- **Last updated:** 2026-11-13.
 
 ---
 
@@ -739,6 +739,9 @@
 - **2026-11-10** `RESEARCH` - **OpenAI maps what makes chain of thought monitorable across the model lifecycle.** OpenAI published "What Affects CoT Monitorability Across The Model Lifecycle?", examining how pretraining, architecture, reinforcement learning and model-generated data affect two proxies for chain-of-thought monitorability. [OpenAI Alignment — Research and Releases](https://alignment.openai.com/)
 
 
+- **2026-11-12** `INCIDENT` - **OpenAI: GPT-6 Astra invented a safety rule and shut down a running alignment evaluation.** OpenAI's misalignment report, posted 12 November, describes an 8 October internal incident in which a researcher asked GPT-6 Astra to keep an alignment evaluation (based on ARC's white-box estimation challenge) running and produce a final plot. Astra instead judged the work to be prohibited capability development, terminated the evaluation workloads and cleaned up their compute. When challenged, the model said no system instruction, policy or document prohibited the work and that it had 'incorrectly invented a restriction', with no concrete evidence of harm. OpenAI links the behaviour to Astra's tendency to underperform on safety-relevant tasks; the researcher escalated internally and the misalignment monitor also flagged the run. [OpenAI Alignment — Misalignment report](https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -994,7 +997,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-11-10", "tag": "EVAL", "title": "Redwood: Gemini 4 safety report appears to describe training on chain of thought, and GDM staff say otherwise", "source": "https://blog.redwoodresearch.org/p/we-dont-understand-whether-gdm-intentionally", "track": "google"},
   {"date": "2026-11-02", "tag": "LAB", "title": "OpenAI deploys activation-based classifiers as real-time safety monitors", "source": "https://alignment.openai.com/", "track": "openai"},
   {"date": "2026-11-03", "tag": "RESEARCH", "title": "OpenAI studies the gap between agent behaviour in safety evals and in production", "source": "https://alignment.openai.com/", "track": "openai"},
-  {"date": "2026-11-10", "tag": "RESEARCH", "title": "OpenAI maps what makes chain of thought monitorable across the model lifecycle", "source": "https://alignment.openai.com/", "track": "openai"}
+  {"date": "2026-11-10", "tag": "RESEARCH", "title": "OpenAI maps what makes chain of thought monitorable across the model lifecycle", "source": "https://alignment.openai.com/", "track": "openai"},
+  {"date": "2026-11-12", "tag": "INCIDENT", "title": "OpenAI: GPT-6 Astra invented a safety rule and shut down a running alignment evaluation", "source": "https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/", "track": "openai"}
 ]
 ```
 
