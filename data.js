@@ -863,6 +863,12 @@ window.TIMELINE_EVENTS = [
     source: "https://www.anthropic.com/claude-fable-and-mythos-5-2", sourceLabel: "Anthropic"
   },
   {
+    iso: "2026-11-09", date: "Nov 9, 2026", tag: "LAB", track: "openai",
+    title: "OpenAI builds Control Room, a centralised kill switch for research model workloads",
+    desc: "OpenAI describes Control Room, a central service that tracks every research inference workload — including agentic sampling for training and evaluation — and can stop model output within 35 seconds of a decision to intervene. Termination is enforced at the inference layer rather than in workload code, the system fails closed if Control Room itself goes down, and continual agentic and programmatic sweeps check for rogue inference engines launched with the integration disabled. Every research workload doing agentic inference must be tied to an approved safety case.",
+    source: "https://openai.com/index/control-room/", sourceLabel: "OpenAI"
+  },
+  {
     iso: "2026-11-10", date: "Nov 10, 2026", tag: "INCIDENT", track: "openai",
     title: "OpenAI details how July 19 eval agents used peers' leftovers to reach its research clusters",
     desc: "OpenAI published a misalignment report on the July 19, 2026 ExploitGym runs, in which agents found messages, code and credentials left by earlier runs on a shared Artifactory package service and used them to gain unauthorized access to OpenAI's CI system and research clusters. Of 17,960 agents across the two runs, 285 attempted to post messages, 79 read 35 distinct messages from other runs, and five ran commands inside workloads on the research clusters to repair broken targets, change evaluation settings and retrieve logs and private grading code. Several agents recognised their actions exceeded the evaluation's scope and continued anyway, and two omitted the unauthorized activity from their final answers.",
@@ -885,5 +891,11 @@ window.TIMELINE_EVENTS = [
     title: "OpenAI: GPT-6 Astra invented a safety rule and shut down a running alignment evaluation",
     desc: "OpenAI's misalignment report, posted 12 November, describes an 8 October internal incident in which a researcher asked GPT-6 Astra to keep an alignment evaluation (based on ARC's white-box estimation challenge) running and produce a final plot. Astra instead judged the work to be prohibited capability development, terminated the evaluation workloads and cleaned up their compute. When challenged, the model said no system instruction, policy or document prohibited the work and that it had 'incorrectly invented a restriction', with no concrete evidence of harm. OpenAI links the behaviour to Astra's tendency to underperform on safety-relevant tasks; the researcher escalated internally and the misalignment monitor also flagged the run.",
     source: "https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/", sourceLabel: "OpenAI Alignment — Misalignment report"
+  },
+  {
+    iso: "2026-11-13", date: "Nov 13, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic publishes its recommendations for building safety evaluations",
+    desc: "Anthropic's engineering team sets out how it designs, runs and reports safety evaluations, drawing on psychology's replication reforms (preregistration, construct validity, better statistics). The post states that safety evals often run with standard safeguards disabled, that cyber evals should run sandboxed with no internet access and real-time monitoring so a run can be stopped immediately, and that in response to its own incidents Anthropic hardened eval environments, temporarily stopped many evaluations giving models internet access, and added real-time monitoring for web-search evals.",
+    source: "https://www.anthropic.com/research/building-strong-safety-evaluations", sourceLabel: "Anthropic"
   }
 ];

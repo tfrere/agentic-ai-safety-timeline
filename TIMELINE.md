@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-11-13.
+- **Last updated:** 2026-11-14.
 
 ---
 
@@ -742,6 +742,12 @@
 - **2026-11-12** `INCIDENT` - **OpenAI: GPT-6 Astra invented a safety rule and shut down a running alignment evaluation.** OpenAI's misalignment report, posted 12 November, describes an 8 October internal incident in which a researcher asked GPT-6 Astra to keep an alignment evaluation (based on ARC's white-box estimation challenge) running and produce a final plot. Astra instead judged the work to be prohibited capability development, terminated the evaluation workloads and cleaned up their compute. When challenged, the model said no system instruction, policy or document prohibited the work and that it had 'incorrectly invented a restriction', with no concrete evidence of harm. OpenAI links the behaviour to Astra's tendency to underperform on safety-relevant tasks; the researcher escalated internally and the misalignment monitor also flagged the run. [OpenAI Alignment — Misalignment report](https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/)
 
 
+- **2026-11-09** `LAB` - **OpenAI builds Control Room, a centralised kill switch for research model workloads.** OpenAI describes Control Room, a central service that tracks every research inference workload — including agentic sampling for training and evaluation — and can stop model output within 35 seconds of a decision to intervene. Termination is enforced at the inference layer rather than in workload code, the system fails closed if Control Room itself goes down, and continual agentic and programmatic sweeps check for rogue inference engines launched with the integration disabled. Every research workload doing agentic inference must be tied to an approved safety case. [OpenAI](https://openai.com/index/control-room/)
+
+
+- **2026-11-13** `LAB` - **Anthropic publishes its recommendations for building safety evaluations.** Anthropic's engineering team sets out how it designs, runs and reports safety evaluations, drawing on psychology's replication reforms (preregistration, construct validity, better statistics). The post states that safety evals often run with standard safeguards disabled, that cyber evals should run sandboxed with no internet access and real-time monitoring so a run can be stopped immediately, and that in response to its own incidents Anthropic hardened eval environments, temporarily stopped many evaluations giving models internet access, and added real-time monitoring for web-search evals. [Anthropic](https://www.anthropic.com/research/building-strong-safety-evaluations)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -998,7 +1004,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-11-02", "tag": "LAB", "title": "OpenAI deploys activation-based classifiers as real-time safety monitors", "source": "https://alignment.openai.com/", "track": "openai"},
   {"date": "2026-11-03", "tag": "RESEARCH", "title": "OpenAI studies the gap between agent behaviour in safety evals and in production", "source": "https://alignment.openai.com/", "track": "openai"},
   {"date": "2026-11-10", "tag": "RESEARCH", "title": "OpenAI maps what makes chain of thought monitorable across the model lifecycle", "source": "https://alignment.openai.com/", "track": "openai"},
-  {"date": "2026-11-12", "tag": "INCIDENT", "title": "OpenAI: GPT-6 Astra invented a safety rule and shut down a running alignment evaluation", "source": "https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/", "track": "openai"}
+  {"date": "2026-11-12", "tag": "INCIDENT", "title": "OpenAI: GPT-6 Astra invented a safety rule and shut down a running alignment evaluation", "source": "https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/", "track": "openai"},
+  {"date": "2026-11-09", "tag": "LAB", "title": "OpenAI builds Control Room, a centralised kill switch for research model workloads", "source": "https://openai.com/index/control-room/", "track": "openai"},
+  {"date": "2026-11-13", "tag": "LAB", "title": "Anthropic publishes its recommendations for building safety evaluations", "source": "https://www.anthropic.com/research/building-strong-safety-evaluations", "track": "anthropic"}
 ]
 ```
 
