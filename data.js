@@ -897,5 +897,17 @@ window.TIMELINE_EVENTS = [
     title: "Anthropic publishes its recommendations for building safety evaluations",
     desc: "Anthropic's engineering team sets out how it designs, runs and reports safety evaluations, drawing on psychology's replication reforms (preregistration, construct validity, better statistics). The post states that safety evals often run with standard safeguards disabled, that cyber evals should run sandboxed with no internet access and real-time monitoring so a run can be stopped immediately, and that in response to its own incidents Anthropic hardened eval environments, temporarily stopped many evaluations giving models internet access, and added real-time monitoring for web-search evals.",
     source: "https://www.anthropic.com/research/building-strong-safety-evaluations", sourceLabel: "Anthropic"
+  },
+  {
+    iso: "2026-11-16", date: "Nov 16, 2026", tag: "EVAL",
+    title: "METR: investigator agents increasingly tell alignment evals apart from capability evals",
+    desc: "METR placed 'investigator agents' inside 19 alignment and 36 capability tasks and asked them to judge what each environment was testing, scoring eval-awareness directly and via an LLM-judged open-ended question. Agents are increasingly able to discriminate the two classes, and do it by noticing environments that 'look fake' or tasks that read as honeypots designed to elicit bad behaviour. METR separates environment-level tells (mocked services, implausible scenarios) from task-level tells (unethical shortcuts, high-stakes tradeoffs) and warns these tells could make alignment evals overestimate alignment.",
+    source: "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/", sourceLabel: "METR"
+  },
+  {
+    iso: "2026-11-16", date: "Nov 16, 2026", tag: "LAB", track: "anthropic",
+    title: "Anthropic cuts its vulnerability disclosure window to 30 days, citing AI rediscovery",
+    desc: "Anthropic's Frontier Red Team shortened its coordinated vulnerability disclosure window from 90 days to 30 days for high- and critical-severity issues and 45 days for everything else, effective for reports sent on or after 1 January 2027. It will also escalate to an external coordinator after 15 days of maintainer silence instead of 30. The stated reason is that a bug one model finds is increasingly likely to be found by another, and Anthropic says it is seeing a higher rate of rediscovery; the policy does not cover unreviewed AI-generated findings such as those from OSS Scanner.",
+    source: "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines", sourceLabel: "Anthropic"
   }
 ];

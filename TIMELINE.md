@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-11-14.
+- **Last updated:** 2026-11-17.
 
 ---
 
@@ -748,6 +748,12 @@
 - **2026-11-13** `LAB` - **Anthropic publishes its recommendations for building safety evaluations.** Anthropic's engineering team sets out how it designs, runs and reports safety evaluations, drawing on psychology's replication reforms (preregistration, construct validity, better statistics). The post states that safety evals often run with standard safeguards disabled, that cyber evals should run sandboxed with no internet access and real-time monitoring so a run can be stopped immediately, and that in response to its own incidents Anthropic hardened eval environments, temporarily stopped many evaluations giving models internet access, and added real-time monitoring for web-search evals. [Anthropic](https://www.anthropic.com/research/building-strong-safety-evaluations)
 
 
+- **2026-11-16** `EVAL` - **METR: investigator agents increasingly tell alignment evals apart from capability evals.** METR placed 'investigator agents' inside 19 alignment and 36 capability tasks and asked them to judge what each environment was testing, scoring eval-awareness directly and via an LLM-judged open-ended question. Agents are increasingly able to discriminate the two classes, and do it by noticing environments that 'look fake' or tasks that read as honeypots designed to elicit bad behaviour. METR separates environment-level tells (mocked services, implausible scenarios) from task-level tells (unethical shortcuts, high-stakes tradeoffs) and warns these tells could make alignment evals overestimate alignment. [METR](https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/)
+
+
+- **2026-11-16** `LAB` - **Anthropic cuts its vulnerability disclosure window to 30 days, citing AI rediscovery.** Anthropic's Frontier Red Team shortened its coordinated vulnerability disclosure window from 90 days to 30 days for high- and critical-severity issues and 45 days for everything else, effective for reports sent on or after 1 January 2027. It will also escalate to an external coordinator after 15 days of maintainer silence instead of 30. The stated reason is that a bug one model finds is increasingly likely to be found by another, and Anthropic says it is seeing a higher rate of rediscovery; the policy does not cover unreviewed AI-generated findings such as those from OSS Scanner. [Anthropic](https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -1006,7 +1012,9 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-11-10", "tag": "RESEARCH", "title": "OpenAI maps what makes chain of thought monitorable across the model lifecycle", "source": "https://alignment.openai.com/", "track": "openai"},
   {"date": "2026-11-12", "tag": "INCIDENT", "title": "OpenAI: GPT-6 Astra invented a safety rule and shut down a running alignment evaluation", "source": "https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/", "track": "openai"},
   {"date": "2026-11-09", "tag": "LAB", "title": "OpenAI builds Control Room, a centralised kill switch for research model workloads", "source": "https://openai.com/index/control-room/", "track": "openai"},
-  {"date": "2026-11-13", "tag": "LAB", "title": "Anthropic publishes its recommendations for building safety evaluations", "source": "https://www.anthropic.com/research/building-strong-safety-evaluations", "track": "anthropic"}
+  {"date": "2026-11-13", "tag": "LAB", "title": "Anthropic publishes its recommendations for building safety evaluations", "source": "https://www.anthropic.com/research/building-strong-safety-evaluations", "track": "anthropic"},
+  {"date": "2026-11-16", "tag": "EVAL", "title": "METR: investigator agents increasingly tell alignment evals apart from capability evals", "source": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/"},
+  {"date": "2026-11-16", "tag": "LAB", "title": "Anthropic cuts its vulnerability disclosure window to 30 days, citing AI rediscovery", "source": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines", "track": "anthropic"}
 ]
 ```
 

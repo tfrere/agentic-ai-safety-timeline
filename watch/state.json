@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-11-16T06:38:59+00:00",
+  "last_run": "2026-11-17T06:26:13+00:00",
   "feed_hashes": {
-    "hf-blog": "de6765923c535d06e0bef1f545db463fb8c4c98498cecc880715aab2666bba44",
-    "metr": "275c497378b2252331f0f215f33340a1143360a053fa54de4ad369dbf3d7afa0",
-    "openai-news": "1f09626779275efe1edbe9b833e797cd5748c1cdeaec703744cb6dffc9ac5bb6",
+    "hf-blog": "1125c0cefe607aefd83166da2829f64a6e3c58890b0c1a88ce3cfcb01270fc54",
+    "metr": "733e2451088c8a781d715f6c4013f0615bb860efa489f50259eda9cfebf5335d",
+    "openai-news": "4fa4621d0bf188b48701e897a132a6976963faca174604c4dd49249f78d14e06",
     "deepmind": "cb984c2ab94cac606c56654a0574a7e7621f3a19e972f815cfd667ee448bde94",
-    "redwood": "32536e78bef3ad5bc72293e2a1270711c2d38f8e6f40d1508c77d13d78103160",
-    "frontier-security": "817857e41285b4912a21de69f9de9618c4d07c115c630518c67cf368eebc25c9",
-    "transformer-news": "ba9e96ff2153a7773da2c86312386d379daa33278af71d0867fea2c04aabc4c9",
-    "simonw": "5d603c0bd3e401168385dd8ffd0d3376b1baaec9498e5e80290dccf628bdc843",
-    "arxiv-cr": "30fd66155b004f2241bb65fe2e047e3ac00b301b5202e9fec166db95ab897d3e",
-    "arxiv-ai": "6e1c737b1b58b3bbf1c3a687f5c047b35a4c5eec64fb17f309dbcf60ca7f0c2c",
-    "alignment-forum": "92a9c48c4bb5be334b019bb56f6b1e4f8b3aa61f3af655a7f683d0ec5b7b9b1c"
+    "redwood": "0c138516e9575706ea063ed8d3240a4450506e4e50b45cd51faac3e4dc168e32",
+    "frontier-security": "da27941d0c43fb6805d3899e43ed5ea6fec834c0e5b5a5e4f157c696f61e3a80",
+    "transformer-news": "ca95f4dc24badc476caf0b2e74adb189b2ec5ccb4c97470fc30c663660e8f22c",
+    "simonw": "700fe46b12fe806a68e5a71234a0b6d1431a23a502afac2775e3b0b2147178df",
+    "arxiv-cr": "ce54cbe9f57626a0e69176f4dddfd5c3506e266d19e685329a9c01a08d47483a",
+    "arxiv-ai": "957d42abad424e475a5d61967825fcac340915ebe4003b9616aa21f2369d9be7",
+    "alignment-forum": "4dfe7468e83ae8d9c04a77b12f455d5859e15c0db23934dd4d27a39280888110"
   },
   "page_hashes": {
     "openai-alignment": "a8c5b32dfecd60bad47c1c01a8986dff3bf02621367cf95d2a2c8f811cafbdb4",
-    "anthropic-research": "f28c3a9c7009b4d945e4c502bfca7612944e51e4ae76b155522775f915b42db1",
-    "anthropic-news": "6df07d98338bb05ad8a3d0a58c23bf524b2752203f22b14af4a1d87aba89c827",
-    "deepmind-frontier-safety": "36aba516c4c134c770b8112116922468101560f74fa5839c73f45fe55cbe4268",
-    "meta-blog": "f8398ef184312c395be08e5aed17dd0f82da2479f8b901bc21b9704a0cc0477f",
+    "anthropic-research": "614d829e0eec9759e54504d09ef23dadc74c0c082dc4793825c47002eeddce26",
+    "anthropic-news": "353a9b766a1c73221c5d809fab5c4ba2c5be05f520538e568435710399d1bed1",
+    "deepmind-frontier-safety": "7b8410da0a872fd7bf4d562daa7668000cd626b8071c15fde0d7cef359f25257",
+    "meta-blog": "4c1df1dab02a849a2d062d8625b7d58a31f358653a0d79b21e4852b0623a3ff5",
     "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
-    "apollo-science": "cdb26aa483865545e5b64ddfabcd0a624229038be99c0c34c096206ff7c516de",
-    "caisi": "ce05f421352b963f392e2860e420889b9a0ef188ff9bbcb7fe5a24b400ec3943",
-    "redwood-home": "4d461ec61dddbcdc3d75006d257bafda3594c619056d1e52a57597030f9af705",
-    "aiaaic": "eb0947704e1598b66327715007a45cc5d710b4f987341f2c775aedcbe38907d8"
+    "apollo-science": "f25d3de4b40379aa42fed3dba544ff7b680d13435855277214e500b5b3e4b350",
+    "caisi": "b0163ccb32a3644f00d69df5c2d669c33c39536d3b3b0a74e331d152509bed89",
+    "redwood-home": "8ea5cf44cddcf67aa3bfa4a397d20e7fa00fa0cc671430e4864150931f755f6a",
+    "aiaaic": "3f1361844aa6866c4888de4ae19518aa07586193ca8e090421516eb7566024e4"
   },
   "proposed": [
     {
@@ -707,6 +707,20 @@
       "title": "Anthropic publishes its recommendations for building safety evaluations",
       "iso": "2026-11-13",
       "seen": "2026-11-14",
+      "applied": true
+    },
+    {
+      "url": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/",
+      "title": "METR: investigator agents increasingly tell alignment evals apart from capability evals",
+      "iso": "2026-11-16",
+      "seen": "2026-11-17",
+      "applied": true
+    },
+    {
+      "url": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines",
+      "title": "Anthropic cuts its vulnerability disclosure window to 30 days, citing AI rediscovery",
+      "iso": "2026-11-16",
+      "seen": "2026-11-17",
       "applied": true
     }
   ]
