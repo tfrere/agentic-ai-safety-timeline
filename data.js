@@ -909,5 +909,11 @@ window.TIMELINE_EVENTS = [
     title: "Anthropic cuts its vulnerability disclosure window to 30 days, citing AI rediscovery",
     desc: "Anthropic's Frontier Red Team shortened its coordinated vulnerability disclosure window from 90 days to 30 days for high- and critical-severity issues and 45 days for everything else, effective for reports sent on or after 1 January 2027. It will also escalate to an external coordinator after 15 days of maintainer silence instead of 30. The stated reason is that a bug one model finds is increasingly likely to be found by another, and Anthropic says it is seeing a higher rate of rediscovery; the policy does not cover unreviewed AI-generated findings such as those from OSS Scanner.",
     source: "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines", sourceLabel: "Anthropic"
+  },
+  {
+    iso: "2026-11-16", date: "Nov 16, 2026", tag: "EVAL", track: "openai",
+    title: "Apollo starts a four-month embedded evaluation pilot inside OpenAI",
+    desc: "Apollo Research announced a pilot in which a team of six works inside OpenAI for four months, assessing whether models attempt to subvert their own or their successors' alignment and control mechanisms across training, evaluations and internal deployment. Access for the training-incentives claim includes training code and datasets, RL rollouts with available reasoning traces and rewards, and queries to intermediate checkpoints; OpenAI may still withhold in-scope items for technical infeasibility, security or IP reasons, but has agreed not to withhold information or staff access simply because findings are unfavourable and must give written reasons for refusals. Apollo says the pilot meets its bar for meta-transparency but does not yet meet its access and disclosure criteria.",
+    source: "https://www.apolloresearch.ai/blog/pilot-towards-embedded-evaluations", sourceLabel: "Apollo Research"
   }
 ];

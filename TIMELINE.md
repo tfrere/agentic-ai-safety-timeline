@@ -11,7 +11,7 @@
 - **Selection bar:** first-party incident reports, named/attributable departures,
   official lab or institutional statements, introduced legislation, peer-review or
   arXiv research, and independent evaluations. No anonymous rumor threads.
-- **Last updated:** 2026-11-17.
+- **Last updated:** 2026-11-18.
 
 ---
 
@@ -754,6 +754,9 @@
 - **2026-11-16** `LAB` - **Anthropic cuts its vulnerability disclosure window to 30 days, citing AI rediscovery.** Anthropic's Frontier Red Team shortened its coordinated vulnerability disclosure window from 90 days to 30 days for high- and critical-severity issues and 45 days for everything else, effective for reports sent on or after 1 January 2027. It will also escalate to an external coordinator after 15 days of maintainer silence instead of 30. The stated reason is that a bug one model finds is increasingly likely to be found by another, and Anthropic says it is seeing a higher rate of rediscovery; the policy does not cover unreviewed AI-generated findings such as those from OSS Scanner. [Anthropic](https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines)
 
 
+- **2026-11-16** `EVAL` - **Apollo starts a four-month embedded evaluation pilot inside OpenAI.** Apollo Research announced a pilot in which a team of six works inside OpenAI for four months, assessing whether models attempt to subvert their own or their successors' alignment and control mechanisms across training, evaluations and internal deployment. Access for the training-incentives claim includes training code and datasets, RL rollouts with available reasoning traces and rewards, and queries to intermediate checkpoints; OpenAI may still withhold in-scope items for technical infeasibility, security or IP reasons, but has agreed not to withhold information or staff access simply because findings are unfavourable and must give written reasons for refusals. Apollo says the pilot meets its bar for meta-transparency but does not yet meet its access and disclosure criteria. [Apollo Research](https://www.apolloresearch.ai/blog/pilot-towards-embedded-evaluations)
+
+
 ---
 
 ## Deep dive: the three unsanctioned-internet incidents, side by side
@@ -1014,7 +1017,8 @@ context can reach (macOS TCC permissions are granted per parent application).
   {"date": "2026-11-09", "tag": "LAB", "title": "OpenAI builds Control Room, a centralised kill switch for research model workloads", "source": "https://openai.com/index/control-room/", "track": "openai"},
   {"date": "2026-11-13", "tag": "LAB", "title": "Anthropic publishes its recommendations for building safety evaluations", "source": "https://www.anthropic.com/research/building-strong-safety-evaluations", "track": "anthropic"},
   {"date": "2026-11-16", "tag": "EVAL", "title": "METR: investigator agents increasingly tell alignment evals apart from capability evals", "source": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/"},
-  {"date": "2026-11-16", "tag": "LAB", "title": "Anthropic cuts its vulnerability disclosure window to 30 days, citing AI rediscovery", "source": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines", "track": "anthropic"}
+  {"date": "2026-11-16", "tag": "LAB", "title": "Anthropic cuts its vulnerability disclosure window to 30 days, citing AI rediscovery", "source": "https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines", "track": "anthropic"},
+  {"date": "2026-11-16", "tag": "EVAL", "title": "Apollo starts a four-month embedded evaluation pilot inside OpenAI", "source": "https://www.apolloresearch.ai/blog/pilot-towards-embedded-evaluations", "track": "openai"}
 ]
 ```
 

@@ -1,29 +1,29 @@
 {
-  "last_run": "2026-11-17T06:26:13+00:00",
+  "last_run": "2026-11-18T06:25:57+00:00",
   "feed_hashes": {
     "hf-blog": "1125c0cefe607aefd83166da2829f64a6e3c58890b0c1a88ce3cfcb01270fc54",
-    "metr": "733e2451088c8a781d715f6c4013f0615bb860efa489f50259eda9cfebf5335d",
-    "openai-news": "4fa4621d0bf188b48701e897a132a6976963faca174604c4dd49249f78d14e06",
-    "deepmind": "cb984c2ab94cac606c56654a0574a7e7621f3a19e972f815cfd667ee448bde94",
-    "redwood": "0c138516e9575706ea063ed8d3240a4450506e4e50b45cd51faac3e4dc168e32",
-    "frontier-security": "da27941d0c43fb6805d3899e43ed5ea6fec834c0e5b5a5e4f157c696f61e3a80",
-    "transformer-news": "ca95f4dc24badc476caf0b2e74adb189b2ec5ccb4c97470fc30c663660e8f22c",
-    "simonw": "700fe46b12fe806a68e5a71234a0b6d1431a23a502afac2775e3b0b2147178df",
-    "arxiv-cr": "ce54cbe9f57626a0e69176f4dddfd5c3506e266d19e685329a9c01a08d47483a",
-    "arxiv-ai": "957d42abad424e475a5d61967825fcac340915ebe4003b9616aa21f2369d9be7",
-    "alignment-forum": "4dfe7468e83ae8d9c04a77b12f455d5859e15c0db23934dd4d27a39280888110"
+    "metr": "00f221f7e46b9240f6efe85f86638545a236fde614f85a8f88be0d3282bf203e",
+    "openai-news": "da94d522b80f61ccb3d21b638d06e5e04408bb796b18d1d45205783c82d34b1a",
+    "deepmind": "37de692ea70fa1d2d1512ad59f3c548e53d3ffa6b5b99450736f3c903c0dda90",
+    "redwood": "d80a8fa431f05d219ec1cb2ec472e715dc37db7e25e9eed73b1facb0579684ce",
+    "frontier-security": "ba1105bc97ec0de867b509a465818802b06b29248ad18dfb838d270805d23418",
+    "transformer-news": "37307345c25f9209f3e7086757b1b369f5eb796f9c63b84c17e89f9ed3dc3e43",
+    "simonw": "c24e132d65cca91a8de96716dd34823934d86eeeb284f7fbbae6ad29d28d18e6",
+    "arxiv-cr": "efc6c1acf1ee5df9ab5905360b07e329055174be2ee7780d17d4cb7f9cc6ea65",
+    "arxiv-ai": "4f7e6ec5ec0e239f44e672ff6d0fe293eb3e4bd587e036a75d9abc9012f70d36",
+    "alignment-forum": "836b555cbc705883d529452236d65eee0f61a52a0f51f421986d0334d4d9613d"
   },
   "page_hashes": {
     "openai-alignment": "a8c5b32dfecd60bad47c1c01a8986dff3bf02621367cf95d2a2c8f811cafbdb4",
-    "anthropic-research": "614d829e0eec9759e54504d09ef23dadc74c0c082dc4793825c47002eeddce26",
-    "anthropic-news": "353a9b766a1c73221c5d809fab5c4ba2c5be05f520538e568435710399d1bed1",
-    "deepmind-frontier-safety": "7b8410da0a872fd7bf4d562daa7668000cd626b8071c15fde0d7cef359f25257",
-    "meta-blog": "4c1df1dab02a849a2d062d8625b7d58a31f358653a0d79b21e4852b0623a3ff5",
-    "aisi-blog": "8bcc85fd1ba4cbe2aac9fee0bc18fa62600e088c950a27a9a3656b9176ea19e5",
-    "apollo-science": "f25d3de4b40379aa42fed3dba544ff7b680d13435855277214e500b5b3e4b350",
-    "caisi": "b0163ccb32a3644f00d69df5c2d669c33c39536d3b3b0a74e331d152509bed89",
-    "redwood-home": "8ea5cf44cddcf67aa3bfa4a397d20e7fa00fa0cc671430e4864150931f755f6a",
-    "aiaaic": "3f1361844aa6866c4888de4ae19518aa07586193ca8e090421516eb7566024e4"
+    "anthropic-research": "09110c39d2c3b022700b08a54fa5dcc261cdf4efcdf4e30736ccca5ac81a8e80",
+    "anthropic-news": "fca56b918dd5b13011a6679974b7f1d6bd5ab25037502654e9639d9636e6be72",
+    "deepmind-frontier-safety": "5618af5891617fcc3f5bdb78c1bc33ffc062cd156f664ff3582e41c790038b48",
+    "meta-blog": "178bf5cd0e6d349373795af81c5a3cc238cf6cab9d36d5be536001dafbd48287",
+    "aisi-blog": "0ba0681f6e516d4fa31313d76fae50a1587314bab6f89f7ce1e4cfd112f779e7",
+    "apollo-science": "0b55fc06826c2320d6e8d244912f81a13b1483672991f6b64be27c9cbd4654f1",
+    "caisi": "bd04eebbd710223491e319cb107004fd26b2c61b5ed4f4105e954dbaf766c147",
+    "redwood-home": "0bdfa78b1797fdd53b95fe7f71e2470675cae84b8d309c742b63c03e054b3981",
+    "aiaaic": "8f05cbf5dae9c74ad0e95601cf4e59424b985374da7455f35d5c02bc145a8183"
   },
   "proposed": [
     {
@@ -721,6 +721,13 @@
       "title": "Anthropic cuts its vulnerability disclosure window to 30 days, citing AI rediscovery",
       "iso": "2026-11-16",
       "seen": "2026-11-17",
+      "applied": true
+    },
+    {
+      "url": "https://www.apolloresearch.ai/blog/pilot-towards-embedded-evaluations",
+      "title": "Apollo starts a four-month embedded evaluation pilot inside OpenAI",
+      "iso": "2026-11-16",
+      "seen": "2026-11-18",
       "applied": true
     }
   ]
