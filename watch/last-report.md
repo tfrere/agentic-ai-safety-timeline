@@ -1,9 +1,9 @@
-# Watch report 2026-11-26
+# Watch report 2026-11-27
 
 - feeds ok: 11/11
 - pages ok: 10/10
 - feed items kept: 40
-- pages changed: 5
+- pages changed: 4
 - aiaaic pointers: 15
 - model: `anthropic/claude-opus-5`
 - applied: 0
